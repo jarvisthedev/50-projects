@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 60rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin: 5rem auto;
+    font-weight: bold;
+}
+
+/* 
+ <div class="basic-calc">
+           <div class="disp output">
+                <span class="disp--output1"></span>
+                <span class="disp--output2"></span>
+           </div>
+
+           <span class="sign divide">/</span>
+           <span class="sign multi">X</span>
+           <span class="sign delete">del</span>
+           <span class="num">7</span>
+           <span class="num">8</span>
+           <span class="num">9</span>
+           <span class="sign sub">-</span>
+           <span class="num">4</span>
+           <span class="num">5</span>
+           <span class="num">6</span>
+           <span class="sign add">+</span>
+           <span class="num">1</span>
+           <span class="num">2</span>
+           <span class="num">3</span>
+           <span class="sign equal">=</span>
+           <span class="num">0</span>
+           <span class="sign dot">.</span>
+        </div>
+
+*/
+
+span{
+    display: inline-block;
+}
+
+.basic-calc{
+    width: 30rem;
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1rem;
+}
+
+.disp{
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    background-color: #796b6b;
+}
+
+.disp--output1,.disp--output2{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+/* 
+
+.disp--output1{
+    background-color: #db3939;
+}
+
+.delete{
+    grid-column: 3 / -1;
+}
+
+.zero{
+    grid-column: 1/span 2;
+}
+
+.equal{
+    grid-column: 4 / 5;
+background-color: blue;
+    grid-row: 4/7;
+} */
