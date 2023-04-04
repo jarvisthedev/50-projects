@@ -8,19 +8,26 @@ html{
     font-size: 62.5%;
 }
 
-body{
+body,
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container{
-    width: 60rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     padding: 2rem;
-    margin: 5rem auto;
+    margin: 2rem auto;
     font-weight: bold;
 }
+
+.basic-calc{
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    font-size: 2rem;
+}
+
 
 span{
     display: flex;
@@ -28,15 +35,11 @@ span{
     border: .5px solid rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
-    border-collapse: separate;
+    transition: all .2s;
 }
 
-.basic-calc{
-    width: 30rem;
-    padding: 10rem;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    font-size: 2rem;
+span:hover{
+    background-color: #f8f8f8;
 }
 
 .disp{
@@ -56,6 +59,10 @@ span{
     color: #f7f7f7;
 }
 
+.disp--output1:hover,
+.disp--output2:hover{
+    background-color: initial;
+}
 
 .delete{
     grid-column: 3 / -1;
@@ -70,4 +77,8 @@ span{
     color: #f7f7f7;
     grid-column: 4 / 5;
     grid-row: 5/7;
+}
+
+.equal:hover{
+    background-color: rgba(249, 131, 3, 0.9);
 }
