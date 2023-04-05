@@ -16,18 +16,33 @@ function helper_func(hiddenCont, msg, z_index, color) {
   guessBtn.style.backgroundColor = "inherit";
   userInput.style.backgroundColor = "inherit";
   guessBtn.style.zIndex = z_index;
+  userInput.style.zIndex = z_index;
 }
 
 guessBtn.addEventListener("click", function () {
   userInputValue = Number(userInput.value);
-  entries -= 1;
+  if (!userInput.value) {
+    introText.textContent = "Please enter a valid number";
+    return;
+  }
 
+  if (userInputValue < 0 || userInputValue > 10) {
+    introText.textContent = "Please provide number within 1 & 10";
+    return;
+  }
+
+  entries -= 1;
   if (userInputValue > randomNum) introText.textContent = "Number! Too high";
   else if (userInputValue < randomNum)
     introText.textContent = "Number! Too low";
 
   if (userInputValue === randomNum) {
-    helper_func(randomNum, "Congrats! You have won", "-1", "blue");
+    helper_func(
+      randomNum,
+      "Congrats! You have won 🥳️🎉️ 🥳️🎉️ 🥳️🎉️",
+      "-1",
+      "blue"
+    );
   } else {
     if (entries === 0)
       helper_func(randomNum, "Losser! You have Loser 😭️ 😭️ 😭️", "-1", "red");

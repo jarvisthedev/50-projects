@@ -1,84 +1,86 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
 body,
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container{
-    padding: 2rem;
-    margin: 2rem auto;
-    font-weight: bold;
+.container {
+  padding: 2rem;
+  margin: 2rem auto;
+  font-weight: bold;
 }
 
-.basic-calc{
-    width: 30rem;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    font-size: 2rem;
+.basic-calc {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 2rem;
 }
 
-
-span{
-    display: flex;
-    padding: 3.2rem;
-    border: .5px solid rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-    transition: all .2s;
+span {
+  display: flex;
+  padding: 3.2rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
 }
 
-span:hover{
-    background-color: #f8f8f8;
+span:hover {
+  background-color: #888;
+  color: #f7f7f7;
 }
 
-.disp{
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(19, 16, 16, 0.75);
+.disp {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(19, 16, 16, 0.75);
 }
 
-.disp--output1,.disp--output2{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding: .5rem;
-    padding-right: 1.5rem;
-    border: none;
-    color: #f7f7f7;
+.disp--output1,
+.disp--output2 {
+  height: 2.8rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  border: none;
+  color: #f7f7f7;
 }
 
 .disp--output1:hover,
-.disp--output2:hover{
-    background-color: initial;
+.disp--output2:hover {
+  background-color: initial;
 }
 
-.delete{
-    grid-column: 3 / -1;
+.delete {
+  grid-column: 3 / -1;
 }
 
-.zero{
-    grid-column: 1/span 2;
+.zero {
+  grid-column: 1 / span 2;
 }
 
-.equal{
-    background-color: rgba(255, 132, 0, 0.8);
-    color: #f7f7f7;
-    grid-column: 4 / 5;
-    grid-row: 5/7;
+.equal {
+  background-color: rgba(255, 132, 0, 0.8);
+  color: #f7f7f7;
+  grid-column: 4 / 5;
+  grid-row: 5/7;
 }
 
-.equal:hover{
-    background-color: rgba(249, 131, 3, 0.9);
+.equal:hover {
+  background-color: rgba(218, 115, 4);
 }

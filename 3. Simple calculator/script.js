@@ -25,20 +25,69 @@
 }
 
 const container = document.querySelector(".container");
+const dispOutput1 = document.querySelector(".disp--output1");
+const dispOutput2 = document.querySelector(".disp--output2");
 
-let num = 0;
+function deleteHelper_func() {
+  if (dispOutput2.textContent.length > 0) {
+    let inputvalue = dispOutput2.textContent.split("");
+
+    inputvalue.pop();
+    return inputvalue.join("");
+  }
+}
+
+let num = "0";
 let operation = "+";
 container.addEventListener("click", function (e) {
-  console.log(num, operation);
+  // Delete functionality
+  if (e.target.classList.contains("delete")) {
+    dispOutput2.textContent = deleteHelper_func();
+  }
 
-  if (e.target.className === "num") {
+  // Appending the numbers to user
+  if (e.target.classList.contains("num")) {
     num = e.target.textContent;
+    dispOutput2.textContent += num;
   }
 
+  // Decimal point notation
+  // 1.8 + .3 - 5 x .4
+  if (e.target.classList.contains("dot")) {
+    if (!dispOutput2.textContent.split("").includes("."))
+      dispOutput2.textContent += ".";
+  }
+
+  // Operation sign i.e /, x, -, +
   if (e.target.classList.contains("sign")) {
-    operation = e.target.textContent;
+    let dispvalue_sign = dispOutput2.textContent;
+    let lastval = dispvalue_sign.split("").pop();
+    let signval = e.target.textContent;
+    console.log(lastval, signval);
+
+    // GUARD CLAUSE TO PREVENT MANIPULATIVE MATH ERROS
+    if (
+      ((lastval === "/" || dispvalue_sign.length === 0) &&
+        (signval === "x" || signval === "/")) ||
+      ((lastval === "x" || dispvalue_sign.length === 0) &&
+        (signval === "x" || signval === "/")) ||
+      (lastval === "+" && signval === "+") ||
+      (lastval === "-" && signval === "+")
+    ) {
+      return;
+    } else if (lastval === "-" && signval === "-") {
+      dispOutput2.textContent = deleteHelper_func() + signval;
+    } else if (lastval === "+" && signval === "-") {
+      dispOutput2.textContent = deleteHelper_func() + signval;
+    } else {
+      dispOutput2.textContent += e.target.textContent;
+    }
   }
 
-  console.log(num);
-  console.log(operation);
+  // Equals to functionality
+  if (e.target.classList.contains("equal")) {
+    dispOutput1.textContent = dispOutput2.textContent;
+    // dispOutput2.textContent.split()
+    dispOutput2.textContent = "";
+  }
 });
