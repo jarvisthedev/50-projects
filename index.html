@@ -4,30 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <title>50 projects</title>
   </head>
   <body>
     <header class="header">
-      <div class="head-container">
-        <div class="logo">Jarvis 50</div>
-        <div class="header-list">
-          <ul class="list">
-            <li><a class="btn" href="#">Home</a></li>
-            <li><a class="btn" href="#">Why 50</a></li>
-            <li><a class="btn" href="#">About</a></li>
-            <li><a class="btn" href="#">Calender</a></li>
-            <li><a class="btn" href="#">Contact</a></li>
-            <li><a class="btn" href="#">Get started</a></li>
-          </ul>
-        </div>
-      </div>
+      <a class="logo" href="#"> Jarvis 50 </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Why 50</a></li>
+          <li><a class="main-nav-link" href="#">About</a></li>
+          <li><a class="main-nav-link" href="#">Calender</a></li>
+          <li><a class="main-nav-link" href="#">Contact</a></li>
+          <li><a class="main-nav-link nav-get" href="#">Get started</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <div class="projects-container">
+      <section class="section-projects">
         <div class="container">
           <div class="projects">
+            <h1 class="heading-tertiary">Projects already build</h1>
             <ul class="project-list">
               <li>
                 <a href="1. color changer/" class="project-detail"
@@ -52,7 +56,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

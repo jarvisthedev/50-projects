@@ -6,6 +6,15 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  overflow-x: hidden;
 }
 
 /* ///////////////////////////////// */
@@ -13,56 +22,110 @@ html {
 /* //////////////////////////////// */
 
 .header {
-  padding: 1rem;
-  background-color: blue;
-}
-
-.head-container {
+  background-color: #f7f7f7;
+  height: 9.6rem;
+  padding: 0 4.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2rem;
 }
 
 .logo {
-  font-size: 2.4rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 2.2rem;
 }
 
-.header-list {
-}
-
-.list {
-  display: flex;
+.main-nav-list {
   list-style: none;
+  display: flex;
   justify-content: start;
-  gap: 3rem;
+  align-items: center;
+  gap: 4.8rem;
 }
 
-.btn:link,
-.btn:active {
+.main-nav-link:link,
+.main-nav-link:active {
+  display: inline-block;
   text-decoration: none;
   color: #000;
+  font-weight: 500;
+  font-size: 1.8rem;
   transition: all 0.5s;
 }
 
-.btn:hover,
-.btn:visited {
+.main-nav-link:hover,
+.main-nav-link:visited {
   color: #000;
   border-bottom: 1px solid #000;
 }
 
+.main-nav-link.nav-get:link,
+.main-nav-link.nav-get:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-get:hover,
+.main-nav-link.nav-get:active {
+  background-color: #cf711f;
+}
+
+/* /////////////////////////// */
+/* RE-USABLE CODES */
+/* ///////////////////////// */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  /* color: #45260a; */
+  /* color: #343a40; */
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
 /* ///////////////////////////////// */
-/* PROJECTS-CONTAINER */
+/* SECTION-PROJECT */
 /* //////////////////////////////// */
-.projects-container {
+.section-projects {
   background-color: #f7f7f7;
-  background-color: #9a5f5f;
 }
 
 .container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .projects {
