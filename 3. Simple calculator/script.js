@@ -51,6 +51,41 @@ function lastDotHelper_func(value_in) {
   return value_in;
 }
 
+function calculateBodmas(expression) {
+  // Remove all whitespace from the expression
+  expression = expression.replace(/\s/g, "");
+
+  // Evaluate expressions inside brackets first
+  while (/\([^()]+\)/.test(expression)) {
+    expression = expression.replace(/\([^()]+\)/g, (match) => {
+      return calculateBodmas(match.slice(1, -1));
+    });
+  }
+
+  // Evaluate division and multiplication from left to right
+  expression = expression.replace(
+    /(\d+(\.\d+)?)([*/])(\d+(\.\d+)?)/g,
+    (match, left, leftDecimal, operator, right, rightDecimal) => {
+      left = parseFloat(left + (leftDecimal || ""));
+      right = parseFloat(right + (rightDecimal || ""));
+      return operator === "*" ? left * right : left / right;
+    }
+  );
+
+  // Evaluate addition and subtraction from left to right
+  expression = expression.replace(
+    /(\d+(\.\d+)?)([+\-])(\d+(\.\d+)?)/g,
+    (match, left, leftDecimal, operator, right, rightDecimal) => {
+      left = parseFloat(left + (leftDecimal || ""));
+      right = parseFloat(right + (rightDecimal || ""));
+      return operator === "+" ? left + right : left - right;
+    }
+  );
+
+  // Return the final result
+  return parseFloat(expression);
+}
+
 let num = "0";
 let operation = "+";
 container.addEventListener("click", function (e) {
@@ -100,7 +135,6 @@ container.addEventListener("click", function (e) {
   // Equals to functionality
   if (e.target.classList.contains("equal")) {
     dispOutput1.textContent = dispOutput2.textContent;
-    // dispOutput2.textContent.split()
-    dispOutput2.textContent = "";
+    dispOutput2.textContent = calculateBodmas(dispOutput2.textContent);
   }
 });
