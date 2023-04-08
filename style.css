@@ -33,7 +33,7 @@ body {
 .logo {
   font-size: 2rem;
   font-weight: 600;
-  height: 2.2rem;
+  width: 10rem;
 }
 
 .main-nav-list {
