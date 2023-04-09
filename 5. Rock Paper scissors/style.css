@@ -23,7 +23,6 @@ body,
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 3.2rem;
   margin: 5rem auto;
-  /* background-color: blueviolet; */
 }
 
 .fields {
@@ -39,20 +38,9 @@ body,
   flex: 1 1 0;
 }
 
-.field--1 {
-  /* background-color: violet; */
-}
-
-.field--2 {
-  /* background-color: maroon; */
-}
-
 .scores {
   padding: 2.4rem;
   margin-bottom: 4rem;
-}
-
-.score1 {
 }
 
 .pick {
@@ -71,7 +59,4 @@ body,
 
 .img-detail {
   width: 8.4rem;
-}
-
-.img-name {
 }

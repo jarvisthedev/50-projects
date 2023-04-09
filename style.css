@@ -31,9 +31,9 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: 600;
-  width: 10rem;
+  /* font-size: 2rem; */
+  /* font-weight: 600; */
+  height: 4rem;
 }
 
 .main-nav-list {
