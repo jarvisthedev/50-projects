@@ -34,8 +34,8 @@ body,
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2.4rem 4.8rem;
-  flex: 1 1 0;
+  padding: 2.4rem;
+  width: 35rem;
 }
 
 .scores {
