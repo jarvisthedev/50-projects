@@ -23,6 +23,7 @@ body,
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 3.2rem;
   margin: 5rem auto;
+  position: relative;
 }
 
 .replay {
@@ -42,6 +43,23 @@ body,
   z-index: 10;
 }
 
+.final-result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 77rem;
+  height: 44rem;
+  background-color: rgb(217, 215, 229);
+  z-index: 15;
+}
+
+.outcome {
+  grid-row: 2/3;
+  grid-column: 1/-1 span 2;
+}
+
 .fields {
   align-items: flex-start;
 }
@@ -58,13 +76,13 @@ body,
 .field--1 {
   position: relative;
 }
-
+/* 
 .winner_announcement {
   position: absolute;
   bottom: 7%;
   left: 90%;
   color: #a34f4f;
-}
+} */
 
 .scores {
   padding: 2.4rem;

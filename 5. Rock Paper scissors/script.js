@@ -17,6 +17,7 @@ function reRender() {
   imgName[0].textContent = "";
   imgName[1].textContent = "";
 }
+
 function addButton() {
   container.insertAdjacentHTML(
     "beforebegin",
@@ -28,14 +29,30 @@ let playerScore = 0;
 let opponentScore = 0;
 
 container.addEventListener("click", function (e) {
-  const parentField = imgName[0].closest(".field--1");
+  if (!e.target.classList.contains("img-detail")) return;
+
+  const clicked = e.target;
+  if (clicked.closest(".field--2")) return;
 
   let opponentPick = "";
   let playerPick = "";
-  if (!e.target.classList.contains("img-detail")) return;
-  const clicked = e.target;
 
-  if (clicked.closest(".field--2")) return;
+  const parentField = imgName[0].closest(".field--1");
+
+  const random = Math.floor(Math.random() * 3);
+  if (random === 0) {
+    imgList[1].innerHTML = `<li> <img class="img-detail rock" src="images/img0.png" alt="Rock image" /> </li>`;
+    imgName[1].textContent = "ROCK";
+    opponentPick = "rock";
+  } else if (random === 1) {
+    imgList[1].innerHTML = `<li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>`;
+    imgName[1].textContent = "PAPER";
+    opponentPick = "paper";
+  } else if (random === 2) {
+    imgList[1].innerHTML = `<li> <img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /> </li>`;
+    imgName[1].textContent = "SCISSORS";
+    opponentPick = "scissors";
+  }
 
   if (clicked.classList.contains("rock")) {
     imgList[0].innerHTML = `<li> <img class="img-detail rock" src="images/img0.png" alt="Rock image" /> </li>`;
@@ -49,19 +66,6 @@ container.addEventListener("click", function (e) {
     imgList[0].innerHTML = `<li> <img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /> </li>`;
     imgName[0].textContent = "SCISSORS";
     playerPick = "scissors";
-  }
-
-  const random = Math.floor(Math.random() * 3);
-  imgOpp.src = `images/img${random}.png`;
-  if (random === 0) {
-    imgName[1].textContent = "ROCK";
-    opponentPick = "rock";
-  } else if (random === 1) {
-    imgName[1].textContent = "PAPER";
-    opponentPick = "paper";
-  } else if (random === 2) {
-    imgName[1].textContent = "SCISSORS";
-    opponentPick = "scissors";
   }
 
   if (playerPick === opponentPick) {
@@ -92,13 +96,12 @@ container.addEventListener("click", function (e) {
     addButton();
   }
 
-  replayButton.addEventListener("click", function (e) {
+  // Re-render the whole thing
+  document.querySelector(".replay").addEventListener("click", function (e) {
     console.log(123456);
     reRender();
-    replayButton.remove();
+    document.querySelector(".replay").remove();
   });
-
-  // Re-render the whole thing
 
   // IF EITHER OF SCORE CONFIRM THE WINNER
   if (opponentScore === 3) {
