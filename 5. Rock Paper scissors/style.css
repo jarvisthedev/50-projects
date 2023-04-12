@@ -25,6 +25,23 @@ body,
   margin: 5rem auto;
 }
 
+.replay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 4rem;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
 .fields {
   align-items: flex-start;
 }
@@ -36,6 +53,17 @@ body,
   flex-direction: column;
   padding: 2.4rem;
   width: 35rem;
+}
+
+.field--1 {
+  position: relative;
+}
+
+.winner_announcement {
+  position: absolute;
+  bottom: 7%;
+  left: 90%;
+  color: #a34f4f;
 }
 
 .scores {

@@ -3,15 +3,38 @@ const imgList = document.querySelectorAll(".imgs-list");
 const imgOpp = document.querySelector(".tick");
 const imgName = document.querySelectorAll(".img-name");
 const score = document.querySelectorAll(".score");
+// const replayButton = document.querySelector(".replay");
 
-let score_player = 0;
-let score_opponent = 0;
+function reRender() {
+  imgList[0].innerHTML = `
+  <li><img class="img-detail rock" src="images/img0.png" alt="Rock image"/></li>
+  <li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>
+  <li><img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /></li>`;
+
+  imgList[1].innerHTML = `
+  <li><img class="img-detail tick" src="images/img3.png" alt="Tick image placeholder"  /></li>`;
+
+  imgName[0].textContent = "";
+  imgName[1].textContent = "";
+}
+function addButton() {
+  container.insertAdjacentHTML(
+    "beforebegin",
+    `<button class="replay">Replay</button>`
+  );
+}
+
+let playerScore = 0;
+let opponentScore = 0;
 
 container.addEventListener("click", function (e) {
+  const parentField = imgName[0].closest(".field--1");
+
   let opponentPick = "";
   let playerPick = "";
   if (!e.target.classList.contains("img-detail")) return;
   const clicked = e.target;
+
   if (clicked.closest(".field--2")) return;
 
   if (clicked.classList.contains("rock")) {
@@ -41,42 +64,52 @@ container.addEventListener("click", function (e) {
     opponentPick = "scissors";
   }
 
-  // rock-rock -> draw
-  // rock-paper -> lose
-  // rock-scissors -> win
-
   if (playerPick === opponentPick) {
+    addButton();
   } else if (playerPick === "rock" && opponentPick === "paper") {
-    score_opponent += 1;
-    score[1].textContent = score_opponent;
+    opponentScore += 1;
+    score[1].textContent = opponentScore;
+    addButton();
   } else if (playerPick === "rock" && opponentPick === "scissors") {
-    score_player += 1;
-    score[0].textContent = score_player;
-  }
-  // paper-rock -> win
-  // paper-paper -> draw
-  // paper-scissors -> lose
-  else if (playerPick === "paper" && opponentPick === "rock") {
-    score_player += 1;
-    score[0].textContent = score_player;
+    playerScore += 1;
+    score[0].textContent = playerScore;
+    addButton();
+  } else if (playerPick === "paper" && opponentPick === "rock") {
+    playerScore += 1;
+    score[0].textContent = playerScore;
+    addButton();
   } else if (playerPick === "paper" && opponentPick === "scissors") {
-    score_opponent += 1;
-    score[1].textContent = score_opponent;
-  }
-  // scissors-rock -> lose
-  // scissors-paper -> win
-  // scissors-scissors -> draw
-  else if (playerPick === "scissors" && opponentPick === "rock") {
-    score_opponent += 1;
-    score[1].textContent = score_opponent;
+    opponentScore += 1;
+    score[1].textContent = opponentScore;
+    addButton();
+  } else if (playerPick === "scissors" && opponentPick === "rock") {
+    opponentScore += 1;
+    score[1].textContent = opponentScore;
+    addButton();
   } else if (playerPick === "scissors" && opponentPick === "paper") {
-    score_player += 1;
-    score[0].textContent = score_player;
+    playerScore += 1;
+    score[0].textContent = playerScore;
+    addButton();
   }
+
+  replayButton.addEventListener("click", function (e) {
+    console.log(123456);
+    reRender();
+    replayButton.remove();
+  });
+
+  // Re-render the whole thing
 
   // IF EITHER OF SCORE CONFIRM THE WINNER
-  if (score_opponent === 3) {
-    ("You lost the game");
-    ("Refresh to start again");
+  if (opponentScore === 3) {
+    parentField.insertAdjacentHTML(
+      "beforeend",
+      `<span class="winner_announcement">LOST</span>`
+    );
+  } else if (playerScore === 3) {
+    parentField.insertAdjacentHTML(
+      "beforeend",
+      `<span class="winner_announcement">WON</span>`
+    );
   }
 });
