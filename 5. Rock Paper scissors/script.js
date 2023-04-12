@@ -3,7 +3,8 @@ const imgList = document.querySelectorAll(".imgs-list");
 const imgOpp = document.querySelector(".tick");
 const imgName = document.querySelectorAll(".img-name");
 const score = document.querySelectorAll(".score");
-// const replayButton = document.querySelector(".replay");
+const hiddenScore = document.querySelectorAll(".hidden-score");
+const finalResult = document.querySelector(".final-result");
 
 function reRender() {
   imgList[0].innerHTML = `
@@ -73,46 +74,52 @@ container.addEventListener("click", function (e) {
   } else if (playerPick === "rock" && opponentPick === "paper") {
     opponentScore += 1;
     score[1].textContent = opponentScore;
+    hiddenScore[1].textContent = opponentScore;
     addButton();
   } else if (playerPick === "rock" && opponentPick === "scissors") {
     playerScore += 1;
     score[0].textContent = playerScore;
+    hiddenScore[0].textContent = playerScore;
+
     addButton();
   } else if (playerPick === "paper" && opponentPick === "rock") {
     playerScore += 1;
     score[0].textContent = playerScore;
+    hiddenScore[0].textContent = playerScore;
+
     addButton();
   } else if (playerPick === "paper" && opponentPick === "scissors") {
     opponentScore += 1;
     score[1].textContent = opponentScore;
+    hiddenScore[1].textContent = opponentScore;
+
     addButton();
   } else if (playerPick === "scissors" && opponentPick === "rock") {
     opponentScore += 1;
     score[1].textContent = opponentScore;
+    hiddenScore[1].textContent = opponentScore;
+
     addButton();
   } else if (playerPick === "scissors" && opponentPick === "paper") {
     playerScore += 1;
     score[0].textContent = playerScore;
+    hiddenScore[0].textContent = playerScore;
+
     addButton();
   }
 
   // Re-render the whole thing
   document.querySelector(".replay").addEventListener("click", function (e) {
-    console.log(123456);
     reRender();
     document.querySelector(".replay").remove();
   });
 
   // IF EITHER OF SCORE CONFIRM THE WINNER
   if (opponentScore === 3) {
-    parentField.insertAdjacentHTML(
-      "beforeend",
-      `<span class="winner_announcement">LOST</span>`
-    );
+    finalResult.classList.remove("hidden");
+    document.querySelector(".outcome").textContent = "Opps! You just lost";
   } else if (playerScore === 3) {
-    parentField.insertAdjacentHTML(
-      "beforeend",
-      `<span class="winner_announcement">WON</span>`
-    );
+    finalResult.classList.remove("hidden");
+    document.querySelector(".outcome").textContent = "Congrats! You won";
   }
 });
