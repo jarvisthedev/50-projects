@@ -23,20 +23,21 @@ function reset() {
 }
 
 function comparePickedImages(pos) {
-  // } else if (playerPick === "rock" && opponentPick === "paper") {
-  opponentScore += 1;
-  score[pos].textContent = opponentScore;
-  hiddenScore[pos].textContent = opponentScore;
-  addButton();
-
-  // } else if (playerPick === "rock" && opponentPick === "scissors") {
-  playerScore += 1;
-  score[0].textContent = playerScore;
-  hiddenScore[0].textContent = playerScore;
-  addButton();
+  addBtn_Replay();
+  if (pos === 0) {
+    playerScore += 1;
+    score[pos].textContent = playerScore;
+    hiddenScore[pos].textContent = playerScore;
+    return playerScore;
+  } else {
+    opponentScore += 1;
+    score[pos].textContent = opponentScore;
+    hiddenScore[pos].textContent = opponentScore;
+    return opponentScore;
+  }
 }
 
-function addButton() {
+function addBtn_Replay() {
   container.insertAdjacentHTML(
     "beforebegin",
     `<button class="replay">Replay</button>`
@@ -105,47 +106,22 @@ container.addEventListener("click", function (e) {
 
   //
   // 3. COMPARING IMAGES PICKED WITH THEIR NAMES
-  if (playerPick === opponentPick) {
-    addButton();
-  } else if (playerPick === "rock" && opponentPick === "paper") {
-    opponentScore += 1;
-    score[1].textContent = opponentScore;
-    hiddenScore[1].textContent = opponentScore;
-    addButton();
-  } else if (playerPick === "rock" && opponentPick === "scissors") {
-    playerScore += 1;
-    score[0].textContent = playerScore;
-    hiddenScore[0].textContent = playerScore;
-    addButton();
-  } else if (playerPick === "paper" && opponentPick === "rock") {
-    playerScore += 1;
-    score[0].textContent = playerScore;
-    hiddenScore[0].textContent = playerScore;
-    addButton();
-  } else if (playerPick === "paper" && opponentPick === "scissors") {
-    opponentScore += 1;
-    score[1].textContent = opponentScore;
-    hiddenScore[1].textContent = opponentScore;
-    addButton();
-  } else if (playerPick === "scissors" && opponentPick === "rock") {
-    opponentScore += 1;
-    score[1].textContent = opponentScore;
-    hiddenScore[1].textContent = opponentScore;
-    addButton();
-  } else if (playerPick === "scissors" && opponentPick === "paper") {
-    playerScore += 1;
-    score[0].textContent = playerScore;
-    hiddenScore[0].textContent = playerScore;
-    addButton();
-  }
+  if (playerPick === opponentPick) addBtn_Replay();
+  else if (playerPick === "rock" && opponentPick === "paper")
+    opponentScore = comparePickedImages(1);
+  else if (playerPick === "rock" && opponentPick === "scissors")
+    playerScore = comparePickedImages(0);
+  else if (playerPick === "paper" && opponentPick === "rock")
+    playerScore = comparePickedImages(0);
+  else if (playerPick === "paper" && opponentPick === "scissors")
+    opponentScore = comparePickedImages(1);
+  else if (playerPick === "scissors" && opponentPick === "rock")
+    opponentScore = comparePickedImages(1);
+  else if (playerPick === "scissors" && opponentPick === "paper")
+    playerScore = comparePickedImages(0);
 
-  // Re-render the whole thing
-  document.querySelector(".replay").addEventListener("click", function (e) {
-    reset();
-    document.querySelector(".replay").remove();
-  });
-
-  // IF EITHER OF SCORE CONFIRM THE WINNER
+  //
+  // 4. ANNOUNCE THE WINNER
   if (opponentScore === 3) {
     finalResult.classList.remove("hidden");
     document.querySelector(".outcome").textContent = "Opps! You just lost";
@@ -153,4 +129,11 @@ container.addEventListener("click", function (e) {
     finalResult.classList.remove("hidden");
     document.querySelector(".outcome").textContent = "Congrats! You won";
   }
+
+  //
+  // 5. THE REPLAY BUTTON AND ITS FUNCTIONALITY
+  document.querySelector(".replay").addEventListener("click", function (e) {
+    reset();
+    document.querySelector(".replay").remove();
+  });
 });
