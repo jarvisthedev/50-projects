@@ -6,7 +6,10 @@ const score = document.querySelectorAll(".score");
 const hiddenScore = document.querySelectorAll(".hidden-score");
 const finalResult = document.querySelector(".final-result");
 
-function reRender() {
+let playerScore = 0;
+let opponentScore = 0;
+
+function reset() {
   imgList[0].innerHTML = `
   <li><img class="img-detail rock" src="images/img0.png" alt="Rock image"/></li>
   <li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>
@@ -19,6 +22,20 @@ function reRender() {
   imgName[1].textContent = "";
 }
 
+function comparePickedImages(pos) {
+  // } else if (playerPick === "rock" && opponentPick === "paper") {
+  opponentScore += 1;
+  score[pos].textContent = opponentScore;
+  hiddenScore[pos].textContent = opponentScore;
+  addButton();
+
+  // } else if (playerPick === "rock" && opponentPick === "scissors") {
+  playerScore += 1;
+  score[0].textContent = playerScore;
+  hiddenScore[0].textContent = playerScore;
+  addButton();
+}
+
 function addButton() {
   container.insertAdjacentHTML(
     "beforebegin",
@@ -26,8 +43,13 @@ function addButton() {
   );
 }
 
-let playerScore = 0;
-let opponentScore = 0;
+// Image Picked It's Name
+function imgName_and_Picture(pos, innerContent, name) {
+  imgList[pos].innerHTML = innerContent;
+  imgName[pos].textContent = name;
+  imgPickedName = name.toLowerCase();
+  return imgPickedName;
+}
 
 container.addEventListener("click", function (e) {
   if (!e.target.classList.contains("img-detail")) return;
@@ -35,40 +57,54 @@ container.addEventListener("click", function (e) {
   const clicked = e.target;
   if (clicked.closest(".field--2")) return;
 
+  const random = Math.floor(Math.random() * 3);
   let opponentPick = "";
   let playerPick = "";
 
-  const parentField = imgName[0].closest(".field--1");
+  //
+  // 1. RANDOM IMG PICKED WITH ITS NAME
+  if (random === 0)
+    opponentPick = imgName_and_Picture(
+      1,
+      `<li> <img class="img-detail rock" src="images/img0.png" alt="Rock image" /></li>`,
+      "ROCK"
+    );
+  else if (random === 1)
+    opponentPick = imgName_and_Picture(
+      1,
+      `<li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>`,
+      "PAPER"
+    );
+  else if (random === 2)
+    opponentPick = imgName_and_Picture(
+      1,
+      `<li> <img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /></li>`,
+      "SCISSORS"
+    );
 
-  const random = Math.floor(Math.random() * 3);
-  if (random === 0) {
-    imgList[1].innerHTML = `<li> <img class="img-detail rock" src="images/img0.png" alt="Rock image" /> </li>`;
-    imgName[1].textContent = "ROCK";
-    opponentPick = "rock";
-  } else if (random === 1) {
-    imgList[1].innerHTML = `<li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>`;
-    imgName[1].textContent = "PAPER";
-    opponentPick = "paper";
-  } else if (random === 2) {
-    imgList[1].innerHTML = `<li> <img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /> </li>`;
-    imgName[1].textContent = "SCISSORS";
-    opponentPick = "scissors";
-  }
+  //
+  // 2. IMAGE PICKED BY PLAYER FROM PLAYER'S SIDE
+  if (clicked.classList.contains("rock"))
+    playerPick = imgName_and_Picture(
+      0,
+      `<li> <img class="img-detail rock" src="images/img0.png" alt="Rock image" /></li>`,
+      "ROCK"
+    );
+  else if (clicked.classList.contains("paper"))
+    playerPick = imgName_and_Picture(
+      0,
+      `<li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>`,
+      "PAPER"
+    );
+  else if (clicked.classList.contains("scissors"))
+    playerPick = imgName_and_Picture(
+      0,
+      `<li> <img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /></li>`,
+      "SCISSORS"
+    );
 
-  if (clicked.classList.contains("rock")) {
-    imgList[0].innerHTML = `<li> <img class="img-detail rock" src="images/img0.png" alt="Rock image" /> </li>`;
-    imgName[0].textContent = "ROCK";
-    playerPick = "rock";
-  } else if (clicked.classList.contains("paper")) {
-    imgList[0].innerHTML = `<li><img class="img-detail paper" src="images/img1.png" alt="Paper image" /></li>`;
-    imgName[0].textContent = "PAPER";
-    playerPick = "paper";
-  } else if (clicked.classList.contains("scissors")) {
-    imgList[0].innerHTML = `<li> <img class="img-detail scissors" src="images/img2.png" alt="Scissors image" /> </li>`;
-    imgName[0].textContent = "SCISSORS";
-    playerPick = "scissors";
-  }
-
+  //
+  // 3. COMPARING IMAGES PICKED WITH THEIR NAMES
   if (playerPick === opponentPick) {
     addButton();
   } else if (playerPick === "rock" && opponentPick === "paper") {
@@ -80,37 +116,32 @@ container.addEventListener("click", function (e) {
     playerScore += 1;
     score[0].textContent = playerScore;
     hiddenScore[0].textContent = playerScore;
-
     addButton();
   } else if (playerPick === "paper" && opponentPick === "rock") {
     playerScore += 1;
     score[0].textContent = playerScore;
     hiddenScore[0].textContent = playerScore;
-
     addButton();
   } else if (playerPick === "paper" && opponentPick === "scissors") {
     opponentScore += 1;
     score[1].textContent = opponentScore;
     hiddenScore[1].textContent = opponentScore;
-
     addButton();
   } else if (playerPick === "scissors" && opponentPick === "rock") {
     opponentScore += 1;
     score[1].textContent = opponentScore;
     hiddenScore[1].textContent = opponentScore;
-
     addButton();
   } else if (playerPick === "scissors" && opponentPick === "paper") {
     playerScore += 1;
     score[0].textContent = playerScore;
     hiddenScore[0].textContent = playerScore;
-
     addButton();
   }
 
   // Re-render the whole thing
   document.querySelector(".replay").addEventListener("click", function (e) {
-    reRender();
+    reset();
     document.querySelector(".replay").remove();
   });
 
