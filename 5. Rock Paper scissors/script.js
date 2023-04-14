@@ -5,6 +5,7 @@ const imgName = document.querySelectorAll(".img-name");
 const score = document.querySelectorAll(".score");
 const hiddenScore = document.querySelectorAll(".hidden-score");
 const finalResult = document.querySelector(".final-result");
+const playAgainBtn = document.querySelector(".play-again");
 
 let playerScore = 0;
 let opponentScore = 0;
@@ -51,6 +52,15 @@ function imgName_and_Picture(pos, innerContent, name) {
   imgPickedName = name.toLowerCase();
   return imgPickedName;
 }
+
+playAgainBtn.addEventListener("click", function () {
+  finalResult.classList.add("hidden");
+  reset();
+  score[0].textContent = 0;
+  score[1].textContent = 0;
+  hiddenScore[0].textContent = 0;
+  hiddenScore[1].textContent = 0;
+});
 
 container.addEventListener("click", function (e) {
   if (!e.target.classList.contains("img-detail")) return;
@@ -124,10 +134,10 @@ container.addEventListener("click", function (e) {
   // 4. ANNOUNCE THE WINNER
   if (opponentScore === 3) {
     finalResult.classList.remove("hidden");
-    document.querySelector(".outcome").textContent = "Opps! You just lost";
+    document.querySelector(".outcome").textContent = "You lose...";
   } else if (playerScore === 3) {
     finalResult.classList.remove("hidden");
-    document.querySelector(".outcome").textContent = "Congrats! You won";
+    document.querySelector(".outcome").textContent = "You win!";
   }
 
   //
