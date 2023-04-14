@@ -9,6 +9,7 @@ const playAgainBtn = document.querySelector(".play-again");
 
 let playerScore = 0;
 let opponentScore = 0;
+let time_seconds = 3;
 
 function reset() {
   imgList[0].innerHTML = `
@@ -24,7 +25,6 @@ function reset() {
 }
 
 function comparePickedImages(pos) {
-  addBtn_Replay();
   if (pos === 0) {
     playerScore += 1;
     score[pos].textContent = playerScore;
@@ -38,30 +38,41 @@ function comparePickedImages(pos) {
   }
 }
 
-function addBtn_Replay() {
-  container.insertAdjacentHTML(
-    "beforebegin",
-    `<button class="replay">Replay</button>`
-  );
-}
-
 // Image Picked It's Name
 function imgName_and_Picture(pos, innerContent, name) {
+  // SETTING A TIMER WHICH WILL RESET THE GAME AFTER COMPARING RESULTS
+  if (pos === 0) {
+    const resetTimer = setInterval(() => {
+      time_seconds -= 1;
+      if (time_seconds === 0) {
+        reset();
+        clearInterval(resetTimer);
+        time_seconds = 3;
+      }
+    }, 1000);
+  }
+
   imgList[pos].innerHTML = innerContent;
   imgName[pos].textContent = name;
   imgPickedName = name.toLowerCase();
   return imgPickedName;
 }
 
+// PLAY AGAIN BUTTON
 playAgainBtn.addEventListener("click", function () {
-  finalResult.classList.add("hidden");
-  reset();
   score[0].textContent = 0;
   score[1].textContent = 0;
   hiddenScore[0].textContent = 0;
   hiddenScore[1].textContent = 0;
+
+  playerScore = 0;
+  opponentScore = 0;
+
+  reset();
+  finalResult.classList.add("hidden");
 });
 
+// THE WHOLE CONTAINER
 container.addEventListener("click", function (e) {
   if (!e.target.classList.contains("img-detail")) return;
 
@@ -116,8 +127,8 @@ container.addEventListener("click", function (e) {
 
   //
   // 3. COMPARING IMAGES PICKED WITH THEIR NAMES
-  if (playerPick === opponentPick) addBtn_Replay();
-  else if (playerPick === "rock" && opponentPick === "paper")
+  if (playerPick === opponentPick) {
+  } else if (playerPick === "rock" && opponentPick === "paper")
     opponentScore = comparePickedImages(1);
   else if (playerPick === "rock" && opponentPick === "scissors")
     playerScore = comparePickedImages(0);
@@ -139,11 +150,4 @@ container.addEventListener("click", function (e) {
     finalResult.classList.remove("hidden");
     document.querySelector(".outcome").textContent = "You win!";
   }
-
-  //
-  // 5. THE REPLAY BUTTON AND ITS FUNCTIONALITY
-  document.querySelector(".replay").addEventListener("click", function (e) {
-    reset();
-    document.querySelector(".replay").remove();
-  });
 });
