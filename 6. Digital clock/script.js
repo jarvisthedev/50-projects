@@ -1,7 +1,14 @@
 const container = document.querySelector(".container");
 const containerDay = document.querySelector(".day");
-const containerTime = document.querySelector(".time");
+const containerTimeHour = document.querySelector(".time-hour");
+const containerTimeMin = document.querySelector(".minute");
+const containerTimeSec = document.querySelector(".second");
 const containerDate = document.querySelector(".date");
+
+const clocksystemBtn = document.querySelector(".clock-system");
+
+// const containerDate = document.querySelector(".clock-system--12");
+// const containerDate = document.querySelector(".clock-system--24");
 
 function update_time() {
   const newDate = new Date();
@@ -23,14 +30,25 @@ function update_time() {
     .toString()
     .padStart(2, 0)} ${newDate_year}`;
 
-  containerTime.innerHTML = `${newDate_hour
-    .toString()
-    .padStart(2, 0)} <span class="dot">:</span>${newDate_min
-    .toString()
-    .padStart(2, 0)} <span class="dot">:</span>${newDate_sec
-    .toString()
-    .padStart(2, 0)}`;
+  containerTimeHour.textContent = `${newDate_hour.toString().padStart(2, 0)}`;
+  containerTimeMin.textContent = `${newDate_min.toString().padStart(2, 0)}`;
+  containerTimeSec.textContent = `${newDate_sec.toString().padStart(2, 0)}`;
 }
+
+update_time();
 setInterval(() => {
   update_time();
 }, 1000);
+
+container.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("btn")) return;
+
+  let hours = containerTimeHour.textContent;
+
+  const clicked = e.target;
+  if (e.target.classList.contains("clock-system--12"))
+    if (Number(hours) > 12) containerTimeHour.textContent = Number(hours) - 12;
+
+  console.log(clicked);
+  console.log(containerTimeHour.textContent);
+});
