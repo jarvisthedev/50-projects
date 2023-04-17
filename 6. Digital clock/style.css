@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
 }
 
 html {
@@ -22,4 +23,29 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 3.2rem;
   margin: 5rem auto;
+  padding: 9.6rem;
+}
+
+.day {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 10rem;
+  margin-bottom: 3.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1.4rem;
+}
+
+.dot {
+  transform: translateY(-1.4rem);
+}
+
+.date {
+  font-weight: 500;
 }
