@@ -5,11 +5,6 @@ const containerTimeMin = document.querySelector(".minute");
 const containerTimeSec = document.querySelector(".second");
 const containerDate = document.querySelector(".date");
 
-const clocksystemBtn = document.querySelector(".clock-system");
-
-// const containerDate = document.querySelector(".clock-system--12");
-// const containerDate = document.querySelector(".clock-system--24");
-
 function update_time() {
   const newDate = new Date();
 
