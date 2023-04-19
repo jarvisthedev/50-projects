@@ -21,8 +21,10 @@ body {
 .container {
   max-width: 120rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  padding: 3.2rem;
-  margin: 5rem auto;
-  padding: 9.6rem;
-  position: relative;
+  /* padding: 3.2rem; */
+  margin: 0.2rem auto;
+}
+
+.bg-photo {
+  width: 40rem;
 }
