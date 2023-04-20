@@ -28,3 +28,14 @@ body {
 .bg-photo {
   width: 40rem;
 }
+
+.hero-section {
+  background-image: url("images/ben iwara.jpg");
+  width: 40rem;
+  height: 60rem;
+  background-size: cover;
+}
+
+.svg {
+  width: 1.8rem;
+}
