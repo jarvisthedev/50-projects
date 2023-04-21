@@ -34,3 +34,40 @@ body {
 .svg {
   width: 1.8rem;
 }
+
+/* //////////////////////// */
+/* PLAYLIST */
+/* //////////////////////// */
+
+.play-list {
+  list-style: none;
+  background-color: #111;
+  padding: 2.4rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 5rem 1fr 2.4rem;
+}
+
+.cover-photo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.song-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name {
+  color: #f7f7f7;
+  font-size: 1.8rem;
+}
+
+.artist {
+  color: #f7f7f7;
+  font-size: 1.8rem;
+}
