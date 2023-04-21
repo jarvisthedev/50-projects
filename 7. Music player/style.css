@@ -26,13 +26,66 @@ body {
 
 .hero-section {
   background-image: url("images/ben iwara.jpg");
-  width: 40rem;
+  width: 34rem;
   height: 30rem;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url(http://static.stereogum.com/blogs.dir/2/files/2011/12/Adele-21.jpg)
+      center bottom;
   background-size: cover;
 }
 
 .svg {
   width: 1.8rem;
+}
+
+.section {
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+  margin-bottom: 3.6rem;
+}
+
+.menu-and-list,
+.search-and-playlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.head {
+  color: #f7f7f7;
+  font-size: 1.8rem;
+}
+
+.current-song-name {
+  color: #f7f7f7;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.swift-control,
+.controls {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.controls {
+  padding: 2.8rem;
 }
 
 /* //////////////////////// */
@@ -48,6 +101,7 @@ body {
 .list {
   display: grid;
   grid-template-columns: 5rem 1fr 2.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .cover-photo {
@@ -57,17 +111,34 @@ body {
 
 .song-detail {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  gap: 0.24rem;
+  padding: 0 1.2rem;
 }
 
-.name {
+.song-name {
   color: #f7f7f7;
   font-size: 1.8rem;
 }
 
-.artist {
-  color: #f7f7f7;
+.artist,
+.song-artist {
+  color: rgba(247, 247, 247, 0.8);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.song-artist {
   font-size: 1.8rem;
+}
+
+.list-separator {
+  border: 1px solid rgba(247, 247, 247, 0.9);
+  height: 0.01rem;
+}
+
+.detail {
+  padding: 1.2rem;
 }
