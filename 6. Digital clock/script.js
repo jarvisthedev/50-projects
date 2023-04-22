@@ -5,6 +5,20 @@ const containerTimeMin = document.querySelector(".minute");
 const containerTimeSec = document.querySelector(".second");
 const containerDate = document.querySelector(".date");
 
+const btn_12 = document.querySelector(".clock-system--12");
+const btn_24 = document.querySelector(".clock-system--24");
+
+// HELPER FUNCTION THAT UPDATES CLOCK SYSTEM
+function btn_12_update_func(hour) {
+  if (btn_12.classList.contains("active")) {
+    document.querySelector(".time-system").textContent = `${
+      hour >= 12 ? "PM" : "AM"
+    }`;
+    if (hour > 12) hour = hour - 12;
+  } else document.querySelector(".time-system").textContent = "";
+  containerTimeHour.textContent = `${hour.toString().padStart(2, 0)}`;
+}
+
 function update_time() {
   const newDate = new Date();
 
@@ -16,7 +30,7 @@ function update_time() {
   }).format(newDate);
   const newDate_date = newDate.getDate();
   const newDate_year = newDate.getFullYear();
-  const newDate_hour = newDate.getHours();
+  let newDate_hour = newDate.getHours();
   const newDate_min = newDate.getMinutes();
   const newDate_sec = newDate.getSeconds();
 
@@ -25,9 +39,10 @@ function update_time() {
     .toString()
     .padStart(2, 0)} ${newDate_year}`;
 
-  containerTimeHour.textContent = `${newDate_hour.toString().padStart(2, 0)}`;
   containerTimeMin.textContent = `${newDate_min.toString().padStart(2, 0)}`;
   containerTimeSec.textContent = `${newDate_sec.toString().padStart(2, 0)}`;
+
+  btn_12_update_func(newDate_hour);
 }
 
 update_time();
@@ -38,12 +53,8 @@ setInterval(() => {
 container.addEventListener("click", function (e) {
   if (!e.target.classList.contains("btn")) return;
 
-  let hours = containerTimeHour.textContent;
+  btn_12.classList.toggle("active");
+  btn_24.classList.toggle("active");
 
-  const clicked = e.target;
-  if (e.target.classList.contains("clock-system--12"))
-    if (Number(hours) > 12) containerTimeHour.textContent = Number(hours) - 12;
-
-  console.log(clicked);
-  console.log(containerTimeHour.textContent);
+  btn_12_update_func(new Date().getHours());
 });

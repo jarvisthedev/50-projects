@@ -25,6 +25,7 @@ body {
   margin: 5rem auto;
   padding: 9.6rem;
   position: relative;
+  width: 62rem;
 }
 
 .clock-system {
@@ -34,6 +35,15 @@ body {
 }
 
 .btn {
+  padding: 0.24rem;
+  border: none;
+  border: 1px solid rgb(52, 47, 47);
+  border-radius: 0.3rem;
+}
+
+.active {
+  background-color: rgb(52, 47, 47);
+  color: #f7f7f7;
 }
 
 .day {
@@ -58,6 +68,16 @@ body {
 
 .dot {
   transform: translateY(-1.4rem);
+}
+
+.time-second {
+  margin-right: 5rem;
+}
+
+.time-system {
+  font-size: 2.4rem;
+  letter-spacing: 5px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .date {
