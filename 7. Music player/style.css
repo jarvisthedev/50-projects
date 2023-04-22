@@ -24,19 +24,17 @@ body {
   margin: 0.2rem auto;
 }
 
-.hero-section {
-  background-image: url("images/ben iwara.jpg");
-  width: 34rem;
-  height: 30rem;
-  background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url(http://static.stereogum.com/blogs.dir/2/files/2011/12/Adele-21.jpg)
-      center bottom;
-  background-size: cover;
-}
-
 .svg {
   width: 1.8rem;
+  cursor: pointer;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url("images/ben iwara.jpg");
+  background-size: cover;
+  width: 34rem;
+  height: 32rem;
 }
 
 .header {
@@ -60,17 +58,17 @@ body {
   font-size: 1.8rem;
 }
 
-.current-song-name {
-  color: #f7f7f7;
-  font-size: 2.8rem;
-  font-weight: 500;
-}
-
 .name {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.4rem;
+}
+
+.current-song-name {
+  color: #f7f7f7;
+  font-size: 2.8rem;
+  font-weight: 500;
 }
 
 .swift-control,
@@ -81,8 +79,47 @@ body {
   align-content: center;
 }
 
+.swift-control {
+  margin-bottom: 3.6rem;
+}
+
 .controls {
-  padding: 2.8rem;
+  padding: 0 2.8rem;
+}
+
+.seek-bar-container {
+  display: grid;
+  grid-template-columns: 4rem 1fr 4rem;
+  justify-content: start;
+  align-content: center;
+  padding: 1rem 0.72rem;
+  margin-bottom: 1.8rem;
+}
+
+.current-time,
+.duration {
+  font-size: 1.4rem;
+  color: #f7f7f7;
+}
+
+.music-seek-bar {
+  -webkit-appearance: none;
+  height: 0.5rem;
+  background: #000;
+  overflow: hidden;
+  justify-self: stretch;
+  align-self: center;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.music-seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 5px;
+  background: #63ff69;
+  cursor: pointer;
+  border-radius: 5rem;
 }
 
 /* //////////////////////// */
@@ -92,8 +129,11 @@ body {
 .play-list {
   list-style: none;
   background-color: #222;
-  padding: 2.4rem;
-  padding-bottom: 1.2rem;
+  padding: 1.8rem 2.4rem 1.2rem 2.4rem;
+}
+
+.detail {
+  padding: 0.42rem 0;
 }
 
 .list {
@@ -118,7 +158,8 @@ body {
 
 .song-name {
   color: #f7f7f7;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .artist,
@@ -132,6 +173,11 @@ body {
   font-size: 1.8rem;
 }
 
+.svg--playlist {
+  justify-self: center;
+  align-self: center;
+}
+
 .hr {
   display: block;
   height: 1px;
@@ -139,51 +185,3 @@ body {
   border-top: 1px solid rgba(204, 204, 204, 0.5);
   padding: 0;
 }
-
-.detail {
-  margin-bottom: 1.2rem;
-}
-
-/* /////////////////// */
-/* AUDIO */
-/* /////////////////// */
-
-.seek-bar-container {
-  display: grid;
-  grid-template-columns: 6rem 1fr 6rem;
-  /* justify-content: space-around; */
-  /* align-content: center; */
-  /* padding: 1rem 0; */
-}
-
-.current-time,
-.duration {
-  font-size: 1.4rem;
-  color: #f7f7f7;
-}
-
-.music-seek-bar {
-}
-
-.duration {
-}
-
-/* 
-.music-seek-bar {
-  -webkit-appearance: none;
-  width: 100%;
-  position: absolute;
-  top: -4px;
-  height: 8px;
-  background: var(--secondary-color);
-  overflow: hidden;
-}
-
-.music-seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 10px;
-  width: 5px;
-  background: var(--primary-color);
-  cursor: pointer;
-  box-shadow: -400px 0 0 400px var(--primary-color);
-} */
