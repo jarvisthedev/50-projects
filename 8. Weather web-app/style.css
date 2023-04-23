@@ -22,12 +22,7 @@ body {
   width: 60rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   margin: 5.6rem auto;
-  padding: 3.2rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   color: #f7f7f7;
 
   background-image: url("	https://images3.alphacoders.com/109/1091500.jpg");
@@ -36,10 +31,16 @@ body {
   position: relative;
 }
 
-.container::after {
-  position: absolute;
-  content: "";
+.section,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.section {
+  padding: 3.2rem 12.5rem;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.3),
