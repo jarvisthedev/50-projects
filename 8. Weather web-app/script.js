@@ -24,3 +24,21 @@ dateUpdate();
 setInterval(() => {
   dateUpdate();
 }, 1000);
+
+const api = {
+  key: "2fa73590fd8b5a4c6e68098ad5625395",
+  base: "https://api.openweathermap.org/data/2.5/",
+};
+
+function getResults(query) {
+  fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+    .then((weather) => {
+      return weather.json();
+    })
+    .then(displayResults);
+}
+
+// a0e909bc2034aa3e7a07f999e095251e
+// a1e9fb02d683f637a96db2f58a38e793
+
+// https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
