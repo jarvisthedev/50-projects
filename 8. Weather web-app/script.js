@@ -38,6 +38,10 @@ function getResults(query) {
     .then(displayResults);
 }
 
+// https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
+
+// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
 // a0e909bc2034aa3e7a07f999e095251e
 // a1e9fb02d683f637a96db2f58a38e793
 
