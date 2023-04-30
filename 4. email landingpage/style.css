@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -9,7 +10,95 @@ html {
 }
 
 body {
+  background-color: #000;
+  color: #f7f7f7;
+
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.header,
+.container {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+}
+
+.gmail-logo {
+}
+
+.tools {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn,
+.labels-list {
+  display: flex;
   justify-content: center;
+}
+
+.btn {
+  align-items: center;
+  font-size: 3.2rem;
+  padding: 1.2rem 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.search-area {
+}
+
+.mail-tools {
+}
+
+.container {
+}
+
+.mail-labels {
+  padding: 0.2rem;
+}
+
+.labels-list {
+  list-style-type: none;
+  flex-direction: column;
+
+  gap: 0.3rem;
+  margin-left: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.label-list-detail {
+}
+
+.add-labels {
+}
+
+.mail-container {
+  /* background-color: #fff; */
+}
+
+.mail-container-top {
+}
+
+.mail-type {
+}
+
+.mail-type-list {
+}
+
+.list-detail {
+}
+
+.mails-list {
+}
+
+.mail-detail {
+}
+
+.holder {
+}
+
+.holder-detail {
 }

@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Number</title>
+    <title>Gmail layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
@@ -12,16 +18,27 @@
     <header class="header">
       <div class="gmail-logo">LOGO</div>
       <div class="tools">
-        <div class="search-area">input</div>
+        <div class="search-area">input search tab</div>
         <div class="mail-tools">TOOLS</div>
       </div>
     </header>
     <div class="container">
-      <div class="mail-labels">Labels</div>
-      <div class="mail-details">
-        <div class="details-header">
-          <div class="details-part1">Part1</div>
-          <div class="details-part2">Part2</div>
+      <div class="mail-labels">
+        <div class="btn-compose"><button class="btn">Compose</button></div>
+        <ul class="labels-list">
+          <li class="label-list-detail">Inbox</li>
+          <li class="label-list-detail">Starred</li>
+          <li class="label-list-detail">Snoozed</li>
+          <li class="label-list-detail">Sent</li>
+          <li class="label-list-detail">Drafts</li>
+          <li class="label-list-detail">More</li>
+        </ul>
+        <div class="add-labels">Labels</div>
+      </div>
+      <div class="mail-container">
+        <div class="mail-container-top">
+          <div class="top-part1">Part1</div>
+          <div class="top-part2">Part2</div>
         </div>
         <div class="mail-type">
           <ul class="mail-type-list">
@@ -34,21 +51,21 @@
           <li class="mail-detail">
             <ul class="holder">
               <li class="holder-detail">Sender</li>
-              <li class="holder-detail">Content</li>
+              <li class="holder-detail">Mail content in details</li>
               <li class="holder-detail">Time</li>
             </ul>
           </li>
           <li class="mail-detail">
             <ul class="holder">
               <li class="holder-detail">Sender</li>
-              <li class="holder-detail">Content</li>
+              <li class="holder-detail">Mail content in details</li>
               <li class="holder-detail">Time</li>
             </ul>
           </li>
           <li class="mail-detail">
             <ul class="holder">
               <li class="holder-detail">Sender</li>
-              <li class="holder-detail">Content</li>
+              <li class="holder-detail">Mail content in details</li>
               <li class="holder-detail">Time</li>
             </ul>
           </li>
