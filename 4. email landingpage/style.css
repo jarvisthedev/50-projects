@@ -40,11 +40,28 @@ body {
   justify-content: center;
 }
 
+.mail-tools-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  padding-right: 1.5rem;
+  font-size: 2.8rem;
+}
+
+.tools-detail {
+}
+
 .btn {
   align-items: center;
-  font-size: 3.2rem;
-  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  padding: 1.8rem 1.8rem;
   margin-bottom: 1.2rem;
+  gap: 1.8rem;
+  color: #555;
+  border: none;
+  border-radius: 1.5rem;
 }
 
 .search-area {
@@ -74,7 +91,7 @@ body {
 }
 
 .mail-labels {
-  padding: 0.2rem;
+  padding: 0.1rem;
 }
 
 .labels-list {
@@ -112,6 +129,18 @@ body {
   justify-content: space-between;
 }
 
+.top-part,
+.top-part-detail {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.top-part-detail {
+}
+
 .mail-container-top {
   /* margin-bottom: 4.2rem; */
   padding: 1.2rem;
@@ -135,6 +164,22 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 1.8rem 1.2rem;
+}
+
+.labels-list {
+  display: flex;
+  align-items: flex-start;
+}
+
+.label-list-detail,
+.add-labels {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.list-detail {
+  gap: 1.8rem;
 }
 
 .mails-list,
