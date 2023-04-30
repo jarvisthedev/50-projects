@@ -75,30 +75,74 @@ body {
 .add-labels {
 }
 
+.mail-container-head {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 1.6rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .mail-container {
-  /* background-color: #fff; */
+  background-color: #222;
+  border-radius: 1.6rem;
+}
+
+.mail-container-top,
+.mail-type {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
 }
 
 .mail-container-top {
+  /* margin-bottom: 4.2rem; */
+  padding: 1.2rem;
 }
 
 .mail-type {
 }
 
 .mail-type-list {
+  list-style-type: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .list-detail {
+  width: 24rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.8rem 1.2rem;
 }
 
-.mails-list {
+.mails-list,
+.holder {
+  list-style-type: none;
+  padding: 0 1.2rem;
 }
 
 .mail-detail {
 }
 
 .holder {
+  display: grid;
+  grid-template-columns: 24rem 1fr 3rem;
+  /* column-gap: ; */
 }
 
 .holder-detail {
+  padding: 0.5rem;
+}
+
+.hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(204, 204, 204, 0.5);
+  padding: 0;
 }
