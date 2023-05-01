@@ -208,3 +208,18 @@ body {
   border-top: 1px solid rgba(204, 204, 204, 0.5);
   padding: 0;
 }
+
+.icons {
+  width: 2.4rem;
+  color: #f7f7f7 !important;
+  fill: #f7f7f7 !important;
+  stroke: #f7f7f7 !important;
+  background-color: transparent;
+}
+
+.icons svg path {
+  fill: red;
+  -webkit-fill: red; /* for older versions of Safari and other WebKit browsers */
+  stroke: blue;
+  -webkit-stroke: blue; /* for older versions of Safari and other WebKit browsers */
+}
