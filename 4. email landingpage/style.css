@@ -67,15 +67,28 @@ body {
 .search-area {
 }
 
+.search-mail-text,
+.input-key,
+.gmail-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
 .mail-search {
-  padding: 1.6rem 2.4rem;
+  padding: 1.2rem 2.4rem;
   width: 71.5rem;
 
   border-radius: 1rem;
   border: none;
 
   background-color: #444;
-  color: #f7f7f7;
+  color: #e1dcdc;
+}
+
+.gmail-text {
+  font-size: 1.6rem;
 }
 
 .search-navigation {
@@ -209,17 +222,34 @@ body {
   padding: 0;
 }
 
-.icons {
+.svg-icon {
   width: 2.4rem;
-  color: #f7f7f7 !important;
-  fill: #f7f7f7 !important;
-  stroke: #f7f7f7 !important;
-  background-color: transparent;
+  /* color: #f7f7f7cd !important; */
+  /* fill: #f7f7f7 !important; */
+  /* stroke: #f7f7f7 !important; */
+  /* background-color: transparent; */
+
+  fill: red;
+  -webkit-fill: red;
+  stroke: blue;
+  -webkit-stroke: blue;
 }
 
-.icons svg path {
+.svg-icon svg {
   fill: red;
-  -webkit-fill: red; /* for older versions of Safari and other WebKit browsers */
+  -webkit-fill: red;
   stroke: blue;
-  -webkit-stroke: blue; /* for older versions of Safari and other WebKit browsers */
+  -webkit-stroke: blue;
+}
+
+.top-part {
+  font-size: 1rem;
+}
+
+.down-tri {
+  gap: 0;
+}
+
+.triangle {
+  width: 1.2rem !important;
 }
