@@ -76,6 +76,26 @@ body {
   gap: 1.8rem;
 }
 
+.gmail-logo {
+  justify-content: flex-start;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+
+.input-key {
+  gap: 0.8rem;
+}
+
+.svg-icon.gmail-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.svg-icon.menu {
+  height: 1.8rem;
+  width: 2.8rem;
+}
+
 .mail-search {
   padding: 1.2rem 2.4rem;
   width: 71.5rem;
@@ -101,7 +121,6 @@ body {
 }
 
 .container {
-  background-color: rgb(67, 135, 56);
 }
 
 .btn-compose {
@@ -110,7 +129,6 @@ body {
 
 .mail-labels {
   padding: 0.1rem 0.1rem 0.1rem 0;
-  background-color: rgb(160, 80, 80);
 }
 
 .labels-list {
@@ -131,23 +149,19 @@ body {
   border-radius: 0 10rem 10rem 0;
 }
 
-.labels-list .label-list-detail:nth-child(even) {
-  background-color: blue;
+.labels-list .label-list-detail:hover {
+  background-color: rgba(51, 51, 51, 0.95);
 }
 
-.add-labels {
+.labels-list .label-list-detail.active {
+  background-color: #444;
+}
+
+labels-list label-list-detail active .add-labels {
   margin-left: 3rem;
   justify-content: space-between;
 
   width: 20rem;
-}
-
-.mail-container-head {
-  background-color: rgba(51, 51, 51, 0.95);
-  padding: 1rem;
-  border-radius: 1.6rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .mail-container {
@@ -174,10 +188,14 @@ body {
 }
 
 .mail-container-top {
+  align-items: center;
   padding: 1.2rem;
+  border-radius: 1.6rem 1.6rem 0 0;
+  background-color: rgba(51, 51, 51, 0.95);
 }
 
 .mail-type {
+  background-color: rgba(51, 51, 51, 0.95);
 }
 
 .mail-type-list {
@@ -188,13 +206,19 @@ body {
   justify-content: space-around;
 }
 
+.mail-type-list .list-detail:hover {
+  background-color: #444;
+}
+
 .list-detail {
-  width: 24rem;
+  width: 23rem;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 1.8rem 1.2rem;
+  cursor: pointer;
+  font-size: 1.4rem;
 }
 
 .labels-list {
@@ -216,7 +240,9 @@ body {
 .mails-list,
 .holder {
   list-style-type: none;
-  padding: 0 1.2rem;
+  padding-right: 1.2rem;
+  font-size: 1.6rem;
+  color: rgba(225, 220, 220, 0.75);
 }
 
 .mail-detail {
@@ -260,8 +286,8 @@ body {
 }
 
 .svg-icon.keyboard {
-  width: 3rem;
-  height: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 .svg-icon.important,
@@ -272,7 +298,11 @@ body {
   width: 1.6rem;
 }
 
-.svg-icon.menu {
-  height: 3rem;
-  width: 3rem;
+.sender-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  padding-left: 1.2rem;
 }
