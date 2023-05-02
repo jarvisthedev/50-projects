@@ -13,7 +13,7 @@ body {
   background-color: rgba(0, 0, 0, 0.95);
   color: #f7f7f7;
 
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
   font-size: 1.8rem;
 }
 
@@ -101,25 +101,45 @@ body {
 }
 
 .container {
+  background-color: rgb(67, 135, 56);
+}
+
+.btn-compose {
+  margin: 0.5rem 0 1rem 1rem;
 }
 
 .mail-labels {
-  padding: 0.1rem;
+  padding: 0.1rem 0.1rem 0.1rem 0;
+  background-color: rgb(160, 80, 80);
 }
 
 .labels-list {
   list-style-type: none;
   flex-direction: column;
 
-  gap: 0.3rem;
-  margin-left: 2rem;
   margin-bottom: 1.2rem;
+  font-size: 1.6rem;
 }
 
-.label-list-detail {
+.labels-list .label-list-detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 24rem;
+  padding: 0.8rem 0.8rem 0.8rem 2.2rem;
+  border-radius: 0 10rem 10rem 0;
+}
+
+.labels-list .label-list-detail:nth-child(even) {
+  background-color: blue;
 }
 
 .add-labels {
+  margin-left: 3rem;
+  justify-content: space-between;
+
+  width: 20rem;
 }
 
 .mail-container-head {
@@ -138,7 +158,6 @@ body {
 .mail-container-top,
 .mail-type {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -155,7 +174,6 @@ body {
 }
 
 .mail-container-top {
-  /* margin-bottom: 4.2rem; */
   padding: 1.2rem;
 }
 
@@ -207,7 +225,6 @@ body {
 .holder {
   display: grid;
   grid-template-columns: 24rem 1fr 3rem;
-  /* column-gap: ; */
 }
 
 .holder-detail {
@@ -223,23 +240,11 @@ body {
 }
 
 .svg-icon {
-  width: 2.4rem;
-  /* color: #f7f7f7cd !important; */
-  /* fill: #f7f7f7 !important; */
-  /* stroke: #f7f7f7 !important; */
-  /* background-color: transparent; */
+  width: 1.8rem;
+  height: 1.8rem;
 
-  fill: red;
-  -webkit-fill: red;
-  stroke: blue;
-  -webkit-stroke: blue;
-}
-
-.svg-icon svg {
-  fill: red;
-  -webkit-fill: red;
-  stroke: blue;
-  -webkit-stroke: blue;
+  fill: #f7f7f7;
+  stroke: #f7f7f7;
 }
 
 .top-part {
@@ -251,5 +256,23 @@ body {
 }
 
 .triangle {
-  width: 1.2rem !important;
+  width: 1.2rem;
+}
+
+.svg-icon.keyboard {
+  width: 3rem;
+  height: 3rem;
+}
+
+.svg-icon.important,
+.svg-icon.starred,
+.svg-icon.chat,
+.svg-icon.draft,
+.svg-icon.down-arrow {
+  width: 1.6rem;
+}
+
+.svg-icon.menu {
+  height: 3rem;
+  width: 3rem;
 }
