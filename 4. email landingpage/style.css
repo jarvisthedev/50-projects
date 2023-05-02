@@ -15,15 +15,14 @@ body {
 
   padding: 1rem 1rem 1rem 0;
   font-size: 1.8rem;
+  overflow: hidden;
+  touch-action: none;
 }
 
 .header,
 .container {
   display: grid;
   grid-template-columns: 25rem 1fr;
-}
-
-.gmail-logo {
 }
 
 .tools {
@@ -50,9 +49,6 @@ body {
   font-size: 2.8rem;
 }
 
-.tools-detail {
-}
-
 .btn {
   align-items: center;
   font-size: 1.8rem;
@@ -62,9 +58,6 @@ body {
   color: #555;
   border: none;
   border-radius: 1.5rem;
-}
-
-.search-area {
 }
 
 .search-mail-text,
@@ -117,12 +110,6 @@ body {
   justify-content: space-between;
 }
 
-.mail-tools {
-}
-
-.container {
-}
-
 .btn-compose {
   margin: 0.5rem 0 1rem 1rem;
 }
@@ -157,7 +144,7 @@ body {
   background-color: #444;
 }
 
-labels-list label-list-detail active .add-labels {
+.add-labels {
   margin-left: 3rem;
   justify-content: space-between;
 
@@ -167,6 +154,10 @@ labels-list label-list-detail active .add-labels {
 .mail-container {
   background-color: rgba(34, 34, 34, 0.35);
   border-radius: 1.6rem;
+  /* overflow: auto; */
+
+  overflow-x: auto;
+  overflow-y: scroll;
 }
 
 .mail-container-top,
@@ -182,9 +173,6 @@ labels-list label-list-detail active .add-labels {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-}
-
-.top-part-detail {
 }
 
 .mail-container-top {
@@ -245,7 +233,8 @@ labels-list label-list-detail active .add-labels {
   color: rgba(225, 220, 220, 0.75);
 }
 
-.mail-detail {
+.mails-list {
+  /* overflow: scroll; */
 }
 
 .holder {

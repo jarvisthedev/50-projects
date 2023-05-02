@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  font-weight: 400;
+  background-color: #f7f7f7;
+}
+
+.container {
+  width: 60rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  margin: 5.6rem auto;
+
+  color: #f7f7f7;
+}
+
+.section,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+.section {
+}
