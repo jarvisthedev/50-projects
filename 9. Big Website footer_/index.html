@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Big Website footer_</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
@@ -19,7 +25,7 @@
               alt="location_svg"
             />
             <div class="list-content">
-              <div class="list-content-title">Find us</div>
+              <div class="list-content-title head--1">Find us</div>
               <div class="list-content-info">
                 1010 Avenue, sw 54321, chandigarh
               </div>
@@ -28,16 +34,15 @@
           <li class="header-list">
             <img class="svg-icon" src="icons/phone.svg" alt="phone_svg" />
             <div class="list-content">
-              <div class="list-content-title">Call us</div>
+              <div class="list-content-title head--1">Call us</div>
               <div class="list-content-info">9876543210 0</div>
             </div>
           </li>
           <li class="header-list">
             <img class="svg-icon" src="icons/mail-open.svg" alt="mail_svg" />
 
-            </svg>
             <div class="list-content">
-              <div class="list-content-title">Mail us</div>
+              <div class="list-content-title head--1">Mail us</div>
               <div class="list-content-info">mail@info.com</div>
             </div>
           </li>
@@ -45,7 +50,11 @@
         <hr class="hr" />
         <div class="footer-body">
           <div class="logo-design">
-            <p class="logo-design-img">LOGO</p>
+            <img
+              class="logo-design-img"
+              src="icons/ak-logo.png"
+              alt="ak Logo"
+            />
             <span class="logo-design-text"
               >Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
               eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem
@@ -53,17 +62,40 @@
             >
 
             <div class="social-media">
-              <div class="social-title">Follow us</div>
+              <div class="social-title head--1">Follow us</div>
               <ul class="social-media-logos">
-                <li><a class="link media-logo" href="#">Fac</a></li>
-                <li><a class="link media-logo" href="#">Twi</a></li>
-                <li><a class="link media-logo" href="#">G+</a></li>
+                <li>
+                  <a class="link media-logo" href="#"
+                    ><img
+                      class="social-logo facebook"
+                      src="icons/facebook.svg"
+                      alt="facebook_logo"
+                  /></a>
+                </li>
+                <li>
+                  <a class="link media-logo" href="#"
+                    ><img
+                      class="social-logo"
+                      src="icons/twitter.svg"
+                      alt="twitter_logo"
+                  /></a>
+                </li>
+                <li>
+                  <a class="link media-logo" href="#"
+                    ><img
+                      class="social-logo"
+                      src="icons/google-plus.svg"
+                      alt="google_plus_logo"
+                  /></a>
+                </li>
               </ul>
             </div>
           </div>
 
           <div class="useful-links">
-            <div class="useful-links-text">Useful Links</div>
+            <div class="useful-links-text head--1 bottom-line">
+              Useful Links
+            </div>
             <ul class="links-list">
               <li><a class="link link-detail" href="#">Home</a></li>
               <li><a class="link link-detail" href="#">About</a></li>
@@ -79,35 +111,41 @@
           </div>
 
           <div class="subscribe-newLater">
-            <div class="subscribe-head">Subscribe</div>
+            <div class="subscribe-head head--1 bottom-line">Subscribe</div>
             <div class="subscribe-text">
               Don’t miss to subscribe to our new feeds, kindly fill the form
               below.
             </div>
             <div class="mail-input">
-              <input class="subscribe-input" type="text" />
-              <img
-                class="svg-icon"
-                src="icons/sent-mail.svg"
-                alt="Send_mail_logo"
+              <input
+                class="subscribe-input"
+                placeholder="Email Address"
+                type="text"
               />
+              <div class="subscribe-mail-logo">
+                <img
+                  class="svg-icon"
+                  src="icons/sent-mail.svg"
+                  alt="Send_mail_logo"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <span class="footer-bottom-text"
-            >Copyright © 2018, All Right Reserved
-            <a class="link" href="#">Anup</a>
-          </span>
-          <ul class="summary-list">
-            <li><a class="link summary-list-details" href="#">Home</a></li>
-            <li><a class="link summary-list-details" href="#">Terms</a></li>
-            <li><a class="link summary-list-details" href="#">Privacy</a></li>
-            <li><a class="link summary-list-details" href="#">Policy</a></li>
-            <li><a class="link summary-list-details" href="#">Contact</a></li>
-          </ul>
-        </div>
       </section>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-text"
+        >Copyright © 2018, All Right Reserved
+        <a class="link" href="#">Anup</a>
+      </span>
+      <ul class="summary-list">
+        <li><a class="link summary-list-details" href="#">Home</a></li>
+        <li><a class="link summary-list-details" href="#">Terms</a></li>
+        <li><a class="link summary-list-details" href="#">Privacy</a></li>
+        <li><a class="link summary-list-details" href="#">Policy</a></li>
+        <li><a class="link summary-list-details" href="#">Contact</a></li>
+      </ul>
     </div>
   </body>
 </html>
