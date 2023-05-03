@@ -13,26 +13,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 400;
-  background-color: #f7f7f7;
-}
-
-.container {
-  width: 60rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  margin: 5.6rem auto;
-
+  background-color: #111;
   color: #f7f7f7;
 }
 
-.section,
+.container {
+  width: 120rem;
+  margin: 5.6rem auto;
+  padding: 1.2rem;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-direction: column; */
 }
 
-.section {
+.svg-icon {
+  width: 4.5rem;
+  width: 4.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link:link,
+.link:active {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:visited {
+  color: orangered;
+  text-decoration: underline;
 }
