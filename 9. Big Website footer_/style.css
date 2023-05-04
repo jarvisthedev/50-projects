@@ -20,11 +20,46 @@ body {
   flex-direction: column;
 }
 
+/* ///////////////////// */
+/* REUSABLE CODE */
+/* ////////////////// */
+
 .head--1 {
   font-size: 2.4rem;
   font-weight: 600;
   color: #f7f7f7;
 }
+
+.subscribe-mail-logo .svg-icon {
+  width: 2.8rem;
+}
+
+.svg-icon {
+  width: 3.6rem;
+  width: 3.6rem;
+  stroke: orangered;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link:link,
+.link:active {
+  color: rgba(247, 247, 247, 0.7);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:visited {
+  color: orangered;
+  text-decoration: underline;
+}
+
+/* ///////////////////// */
+/* GENERAL CODE */
+/* ////////////////// */
 
 .container {
   width: 120rem;
@@ -38,7 +73,7 @@ body {
   padding: 1.2rem;
 }
 
-.footer-header {
+.footer-head {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -155,33 +190,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: orangered;
-}
-
-.subscribe-mail-logo .svg-icon {
-  width: 2.8rem;
-}
-
-.svg-icon {
-  width: 3.6rem;
-  width: 3.6rem;
-  stroke: orangered;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.link:link,
-.link:active {
-  color: rgba(247, 247, 247, 0.7);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.link:hover,
-.link:visited {
-  color: orangered;
-  text-decoration: underline;
 }
 
 /* ////////////////// */

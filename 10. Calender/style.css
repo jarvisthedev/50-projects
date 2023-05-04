@@ -22,8 +22,7 @@ body,
 
 .container {
   padding: 2rem;
-  margin: 0 auto;
-  font-weight: bold;
+  margin: 5rem auto;
 }
 
 .grid-list {
