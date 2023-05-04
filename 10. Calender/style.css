@@ -15,7 +15,9 @@ body,
   align-items: center;
   justify-content: center;
   font-size: 2.4rem;
-  background-color: #f8f8f8;
+  font-weight: 400;
+  background-color: #111;
+  color: #f7f7f7;
 }
 
 .container {
@@ -26,10 +28,11 @@ body,
 
 .grid-list {
   list-style-type: none;
+
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  row-gap: 0.4rem;
-  column-gap: 0.4rem;
+  row-gap: 0.2rem;
+  column-gap: 0.2rem;
   padding: 1.4rem;
 }
 
@@ -45,43 +48,42 @@ body,
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-color: blue;
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 2.4rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
 }
 
 .today-weekday {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 
 .today-date {
-  font-size: 3rem;
-}
-
-.header-day {
+  font-size: 2.2rem;
 }
 
 .calender-nav {
-  background-color: maroon;
-  padding: 1rem 1.8rem;
+  padding: 0.5rem 1.8rem 0.5rem 0.3rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.4rem;
+}
+
+.calender-nav-detail.current-month {
+  font-size: 1.8rem;
 }
 
 .icon {
-  background-color: rgb(123, 161, 156);
-  padding: 0.6rem;
+  font-size: 2.4rem;
+  padding: 0.8rem;
   border-radius: 50%;
   cursor: pointer;
+
+  transition: all 0.3s;
 }
 
-.current-month {
-}
-
-.week-days {
-  background-color: rgb(153, 172, 57);
+.icon:hover {
+  background-color: rgba(247, 247, 247, 0.3);
 }
 
 .week-day,
@@ -94,27 +96,32 @@ body,
   padding: 0.8rem;
 }
 
-.week-day {
-  background-color: violet;
+.grid-list.week-days {
+  padding: 0.2rem 1.2rem;
 }
 
-.days-list {
-  background-color: brown;
+.grid-list.days-list {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.4rem;
 }
 
 .day-details {
-  background-color: yellow;
   border-radius: 10rem;
-  height: 5rem;
-  border: 3px solid black;
+  height: 4.2rem;
+  width: 4.2rem;
 }
 
-.prev-month-day {
+.day-details:hover {
+  border: 2px solid blue;
+  background-color: lightblue;
 }
 
+.day-details.current-day {
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.prev-month-day,
 .next-month-day {
-}
-
-.current-day {
-  background-color: green;
+  font-weight: #f0f0f0;
 }
