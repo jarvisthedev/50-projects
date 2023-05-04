@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script
       type="module"
@@ -20,16 +26,16 @@
     <div class="container">
       <div class="calender">
         <div class="header">
-          <div class="header-day">Thursday</div>
-          <div class="header-day">May 4 2024</div>
+          <div class="header-day today-weekday">Thursday</div>
+          <div class="header-day today-date">May 4 2024</div>
         </div>
         <ul class="cal-list calender-nav">
           <li class="calender-nav-detail left-arrow">
-            <ion-icon name="chevron-back-outline"></ion-icon>
+            <ion-icon class="icon" name="chevron-back-outline"></ion-icon>
           </li>
           <li class="calender-nav-detail current-month">May</li>
           <li class="calender-nav-detail right-arrow">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
+            <ion-icon class="icon" name="chevron-forward-outline"></ion-icon>
           </li>
         </ul>
 
