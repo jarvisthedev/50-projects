@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -25,11 +25,11 @@
   <body>
     <div class="container">
       <div class="calender">
-        <div class="header">
+        <div class="header flex">
           <div class="header-day today-weekday">Thursday</div>
           <div class="header-day today-date">May 4 2024</div>
         </div>
-        <ul class="cal-list calender-nav">
+        <ul class="calender-nav-list flex">
           <li class="calender-nav-detail left-arrow">
             <ion-icon class="icon" name="chevron-back-outline"></ion-icon>
           </li>
@@ -40,58 +40,58 @@
         </ul>
 
         <ul class="grid-list week-days">
-          <li class="week-day">Sun</li>
-          <li class="week-day">Mon</li>
-          <li class="week-day">Teu</li>
-          <li class="week-day">Wed</li>
-          <li class="week-day">Thu</li>
-          <li class="week-day">Fri</li>
-          <li class="week-day">Sat</li>
+          <li class="week-day flex">Sun</li>
+          <li class="week-day flex">Mon</li>
+          <li class="week-day flex">Teu</li>
+          <li class="week-day flex">Wed</li>
+          <li class="week-day flex">Thu</li>
+          <li class="week-day flex">Fri</li>
+          <li class="week-day flex">Sat</li>
         </ul>
 
         <ul class="grid-list days-list">
-          <li class="day-details prev-month-day">30</li>
-          <li class="day-details">01</li>
-          <li class="day-details">02</li>
-          <li class="day-details">03</li>
-          <li class="day-details current-day">04</li>
-          <li class="day-details">05</li>
-          <li class="day-details">06</li>
-          <li class="day-details">07</li>
-          <li class="day-details">08</li>
-          <li class="day-details">09</li>
-          <li class="day-details">10</li>
-          <li class="day-details">11</li>
-          <li class="day-details">12</li>
-          <li class="day-details">13</li>
-          <li class="day-details">14</li>
-          <li class="day-details">15</li>
-          <li class="day-details">16</li>
-          <li class="day-details">17</li>
-          <li class="day-details">18</li>
-          <li class="day-details">19</li>
-          <li class="day-details">20</li>
-          <li class="day-details">21</li>
-          <li class="day-details">22</li>
-          <li class="day-details">23</li>
-          <li class="day-details">24</li>
-          <li class="day-details">25</li>
-          <li class="day-details">26</li>
-          <li class="day-details">27</li>
-          <li class="day-details">28</li>
-          <li class="day-details">29</li>
-          <li class="day-details">30</li>
-          <li class="day-details">31</li>
-          <li class="day-details next-month-day">01</li>
-          <li class="day-details next-month-day">02</li>
-          <li class="day-details next-month-day">03</li>
-          <li class="day-details next-month-day">04</li>
-          <li class="day-details next-month-day">05</li>
-          <li class="day-details next-month-day">06</li>
-          <li class="day-details next-month-day">07</li>
-          <li class="day-details next-month-day">08</li>
-          <li class="day-details next-month-day">09</li>
-          <li class="day-details next-month-day">10</li>
+          <li class="day-details flex prev-month-day">30</li>
+          <li class="day-details flex">01</li>
+          <li class="day-details flex">02</li>
+          <li class="day-details flex">03</li>
+          <li class="day-details flex current-day">04</li>
+          <li class="day-details flex">05</li>
+          <li class="day-details flex">06</li>
+          <li class="day-details flex day-clicked">07</li>
+          <li class="day-details flex">08</li>
+          <li class="day-details flex">09</li>
+          <li class="day-details flex">10</li>
+          <li class="day-details flex">11</li>
+          <li class="day-details flex">12</li>
+          <li class="day-details flex">13</li>
+          <li class="day-details flex">14</li>
+          <li class="day-details flex">15</li>
+          <li class="day-details flex">16</li>
+          <li class="day-details flex">17</li>
+          <li class="day-details flex">18</li>
+          <li class="day-details flex">19</li>
+          <li class="day-details flex">20</li>
+          <li class="day-details flex">21</li>
+          <li class="day-details flex">22</li>
+          <li class="day-details flex">23</li>
+          <li class="day-details flex">24</li>
+          <li class="day-details flex">25</li>
+          <li class="day-details flex">26</li>
+          <li class="day-details flex">27</li>
+          <li class="day-details flex">28</li>
+          <li class="day-details flex">29</li>
+          <li class="day-details flex">30</li>
+          <li class="day-details flex">31</li>
+          <li class="day-details flex next-month-day">01</li>
+          <li class="day-details flex next-month-day">02</li>
+          <li class="day-details flex next-month-day">03</li>
+          <li class="day-details flex next-month-day">04</li>
+          <li class="day-details flex next-month-day">05</li>
+          <li class="day-details flex next-month-day">06</li>
+          <li class="day-details flex next-month-day">07</li>
+          <li class="day-details flex next-month-day">08</li>
+          <li class="day-details flex next-month-day">09</li>
+          <li class="day-details flex next-month-day">10</li>
         </ul>
       </div>
     </div>

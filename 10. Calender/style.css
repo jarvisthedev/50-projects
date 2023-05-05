@@ -9,6 +9,9 @@ html {
   font-size: 62.5%;
 }
 
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
 body,
 .container {
   display: flex;
@@ -16,87 +19,92 @@ body,
   justify-content: center;
   font-size: 2.4rem;
   font-weight: 400;
-  background-color: #111;
+  background-color: #1a1a1a;
   color: #f7f7f7;
 }
 
 .container {
-  padding: 2rem;
   margin: 5rem auto;
+  border: 1px solid #888888;
+  border-radius: 0.5rem;
 }
 
+.header {
+  flex-direction: column;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  background-color: #3131f2;
+}
+
+/* ////////////////////////// */
+/* REUSABLE STYLE */
+/* ////////////////////////// */
 .grid-list {
   list-style-type: none;
 
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  row-gap: 0.2rem;
-  column-gap: 0.2rem;
+  row-gap: 0.3rem;
+  column-gap: 0.3rem;
   padding: 1.4rem;
 }
 
-.cal-list {
-  list-style-type: none;
+.flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.header {
-  display: flex;
-  align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
-  padding: 0.1rem 2.4rem;
-  font-weight: 400;
-  margin-bottom: 1.2rem;
 }
 
-.today-weekday {
-  font-size: 1.8rem;
-}
-
-.today-date {
-  font-size: 2.2rem;
-}
-
-.calender-nav {
-  padding: 0.5rem 1.8rem 0.5rem 0.3rem;
-
-  display: flex;
-  align-items: center;
+/* ////////////////////////// */
+/* SYSTEMATIC STYLE */
+/* ////////////////////////// */
+.calender-nav-list {
+  list-style-type: none;
+  padding: 0.2rem;
   justify-content: space-between;
 }
 
 .calender-nav-detail.current-month {
+  font-size: 1.6rem;
+}
+
+.today-weekday {
+  font-size: 1.6rem;
+}
+
+.today-date {
   font-size: 1.8rem;
 }
 
 .icon {
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   padding: 0.8rem;
   border-radius: 50%;
+
   cursor: pointer;
-
   transition: all 0.3s;
-}
-
-.icon:hover {
-  background-color: rgba(247, 247, 247, 0.3);
 }
 
 .week-day,
 .day-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: 0.8rem;
+  transition: all 0.3s;
+}
+
+.day-details:hover,
+.icon:hover {
+  background-color: #333;
+}
+
+.day-details {
+  border-radius: 10rem;
+  height: 4.2rem;
 }
 
 .grid-list.week-days {
-  padding: 0.2rem 1.2rem;
+  padding: 0;
+  color: #888888;
 }
 
 .grid-list.days-list {
@@ -104,23 +112,18 @@ body,
   font-size: 1.4rem;
 }
 
-.day-details {
-  border-radius: 10rem;
-  height: 4.2rem;
-  width: 4.2rem;
-}
-
-.day-details:hover {
-  border: 2px solid blue;
-  background-color: lightblue;
+.day-clicked,
+.day-clicked:hover {
+  border: 2px solid #5f5ff5;
+  background-color: #333333;
 }
 
 .day-details.current-day {
-  background-color: blue;
-  border: 2px solid blue;
+  border: 2px solid #3131f2;
+  background-color: #3131f2;
 }
 
 .prev-month-day,
 .next-month-day {
-  font-weight: #f0f0f0;
+  color: #888888;
 }
