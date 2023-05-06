@@ -4,6 +4,9 @@ const todayDate = document.querySelector(".today-date");
 const todayMonth = document.querySelector(".current-month");
 const daysList = document.querySelector(".days-list");
 
+let currentMonth = 0;
+let currentYear = 0;
+
 function update_header(input) {
   const newDate = input;
   const newDate_year = newDate.getFullYear();
@@ -14,11 +17,6 @@ function update_header(input) {
   const newDate_day = new Intl.DateTimeFormat("en-US", {
     weekday: "long",
   }).format(newDate);
-
-  // console.log(newDate_month);
-  // console.log(newDate_day);
-  // console.log(newDate_year);
-  // console.log(newDate_date);
 
   todayMonth.textContent = newDate_month;
   todayWeekday.textContent = newDate_day;
@@ -43,39 +41,78 @@ container.addEventListener("click", function (e) {
   }
 });
 
-// Month in JavaScript is 0-indexed (January is 0, February is 1, etc),
-// but by using 0 as the day it will give us the last day of the prior
-// month. So passing in 1 as the month number will return the last day
-// of January, not February
+currentMonth = 3;
+currentYear = 2009;
+
+// currentMonth=currentMonth===1?currentMonth=13
+
+// // Previous month days
+function lastMonth_days(date) {
+  const previous_month = date;
+  let days = previous_month.getDay();
+  console.log(previous_month);
+  console.log(previous_month.getDay());
+
+  const firstDate_previous_month = new Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+  }).format(previous_month);
+
+  console.log(firstDate_previous_month);
+
+  daysList.innerHTML = `
+
+  `;
+
+  days = days === 0 ? 7 : days;
+  console.log(days);
+  for (let i = 0; i < days; i++) {
+    const html = `<li class="day-details flex prev-month-day">30</li>`;
+    daysList.insertAdjacentHTML("beforeend", html);
+
+    console.log("previous month");
+  }
+}
+// month/date/year
+lastMonth_days(new Date(`${currentMonth - 1}/01/2023`));
+
+// Current month days
 function daysInMonth(month, year) {
   return new Date(year, month, 0).getDate();
 }
 
-// July
-let today_totalDays = daysInMonth(7, 2009); // 31
-// February
-today_totalDays = daysInMonth(2, 2009); // 28
-today_totalDays = daysInMonth(2, 2008); // 29
+function currentMonth_days(days) {
+  let totalDays = days;
 
-// month/date/year
-const newDat_ex = new Date("05/01/2023");
-console.log(newDat_ex);
-console.log(newDat_ex.getDay());
+  for (let i = 1; i <= totalDays; i++) {
+    // str1.padStart(2, '0')
+    const html = `<li class="day-details flex">${i
+      .toString()
+      .padStart(2, 0)}</li>`;
+    daysList.insertAdjacentHTML("beforeend", html);
 
-const newDate_day_ex = new Intl.DateTimeFormat("en-US", {
-  weekday: "long",
-}).format(newDat_ex);
-
-console.log(newDate_day_ex);
-
-// daysList.innerHTML = `
-
-// `;
-
-for (let i = 0; i < newDat_ex.getDay(); i++) {
-  console.log(1);
+    console.log("Current month");
+  }
 }
 
-for (let i = 1; i <= today_totalDays; i++) {
-  console.log(1);
+currentMonth_days(daysInMonth(currentMonth, currentYear)); // 29
+
+// Current month days
+function nextMonth_days() {
+  // Current month days
+  const countDays = document.querySelectorAll(".day-details").length;
+  const remainingSlots = 42 - countDays;
+
+  for (let i = 1; i <= remainingSlots; i++) {
+    // str1.padStart(2, '0')
+    const html = `<li class="day-details flex next-month-day">${i
+      .toString()
+      .padStart(2, 0)}</li>`;
+    daysList.insertAdjacentHTML("beforeend", html);
+
+    console.log("next month");
+  }
+  console.log(countDays);
+  console.log(remainingSlots);
 }
+
+nextMonth_days();
