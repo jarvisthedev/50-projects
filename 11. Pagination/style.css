@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+body,
+.container {
+  font-size: 2.4rem;
+  font-weight: 400;
+  background-color: #f7f7f7;
+}
+
+.container {
+  margin: 10rem auto;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  padding: 2.4rem;
+  gap: 4rem;
+}
+
+.icon {
+  font-size: 2.4rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  background-color: #333;
+}
+
+/* ////////////////////////// */
+/* REUSABLE STYLE */
+/* ////////////////////////// */
+.flx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ////////////////////////// */
+/* SYSTEMATIC FLOW STYLE */
+/* ////////////////////////// */
+.pagination {
+  margin-bottom: 10rem;
+}
+
+.pages-list {
+  list-style-type: none;
+}
+
+.page-detail {
+  text-decoration: none;
+  color: #111;
+  padding: 1rem;
+}
+
+.active {
+}
+
+.pagination-helpers {
+  justify-content: space-between;
+  background-color: rgb(175, 79, 79);
+  gap: 10rem;
+}
+
+.btn-input {
+}
+
+.btn {
+  width: 5rem;
+}
+
+.helper-details {
+  font-size: 1.8rem;
+}
