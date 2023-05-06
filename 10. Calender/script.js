@@ -4,100 +4,87 @@ const todayDate = document.querySelector(".today-date");
 const todayMonth = document.querySelector(".current-month");
 const daysList = document.querySelector(".days-list");
 
-let currentMonth = 0;
-let currentYear = 0;
+let currentMonth = new Date().getMonth() + 1;
+let currentYear = new Date().getFullYear();
+
+// Days Available in a month
+function daysInMonth(month, year) {
+  return new Date(year, month, 0).getDate();
+}
 
 function update_header(input) {
-  const newDate = input;
-  const newDate_year = newDate.getFullYear();
-  const newDate_date = newDate.getDate();
+  const newDate_year = input.getFullYear();
+  const newDate_date = input.getDate();
   const newDate_month = new Intl.DateTimeFormat("en-US", {
     month: "long",
-  }).format(newDate);
+  }).format(input);
   const newDate_day = new Intl.DateTimeFormat("en-US", {
     weekday: "long",
-  }).format(newDate);
+  }).format(input);
 
   todayMonth.textContent = newDate_month;
   todayWeekday.textContent = newDate_day;
   todayDate.textContent = `${newDate_month} ${newDate_date} ${newDate_year}`;
 }
 
-update_header(new Date());
-
-setInterval(() => {
-  update_header(new Date());
-}, 1000);
-
 container.addEventListener("click", function (e) {
-  const icon = e.target.classList.contains("icon");
-  const dayClicked = e.target.classList.contains("day-details");
-  if (icon) {
-    console.log("Icon clicked");
+  const list = e.target.classList;
+  if (list.contains("left-arrow") || list.contains("prev-month-day"))
+    currentMonth -= 1;
+  if (list.contains("right-arrow") || list.contains("next-month-day"))
+    currentMonth += 1;
+
+  if (currentMonth === 0) {
+    currentMonth = 12;
+    currentYear -= 1;
+  }
+  if (currentMonth === 13) {
+    currentMonth = 1;
+    currentYear += 1;
   }
 
-  if (dayClicked) {
-    console.log("Day clicked");
-  }
+  allFuctions_helper();
 });
 
-currentMonth = 2;
-currentYear = 2023;
-
-// // Previous month days
 function lastMonth_days(date) {
   let currMonth = date.getMonth();
   let prevMonth = currMonth - 1;
 
   let days = date.getDay();
-
-  console.log(date);
-  console.log(date.getDay());
   date = new Date(currentYear, prevMonth);
-
   let prevMonth_days = daysInMonth(prevMonth + 1, currentYear);
-  let reverse_lastMonth_days = prevMonth_days - days + 1;
-
-  console.log(`${prevMonth_days} month days`);
-  console.log(`${prevMonth + 1} previous month`);
-  console.log(`${currMonth + 1} current month`);
 
   daysList.innerHTML = ``;
 
   days = days === 0 ? 7 : days;
-  console.log(days);
+  let lastDays = prevMonth_days - days + 1;
   for (let i = 0; i < days; i++) {
-    const html = `<li class="day-details flex prev-month-day">${reverse_lastMonth_days}</li>`;
+    const html = `<li class="day-details flex prev-month-day">${lastDays}</li>`;
     daysList.insertAdjacentHTML("beforeend", html);
-    reverse_lastMonth_days += 1;
-
-    console.log("previous month");
+    lastDays += 1;
   }
-}
-// month/date/year
-lastMonth_days(new Date(`${currentMonth}/01/${currentYear}`));
-
-// Current month days
-function daysInMonth(month, year) {
-  return new Date(year, month, 0).getDate();
 }
 
 function currentMonth_days(days) {
-  let totalDays = days;
+  let year = new Date(`${currentMonth}/01/${currentYear}`);
+  const todaysYear = new Date();
 
-  for (let i = 1; i <= totalDays; i++) {
+  for (let i = 1; i <= days; i++) {
     const html = `<li class="day-details flex">${i
       .toString()
       .padStart(2, 0)}</li>`;
     daysList.insertAdjacentHTML("beforeend", html);
-
-    console.log("Current month");
   }
+
+  const newDate_month = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+  }).format(year);
+  todayMonth.textContent =
+    currentYear !== todaysYear.getFullYear()
+      ? `${newDate_month} ${currentYear}`
+      : newDate_month;
 }
 
-currentMonth_days(daysInMonth(currentMonth, currentYear));
-
-// Current month days
 function nextMonth_days() {
   const countDays = document.querySelectorAll(".day-details").length;
   const remainingSlots = 42 - countDays;
@@ -107,11 +94,19 @@ function nextMonth_days() {
       .toString()
       .padStart(2, 0)}</li>`;
     daysList.insertAdjacentHTML("beforeend", html);
-
-    console.log("next month");
   }
-  console.log(countDays);
-  console.log(remainingSlots);
 }
 
-nextMonth_days();
+function allFuctions_helper() {
+  lastMonth_days(new Date(`${currentMonth}/01/${currentYear}`));
+  currentMonth_days(daysInMonth(currentMonth, currentYear));
+  nextMonth_days();
+}
+
+setInterval(() => {
+  update_header(new Date());
+  allFuctions_helper();
+}, 1000 * 60 * 60);
+
+update_header(new Date());
+allFuctions_helper();
