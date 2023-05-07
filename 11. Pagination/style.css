@@ -67,9 +67,7 @@ body,
 }
 
 .page-detail:link,
-.page-detail:visited,
-.dots-detail:link,
-.dots-detail:visited {
+.page-detail:visited {
   text-decoration: none;
   color: #333;
   width: 4.6rem;
@@ -81,8 +79,7 @@ body,
 
 .page-detail:hover,
 .page-detail:active,
-.dots-detail:hover,
-.dots-detail:active,
+.page-dots:hover,
 .current-page {
   background-color: #8080ff;
 }
@@ -94,7 +91,7 @@ body,
 .page-dots {
   padding: 0.7rem;
   width: 4rem;
-  border-radius: 50%;
+  border-radius: 0.9rem;
 }
 
 .dots {
@@ -103,7 +100,7 @@ body,
   left: -5.5rem;
 }
 
-.dots-list .dots-detail {
+.dots-list .page-detail {
   font-size: 1.8rem;
   width: 4rem;
 }
@@ -118,6 +115,7 @@ body,
   list-style-type: none;
   border: 1px solid rgba(0, 0, 0, 0.4);
   position: relative;
+  border-radius: 0.5rem;
 }
 
 .dots-list::before {
