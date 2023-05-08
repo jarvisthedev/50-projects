@@ -3,6 +3,7 @@ const todayWeekday = document.querySelector(".today-weekday");
 const todayDate = document.querySelector(".today-date");
 const todayMonth = document.querySelector(".current-month");
 const daysList = document.querySelector(".days-list");
+const dayDetails = document.querySelectorAll(".day-details");
 
 let currentMonth = new Date().getMonth() + 1;
 let currentYear = new Date().getFullYear();
@@ -26,25 +27,6 @@ function update_header(input) {
   todayWeekday.textContent = newDate_day;
   todayDate.textContent = `${newDate_month} ${newDate_date} ${newDate_year}`;
 }
-
-container.addEventListener("click", function (e) {
-  const list = e.target.classList;
-  if (list.contains("left-arrow") || list.contains("prev-month-day"))
-    currentMonth -= 1;
-  if (list.contains("right-arrow") || list.contains("next-month-day"))
-    currentMonth += 1;
-
-  if (currentMonth === 0) {
-    currentMonth = 12;
-    currentYear -= 1;
-  }
-  if (currentMonth === 13) {
-    currentMonth = 1;
-    currentYear += 1;
-  }
-
-  allFuctions_helper();
-});
 
 function lastMonth_days(date) {
   let currMonth = date.getMonth();
@@ -76,6 +58,22 @@ function currentMonth_days(days) {
     daysList.insertAdjacentHTML("beforeend", html);
   }
 
+  if (click) {
+    for (let i = 0; i < dayDetails.length; i++) {
+      if (
+        !dayDetails[i].classList.contains("prev-month-day") &&
+        !dayDetails[i].classList.contains("next-month-day") &&
+        dayDetails[i].textContent === date
+      ) {
+        dayDetails[i].classList.add("day-clicked");
+        dayDetails[i].classList.add("current-day");
+        console.log(2121221121212);
+        console.log(dayDetails[i]);
+      }
+    }
+    console.log(date);
+  }
+
   const newDate_month = new Intl.DateTimeFormat("en-US", {
     month: "long",
   }).format(year);
@@ -103,10 +101,63 @@ function allFuctions_helper() {
   nextMonth_days();
 }
 
+let click = false;
+let date = 0;
+console.log(date);
+
+function clickedDay_helper(dayClick) {
+  // const dayClick=document.querySelector('date')
+  if (
+    !dayClick.classList.contains("prev-month-day") &&
+    !dayClick.classList.contains("next-month-day")
+  )
+    return;
+  date = dayClick.textContent;
+  console.log(date);
+
+  for (let i = 0; i < dayDetails.length; i++) {
+    if (
+      !dayDetails[i].classList.contains("prev-month-day") &&
+      !dayDetails[i].classList.contains("next-month-day") &&
+      dayDetails[i].textContent === date
+    ) {
+      // dayDetails[i].classList.add("day-clicked");
+      console.log(2121221121212);
+      click = true;
+    }
+  }
+}
+
+container.addEventListener("click", function (e) {
+  const list = e.target;
+  if (
+    list.classList.contains("left-arrow") ||
+    list.classList.contains("prev-month-day")
+  )
+    currentMonth -= 1;
+
+  if (
+    list.classList.contains("right-arrow") ||
+    list.classList.contains("next-month-day")
+  )
+    currentMonth += 1;
+  if (currentMonth === 0) {
+    currentMonth = 12;
+    currentYear -= 1;
+  }
+  if (currentMonth === 13) {
+    currentMonth = 1;
+    currentYear += 1;
+  }
+
+  allFuctions_helper();
+  clickedDay_helper(list);
+});
+
+update_header(new Date());
+allFuctions_helper();
+
 setInterval(() => {
   update_header(new Date());
   allFuctions_helper();
 }, 1000 * 60 * 60);
-
-update_header(new Date());
-allFuctions_helper();

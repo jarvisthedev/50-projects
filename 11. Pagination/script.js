@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-const pageDots = document.querySelector(".page-dots");
 const dots = document.querySelector(".dots");
 const icons = document.querySelectorAll(".icon");
 const pagesList = document.querySelector(".pages-list");
@@ -32,26 +31,21 @@ container.addEventListener("click", function (e) {
   e.preventDefault();
   const clicked = e.target;
 
-  if (clicked.classList.contains("page-dots")) {
-    dots.classList.toggle("hidden");
-  }
+  if (clicked === icons[0] || clicked === icons[1]) currentPage_func(clicked);
+  if (clicked.classList.contains("page-dots")) dots.classList.toggle("hidden");
 
-  if (clicked.classList.contains("page-detail")) {
+  if (clicked.classList.contains("page-detail"))
     for (let i = 0; i < pageDetails.length; i++) {
       pageDetails[i].classList.remove("current-page");
+      clicked.classList.add("current-page");
     }
-    clicked.classList.add("current-page");
+
+  for (let i = 0; i < pageDetails.length; i++) {
+    if (
+      7 < Number(pageDetails[i].textContent) &&
+      Number(pageDetails[i].textContent) < 17 &&
+      pageDetails[i].classList.contains("current-page")
+    )
+      dots.classList.remove("hidden");
   }
-
-  if (clicked === icons[0] || clicked === icons[1]) currentPage_func(clicked);
-
-  // for (let i = 0; i < pageDetails.length; i++) {
-  //   if (
-  //     7 < Number(pageDetails[i].textContent) &&
-  //     Number(pageDetails[i].textContent) < 17 &&
-  //     pageDetails[i].classList.contains("current-page")
-  //   )
-  //     dots.classList.remove("hidden");
-  //   else dots.classList.add("hidden");
-  // }
 });
