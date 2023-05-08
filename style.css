@@ -28,6 +28,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* background: #000; */
 }
 
 .logo {
@@ -120,8 +121,12 @@ body {
 /* ///////////////////////////////// */
 /* SECTION-PROJECT */
 /* //////////////////////////////// */
-.section-projects {
+.section-hero {
   background-color: #f7f7f7;
+}
+
+.hero {
+  height: 100vh;
 }
 
 .container {
