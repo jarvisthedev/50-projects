@@ -14,12 +14,6 @@ function currentPage_func(icon) {
       valueinput = Number(valueinput);
     }
   }
-  // for (let i = 0; i < pageDetails.length; i++) {
-  //   if (pageDetails[i].textContent === (valueinput + 1).toString()) {
-  //     pageDetails[i].classList.add("current-page");
-  //     pageDetails[i - 1].classList.remove("current-page");
-  //   }
-  // }
 
   for (let i = 0; i < pageDetails.length; i++) {
     if (
@@ -43,10 +37,21 @@ container.addEventListener("click", function (e) {
   }
 
   if (clicked.classList.contains("page-detail")) {
-    console.log("page clicked");
+    for (let i = 0; i < pageDetails.length; i++) {
+      pageDetails[i].classList.remove("current-page");
+    }
+    clicked.classList.add("current-page");
   }
 
   if (clicked === icons[0] || clicked === icons[1]) currentPage_func(clicked);
-});
 
-console.log(pageDetails);
+  // for (let i = 0; i < pageDetails.length; i++) {
+  //   if (
+  //     7 < Number(pageDetails[i].textContent) &&
+  //     Number(pageDetails[i].textContent) < 17 &&
+  //     pageDetails[i].classList.contains("current-page")
+  //   )
+  //     dots.classList.remove("hidden");
+  //   else dots.classList.add("hidden");
+  // }
+});

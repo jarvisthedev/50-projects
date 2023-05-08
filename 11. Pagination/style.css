@@ -79,8 +79,11 @@ body,
 
 .page-detail:hover,
 .page-detail:active,
-.page-dots:hover,
-.current-page {
+.page-dots:hover {
+  background-color: #ccccff;
+}
+
+.page-detail.current-page {
   background-color: #8080ff;
 }
 
