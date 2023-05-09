@@ -16,34 +16,16 @@ body,
 .container {
   font-size: 2.4rem;
   font-weight: 400;
-  background-color: #f7f7f7;
+  background-color: #333;
+}
+
+body {
+  flex-direction: column;
 }
 
 .container {
-  margin: 10rem auto;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
-  /* flex-direction: column; */
-  padding: 2.4rem;
-}
-
-.icon {
-  font-size: 2.4rem;
-  padding: 1.2rem;
-  border-radius: 0.9rem;
-
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.hidden {
-  display: none;
-}
-
-.icon:hover {
-  background-color: #8080ff;
-}
-
-.images-holder {
+  margin: 5rem auto;
+  padding: 0.5rem;
 }
 
 /* ////////////////////////// */
@@ -63,3 +45,46 @@ body,
 /* ////////////////////////// */
 /* SYSTEMATIC FLOW STYLE */
 /* ////////////////////////// */
+
+.img-group {
+  list-style-type: none;
+  gap: 0.8rem;
+  padding: 1.2rem;
+}
+
+.img-list {
+  width: 6.8rem;
+  height: 52rem;
+  background-color: rgb(83, 127, 152);
+  border-radius: 5rem;
+  transition: all 0.3s;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.current-img {
+  width: 80rem;
+  border-radius: 3.2rem;
+}
+
+.img-list:nth-child(1) {
+  background-image: url("images/bridge-image.jpg");
+}
+
+.img-list:nth-child(2) {
+  background-image: url("images/city-with-lighting.jpg");
+}
+
+.img-list:nth-child(3) {
+  background-image: url("images/metal-bridge.jpg");
+}
+
+.img-list:nth-child(4) {
+  background-image: url("images/statue-on-tower.jpg");
+}
+
+.img-list:nth-child(5) {
+  background-image: url("images/white-city-building.jpg");
+}
