@@ -39,15 +39,19 @@ body,
   justify-content: center;
 }
 
-/* ////////////////////////// */
-/* SYSTEMATIC FLOW STYLE */
-/* ////////////////////////// */
-
 .list {
   list-style-type: none;
   gap: 0.8rem;
   padding: 1.2rem;
 }
+
+.no-display {
+  display: none;
+}
+
+/* ////////////////////////// */
+/* SYSTEMATIC FLOW STYLE */
+/* ////////////////////////// */
 
 .img-list {
   color: #f7f7f7;
@@ -98,8 +102,8 @@ body,
 .img-list:nth-child(5) {
   background-image: linear-gradient(
       to right bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
     url("images/tall-building.jpg");
 }
@@ -138,18 +142,17 @@ body,
 
   gap: 0.3rem;
   padding: 0.5rem;
+  transition: all 0.3s;
 }
 
 .head-text {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+  color: #c6c6c6;
 }
 
 .more {
   grid-row: 2/3;
   grid-column: 2/3;
   font-size: 1.8rem;
-}
-
-.no-display {
-  display: none;
+  color: #adadad;
 }

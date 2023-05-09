@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+body,
+.container {
+  font-size: 2.4rem;
+  font-weight: 400;
+  background-color: #f7f7f7;
+}
+
+.container {
+  margin: 10rem 7rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  padding: 2.4rem;
+}
+
+/* ////////////////////////// */
+/* REUSABLE STYLE */
+/* ////////////////////////// */
+.flx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  /* list-style-type: none; */
+  /* flex-direction: column; */
+  gap: 4rem;
+  /* background-color: rgb(154, 89, 89); */
+
+  /* width: 30rem; */
+}
+
+/* ////////////////////////// */
+/* SYSTEMATIC FLOW STYLE */
+/* ////////////////////////// */
+
+.card_holder {
+  position: relative;
+  background-color: rgb(81, 69, 212);
+}
+
+.more-info {
+  margin-left: 32rem;
+  padding-left: 1.2rem;
+  padding: 6.2rem 1.2rem;
+}
+
+.card-img {
+  width: 30rem;
+  height: 30rem;
+
+  position: absolute;
+  top: 2rem;
+  /* top: 50%; */
+  /* transform: translate(-50%); */
+  left: -4rem;
+}
+
+.dot-detail {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #444;
+}
+
+.current-dot {
+  background-color: rgb(189, 244, 60);
+}
