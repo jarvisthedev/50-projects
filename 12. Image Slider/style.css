@@ -17,14 +17,11 @@ body,
   font-size: 2.4rem;
   font-weight: 400;
   background-color: #333;
-}
-
-body {
   flex-direction: column;
 }
 
 .container {
-  margin: 5rem auto;
+  margin: 2.5rem auto;
   padding: 0.5rem;
 }
 
@@ -33,7 +30,7 @@ body {
 /* ////////////////////////// */
 .grid {
   display: grid;
-  grid-template-columns: 1rem 1fr 1rem;
+  grid-template-columns: 5rem 1fr;
 }
 
 .flex {
@@ -46,22 +43,23 @@ body {
 /* SYSTEMATIC FLOW STYLE */
 /* ////////////////////////// */
 
-.img-group {
+.list {
   list-style-type: none;
   gap: 0.8rem;
   padding: 1.2rem;
 }
 
 .img-list {
+  color: #f7f7f7;
   width: 6.8rem;
   height: 52rem;
-  background-color: rgb(83, 127, 152);
   border-radius: 5rem;
   transition: all 0.3s;
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: relative;
 }
 
 .current-img {
@@ -70,7 +68,14 @@ body {
 }
 
 .img-list:nth-child(1) {
-  background-image: url("images/bridge-image.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("images/bridge-image.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .img-list:nth-child(2) {
@@ -82,9 +87,69 @@ body {
 }
 
 .img-list:nth-child(4) {
-  background-image: url("images/statue-on-tower.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("images/statue-on-tower.jpg");
 }
 
 .img-list:nth-child(5) {
-  background-image: url("images/white-city-building.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("images/tall-building.jpg");
+}
+
+.dots {
+  gap: 1.4rem;
+}
+
+.dot-list {
+  background-color: #949494;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.current-dot {
+  width: 1.8rem;
+  border-radius: 0.4rem;
+  background-color: #1b1919;
+}
+
+.flag-logo {
+  width: 4.2rem;
+  grid-row: 1/3;
+  grid-column: 1/2;
+  justify-self: stretch;
+  align-self: center;
+}
+
+.flag-and-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+
+  gap: 0.3rem;
+  padding: 0.5rem;
+}
+
+.head-text {
+  font-size: 2.4rem;
+}
+
+.more {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-size: 1.8rem;
+}
+
+.no-display {
+  display: none;
 }
