@@ -37,6 +37,10 @@ body {
   border-radius: 1.8rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .card-img {
   width: 30rem;
   height: 30rem;
@@ -57,15 +61,19 @@ body {
       rgba(0, 0, 0, 0.06)
     ),
     url("img/national-cancer.jpg");
+  /* background-color: rgb(248, 23, 23); */
 }
 
-.card-img:nth-child(2) {
+/* .card-img:nth-child(2) */
+.card-img:nth-of-type(2) {
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
     url("img/research-ongoing.jpg");
+
+  /* background-color: rgb(248, 233, 23); */
 }
 
 .card-img:nth-child(3) {
@@ -75,13 +83,15 @@ body {
       rgba(0, 0, 0, 0.06)
     ),
     url("img/medical-gadgets.jpg");
+
+  /* background-color: rgb(34, 23, 248); */
 }
 
 .card_holder {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.8rem;
+  gap: 0.8rem;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 1.8rem;
@@ -91,17 +101,20 @@ body {
   margin-bottom: 1.4rem;
   font-size: 1.8rem;
   color: #333;
+  margin-top: 4.8rem;
 }
 
 .heading {
   margin-bottom: 1.8rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  color: #222;
 }
 
 .card-text {
   font-size: 1.8rem;
   line-height: 1.4;
-  margin-bottom: 2.4rem;
+  margin-bottom: 5.6rem;
+  color: #333;
 }
 
 .read-more {
@@ -114,7 +127,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #f7f7f7;
-  background-image: linear-gradient(to right bottom, #ff7300, red);
+  background-image: linear-gradient(to right bottom, #ff7300, #ff0000d7);
 
   padding: 1.2rem 2.4rem;
   border-radius: 10rem;
@@ -124,6 +137,7 @@ body {
 .btn:hover,
 .btn:visited {
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+  color: #f7f7f7;
 }
 
 .more-info {
@@ -139,18 +153,19 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 
 .dot-detail {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #999;
+  background-color: #c2c2c2;
 }
 
 .current-dot {
   background-color: #ff1a1a;
-  height: 2rem;
+  height: 2.4rem;
+  width: 0.8rem;
   border-radius: 0.3rem;
 }
