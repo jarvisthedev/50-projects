@@ -12,70 +12,75 @@ html {
 /* ////////////////////////// */
 /* GENERAL STYLE */
 /* ////////////////////////// */
+
 body,
 .container {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
 }
 
-.container {
-  margin: 10rem 7rem;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  padding: 2.4rem;
-}
-
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-.flx {
+body {
+  background-color: rgb(92, 176, 91);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.list {
-  /* list-style-type: none; */
-  /* flex-direction: column; */
-  gap: 4rem;
-  /* background-color: rgb(154, 89, 89); */
+.container {
+  background-color: rgb(242, 202, 202);
 
-  /* width: 30rem; */
-}
-
-/* ////////////////////////// */
-/* SYSTEMATIC FLOW STYLE */
-/* ////////////////////////// */
-
-.card_holder {
-  position: relative;
-  background-color: rgb(81, 69, 212);
-}
-
-.more-info {
-  margin-left: 32rem;
-  padding-left: 1.2rem;
-  padding: 6.2rem 1.2rem;
+  margin: 10rem auto;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 3.2rem;
 }
 
 .card-img {
-  width: 30rem;
+  width: 40rem;
   height: 30rem;
+  margin-left: -6.8rem;
+  border-radius: 3.2rem;
+}
 
-  position: absolute;
-  top: 2rem;
-  /* top: 50%; */
-  /* transform: translate(-50%); */
-  left: -4rem;
+.card_holder {
+  background-color: rgb(81, 69, 212);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 3.2rem;
+}
+
+.more-info {
+  max-width: 60rem;
+}
+
+.dots {
+  list-style-type: none;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 .dot-detail {
   width: 1.2rem;
   height: 1.2rem;
+  border-radius: 50%;
   background-color: #444;
 }
 
 .current-dot {
   background-color: rgb(189, 244, 60);
+  height: 6rem;
+  border-radius: 0.3rem;
 }
+
+/* ////////////////////////// */
+/* SYSTEMATIC FLOW STYLE */
+/* ////////////////////////// */
