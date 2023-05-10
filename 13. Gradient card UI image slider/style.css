@@ -25,12 +25,9 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: linear-gradient(to right bottom, red, blue);
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #fd3838 74%);
+  min-height: 100vh;
 }
 
 .container {
@@ -43,35 +40,96 @@ body {
 .card-img {
   width: 30rem;
   height: 30rem;
-  margin-left: -6.8rem;
+
+  box-shadow: 0 0 3.2rem 0 rgba(0, 0, 0, 0.2);
+  margin: 2.8rem 0 2.8rem -6.8rem;
   border-radius: 1.8rem;
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
 
+.card-img:nth-child(1) {
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
     url("img/national-cancer.jpg");
-  background-size: cover;
-  background-position: center;
+}
+
+.card-img:nth-child(2) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.06)
+    ),
+    url("img/research-ongoing.jpg");
+}
+
+.card-img:nth-child(3) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.06)
+    ),
+    url("img/medical-gadgets.jpg");
 }
 
 .card_holder {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1.8rem;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 1.8rem;
 }
 
+.date {
+  margin-bottom: 1.4rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.heading {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+}
+
+.card-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 2.4rem;
+}
+
+.read-more {
+  margin-bottom: 6rem;
+}
+
+.btn:link,
+.btn:active {
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f7f7f7;
+  background-image: linear-gradient(to right bottom, #ff7300, red);
+
+  padding: 1.2rem 2.4rem;
+  border-radius: 10rem;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:visited {
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
 .more-info {
   max-width: 60rem;
+  margin-left: 2.4rem;
+  padding-left: 2.4rem;
 }
 
 .dots {
@@ -85,14 +143,14 @@ body {
 }
 
 .dot-detail {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: #999;
 }
 
 .current-dot {
-  background-color: rgb(189, 244, 60);
-  height: 3rem;
+  background-color: #ff1a1a;
+  height: 2rem;
   border-radius: 0.3rem;
 }
