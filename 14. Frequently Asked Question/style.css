@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+
+body,
+.container {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #f7f7f7;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.container {
+  margin: 10rem auto;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 1.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.heading {
+  margin-bottom: 1.8rem;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.btn:link,
+.btn:active {
+  text-decoration: none;
+  background-color: #fefe67;
+  color: #111;
+  font-size: 3.2rem;
+  font-weight: 700;
+  padding: 3.2rem 4.8rem;
+
+  border-radius: 10rem;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:visited {
+  color: #f7f7f7;
+  text-decoration: underline;
+}
+
+.btn--1 {
+}
+
+.btn--2 {
+}
+
+.btn-text1 {
+  margin-bottom: 3.2rem;
+  background-color: #fff;
+}
+
+.btn-text2 {
+}
