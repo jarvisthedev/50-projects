@@ -16,7 +16,8 @@ body,
 .section-pricing,
 .plan-billing,
 .plan-description,
-.plan-desc {
+.plan-desc,
+.plan-featuress {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +43,7 @@ body,
 body {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #f7f7f7;
+  color: #000;
   background-color: #000;
 }
 
@@ -54,7 +55,10 @@ body {
 
   margin: 6.4rem auto;
   padding: 0.8rem;
-  /* background-color: rgb(194, 196, 50); */
+}
+
+.plan-name {
+  margin-bottom: 1rem;
 }
 
 .pricing-option {
@@ -63,17 +67,26 @@ body {
   padding: 3rem 2.4rem;
 }
 
+.plan-head {
+  padding: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.monthly {
+  font-size: 1.4rem;
+}
+
 .plan-billing {
   justify-content: space-between;
   background-color: rgb(226, 32, 32);
-  padding: 1.2rem 2.7rem;
+  padding: 1.2rem 2.4rem;
   border-radius: 2rem;
   margin-bottom: 1.2rem;
+  gap: 3.8rem;
 }
 
 .plan-price {
   font-size: 2.8rem;
-  background-color: rgb(32, 226, 219);
 }
 
 .plan-description {
@@ -82,43 +95,40 @@ body {
   flex-direction: column;
   border-radius: 2rem;
   background-color: rgb(61, 32, 226);
-  gap: 1.2rem;
-  padding: 3rem 2.4rem;
+  gap: 1rem;
+  padding: 2rem 2.2rem;
   margin-bottom: 1.2rem;
 }
 
 .plan-desc {
-  background-color: rgb(226, 32, 32);
-  padding: 1.2rem 2.7rem;
+  padding: 1rem 0.2rem;
 
   justify-content: flex-start;
   gap: 1.2rem;
 }
 
-.icon {
-}
-
-.nos {
-}
-
 .plan-features {
-  padding: 3rem 2.4rem;
   border-radius: 2rem;
+  flex-direction: column;
 
   background-color: rgb(226, 187, 32);
+  gap: 1rem;
+  padding: 2rem 2.2rem;
 }
 
 .icon img {
-  width: 2.4rem;
+  width: 1.8rem;
 }
 
 .feature-top {
   margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .feature {
-  padding: 1.2rem 2.7rem;
-  background-color: rgb(216, 32, 226);
+  padding: 1rem 0.2rem;
 }
 
 .btn {
