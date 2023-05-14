@@ -14,6 +14,7 @@ html {
 /* ////////////////////////// */
 body,
 .section-pricing,
+.pricing-intro,
 .plan-billing,
 .plan-description,
 .plan-desc,
@@ -57,12 +58,40 @@ body {
   padding: 0.8rem;
 }
 
+.pricing-intro {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+  flex-direction: column;
+  gap: 2rem;
+  color: #f7f7f7;
+  margin-bottom: 8.4rem;
+}
+
+.pricing-text {
+  font-size: 5.8rem;
+  margin-bottom: 3.2rem;
+  font-weight: 400;
+}
+
+.pricing-more-text {
+  color: #c6c6c6;
+  margin-bottom: 2.8rem;
+}
+
+.pricing-intro .btn {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 .plan-name {
   margin-bottom: 1rem;
 }
 
 .pricing-option {
-  background-color: rgb(37, 175, 35);
   border-radius: 2.4rem;
   padding: 3rem 2.4rem;
 }
@@ -78,7 +107,6 @@ body {
 
 .plan-billing {
   justify-content: space-between;
-  background-color: rgb(226, 32, 32);
   padding: 1.2rem 2.4rem;
   border-radius: 2rem;
   margin-bottom: 1.2rem;
@@ -89,12 +117,41 @@ body {
   font-size: 2.8rem;
 }
 
+.option--1 {
+  background-color: #ffe385;
+}
+
+.option--1 .plan-description,
+.option--1 .plan-billing,
+.option--1 .plan-features {
+  background-color: #e6cc78;
+}
+
+.option--2 {
+  background-color: #00fab0;
+}
+
+.option--2 .plan-description,
+.option--2 .plan-billing,
+.option--2 .plan-features {
+  background-color: #00e19e;
+}
+
+.option--3 {
+  background-color: #50bfff;
+}
+
+.option--3 .plan-description,
+.option--3 .plan-billing,
+.option--3 .plan-features {
+  background-color: #48ace6;
+}
+
 .plan-description {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   border-radius: 2rem;
-  background-color: rgb(61, 32, 226);
   gap: 1rem;
   padding: 2rem 2.2rem;
   margin-bottom: 1.2rem;
@@ -111,7 +168,6 @@ body {
   border-radius: 2rem;
   flex-direction: column;
 
-  background-color: rgb(226, 187, 32);
   gap: 1rem;
   padding: 2rem 2.2rem;
 }
