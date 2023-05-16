@@ -87,7 +87,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.8;
   margin-bottom: 8.4rem;
-  color: #333;
+  color: #444;
 }
 
 .review-last-part {
@@ -96,11 +96,12 @@ body {
 
 .reviewer-title {
   font-size: 1.2rem;
-  color: #333;
+  color: #444;
 }
 
 .reviewer-company-logo {
 }
 
 .reviewer-logo {
+  height: 1.8rem;
 }
