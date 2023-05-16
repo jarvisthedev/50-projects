@@ -12,10 +12,21 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.section--review,
+.review-last-part {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: #f7f7f7;
+  background-color: #000;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2rem;
 }
 
 .hr {
@@ -39,28 +50,57 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   color: #000;
-  background-color: #000;
+  background-color: #dedede;
 }
 
 .section--review {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 132rem;
-  gap: 2.8rem;
-
   margin: 6.4rem auto;
   padding: 0.8rem;
+  gap: 2rem;
 }
 
-.btn {
-  text-decoration: none;
-  color: #f7f7f7;
-  background-color: #000;
-  font-size: 1.4rem;
-  padding: 1.2rem 2.4rem;
+.review {
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 2.8rem;
   border-radius: 2rem;
+  width: 60rem;
 }
 
-.plan-features {
-  list-style-type: none;
+.img {
+  margin-bottom: 2rem;
+}
+
+.profile-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+}
+
+.reviewer-name {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+
+.review-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 8.4rem;
+  color: #333;
+}
+
+.review-last-part {
+  justify-content: space-between;
+}
+
+.reviewer-title {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.reviewer-company-logo {
+}
+
+.reviewer-logo {
 }
