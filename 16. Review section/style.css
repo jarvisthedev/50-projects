@@ -20,24 +20,6 @@ body,
   justify-content: center;
 }
 
-.btn {
-  text-decoration: none;
-  color: #f7f7f7;
-  background-color: #000;
-  font-size: 1.4rem;
-  padding: 1.2rem 2.4rem;
-  border-radius: 2rem;
-}
-
-.hr {
-  display: block;
-  height: 0.5px;
-  border: 0;
-  border-top: 0.5px solid rgba(204, 204, 204, 0.3);
-  padding: 0;
-  margin-bottom: 4.8rem;
-}
-
 .hidden {
   display: none;
 }
@@ -75,6 +57,7 @@ body {
   width: 5rem;
   height: 5rem;
   border-radius: 5rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .reviewer-name {
@@ -97,9 +80,6 @@ body {
 .reviewer-title {
   font-size: 1.2rem;
   color: #444;
-}
-
-.reviewer-company-logo {
 }
 
 .reviewer-logo {
