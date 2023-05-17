@@ -1,4 +1,3 @@
-const sectionPricing = document.querySelector(".section--pricing");
 const review = document.querySelectorAll(".review");
 
 function addingRemovingHiddenClass() {
