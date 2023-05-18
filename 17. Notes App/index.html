@@ -20,19 +20,35 @@
   <body>
     <div class="section--notes">
       <h1 class="head-note">Notes App</h1>
-      <input class="input" type="text" />
-      <div class="color-picker">
-        <div class="text">Pick a color:</div>
-        <input class="color" type="color" name="color" id="color" />
-      </div>
-      <button class="add">Add</button>
 
-      <div class="notes-saved">
-        <div class="notes">I love you</div>
-        <div class="notes">Another text</div>
-        <div class="notes">Different text notes</div>
-        <div class="notes">Team sales text</div>
+      <textarea
+        class="input-text"
+        name="input-text"
+        id="input-text"
+        cols="30"
+        rows="10"
+        placeholder="Enter your notes here..."
+      ></textarea>
+      <div class="additional">
+        <div class="left">
+          <div class="color-picker">
+            <div class="text">Pick a color:</div>
+            <input class="color" type="color" name="color" id="color" />
+          </div>
+          <div class="size">
+            <div class="text">Size:</div>
+            <input class="number" type="number" placeholder="17" />
+          </div>
+        </div>
+        <button class="add">Add</button>
       </div>
+
+      <ul class="notes-saved">
+        <li class="notes">I love you</li>
+        <li class="notes">Another text</li>
+        <li class="notes">Different text notes</li>
+        <li class="notes">Team sales text</li>
+      </ul>
     </div>
 
     <!-- <hr class="hr" /> -->
