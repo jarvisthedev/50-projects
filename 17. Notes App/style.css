@@ -14,7 +14,6 @@ html {
 /* ////////////////////////// */
 body,
 .section--notes,
-/* .input-text, */
 .additional,
 .left,
 .color-picker,
@@ -48,6 +47,10 @@ body {
 .section--notes {
   flex-direction: column;
   padding: 2rem 0;
+}
+
+.head-note {
+  margin: 3rem auto 2rem auto;
 }
 
 .input-text {
@@ -103,7 +106,7 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.notes::after {
+.delete {
   position: absolute;
   content: "x";
   top: 0;
