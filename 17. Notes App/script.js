@@ -4,7 +4,7 @@ const inputText = document.querySelector(".input-text");
 const notesSaved = document.querySelector(".notes-saved");
 const colorChange = document.querySelector(".color");
 
-sectionNotes.addEventListener("click", function (e) {
+function clickEvent(e) {
   e.preventDefault();
   const clicked = e.target;
 
@@ -24,13 +24,15 @@ sectionNotes.addEventListener("click", function (e) {
   if (clicked.classList.contains("delete")) {
     clicked.parentNode.remove();
   }
+}
 
-  // inputText.style.color = "blue";
-});
+sectionNotes.addEventListener("click", clickEvent);
 
+sectionNotes.removeEventListener("click", clickEvent);
 sectionNotes.addEventListener("change", function (e) {
   if (e.target.classList.contains("color")) {
     const selectedColor = e.target.value;
     inputText.style.color = selectedColor;
   }
+  sectionNotes.addEventListener("click", clickEvent);
 });
