@@ -80,6 +80,7 @@ body {
 .color {
   width: 3rem;
   border: none;
+  cursor: pointer;
 }
 
 .add {
