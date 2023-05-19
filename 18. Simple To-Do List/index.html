@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes web app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="section--notes">
+      <h1 class="head-note">Notes App</h1>
+
+      <textarea
+        class="input-text"
+        name="input-text"
+        id="input-text"
+        cols="30"
+        rows="10"
+        placeholder="Enter your notes here..."
+      ></textarea>
+      <div class="additional">
+        <div class="left">
+          <div class="color-picker">
+            <div class="text">Pick a color:</div>
+            <input class="color" type="color" name="color" id="color" />
+          </div>
+          <div class="size">
+            <div class="text">Size:</div>
+            <input class="number" type="number" value="17" />
+          </div>
+        </div>
+        <button class="add">Add</button>
+      </div>
+
+      <ul class="notes-saved"></ul>
+    </div>
+    <!-- <hr class="hr" /> -->
+  </body>
+</html>
