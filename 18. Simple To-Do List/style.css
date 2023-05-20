@@ -12,13 +12,7 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body,
-.section--notes,
-.additional,
-.left,
-.color-picker,
-.size,
-.notes-saved {
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,75 +36,4 @@ body {
   font-weight: 400;
   color: #000;
   background-color: #dedede;
-}
-
-.section--notes {
-  flex-direction: column;
-  padding: 2rem 0;
-}
-
-.head-note {
-  margin: 3rem auto 2rem auto;
-}
-
-.input-text {
-  width: 70vw;
-  height: 40vh;
-  border: none;
-  padding: 1.2rem;
-  font-size: 2.2rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
-}
-
-.additional {
-  align-self: stretch;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-.left {
-  gap: 1.2rem;
-}
-
-.number {
-  width: 4rem;
-}
-
-.color {
-  width: 3rem;
-  border: none;
-  cursor: pointer;
-}
-
-.add {
-  padding: 0.8rem 2.4rem;
-  border-radius: 2rem;
-  border: none;
-  font-size: 1.6rem;
-  background-color: #03be03;
-  color: #f7f7f7;
-}
-
-.notes-saved {
-  list-style-type: none;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1rem;
-}
-
-.notes {
-  background-color: #f7f7f7;
-  position: relative;
-  padding: 1.2rem;
-  width: 70vw;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.delete {
-  position: absolute;
-  content: "x";
-  top: 0;
-  right: 1rem;
-  cursor: pointer;
 }
