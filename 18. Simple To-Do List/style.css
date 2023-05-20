@@ -12,7 +12,9 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.section--to-do-list,
+.adding-todo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,5 +37,66 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   color: #000;
+  background-color: #f7f7f7;
+}
+
+.section--to-do-list {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.headline {
+  margin: 3.2rem auto 2.4rem 0;
+  font-size: 2.4rem;
+}
+
+.input-text {
+  width: 40vw;
+  height: 30vh;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.adding-todo {
+  justify-content: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.delete {
+  padding: 0.3rem;
+  border-radius: 4rem;
+  margin-right: 2rem;
+}
+
+.delete:hover {
   background-color: #dedede;
+}
+
+.to-do-list {
+  list-style-type: none;
+}
+
+.do-detail {
+  display: grid;
+  grid-template-columns: 2rem 1fr 2rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+.hr {
+  grid-column: 1/-1;
 }
