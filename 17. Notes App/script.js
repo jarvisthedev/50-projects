@@ -3,6 +3,9 @@ const noteSaved = document.querySelector(".notes-saved");
 const inputText = document.querySelector(".input-text");
 const addNote = document.querySelector(".add");
 
+let textColor = "";
+let noteFontSize = "24px";
+
 addNote.addEventListener("click", function (e) {
   if (inputText.value === "" || inputText.value === " ")
     alert("Please add some text");
@@ -13,6 +16,8 @@ addNote.addEventListener("click", function (e) {
       </li>`;
     inputText.value = "";
     noteSaved.insertAdjacentHTML("afterbegin", html);
+    document.querySelector(".note").style.color = textColor;
+    document.querySelector(".note").style.fontSize = noteFontSize;
   }
 });
 
@@ -25,7 +30,12 @@ noteSaved.addEventListener("click", function (e) {
 
 sectionNotes.addEventListener("change", function (e) {
   if (e.target.classList.contains("color")) {
-    const selectedColor = e.target.value;
-    inputText.style.color = selectedColor;
+    textColor = e.target.value;
+    inputText.style.color = textColor;
+  }
+
+  if (e.target.classList.contains("note-size")) {
+    noteFontSize = e.target.value;
+    inputText.style.fontSize = `${noteFontSize}px`;
   }
 });
