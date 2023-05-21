@@ -49,9 +49,6 @@ body {
   padding: 5rem;
 }
 
-.description {
-}
-
 .head,
 .sub-text {
   text-transform: uppercase;
@@ -61,13 +58,11 @@ body {
 }
 
 .more-text {
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 2rem;
-}
-
-.sub-text {
+  padding-right: 3rem;
 }
 
 .form {
@@ -92,4 +87,7 @@ body {
   padding: 1.8rem;
   border: none;
   border-radius: 0.4rem;
+  margin-bottom: 4.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
