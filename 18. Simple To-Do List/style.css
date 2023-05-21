@@ -60,17 +60,20 @@ body {
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
+.icon,
 .adding-todo {
-  justify-content: flex-start;
-  gap: 0.8rem;
-  margin-bottom: 2rem;
   color: #333;
+  cursor: pointer;
 }
 
 .icon {
   font-size: 2.2rem;
-  color: #333;
-  cursor: pointer;
+}
+
+.adding-todo {
+  justify-content: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .delete {
@@ -85,6 +88,7 @@ body {
 
 .to-do-list {
   list-style-type: none;
+  padding-bottom: 1.8rem;
 }
 
 .do-detail {
