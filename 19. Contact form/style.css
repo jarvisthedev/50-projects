@@ -12,7 +12,8 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,4 +37,59 @@ body {
   font-weight: 400;
   color: #000;
   background-color: #f7f7f7;
+}
+
+.section--contact-form {
+  max-width: 128rem;
+  background-color: rgb(0, 0, 0);
+  color: #f7f7f7;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 5rem;
+}
+
+.description {
+}
+
+.head,
+.sub-text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.more-text {
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.sub-text {
+}
+
+.form {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input {
+  background-color: #000;
+  border: none;
+  border: 1px solid #dedede;
+  padding: 1rem 2.4rem;
+  border-radius: 0.4rem;
+}
+
+.investment {
+  margin-bottom: 3.2rem;
+}
+
+.btn {
+  padding: 1.8rem;
+  border: none;
+  border-radius: 0.4rem;
 }
