@@ -12,7 +12,9 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.section--partnership,
+.partnership {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,14 +34,26 @@ input:focus {
 /* ////////////////////////// */
 
 body {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #000;
   background-color: #f7f7f7;
 }
 
 .section--partnership {
-  max-width: 128rem;
-  color: #f7f7f7;
   margin: 10rem auto;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.partnership {
+  gap: 3rem;
+}
+
+.partnership--1 {
+}
+
+.partnership-logo {
+  height: 3rem;
+  color: #f7f7f7;
+}
+
+.partnership--2 {
 }
