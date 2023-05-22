@@ -12,7 +12,9 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.section--pattern,
+.part {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,11 +38,53 @@ body {
   font-weight: 400;
   color: #000;
   background-color: #f7f7f7;
+  flex-direction: column;
+  position: relative;
 }
 
 .section--pattern {
-  max-width: 128rem;
-  background-color: rgb(0, 0, 0);
-  color: #f7f7f7;
   margin: 10rem auto;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.part {
+  gap: 2rem;
+  padding: 8.2rem 7.8rem;
+}
+
+.part:nth-child(even) {
+  background-color: #ecf1f8;
+}
+
+.part:nth-child(even) .about {
+  padding-right: 11rem;
+}
+
+.part:nth-child(odd) .about {
+  padding-left: 11rem;
+}
+
+.img {
+  height: 42rem;
+}
+
+.about-head {
+  font-size: 3.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  padding-bottom: 2.4rem;
+  color: #3273dc;
+}
+
+.about-text {
+  font-size: 2.3rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.site {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
