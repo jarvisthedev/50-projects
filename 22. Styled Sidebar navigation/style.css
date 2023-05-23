@@ -82,6 +82,10 @@ body {
   background-color: #0e111b;
 }
 
+.search-logo.light {
+  background-color: #efefef;
+}
+
 .nav.nav--large-light,
 .nav.nav--thin-dark {
   background-color: #f7f7f7;
@@ -177,6 +181,23 @@ body {
   background-color: #5f6472;
 }
 
+.nav--large-light .nav-tools-details:hover {
+  background-color: #e8e8e8;
+}
+
+.nav--large-light .theme-slider {
+  background-color: #e8e8e8;
+}
+
+.nav--large-light .dark-theme {
+  background-color: transparent;
+  color: #999;
+}
+
+.nav--large-light .light-theme {
+  background-color: #f7f7f7;
+}
+
 .nav-list--customization .nav-tools-details {
   align-items: center;
   justify-content: stretch;
@@ -209,7 +230,6 @@ body {
 
 .theme-slider {
   padding: 0.3rem;
-  /* background-color: #0e111b; */
   border-radius: 1rem;
   gap: 0.5rem;
   margin: auto 0.5rem 1rem 0.5rem;
@@ -221,6 +241,7 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
+
 button {
   font-size: 1.2rem;
   font-weight: 500;
@@ -255,7 +276,9 @@ button {
 }
 
 .username {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
 }
 
 .email {
@@ -264,4 +287,20 @@ button {
 
 .logout {
   margin-left: 1rem;
+}
+
+/* SMALLEST PART */
+
+.nav.nav--thin-dark .search-space .tool-icon {
+  position: relative;
+}
+
+.nav.nav--thin-dark .theme-slider {
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav.nav--thin-dark .theme {
+  /* flex-direction: column; */
+  margin: 0;
 }
