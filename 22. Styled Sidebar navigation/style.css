@@ -174,10 +174,11 @@ body {
 .nav-tools-details {
   align-items: stretch;
   justify-content: space-between;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 0.8rem;
   margin-left: 0.8rem;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .nav-tools-details:hover {
@@ -189,16 +190,23 @@ body {
   background-color: #e8e8e8;
 }
 
-.nav--large-light .theme-slider {
+.nav--large-light .theme-slider,
+.nav--thin-light .theme-slider {
   background-color: #e8e8e8;
 }
 
-.nav--large-light .dark-theme {
+.nav.nav--thin-light .theme-slider {
+  flex-direction: column;
+}
+
+.nav--large-light .dark-theme,
+.nav--thin-light .dark-theme {
   background-color: transparent;
   color: #999;
 }
 
-.nav--large-light .light-theme {
+.nav--large-light .light-theme,
+.nav--thin-light .light-theme {
   background-color: #f7f7f7;
 }
 
@@ -298,11 +306,6 @@ button {
   position: relative;
 }
 
-.nav.nav--thin-light .theme-slider {
-  flex-direction: column;
-  padding: 0;
-}
-
 .nav.nav--thin-light .hr {
   border-top: 1px solid transparent;
 }
@@ -338,4 +341,33 @@ button {
 .nav.nav--thin-light .search-space:hover {
   border-radius: 0.5rem;
   background-color: #e8e8e8;
+}
+
+/* Small red notification "" thin-lignt "" */
+.nav.nav--thin-light .notice-thin {
+  position: relative;
+}
+
+.nav.nav--thin-light .notice-thin::after {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  right: -1px;
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  border: 1.5px solid #f7f7f7;
+}
+
+.thin--parent {
+  position: relative;
+}
+.thin--child {
+  position: absolute;
+  right: -10rem;
+  background-color: rgb(32, 28, 28);
+  color: #f7f7f7;
+  display: none;
 }
