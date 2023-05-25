@@ -14,7 +14,8 @@ html {
 /* ////////////////////////// */
 body,
 .section--hero,
-.nav-bar-list {
+.nav-bar-list,
+.detail {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,40 +66,57 @@ body {
     url("./imgs/forest-dark.jpg");
 
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   color: #fefefe;
-  /* position: relative; */
 }
 
 .section--hero {
-  /* width: 40rem; */
-  /* margin: 3.2rem auto; */
+  margin: 0 auto;
   gap: 3rem;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   justify-content: space-between;
   padding: 1rem 5rem;
-  /* background-color: rgb(26, 144, 162); */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
+  margin: 0 5.8rem;
+
+  margin-bottom: 24.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .home {
+  font-weight: 500;
+  font-family: "Yellowtail", cursive;
+  font-size: 4.2rem;
+  padding: 0;
 }
 
 .nav-bar-list {
-  /* background-color: rgb(217, 46, 46); */
+  list-style-type: none;
   justify-content: space-around;
-  gap: 3rem;
+  gap: 4.8rem;
 }
 
-.nav-detail {
-  list-style-type: none;
-  /* background-color: rgb(85, 24, 192); */
+.nav-detail:link,
+.nav-detail:active {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+
+.nav-detail:hover,
+.nav-detail:visited {
+  color: #f7f7f7;
 }
 
 .detail {
+  flex-direction: column;
+}
+
+.text {
+  font-size: 2.4rem;
+}
+
+.more-text {
+  font-size: 4.8rem;
 }
