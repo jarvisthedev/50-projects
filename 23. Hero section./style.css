@@ -63,7 +63,7 @@ body {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url("./imgs/forest-dark.jpg");
+    url("./imgs/see-life.jpg");
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -78,8 +78,8 @@ body {
   gap: 3rem;
   font-size: 2.8rem;
   justify-content: space-between;
-  padding: 1rem 5rem;
-  margin: 0 5.8rem;
+  padding: 1rem 8.4rem;
+  margin: 0 auto;
 
   margin-bottom: 24.2rem;
   background-color: rgba(0, 0, 0, 0.5);
