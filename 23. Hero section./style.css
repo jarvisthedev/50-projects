@@ -12,7 +12,9 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.section--hero,
+.nav-bar-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +56,49 @@ body {
   flex-direction: column;
 }
 
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("./imgs/forest-dark.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #fefefe;
+  /* position: relative; */
+}
+
 .section--hero {
-  margin: 3.2rem auto;
+  /* width: 40rem; */
+  /* margin: 3.2rem auto; */
   gap: 3rem;
+  font-size: 3.2rem;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  /* background-color: rgb(26, 144, 162); */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+}
+
+.home {
+}
+
+.nav-bar-list {
+  /* background-color: rgb(217, 46, 46); */
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.nav-detail {
+  list-style-type: none;
+  /* background-color: rgb(85, 24, 192); */
+}
+
+.detail {
 }
