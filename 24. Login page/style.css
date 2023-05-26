@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* REUSABLE STYLE */
+/* ////////////////////////// */
+body,
+.section--hero,
+.nav-bar-list,
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.site {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.hr {
+  display: block;
+  border: none;
+
+  border-top: 0.5px solid #02081e67;
+  margin-bottom: 1.6rem;
+  margin: 0 0.8rem 0.8rem 0.8rem;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+
+body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000;
+  background-color: #dedede;
+  flex-direction: column;
+}
+
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("./imgs/see-life.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #fefefe;
+}
+
+.section--hero {
+  margin: 0 auto;
+  gap: 3rem;
+  font-size: 2.8rem;
+  justify-content: space-between;
+  padding: 0.5rem 8.4rem;
+  margin: 0 auto;
+
+  margin-bottom: 24.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home {
+  font-weight: 500;
+  font-family: "Yellowtail", cursive;
+  font-size: 4.2rem;
+  padding: 0;
+}
+
+.nav-bar-list {
+  list-style-type: none;
+  justify-content: space-around;
+  gap: 4.8rem;
+}
+
+.nav-detail:link,
+.nav-detail:active {
+  text-decoration: none;
+  color: #f7f7f7;
+  padding-bottom: 1px;
+  border-bottom: 2px solid inherit;
+  transition: all 0.3s;
+}
+
+.nav-detail:hover,
+.nav-detail:visited {
+  color: #f7f7f7;
+  border-bottom: 2px solid #f7f7f7;
+}
+
+.detail {
+  flex-direction: column;
+}
+
+.text {
+  font-size: 2.4rem;
+}
+
+.more-text {
+  font-size: 4.8rem;
+}

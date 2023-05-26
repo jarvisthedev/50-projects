@@ -29,3 +29,5 @@ header.addEventListener("click", function (e) {
   }
   header.style.backgroundImage = `${gradient}, url("${dynamicImageUrl}")`;
 });
+
+console.log(moreText.textContent);
