@@ -78,7 +78,7 @@ body {
   gap: 3rem;
   font-size: 2.8rem;
   justify-content: space-between;
-  padding: 1rem 8.4rem;
+  padding: 0.5rem 8.4rem;
   margin: 0 auto;
 
   margin-bottom: 24.2rem;
@@ -102,11 +102,15 @@ body {
 .nav-detail:active {
   text-decoration: none;
   color: #f7f7f7;
+  padding-bottom: 1px;
+  border-bottom: 2px solid inherit;
+  transition: all 0.3s;
 }
 
 .nav-detail:hover,
 .nav-detail:visited {
   color: #f7f7f7;
+  border-bottom: 2px solid #f7f7f7;
 }
 
 .detail {
