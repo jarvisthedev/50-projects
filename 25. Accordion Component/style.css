@@ -12,7 +12,8 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.section--accordion {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,14 +51,45 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   color: #000;
-  background-color: #fefefe;
+  background-color: #f2f2f2;
   flex-direction: column;
 }
 
 .section--accordion {
+  flex-direction: column;
+  gap: 2rem;
+  margin: 10rem auto;
+  padding: 1rem 10rem;
+  max-width: 100rem;
 }
 
 .component {
+  background-color: #fefefe;
+  display: grid;
+  grid-template-columns: 2rem 1fr 2rem;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid transparent;
+}
+
+.active.component {
+  border-top: 3px solid #008000;
+}
+
+.active .number,
+.active .question,
+.active .arrow-down,
+.active.arrow-down {
+  color: #008000;
+}
+
+.number,
+.question,
+.arrow-down {
+  font-size: 3.2rem;
+  font-weight: 500;
 }
 
 .number {
@@ -67,15 +99,22 @@ body {
 }
 
 .arrow-down {
+  /* color: #008000; */
 }
 
 .response {
+  grid-row: 2/3;
+  grid-column: 2/3;
 }
 
 .response-text {
+  margin-bottom: 2.4rem;
+  /* background-color: rgb(138, 42, 42); */
 }
 
 .answer-list {
+  /* list-style-type: none; */
+  margin-left: 2rem;
 }
 
 .response-detail {

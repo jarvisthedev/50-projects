@@ -1,1 +1,1 @@
-const sectionLogin = document.querySelector(".section-login");
+const sectionAccordion = document.querySelector(".section--accordion");
