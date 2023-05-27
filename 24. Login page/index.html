@@ -11,68 +11,84 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="script.js"></script>
   </head>
 
   <body>
     <div class="section--loginForm">
+      <!-- FIRST PART -->
       <div class="form">
-        <div class="form-header">Corals</div>
-        <div class="head-text">Create an account</div>
-        <div class="head-more-text">
+        <div class="header-name">Corals</div>
+        <div class="header-intro">Create your account</div>
+        <div class="header-texts">
           Let's get started with your 30 days free trial
         </div>
 
-        <div class="login-google">
-          <input type="text" name="google-in" class="google-in" />
-          <div class="google">Login with Google</div>
-        </div>
-
-        <div class="option-or">
-          <hr class="hr" />
-          <div class="or-text">or</div>
-          <hr class="hr" />
+        <div class="google-auth">
+          <input type="text" name="google-in" class="input google-in" />
+          <div class="form-div google-auth-text">
+            <img
+              class="form-logo google-logo"
+              src="imgs/google.svg"
+              alt="google logo"
+            />
+            <div class="form-text">Login with Google</div>
+          </div>
         </div>
         <div class="required">
-          <div class="label">
+          <!-- <div class="label">
             Name
-            <div class="star">*</div>
-          </div>
+            <span class="star">*</span>
+          </div> -->
           <input
             type="text"
             name="name"
-            placeholder="Enter your name"
-            class="holder name"
+            placeholder="Name"
+            class="input name"
+            required
           />
         </div>
         <div class="required">
-          <div class="label">
+          <!-- <div class="label">
             Email
-            <div class="star">*</div>
-          </div>
+            <span class="star">*</span>
+          </div> -->
           <input
             type="email"
             name="email"
-            placeholder="Enter your email"
-            class="holder email"
+            placeholder="Email"
+            class="input email"
+            required
           />
         </div>
         <div class="required">
-          <div class="label">
+          <!-- <div class="label">
             Password
-            <div class="star">*</div>
-          </div>
+            <span class="star">*</span>
+          </div> -->
           <input
-            type="email"
-            name="email"
-            placeholder="Enter your password"
-            class="holder password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input password"
+            required
           />
         </div>
-        <div class="terms">
-          &
-          <div class="terms-text">I agree to all Terms, Privacy and Fees</div>
+        <div class="form-div">
+          <i class="form-logo ph-light ph-square"></i>
+          <i class="form-logo ph-light hidden ph-check-square"></i>
+          <div class="terms form-text">
+            I agree to all Terms, Privacy and Fees
+          </div>
         </div>
 
         <button class="btn sighup">Sign Up</button>
@@ -80,15 +96,25 @@
           Already have an account? <a class="account" href="#">Log in</a>
         </div>
       </div>
-      <div class="bgc-pic login">
-        <div class="pic-head">Discover the Best Furniture for Your Home</div>
-        <div class="pic-text">
-          Our practice is Desinging Complete Environments exceptional building
+
+      <!-- SECOND PART -->
+      <div class="picture-background login">
+        <div class="picture-header">
+          Discover the Best Furniture for Your Home
+        </div>
+        <div class="picture-text">
+          Our practice is Designing Complete Environments exceptional buildings
           communities and places in special situations
         </div>
         <div class="feature">
-          <div class="btn btn-feature">& 100% Guarantee</div>
-          <div class="btn btn-feature">& Free delivery London area</div>
+          <div class="form-div btn btn-feature">
+            <i class="form-logo ph-light ph-shield-check"></i>
+            <div class="form-text btn-text">100% Guarantee</div>
+          </div>
+          <div class="form-div btn btn-feature">
+            <i class="form-logo ph-light ph-truck"></i>
+            <div class="form-text btn-text">Free delivery London area</div>
+          </div>
         </div>
       </div>
     </div>

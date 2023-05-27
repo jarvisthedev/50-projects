@@ -12,7 +12,12 @@ html {
 /* ////////////////////////// */
 /* REUSABLE STYLE */
 /* ////////////////////////// */
-body {
+body,
+.form,
+.alternative,
+.form-div,
+.feature,
+.picture-background {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,8 +43,9 @@ input:focus {
   border: none;
 
   border-top: 0.5px solid #02081e67;
+  /* color: #000; */
+  border: 5px solid #000;
   margin-bottom: 1.6rem;
-  margin: 0 0.8rem 0.8rem 0.8rem;
 }
 
 /* ////////////////////////// */
@@ -52,4 +58,156 @@ body {
   color: #000;
   background-color: #f2f2f2;
   flex-direction: column;
+}
+
+.section--loginForm {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #f7f7f7;
+  margin: 5rem auto;
+  max-width: 96rem;
+  /* padding: 1.2rem; */
+}
+
+.form {
+  align-items: flex-start;
+  flex-direction: column;
+  /* background-color: rgb(56, 178, 56); */
+  padding: 1.2rem;
+}
+
+.header-name {
+  font-weight: 500;
+  /* font-family: "Yellowtail", cursive; */
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.header-intro {
+  font-weight: 500;
+}
+
+.header-texts {
+}
+
+.google-auth {
+}
+
+.google-in {
+}
+
+.form-div {
+  gap: 1.2rem;
+}
+
+.form-logo {
+  font-size: 2.4rem;
+}
+
+.form-text {
+}
+
+.alternative {
+  background-color: rgb(119, 96, 96);
+  align-items: stretch;
+  align-self: stretch;
+}
+
+.alternative-text {
+}
+
+.required {
+}
+
+.label {
+}
+
+.star {
+}
+
+.terms.form-text {
+  font-size: 1.4rem;
+}
+
+.input {
+  padding: 1.4rem;
+  border: none;
+  border-radius: 2rem;
+  border: 1px solid rgba(51, 51, 51, 0.4);
+  background-color: transparent;
+}
+
+.btn {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10rem;
+  border: 1px solid #f7f7f7;
+  color: #f7f7f7;
+}
+
+/* .btn.sighup  */
+.input.google-in,
+.input.name,
+.input.email,
+.input.password {
+  padding: 0.8rem 1rem;
+}
+
+.btn.sighup {
+  background-color: #111;
+  border: none;
+  padding: 0.8rem 8.4rem;
+}
+
+.sighup {
+}
+
+.method {
+}
+
+.account {
+}
+
+.picture-background {
+  background-image: url("imgs/small1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  padding: 2.4rem;
+  justify-content: flex-end;
+  color: #f7f7f7;
+}
+
+.picture-header {
+  margin: 0.8rem 10.8rem;
+  padding: 0.2rem 1.4rem;
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.picture-text {
+  align-self: stretch;
+  padding: 0.6rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ebebeb;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.feature {
+  gap: 1rem;
+  padding: 0.6rem;
+}
+
+.btn-feature {
+}
+
+.btn-text {
+}
+
+.google-logo {
+  width: 3.2rem;
 }
