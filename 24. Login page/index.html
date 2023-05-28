@@ -27,71 +27,46 @@
     <div class="section--loginForm">
       <!-- FIRST PART -->
       <div class="form">
-        <div class="header-name">Corals</div>
-        <div class="header-intro">Create your account</div>
+        <div class="header-name">Dotty</div>
+        <div class="header-intro">Create an account</div>
         <div class="header-texts">
           Let's get started with your 30 days free trial
         </div>
 
-        <div class="google-auth">
-          <input type="text" name="google-in" class="input google-in" />
-          <div class="form-div google-auth-text">
-            <img
-              class="form-logo google-logo"
-              src="imgs/google.svg"
-              alt="google logo"
-            />
-            <div class="form-text">Login with Google</div>
-          </div>
-        </div>
-        <div class="required">
-          <!-- <div class="label">
-            Name
-            <span class="star">*</span>
-          </div> -->
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            class="input name"
-            required
-          />
-        </div>
-        <div class="required">
-          <!-- <div class="label">
-            Email
-            <span class="star">*</span>
-          </div> -->
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            class="input email"
-            required
-          />
-        </div>
-        <div class="required">
-          <!-- <div class="label">
-            Password
-            <span class="star">*</span>
-          </div> -->
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            class="input password"
-            required
-          />
-        </div>
-        <div class="form-div">
-          <i class="form-logo ph-light ph-square"></i>
-          <i class="form-logo ph-light hidden ph-check-square"></i>
-          <div class="terms form-text">
-            I agree to all Terms, Privacy and Fees
-          </div>
-        </div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          class="input name"
+          required
+        />
 
-        <button class="btn sighup">Sign Up</button>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="input email"
+          required
+        />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="input password"
+          required
+        />
+
+        <button class="btn sighup">Create account</button>
+        <button class="btn google">
+          <img class="svg" src="imgs/google.svg" alt="google logo" />
+          <div class="form-text">Sign up with Google</div>
+        </button>
+        <button class="btn twitter">
+          <img class="svg" src="imgs/twitter.svg" alt="google logo" />
+          <div class="form-text">Sign up with Twitter</div>
+        </button>
+
         <div class="method">
           Already have an account? <a class="account" href="#">Log in</a>
         </div>

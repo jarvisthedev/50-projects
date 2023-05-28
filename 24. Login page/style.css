@@ -14,10 +14,12 @@ html {
 /* ////////////////////////// */
 body,
 .form,
-.alternative,
 .form-div,
 .feature,
-.picture-background {
+.picture-background,
+.btn.sighup,
+.btn.google,
+.btn.twitter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,10 +43,7 @@ input:focus {
 .hr {
   display: block;
   border: none;
-
   border-top: 0.5px solid #02081e67;
-  /* color: #000; */
-  border: 5px solid #000;
   margin-bottom: 1.6rem;
 }
 
@@ -56,7 +55,7 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   color: #000;
-  background-color: #f2f2f2;
+  background-color: #dedede;
   flex-direction: column;
 }
 
@@ -66,34 +65,32 @@ body {
   background-color: #f7f7f7;
   margin: 5rem auto;
   max-width: 96rem;
-  /* padding: 1.2rem; */
+  padding: 1.2rem;
+  border-bottom-right-radius: 5rem;
 }
 
 .form {
   align-items: flex-start;
   flex-direction: column;
-  /* background-color: rgb(56, 178, 56); */
-  padding: 1.2rem;
+  padding: 4.2rem 4.2rem;
 }
 
 .header-name {
   font-weight: 500;
-  /* font-family: "Yellowtail", cursive; */
   text-transform: uppercase;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.4rem;
 }
 
 .header-intro {
   font-weight: 500;
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .header-texts {
-}
-
-.google-auth {
-}
-
-.google-in {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2.4rem;
 }
 
 .form-div {
@@ -104,25 +101,9 @@ body {
   font-size: 2.4rem;
 }
 
-.form-text {
-}
-
 .alternative {
-  background-color: rgb(119, 96, 96);
   align-items: stretch;
   align-self: stretch;
-}
-
-.alternative-text {
-}
-
-.required {
-}
-
-.label {
-}
-
-.star {
 }
 
 .terms.form-text {
@@ -132,8 +113,7 @@ body {
 .input {
   padding: 1.4rem;
   border: none;
-  border-radius: 2rem;
-  border: 1px solid rgba(51, 51, 51, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: transparent;
 }
 
@@ -145,27 +125,58 @@ body {
   color: #f7f7f7;
 }
 
-/* .btn.sighup  */
-.input.google-in,
 .input.name,
 .input.email,
 .input.password {
-  padding: 0.8rem 1rem;
+  padding: 1.2rem 0;
+  margin-bottom: 1.2rem;
+  min-width: 25rem;
+}
+
+.input.password {
+  margin-bottom: 2.4rem;
+}
+
+input::placeholder {
+  color: #222;
+}
+
+.btn.sighup,
+.btn.google,
+.btn.twitter {
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  gap: 0.8rem;
+  width: 25rem;
+  margin-bottom: 1.2rem;
 }
 
 .btn.sighup {
   background-color: #111;
-  border: none;
-  padding: 0.8rem 8.4rem;
+  color: #f7f7f7;
 }
 
-.sighup {
+.btn.twitter {
+  margin-bottom: 2.8rem;
 }
 
 .method {
+  font-size: 1rem;
+  align-self: center;
+  color: #333;
+  margin-bottom: 4.2rem;
 }
 
 .account {
+  color: #000;
+}
+
+.svg {
+  width: 1.6rem;
 }
 
 .picture-background {
@@ -177,6 +188,9 @@ body {
   padding: 2.4rem;
   justify-content: flex-end;
   color: #f7f7f7;
+  border-radius: 3rem;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .picture-header {
@@ -200,12 +214,6 @@ body {
 .feature {
   gap: 1rem;
   padding: 0.6rem;
-}
-
-.btn-feature {
-}
-
-.btn-text {
 }
 
 .google-logo {
