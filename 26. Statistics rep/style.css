@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* REUSABLE STYLE */
+/* ////////////////////////// */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.site {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.hr {
+  display: block;
+  border: none;
+
+  border-top: 0.5px solid #02081e67;
+  margin-bottom: 1.6rem;
+  margin: 0 0.8rem 0.8rem 0.8rem;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+
+body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000;
+  background-color: #f2f2f2;
+  flex-direction: column;
+}
+
+.section--statistic {
+  flex-direction: column;
+  gap: 2rem;
+  margin: 10rem auto;
+  padding: 1rem 5rem;
+  max-width: 100rem;
+  align-items: stretch;
+}
