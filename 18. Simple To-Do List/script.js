@@ -28,7 +28,6 @@ sectionToDoList.addEventListener("click", function (e) {
     }
   }
 
-  //   style="text-decoration: line-through;"
   if (clicked.classList.contains("unchecked")) {
     clicked.classList.add("hidden");
     clicked.previousElementSibling.classList.remove("hidden");
