@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 /* ///////////////////////////////// */
 /* HEADER */
 /* //////////////////////////////// */
-
+/* 
 .header {
   background-color: #f7f7f7;
   background-color: #e4c6c6;
@@ -79,19 +79,18 @@ body {
 .main-nav-link.nav-get:active {
   background-color: #cf711f;
   border: none;
-}
+} */
 
 /* /////////////////////////// */
 /* RE-USABLE CODES */
 /* ///////////////////////// */
-
+/* 
 .heading-primary,
 .heading-secondary,
+
 .heading-tertiary {
   font-weight: 700;
   color: #333;
-  /* color: #45260a; */
-  /* color: #343a40; */
   letter-spacing: -0.5px;
 }
 
@@ -121,7 +120,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
-}
+} */
 
 /* ///////////////////////////////// */
 /* SECTION-PROJECT */
@@ -142,11 +141,15 @@ body {
 }
 
 .projects {
+  margin-bottom: 5rem;
 }
 
 .project-list {
   list-style-type: none;
   font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .project-detail:link,
