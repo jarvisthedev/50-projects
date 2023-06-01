@@ -36,6 +36,19 @@ body {
   display: none;
 }
 
+.active-width {
+  width: 50vw;
+}
+
+.centering-all--items {
+  justify-content: center;
+  align-items: center;
+}
+
+.centering-all--items .number {
+  font-size: 10.2rem;
+}
+
 /* ////////////////////////// */
 /* NORMAL STYLE */
 /* ////////////////////////// */
@@ -49,14 +62,9 @@ body {
   background-color: blue;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  padding: 2.4rem 2.4rem 2.4rem 2.4rem;
+  padding: 2.8rem 2.4rem 2.4rem 2.4rem;
   color: #dedede;
   min-height: 82vh;
-}
-
-.article:first-child {
-  width: 50vw;
 }
 
 .article:not(:last-child) {
@@ -94,27 +102,47 @@ body {
   line-height: 1.6;
 }
 
-/* 3. STATES */
+/* STATES */
+/* ////////////////////////////////////////////// */
 /* 1. Normal */
+/* ////////////////////////////////////////////// */
+/*  */
+/*  */
+/*  */
+
+/* ////////////////////////////////////////////// */
 /* 2. Hovered */
+/* ////////////////////////////////////////////// */
+/*  */
+/*  */
+/*  */
 
 /* ////////////////////////////////////////////// */
 /* 3. Clicked */
 /* ////////////////////////////////////////////// */
-
-.clicked-active .number {
-  display: none;
-}
+/*  */
+/*  */
+/*  */
 
 .clicked-active.article {
   justify-content: center;
 }
 
-/* Vertically */
+.clicked-active .number {
+  display: none;
+}
 
+/* If add active, add hidden class */
 .vertical-title {
-  transform: rotate(90deg);
-  font-size: 2.8rem;
+  writing-mode: vertical-lr;
+  font-size: 2rem;
   white-space: nowrap;
-  /* background-color: rgb(22, 149, 37); */
+  align-self: center;
+  font-size: 700;
+
+  /* number            add--hidden */
+  /* article-title     add--hidden */
+  /* article-content   add--hidden */
+  /* button            add--hidden */
+  /* article-title     add--vertical-title    remove hidden  */
 }
