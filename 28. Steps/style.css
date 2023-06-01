@@ -59,7 +59,7 @@ body {
 }
 
 .article {
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.774);
   display: flex;
   flex-direction: column;
   padding: 2.8rem 2.4rem 2.4rem 2.4rem;
@@ -83,10 +83,8 @@ body {
   font-size: 4.8rem;
 }
 
-.icon {
-}
-
-.article-content {
+button span {
+  font-size: 2rem;
 }
 
 .article-content p {
@@ -116,6 +114,35 @@ body {
 /*  */
 /*  */
 /*  */
+.article--hover {
+  background-color: rgba(39, 236, 25, 0.8);
+  width: 28vw;
+  cursor: pointer;
+}
+
+.article--hover button {
+  background-color: transparent;
+  border: none;
+  border: 1px solid #f7f7f7;
+  border-radius: 10rem;
+  color: #f7f7f7;
+
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 1.8rem 4.2rem;
+}
+
+.article--hover .article-title {
+  margin-bottom: 5.6rem;
+  position: relative;
+}
+
+.article--hover .number {
+  position: absolute;
+  top: 21rem;
+  color: rgba(222, 222, 222, 0.2);
+}
 
 /* ////////////////////////////////////////////// */
 /* 3. Clicked */
