@@ -57,7 +57,17 @@ body {
   margin: 6.4rem auto;
   max-width: 100vw;
 
-  background-image: url("imgs/maize.jpg");
+  /* imgs/chicken.jpg */
+  /*  */
+
+  /* imgs/maize.jpg */
+  /* imgs/maize.jpg */
+  /* imgs/maize.jpg */
+  /* imgs/maize.jpg */
+  /* imgs/maize.jpg */
+  /* imgs/maize.jpg */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("imgs/chicks1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -167,22 +177,4 @@ button span {
   /* article-content   add--hidden */
   /* button            add--hidden */
   /* article-title     add--vertical-title    remove hidden  */
-}
-
-.article:nth-child(1) {
-}
-
-.article:nth-child(2) {
-}
-
-.article:nth-child(3) {
-}
-
-.article:nth-child(4) {
-}
-
-.article:nth-child(5) {
-}
-
-.article:nth-child(6) {
 }
