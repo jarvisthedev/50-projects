@@ -58,23 +58,25 @@ body {
   max-width: 100vw;
 
   /* imgs/chicken.jpg */
+  /* imgs/meat.jpg */
   /*  */
 
+  /* imgs/meat.jpg */
+
   /* imgs/maize.jpg */
-  /* imgs/maize.jpg */
-  /* imgs/maize.jpg */
-  /* imgs/maize.jpg */
-  /* imgs/maize.jpg */
-  /* imgs/maize.jpg */
+  /* imgs/satisfaction.jpg */
+  /* imgs/satisfaction1.jpg */
+  /* imgs/partnership.jpg */
+  /* imgs/transport.jpg  ///// bottom */
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("imgs/chicks1.jpg");
+    url("imgs/meat1.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
 }
 
 .article {
-  /* background-color: rgba(0, 0, 255, 0.774); */
   display: flex;
   flex-direction: column;
   padding: 2.8rem 2.4rem 2.4rem 2.4rem;
@@ -150,7 +152,7 @@ button span {
 .article--hover .number {
   position: absolute;
   top: 21rem;
-  color: rgba(222, 222, 222, 0.2);
+  color: rgba(222, 222, 222, 0.1);
 }
 
 /* ////////////////////////////////////////////// */
