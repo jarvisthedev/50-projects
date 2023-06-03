@@ -1,11 +1,17 @@
-// console.log("b;");
 const colorBox = document.querySelector(".color");
 
-function randomNum(num1, num2) {
-  return Math.floor(Math.random(num2 - num1) * num2);
+function randomColor() {
+  const randomNum = Math.floor(Math.random(256 - 0) * 256);
+
+  return randomNum;
 }
+
+// console.log(randomColor(), randomColor(), randomColor());
+
+// const color = `rgb(${randomNum}, ${randomNum}, ${randomNum})`;
+// console.log(color);
 
 setInterval(() => {
   colorBox.style.backgroundColor = `
-  rgb(${randomNum(0, 256)}, ${randomNum(0, 256)}, ${randomNum(0, 256)})`;
+  rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
 }, 1000);
