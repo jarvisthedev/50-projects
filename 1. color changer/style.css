@@ -15,19 +15,28 @@ body {
 }
 
 .color-change {
-  width: 60rem;
+  width: 50%;
   margin: 10rem auto;
   text-align: center;
-  padding: 1rem;
 }
 
-.color-text {
+p {
   font-size: 2rem;
   font-weight: bold;
+  padding: 0.5rem;
 }
 
 .color {
-  height: 30rem;
-  /* background-color: blue; */
+  height: 40rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 38em) {
+  p {
+    font-size: 1.6rem;
+  }
+
+  .color-change {
+    width: 70%;
+  }
 }

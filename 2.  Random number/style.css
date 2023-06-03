@@ -12,7 +12,7 @@ body,
 .random-guess {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .container {
@@ -21,6 +21,7 @@ body,
   padding: 2rem;
   margin: 5rem auto;
   font-weight: bold;
+  /* background-color: rgb(82, 207, 50); */
 }
 
 .random-guess {

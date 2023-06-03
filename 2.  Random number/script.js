@@ -1,6 +1,6 @@
 const hiddenBox = document.querySelector(".hidden-box");
 const trials = document.querySelector(".trials");
-const guessBtn = document.querySelector(".guess-btn");
+const btn = document.querySelector("button");
 const userInput = document.querySelector(".user-number");
 const introText = document.querySelector(".num-text");
 const body = document.querySelector("body");
@@ -13,13 +13,13 @@ function helper_func(hiddenCont, msg, z_index, color) {
   hiddenBox.textContent = hiddenCont;
   introText.textContent = msg;
   body.style.backgroundColor = color;
-  guessBtn.style.backgroundColor = "inherit";
+  btn.style.backgroundColor = "inherit";
   userInput.style.backgroundColor = "inherit";
-  guessBtn.style.zIndex = z_index;
+  btn.style.zIndex = z_index;
   userInput.style.zIndex = z_index;
 }
 
-guessBtn.addEventListener("click", function () {
+btn.addEventListener("click", function () {
   userInputValue = Number(userInput.value);
   if (!userInput.value) {
     introText.textContent = "Please enter a valid number";
@@ -45,7 +45,7 @@ guessBtn.addEventListener("click", function () {
     );
   } else {
     if (entries === 0)
-      helper_func(randomNum, "Losser! You have Loser 😭️ 😭️ 😭️", "-1", "red");
+      helper_func(randomNum, "Loser! You have lost 😭️ 😭️ 😭️", "-1", "red");
   }
   trials.textContent = entries;
 });
