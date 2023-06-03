@@ -138,17 +138,20 @@ button span {
   align-items: center;
   font-size: 1.8rem;
   padding: 1.8rem 2.8rem;
+  display: block;
 }
 
+/* .article--hover . */
 .article--hover .article-title {
   margin-bottom: 5.6rem;
   position: relative;
+  display: block;
 }
 
 .article--hover .number {
   position: absolute;
   top: 21rem;
-  color: rgba(222, 222, 222, 0.1);
+  color: rgba(222, 222, 222, 0.2);
 }
 
 /* ////////////////////////////////////////////// */
@@ -156,23 +159,22 @@ button span {
 /* ////////////////////////////////////////////// */
 .clicked-active.article {
   justify-content: center;
+  width: 50vw;
 }
 
 .clicked-active .number {
   display: none;
 }
 
-/* If add active, add hidden class */
+/* .clicked-active .article-title, */
+.clicked-active .article-content {
+  display: block;
+}
+
 .vertical-title {
   writing-mode: vertical-lr;
   font-size: 2rem;
   white-space: nowrap;
   align-self: center;
   font-size: 700;
-
-  /* number            add--hidden */
-  /* article-title     add--hidden */
-  /* article-content   add--hidden */
-  /* button            add--hidden */
-  /* article-title     add--vertical-title    remove hidden  */
 }
