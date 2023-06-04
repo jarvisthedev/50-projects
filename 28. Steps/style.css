@@ -12,7 +12,6 @@ html {
 /* ////////////////////////// */
 /* GENERAL STYLE */
 /* ////////////////////////// */
-
 body {
   font-size: 1.8rem;
   color: #000;
@@ -50,25 +49,14 @@ body {
 }
 
 /* ////////////////////////// */
-/* NORMAL STYLE */
+/* 1. Normal style */
 /* ////////////////////////// */
-
 .section--steps {
   margin: 6.4rem auto;
   max-width: 100vw;
-
-  /* imgs/chicken.jpg */
-  /* imgs/meat2 */
-  /* imgs/maize.jpg */
-  /* imgs/satisfaction.jpg */
-  /* imgs/satisfaction1.jpg */
-  /* imgs/partnership.jpg */
-  /* imgs/transport.jpg  ///// bottom */
-
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("imgs/meat3.jpg");
+  background-color: blue;
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
   background-size: cover;
 }
 
@@ -113,16 +101,10 @@ button span {
   line-height: 1.6;
 }
 
-/* STATES */
-/* ////////////////////////////////////////////// */
-/* 1. Normal */
-/* ////////////////////////////////////////////// */
-
 /* ////////////////////////////////////////////// */
 /* 2. hover */
 /* ////////////////////////////////////////////// */
 .article--hover {
-  /* background-color: rgba(39, 236, 25, 0.8); */
   width: 28vw;
   cursor: pointer;
 }
@@ -141,7 +123,6 @@ button span {
   display: block;
 }
 
-/* .article--hover . */
 .article--hover .article-title {
   margin-bottom: 5.6rem;
   position: relative;
@@ -166,7 +147,6 @@ button span {
   display: none;
 }
 
-/* .clicked-active .article-title, */
 .clicked-active .article-content {
   display: block;
 }

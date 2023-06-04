@@ -23,49 +23,20 @@ container.addEventListener("click", function (e) {
   parent.classList.add("clicked-active");
   parent.querySelector(".article-title").classList.add("hidden");
   const articleNumber = parent.querySelector(".number").textContent;
-  console.log(articleNumber);
 
-  // .section--steps {
-  //   margin: 6.4rem auto;
-  //   max-width: 100vw;
+  let linear_gradient = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))`;
+  let imagePick = ``;
 
-  //   /* imgs/chicken.jpg */
-  //   /* imgs/meat2 */
-  //   /* imgs/maize.jpg */
-  //   /* imgs/satisfaction.jpg */
-  //   /* imgs/satisfaction1.jpg */
-  //   /* imgs/partnership.jpg */
-  //   /* imgs/transport.jpg  ///// bottom */
+  if (articleNumber === "1") imagePick = `url(imgs/maize.jpg)`;
+  else if (articleNumber === "2") imagePick = `url(imgs/chicks1.jpg)`;
+  else if (articleNumber === "3") imagePick = `url("imgs/meat2.jpg")`;
+  else if (articleNumber === "4") imagePick = `url("imgs/transport.jpg")`;
+  else if (articleNumber === "5") imagePick = `url("imgs/partnership.jpg")`;
+  else if (articleNumber === "6") imagePick = `url("imgs/satisfaction.jpg")`;
 
-  //   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  //     url("imgs/meat3.jpg");
-  //   background-repeat: no-repeat;
-  //   /* background-position: center; */
-  //   background-size: cover;
-  // }
-
-  //
-  //
-  //
-
-  if (articleNumber === "1") {
-    sectionStep.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(imgs/transport.jpg)`;
-  } else if (articleNumber === "2") {
-    sectionStep.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-       url("imgs/chicken.jpg");`;
-  } else if (articleNumber === "3") {
-    sectionStep.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-       url("imgs/transport.jpg");`;
-  } else if (articleNumber === "4") {
-    sectionStep.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-       url("imgs/transport.jpg");`;
-  } else if (articleNumber === "5") {
-    sectionStep.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-       url("imgs/partnership.jpg");`;
-  } else if (articleNumber === "6") {
-    sectionStep.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-       url("imgs/partnership.jpg");`;
-  }
+  if (articleNumber === 4) sectionStep.style.backgroundPosition = "bottom";
+  else sectionStep.style.backgroundPosition = "center";
+  sectionStep.style.backgroundImage = `${linear_gradient},${imagePick}`;
 });
 
 // container.addEventListener("mouseover", function (e) {
@@ -77,6 +48,3 @@ container.addEventListener("click", function (e) {
 //   parent.classList.add("article--hover");
 //   parent.querySelector(".number").classList.remove("hidden");
 // });
-
-console.log(article);
-// sectionStep.style.backgroundImage = "url(./imgs/partnership.jpg)";
