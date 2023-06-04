@@ -24,7 +24,7 @@ container.addEventListener("click", function (e) {
   parent.querySelector(".article-title").classList.add("hidden");
   const articleNumber = parent.querySelector(".number").textContent;
 
-  let linear_gradient = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))`;
+  let linear_gradient = `linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42))`;
   let imagePick = ``;
 
   if (articleNumber === "1") imagePick = `url(imgs/maize.jpg)`;
