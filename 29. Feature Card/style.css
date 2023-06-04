@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+body {
+  font-size: 1.8rem;
+  color: #000;
+  background-color: #f2f2f2;
+  line-height: 1;
+}
+
+.container {
+  color: #dedede;
+}

@@ -21,6 +21,7 @@ container.addEventListener("click", function (e) {
   }
 
   parent.classList.add("clicked-active");
+  parent.classList.remove("article--hover");
   parent.querySelector(".article-title").classList.add("hidden");
   const articleNumber = parent.querySelector(".number").textContent;
 
@@ -39,12 +40,18 @@ container.addEventListener("click", function (e) {
   sectionStep.style.backgroundImage = `${linear_gradient},${imagePick}`;
 });
 
-// container.addEventListener("mouseover", function (e) {
-//   const parent = e.target.closest(".article");
-//   for (let i = 0; i < article.length; i++) {
-//     article[i].classList.remove("article--hover");
-//   }
+container.addEventListener("mouseover", function (e) {
+  const parent = e.target.closest(".article");
+  for (let i = 0; i < article.length; i++) {
+    if (article[i].classList.contains("clicked-active")) return;
+    article[i].classList.remove("article--hover");
+  }
+  parent.classList.add("article--hover");
+  parent.querySelector(".number").classList.remove("hidden");
+});
 
-//   parent.classList.add("article--hover");
-//   parent.querySelector(".number").classList.remove("hidden");
-// });
+container.addEventListener("mouseout", function (e) {
+  for (let i = 0; i < article.length; i++) {
+    article[i].classList.remove("article--hover");
+  }
+});
