@@ -14,11 +14,119 @@ html {
 /* ////////////////////////// */
 body {
   font-size: 1.8rem;
-  color: #000;
-  background-color: #f2f2f2;
+  color: #ccccff;
   line-height: 1;
+  background-color: #000066;
 }
 
-.container {
-  color: #dedede;
+.section--profile-card {
+  max-width: 39.8rem;
+  margin: 5rem auto;
+  padding: 0 1.2rem;
+}
+
+.card {
+  background-color: #222;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.card::after {
+  content: "pro";
+  text-transform: uppercase;
+  position: absolute;
+  top: 2.6rem;
+  left: 2.6rem;
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  color: #222;
+  background-color: #ffa500;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.card-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.8rem;
+}
+
+.card-profile img {
+  height: 15.2rem;
+  width: 15.2rem;
+  border: 1px solid #7ab9d4;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-bottom: 1.8rem;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.location {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.description {
+  line-height: 1.4;
+  padding: 0 6.4rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.btn {
+  font-weight: 300;
+  font-weight: 1.8rem;
+  padding: 1.2rem 2.8rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn--msg {
+  background-color: #7ab9d4;
+}
+
+.btn--follow {
+  background-color: transparent;
+  border: 1px solid #7ab9d4;
+  padding: 1.2rem 2.6rem;
+  color: #7ab9d4;
+}
+
+.card-skills {
+  background-color: #000019;
+  padding: 2rem;
+}
+
+.skills-title {
+}
+
+.card-skills ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* 
+.card-skills a:link,
+.card-skills a:visited {
+  border: 1px solid #7ab9d4;
+  padding: 0.5rem 0.8rem;
+  white-space: nowrap;
+  display: inline-block;
+} */
+
+.skill {
 }
