@@ -16,18 +16,19 @@ body {
   font-size: 1.8rem;
   color: #ccccff;
   line-height: 1;
-  background-color: #000066;
+  background-color: #dedede;
 }
 
 .section--profile-card {
-  max-width: 39.8rem;
+  max-width: 38.2rem;
   margin: 5rem auto;
   padding: 0 1.2rem;
 }
 
 .card {
-  background-color: #222;
+  background-color: #1a1a30;
   position: relative;
+  overflow: hidden;
   border-radius: 0.5rem;
 }
 
@@ -64,14 +65,14 @@ body {
 .name {
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
 }
 
 .location {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.4rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.8rem;
 }
 
 .description {
@@ -103,30 +104,25 @@ body {
 }
 
 .card-skills {
-  background-color: #000019;
+  background-color: #000017;
   padding: 2rem;
 }
 
 .skills-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 
-.card-skills ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-  width: 100%;
-}
-
-/* 
 .card-skills a:link,
 .card-skills a:visited {
-  border: 1px solid #7ab9d4;
+  border: 1px solid rgba(122, 185, 212, 0.2);
   padding: 0.5rem 0.8rem;
   white-space: nowrap;
   display: inline-block;
-} */
-
-.skill {
+  text-decoration: none;
+  color: #add8e6;
+  font-size: 1.4rem;
+  margin: 0.4rem;
 }
