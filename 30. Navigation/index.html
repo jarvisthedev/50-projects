@@ -12,7 +12,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script defer src="script.js"></script>
   </head>
 
@@ -22,13 +31,71 @@
         <div class="logo">Tenn<span>i</span>s</div>
         <div class="nav-list">
           <ul>
-            <li><a class="nav-detail" href="#">Demo</a></li>
-            <li><a class="nav-detail" href="#">Academy</a></li>
+            <li class="parent-header-hover">
+              <a class="nav-detail parent-header" href="#">Demos</a>
+              <div class="nav-hover-detail child-header-hover">
+                <ul>
+                  <li><a class="nav-detail" href="#">Home1</a></li>
+                  <li><a class="nav-detail" href="#">Home2</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li> -->
+            <li class="parent-header-hover">
+              <a class="nav-detail" href="#">Academy</a>
+              <div class="nav-hover-detail child-header-hover hidden">
+                <ul>
+                  <li><a class="nav-detail" href="#">Story</a></li>
+                  <li><a class="nav-detail" href="#">Coaching</a></li>
+                  <li><a class="nav-detail" href="#">Pricing</a></li>
+                  <li><a class="nav-detail" href="#">Partner</a></li>
+                  <li><a class="nav-detail" href="#">Reviews</a></li>
+                  <li><a class="nav-detail" href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </li>
             <li><a class="nav-detail" href="#">Programs</a></li>
             <li><a class="nav-detail" href="#">Schedule</a></li>
-            <li><a class="nav-detail" href="#">All pages</a></li>
+            <!-- <li> -->
+            <li class="parent-header-hover">
+              <a class="nav-detail" href="#">All pages</a>
+              <div class="nav-hover-detail child-header-hover">
+                <ul>
+                  <li><a class="nav-detail" href="#">Home1</a></li>
+                  <li><a class="nav-detail" href="#">Home2</a></li>
+                  <li><a class="nav-detail" href="#">Coaching</a></li>
+                  <li><a class="nav-detail" href="#">Partners</a></li>
+                  <li><a class="nav-detail" href="#">Pricing</a></li>
+                  <li><a class="nav-detail" href="#">Reviews</a></li>
+                  <li><a class="nav-detail" href="#">Get In Touch</a></li>
+                </ul>
+                <ul>
+                  <li><a class="nav-detail" href="#">Schedule</a></li>
+                  <li><a class="nav-detail" href="#">Reviews</a></li>
+                  <li><a class="nav-detail" href="#">Players</a></li>
+                  <li><a class="nav-detail" href="#">Player Details</a></li>
+                  <li><a class="nav-detail" href="#">Programs</a></li>
+                  <li><a class="nav-detail" href="#">Blog</a></li>
+                  <li><a class="nav-detail" href="#">Blog Details</a></li>
+                </ul>
+                <ul>
+                  <li><a class="nav-detail" href="#">FAQ</a></li>
+                  <li><a class="nav-detail" href="#">Shop</a></li>
+                  <li><a class="nav-detail" href="#">Shop Details</a></li>
+                  <li><a class="nav-detail" href="#">Style Guide</a></li>
+                  <li><a class="nav-detail" href="#">Changelog</a></li>
+                  <li><a class="nav-detail" href="#">Coming Soon</a></li>
+                  <li><a class="nav-detail" href="#">404</a></li>
+                </ul>
+              </div>
+            </li>
+
             <li><a class="nav-detail" href="#">Get in Touch</a></li>
-            <li><a class="nav-detail" href="#">7</a></li>
+            <li>
+              <a class="nav-detail" href="#"
+                ><ion-icon name="cart-outline"></ion-icon
+              ></a>
+            </li>
           </ul>
         </div>
       </div>

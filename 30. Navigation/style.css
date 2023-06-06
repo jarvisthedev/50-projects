@@ -19,12 +19,15 @@ body {
   background-color: #111;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ////////////////////////// */
 /* HEADER */
 /* ////////////////////////// */
 .header {
   padding: 0 9.8rem;
-  /* background-color: rgb(48, 134, 37); */
   margin: 0 auto;
 }
 
@@ -32,7 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8.4rem;
+  height: 12.4rem;
 }
 
 .logo {
@@ -52,13 +55,44 @@ body {
   gap: 4.2rem;
 }
 
-.nav-list a {
+.nav-list a:link,
+.nav-list a:visited {
   text-decoration: none;
   color: #f7f7f7;
   font-size: 2.2rem;
   font-weight: 300;
 }
 
+.nav-list a:hover,
+.nav-list a:active {
+  color: #949494;
+}
+
+.parent-header-hover {
+  position: relative;
+}
+
+.child-header-hover {
+  position: absolute;
+  top: 6rem;
+  left: -2rem;
+  background-color: rgb(24, 60, 132);
+}
+
+.child-header-hover ul {
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  /* justify-content: flex-start; */
+  padding: 3.2rem;
+  width: 25rem;
+}
+
+.child-header-hover a {
+  /* flex-direction: column; */
+  /* background-color: orangered; */
+  /* padding: 2.4rem; */
+}
 /* //////////////////////////// */
 /* SECTION HERO */
 /* //////////////////////////// */
@@ -75,11 +109,11 @@ body {
 }
 
 .primary-header {
-  font-size: 11.2rem;
+  font-size: 12.2rem;
   padding: 0 10rem;
-  margin-top: 13.8rem;
+  margin-top: 12.8rem;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 3.2rem;
 }
 
@@ -95,10 +129,18 @@ body {
   list-style: none;
 }
 
-.btn {
+.btn:link,
+.btn:visited {
   text-decoration: none;
   color: #f7f7f7;
   border: 1px solid #f7f7f7;
   padding: 2rem 15rem;
-  border-radius: 100rem;
+  border-radius: 10rem;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #f7f7f7;
+  color: #111;
 }
