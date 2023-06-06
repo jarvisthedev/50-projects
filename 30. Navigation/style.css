@@ -16,7 +16,7 @@ body {
   font-size: 1.8rem;
   color: #f7f7f7;
   line-height: 1;
-  background-color: #111;
+  background-color: #666;
 }
 
 .hidden {
@@ -35,7 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 12.4rem;
+  height: 12.2rem;
 }
 
 .logo {
@@ -52,14 +52,14 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 4.2rem;
+  gap: 5.8rem;
 }
 
 .nav-list a:link,
 .nav-list a:visited {
   text-decoration: none;
   color: #f7f7f7;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 300;
 }
 
@@ -76,22 +76,47 @@ body {
   position: absolute;
   top: 6rem;
   left: -2rem;
-  background-color: rgb(24, 60, 132);
+  background-color: #111;
+}
+
+.child-header-hover .nav-detail {
+  /* position: relative; */
+}
+
+.child-header-hover .nav-detail::before {
+  content: "—";
+  font-size: 3.8rem;
+  position: absolute;
+  top: -0.8rem;
+
+  left: -4rem;
 }
 
 .child-header-hover ul {
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
-  /* justify-content: flex-start; */
   padding: 3.2rem;
-  width: 25rem;
+  width: 17rem;
 }
 
 .child-header-hover a {
-  /* flex-direction: column; */
-  /* background-color: orangered; */
-  /* padding: 2.4rem; */
+  font-size: 2.1rem !important;
+  white-space: nowrap;
+}
+
+.child-header-hover.flex--2 {
+  left: -3.2rem;
+}
+
+.child-header-hover.grid {
+  left: -24rem;
+}
+
+.child-header-hover .grid-ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 52rem;
 }
 /* //////////////////////////// */
 /* SECTION HERO */
@@ -111,10 +136,10 @@ body {
 .primary-header {
   font-size: 12.2rem;
   padding: 0 10rem;
-  margin-top: 12.8rem;
+  margin-top: 8.8rem;
   text-align: center;
   font-weight: 300;
-  margin-bottom: 3.2rem;
+  margin-bottom: 5.2rem;
 }
 
 .section-hero ul {
