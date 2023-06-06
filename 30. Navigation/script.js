@@ -1,15 +1,18 @@
 const sectionHead = document.querySelector(".section--head");
-const container = document.querySelector(".container");
 
 sectionHead.addEventListener("mouseover", function (e) {
   e.preventDefault();
   const parentHover = e.target.closest(".parent-header-hover");
-  //   child-header-hover
+  if (!parentHover) return;
   const childHover = parentHover.querySelector(".child-header-hover");
-  // if (childHover.classList.remove("hidden")) {
-  // childHover.classList.remove("hidden");
-  // }
-  console.log(1122);
-  console.log(parentHover);
-  console.log(childHover);
+  if (childHover.classList.contains("hidden"))
+    childHover.classList.remove("hidden");
+});
+
+sectionHead.addEventListener("mouseout", function (e) {
+  e.preventDefault();
+  const parentHover = e.target.closest(".parent-header-hover");
+  if (!parentHover) return;
+  const childHover = parentHover.querySelector(".child-header-hover");
+  childHover.classList.add("hidden");
 });
