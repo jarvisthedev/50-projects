@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="section--form">
+      <div class="container">
+        <div class="background-photo"></div>
+        <article class="article">
+          <form action="post">
+            <h3 class="form-head">We'd love to hear from you.</h3>
+
+            <div class="contain">
+              <label for="reason">Contact reason</label> <br />
+              <select id="reason" name="reason">
+                <option value="partnership">I want to partner</option>
+                <option value="jounalist">I'm a jounalist</option>
+                <option value="employer">I'm an employer</option>
+                <option value="justice">I'm justice involved</option>
+              </select>
+            </div>
+
+            <div class="contain">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="contain">
+              <label for="organisation">Organisation</label>
+              <input type="text" id="organisation" name="organisation" />
+            </div>
+            <div class="contain">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="contain">
+              <label for="adrdess">Address</label>
+              <input type="text" id="address" name="address" />
+            </div>
+            <div class="contain">
+              <label for="telephone">Telephone</label>
+              <input type="number" name="telephone" id="telephone" />
+            </div>
+            <div class="contain">
+              <label for="phone">Inmate Number</label>
+              <input type="number" name="phone" id="phone" />
+            </div>
+
+            <button class="btn">Submit</button>
+          </form>
+        </article>
+      </div>
+    </div>
+
+    <div class="oficial-site">
+      <!-- <a href="#https://paycove.io/" class="site">visit offial site</a> -->
+    </div>
+  </body>
+</html>
