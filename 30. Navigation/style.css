@@ -31,11 +31,16 @@ body {
   margin: 0 auto;
 }
 
+.padding--horizontal {
+  padding: 6.1rem 0;
+  display: inline-block;
+}
+
 .section--head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 12.2rem;
+  /* height: 12.2rem; */
 }
 
 .logo {
@@ -74,22 +79,38 @@ body {
 
 .child-header-hover {
   position: absolute;
-  top: 6rem;
+  top: 12rem;
   left: -2rem;
   background-color: #111;
 }
 
 .child-header-hover .nav-detail {
-  /* position: relative; */
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
+  transition: all 0.3s;
 }
 
-.child-header-hover .nav-detail::before {
-  content: "—";
+.child-header-hover .nav-detail hr {
   font-size: 3.8rem;
+  border: 1.4px solid #949494;
+  width: 2rem;
   position: absolute;
-  top: -0.8rem;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.3s;
+}
 
-  left: -4rem;
+.sec-link-hover {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+  display: inline-block !important;
 }
 
 .child-header-hover ul {
@@ -101,7 +122,7 @@ body {
 }
 
 .child-header-hover a {
-  font-size: 2.1rem !important;
+  font-size: 1.8rem !important;
   white-space: nowrap;
 }
 
