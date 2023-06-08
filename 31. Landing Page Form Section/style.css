@@ -20,8 +20,8 @@ body {
 }
 
 .section--form {
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -29,25 +29,25 @@ body {
   max-width: 125rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: rgb(42, 57, 187);
 }
 
 .background-photo {
-  background-color: rgb(46, 168, 15);
-  background-image: url('imgs/centre.jpg');
+  background-image: url('imgs/jusfilm.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
 }
 
 .article {
-  background-color: rgb(246, 246, 13);
-  padding: 6rem;
+  background-color: #effe62;
+  padding: 9.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 65.2rem;
 }
 
 .container form {
-  /* max-width: 43rem; */
   background-color: #f7f7f7;
   color: #000;
   padding: 3.6rem 2.8rem;
@@ -57,9 +57,6 @@ body {
   row-gap: 0.8rem;
   column-gap: 2rem;
   line-height: 1.12;
-}
-
-.post {
 }
 
 .form-head {
@@ -94,9 +91,6 @@ form .contain:nth-child(4) {
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 1.6rem;
-}
-
-.container input {
 }
 
 .container .btn {
