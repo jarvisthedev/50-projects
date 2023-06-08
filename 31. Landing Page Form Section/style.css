@@ -105,6 +105,8 @@ form .contain:nth-child(4) {
   text-transform: uppercase;
   background-color: transparent;
   margin-top: 2rem;
+  display: center;
+  justify-content: center;
 }
 
 @media (max-width: 74em) {
@@ -135,5 +137,24 @@ form .contain:nth-child(4) {
 @media (max-width: 45em) {
   .article {
     padding: 0;
+  }
+
+  .container form {
+    row-gap: 0.8rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .section--form {
+    padding: 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .background-photo {
+    width: 100%;
+    padding-bottom: 100%;
   }
 }
