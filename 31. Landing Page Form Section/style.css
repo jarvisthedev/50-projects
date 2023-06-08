@@ -21,6 +21,7 @@ body {
 
 .section--form {
   margin: 0 auto;
+  padding: 0 1.2rem;
   display: flex;
   justify-content: center;
 }
@@ -104,4 +105,35 @@ form .contain:nth-child(4) {
   text-transform: uppercase;
   background-color: transparent;
   margin-top: 2rem;
+}
+
+@media (max-width: 74em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  form .contain:nth-child(5),
+  form .contain:nth-child(6),
+  form .contain:nth-child(7),
+  form .contain:nth-child(8) {
+    grid-column: 1/-1;
+  }
+
+  .article {
+    padding: 4.9rem;
+  }
+}
+
+@media (max-width: 45em) {
+  .article {
+    padding: 0;
+  }
 }
