@@ -1,1 +1,1 @@
-const sectionHead = document.querySelector(".section--form");
+const sectionHead = document.querySelector('.section--form');
