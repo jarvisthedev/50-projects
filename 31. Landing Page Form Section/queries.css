@@ -1,0 +1,55 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1146px) */
+/* ////////////////////////////////// */
+@media (max-width: 74em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (992px) */
+/* ////////////////////////////////// */
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+
+  form .contain:nth-child(5),
+  form .contain:nth-child(6),
+  form .contain:nth-child(7),
+  form .contain:nth-child(8) {
+    grid-column: 1/-1;
+  }
+
+  .article {
+    padding: 4.9rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (770px) */
+/* ////////////////////////////////// */
+@media (max-width: 48em) {
+  .article {
+    padding: 0;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (560px) */
+/* ////////////////////////////////// */
+@media (max-width: 35em) {
+  .section--form {
+    padding: 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .background-photo {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
