@@ -17,13 +17,14 @@
 }
 
 /* ////////////////////////////////// */
-/* PORTRAIT TABLETS (770px) */
+/* PORTRAIT TABLETS (580px) */
 /* ////////////////////////////////// */
-@media (max-width: 48em) {
-}
-
-/* ////////////////////////////////// */
-/* PORTRAIT TABLETS (560px) */
-/* ////////////////////////////////// */
-@media (max-width: 35em) {
+@media (max-width: 36em) {
+  body {
+    white-space: nowrap;
+  }
+  .container {
+    overflow-x: scroll;
+    padding: 3.2rem 0;
+  }
 }
