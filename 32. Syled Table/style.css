@@ -18,3 +18,89 @@ body {
   line-height: 1;
   background-color: #111;
 }
+
+.section--table {
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.intro-text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  gap: 2.4rem;
+  font-weight: 500;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+tr {
+  border-top: 0.1px solid rgba(222, 222, 222, 0.255);
+  text-align: center;
+}
+
+th,
+td {
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.ph {
+  font-size: 3.2rem;
+}
+
+.up-trend {
+  color: #10b981;
+}
+
+.down-trend {
+  color: #f43f5e;
+}
+
+tr td:first-child,
+tr td:nth-child(3) div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #4cfdc7;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #222;
+  font-size: 1.4rem;
+}
+
+tfoot tr {
+  /* background-color: rgb(44, 177, 32); */
+}
+
+tfoot tr td,
+.foot-text {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  width: 2.8rem;
+  border-radius: 50%;
+}
+
+.icons img:not(:first-child) {
+  margin-left: -1.2rem;
+  border: 2px solid #222;
+}

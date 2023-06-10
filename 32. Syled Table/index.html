@@ -18,109 +18,134 @@
 
   <body>
     <div class="section--table">
-      <div class="container">
-        <table class="table">
-          <div class="top-text">
-            <p class="primary-text">Most Popular</p>
-            <p class="primary-text">Top Movers</p>
-          </div>
-          <thead>
+      <table class="table">
+        <thead>
+          <td><p class="primary-text">Most Popular</p></td>
+          <td><p class="primary-text">Top Movers</p></td>
+          <tr>
             <th>Asset</th>
             <th>Last price</th>
             <th>24hrs Change</th>
             <th>Market Cap</th>
-            <tr></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <img src="svgs/btc.svg" alt="Bitcoin icon" />
-                <span class="name">Bitcoin</span>
-              </td>
-              <td>39,294.76 AUD</td>
-              <td>
+            <th>Trade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="svgs/btc.svg" alt="Bitcoin icon" />
+              <span class="name">Bitcoin</span>
+            </td>
+            <td>39,294.76 AUD</td>
+            <td>
+              <div class="down-trend">
                 <p class="value-change">-0.66%</p>
-                <i class="ph-thin ph-arrow-line-down-right"></i>
-              </td>
-              <td><span class="dollar-sign">$</span>760B</td>
-              <td><a class="btn" href="#">Buy</a></td>
-            </tr>
-
-            <tr>
-              <td>
-                <img src="svgs/xrp.svg" alt="Xrp icon" />
-                <span class="name">XRP</span>
-              </td>
-              <td>0.7893 AUD</td>
-              <td>
-                <p class="value-change">1.24%</p>
-                <i class="ph-thin ph-arrow-line-up-right"></i>
-              </td>
-              <td><span class="dollar-sign">$</span>41B</td>
-              <td><a class="btn" href="#">Buy</a></td>
-            </tr>
-
-            <tr>
-              <td>
-                <img src="svgs/usdt.svg" alt="Bitcoin icon" />
-                <span class="name"> Tether</span>
-              </td>
-              <td>1.4778 AUD</td>
-              <td>
-                <p class="value-change">-1.01%</p>
-                <i class="ph-thin ph-arrow-line-down-right"></i>
-              </td>
-              <td><span class="dollar-sign">$</span>327B</td>
-              <td><a class="btn" href="#">Buy</a></td>
-            </tr>
-
-            <tr>
-              <td>
-                <img src="svgs/eth.svg" alt="Ethereum icon" />
-                <span class="name"> Ethereum</span>
-              </td>
-              <td>2,716.32 AUD</td>
-              <td>
-                <p class="value-change">-1.33%</p>
-                <i class="ph-thin ph-arrow-line-down-right"></i>
-              </td>
-              <td><span class="dollar-sign">$</span>327B</td>
-              <td><a class="btn" href="#">Buy</a></td>
-            </tr>
-
-            <tr>
-              <td>
-                <img src="svgs/link.svg" alt="ChainLink icon" />
-                <span class="name"> Chainlink</span>
-              </td>
-              <td>8.92 AUD</td>
-              <td>
-                <p class="value-change">0.22%</p>
-                <i class="ph-thin ph-arrow-line-down-right"></i>
-              </td>
-              <td><span class="dollar-sign">$</span>4B</td>
-              <td><a class="btn" href="#">Buy</a></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <div class="footer">
-                <div class="icons">
-                  <img src="svgs/btc.svg" alt="Bitcoin icon" />
-                  <img src="svgs/xrp.svg" alt="Xrp icon" />
-                  <img src="svgs/sand.svg" alt="Sandbox icon" />
-                  <img src="svgs/dot.svg" alt="Polkadot icon" />
-                  <img src="svgs/eth.svg" alt="Ethereum icon" />
-                </div>
-                <span class="foot-text">
-                  <p class="footer-text">View all markets</p>
-                  <i class="ph-thin ph-arrow-right"></i>
-                </span>
+                <i class="ph ph-arrow-down-right"></i>
               </div>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
+            </td>
+            <td><span class="dollar-sign">$</span>760B</td>
+            <td><a class="btn" href="#">Buy</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="svgs/xrp.svg" alt="Xrp icon" />
+              <span class="name">XRP</span>
+            </td>
+            <td>0.7893 AUD</td>
+            <td>
+              <div class="up-trend">
+                <p class="value-change">1.24%</p>
+                <i class="ph ph-arrow-up-right"></i>
+              </div>
+            </td>
+            <td><span class="dollar-sign">$</span>41B</td>
+            <td><a class="btn" href="#">Buy</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="svgs/usdt.svg" alt="Bitcoin icon" />
+              <span class="name"> Tether</span>
+            </td>
+            <td>1.4778 AUD</td>
+            <td>
+              <div class="down-trend">
+                <p class="value-change">-1.01%</p>
+                <i class="ph ph-arrow-down-right"></i>
+              </div>
+            </td>
+            <td><span class="dollar-sign">$</span>327B</td>
+            <td><a class="btn" href="#">Buy</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="svgs/eth.svg" alt="Ethereum icon" />
+              <span class="name"> Ethereum</span>
+            </td>
+            <td>2,716.32 AUD</td>
+            <td>
+              <div class="down-trend">
+                <p class="value-change">-1.33%</p>
+                <i class="ph ph-arrow-down-right"></i>
+              </div>
+            </td>
+            <td><span class="dollar-sign">$</span>327B</td>
+            <td><a class="btn" href="#">Buy</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="svgs/link.svg" alt="ChainLink icon" />
+              <span class="name"> Chainlink</span>
+            </td>
+            <td>8.92 AUD</td>
+            <td>
+              <div class="up-trend">
+                <p class="value-change">0.22%</p>
+                <i class="ph ph-arrow-up-right"></i>
+              </div>
+            </td>
+            <td><span class="dollar-sign">$</span>4B</td>
+            <td><a class="btn" href="#">Buy</a></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5" class="footer-row">
+              <div class="icons">
+                <img src="svgs/btc.svg" alt="Bitcoin icon" />
+                <img src="svgs/xrp.svg" alt="Xrp icon" />
+                <img src="svgs/sand.svg" alt="Sandbox icon" />
+                <img src="svgs/dot.svg" alt="Polkadot icon" />
+                <img src="svgs/eth.svg" alt="Ethereum icon" />
+              </div>
+              <span class="foot-text">
+                <p class="footer-text">View all markets</p>
+                <i class="ph ph-arrow-right"></i>
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+        <!-- <tfoot>
+          <tr>
+            <td colspan="5" class="footer-row">
+              <div class="icons">
+                <img src="svgs/btc.svg" alt="Bitcoin icon" />
+                <img src="svgs/xrp.svg" alt="Xrp icon" />
+                <img src="svgs/sand.svg" alt="Sandbox icon" />
+                <img src="svgs/dot.svg" alt="Polkadot icon" />
+                <img src="svgs/eth.svg" alt="Ethereum icon" />
+              </div>
+              <span class="foot-text">
+                <p class="footer-text">View all markets</p>
+                <i class="ph ph-arrow-right"></i>
+              </span>
+            </td>
+          </tr>
+        </tfoot> -->
+      </table>
     </div>
 
     <div class="oficial-site">
