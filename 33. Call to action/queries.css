@@ -1,0 +1,51 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1146px) */
+/* ////////////////////////////////// */
+@media (max-width: 74em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (992px) */
+/* ////////////////////////////////// */
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (580px) */
+/* ////////////////////////////////// */
+@media (max-width: 36em) {
+  body {
+    white-space: nowrap;
+  }
+
+  .container {
+    padding: 3.2rem 0;
+    overflow-x: auto;
+    max-height: calc(100vh - 3rem);
+    overflow-y: scroll;
+  }
+
+  .intro-text,
+  .table-foot,
+  th {
+    position: sticky;
+    left: 0;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    background-color: #27272a;
+  }
+
+  th:nth-child(1) {
+    z-index: 2;
+  }
+}
