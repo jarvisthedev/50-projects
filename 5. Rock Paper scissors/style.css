@@ -8,32 +8,65 @@ html {
   font-size: 62.5%;
 }
 
-body,
-.fields {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body {
   font-size: 3.2rem;
   font-weight: bold;
   background-color: rgb(217, 215, 229);
 }
 
+.section-game {
+  background-color: rgb(32, 181, 49);
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2.4rem 0;
+  background-color: rgb(32, 82, 181);
+}
+
+.final-result {
+}
+
+.outcome {
+}
+
+.hidden-score {
+}
+
+.play-again {
+}
+
+.fields {
+}
+
+.field {
+}
+
+.field--1 {
+}
+
+.scores {
+}
+
+.pick {
+}
+
+.imgs-list {
+}
+
+/* 
 .container {
   max-width: 120rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 3.2rem;
   margin: 5rem auto;
-  position: relative;
 }
 
 .final-result {
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  position: absolute;
-  top: 0%;
-  left: 0%;
 
   width: 77rem;
   height: 44rem;
@@ -84,7 +117,6 @@ body,
 }
 
 .field--1 {
-  position: relative;
 }
 
 .scores {
@@ -108,4 +140,4 @@ body,
 
 .img-detail {
   width: 8.4rem;
-}
+} */
