@@ -32,4 +32,52 @@
   html {
     font-size: 37.5%;
   }
+
+  .mail-tools-list {
+    gap: 1.8rem;
+    font-size: 2.4rem;
+    padding: 0.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (450px) */
+/* ////////////////////////////////// */
+@media (max-width: 25em) {
+  html {
+    font-size: 30.5%;
+  }
+
+  .mail-tools-list {
+    gap: 1rem;
+    font-size: 1.8rem;
+    padding: 1.8rem;
+  }
+
+  .header,
+  .container {
+    grid-template-columns: 20rem 1fr;
+  }
+
+  .labels-list .label-list-detail {
+    width: 15rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (350px) */
+/* ////////////////////////////////// */
+@media (max-width: 15em) {
+  html {
+    font-size: 23.5%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (2000px) */
+/* ////////////////////////////////// */
+@media (max-width: 8em) {
+  html {
+    font-size: 17.5%;
+  }
 }
