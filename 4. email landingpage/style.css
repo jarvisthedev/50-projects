@@ -159,7 +159,6 @@ body {
 .mail-container {
   background-color: rgba(34, 34, 34, 0.35);
   border-radius: 1.6rem;
-  /* overflow: auto; */
 
   overflow-x: auto;
   overflow-y: scroll;
@@ -236,10 +235,6 @@ body {
   padding-right: 1.2rem;
   font-size: 1.6rem;
   color: rgba(225, 220, 220, 0.75);
-}
-
-.mails-list {
-  /* overflow: scroll; */
 }
 
 .holder {

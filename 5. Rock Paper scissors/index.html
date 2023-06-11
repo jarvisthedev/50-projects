@@ -6,24 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="queries.css" /> -->
     <script defer src="script.js"></script>
   </head>
   <body>
     <section class="section-game">
       <div class="container">
         <div class="final-result hidden">
-          <span class="outcome"> You win</span>
-          <span class="scores-both">
+          <p class="outcome">You win</p>
+          <p class="scores-both">
             <span class="hidden-score">0</span> :
             <span class="hidden-score">0</span>
-          </span>
+          </p>
           <button class="play-again">PLAY AGAIN</button>
         </div>
         <div class="fields">
           <!-- Player one side (left side) -->
           <div class="field field--1">
-            <span class="scores"> Your score <span class="score">0</span></span>
-            <span class="pick">Make a pick</span>
+            <p class="scores">Your score <span class="score">0</span></p>
+            <p class="pick">Make a pick</p>
 
             <ul class="imgs-list">
               <li>
@@ -49,13 +50,13 @@
               </li>
             </ul>
 
-            <span class="img-name"></span>
+            <p class="img-name"></p>
           </div>
 
           <!-- Player two side (right side) -->
           <div class="field field--2">
-            <span class="scores"> Opp. score <span class="score">0</span></span>
-            <span class="pick">Opp. picked</span>
+            <p class="scores">Opp. score <span class="score">0</span></p>
+            <p class="pick">Opp. picked</p>
 
             <ul class="imgs-list">
               <li>
@@ -66,7 +67,7 @@
                 />
               </li>
             </ul>
-            <span class="img-name"></span>
+            <p class="img-name"></p>
           </div>
         </div>
       </div>
