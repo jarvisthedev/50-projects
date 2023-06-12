@@ -18,6 +18,10 @@ body {
   display: none;
 }
 
+.fields.hidden {
+  display: none;
+}
+
 .container {
   max-width: 70rem;
   margin: 5.2rem auto;
