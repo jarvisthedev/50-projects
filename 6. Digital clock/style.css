@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Dosis", sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 html {
@@ -10,35 +10,8 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 3.2rem;
-  font-weight: bold;
   background-color: #f7f7f7;
-}
-
-.container {
-  max-width: 120rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  padding: 3.2rem;
-  margin: 5rem auto;
-  padding: 9.6rem;
-  position: relative;
-  width: 62rem;
-}
-
-.clock-system {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-}
-
-.btn {
-  padding: 0.24rem;
-  border: none;
-  border: 1px solid rgb(52, 47, 47);
-  border-radius: 0.3rem;
 }
 
 .active {
@@ -46,40 +19,41 @@ body {
   color: #f7f7f7;
 }
 
-.day {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
+.section-game {
+  padding: 1.2rem;
 }
 
-.time,
-.time-hour,
-.time-minute,
-.time-second {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 1.4rem;
+.container {
+  max-width: 60rem;
+  margin: 4.8rem auto;
+  padding: 5.4rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.07);
+  position: relative;
+}
 
+.container div:first-child {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.8rem;
+}
+
+.time p:first-child {
   font-size: 9.6rem;
-  margin-bottom: 3.6rem;
+  margin-bottom: 6.2rem;
   font-weight: 600;
 }
 
 .dot {
   transform: translateY(-1.4rem);
+  display: inline-block;
 }
 
-.time-second {
-  margin-right: 5rem;
-}
-
-.time-system {
-  font-size: 2.4rem;
-  letter-spacing: 5px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.date {
+.container p:last-child {
   font-weight: 500;
 }
