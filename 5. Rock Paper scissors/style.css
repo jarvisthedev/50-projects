@@ -18,10 +18,6 @@ body {
   display: none;
 }
 
-.section-game {
-  /* background-color: rgb(32, 181, 49); */
-}
-
 .container {
   max-width: 70rem;
   margin: 5.2rem auto;
@@ -85,90 +81,3 @@ li img {
   width: 9.8rem;
   margin-bottom: 4.2rem;
 }
-
-/* 
-.container {
-  max-width: 120rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  padding: 3.2rem;
-  margin: 5rem auto;
-}
-
-.final-result {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  width: 77rem;
-  height: 44rem;
-  z-index: 15;
-  background-color: #d9d7e5;
-  padding: 5.6rem;
-}
-
-.scores-both {
-  font-size: 9.6rem;
-  margin-bottom: 8.4rem;
-}
-
-.play-again {
-  width: 20rem;
-  height: 5.6rem;
-  font-size: 2.4rem;
-  padding: 0.5rem;
-  letter-spacing: -0.2rem;
-  word-spacing: 0.6rem;
-  border: none;
-  border: 2px solid #999;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  background-color: #d9d7e5;
-  transition: all 0.4s;
-}
-
-.play-again:hover {
-  transform: scale(1.05);
-}
-
-.hidden {
-  display: none;
-}
-
-.fields {
-  align-items: flex-start;
-}
-
-.field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2.4rem;
-  width: 35rem;
-}
-
-.field--1 {
-}
-
-.scores {
-  padding: 2.4rem;
-  margin-bottom: 4rem;
-}
-
-.pick {
-  margin-bottom: 2rem;
-  font-size: 2.8rem;
-}
-
-.imgs-list {
-  list-style: none;
-  margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.img-detail {
-  width: 8.4rem;
-} */
