@@ -14,45 +14,76 @@ body {
   background-color: rgb(217, 215, 229);
 }
 
+.hidden {
+  display: none;
+}
+
 .section-game {
-  background-color: rgb(32, 181, 49);
+  /* background-color: rgb(32, 181, 49); */
 }
 
 .container {
   max-width: 70rem;
-  margin: 0 auto;
+  margin: 5.2rem auto;
   padding: 2.4rem 0;
-  background-color: rgb(32, 82, 181);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.07);
 }
 
 .final-result {
+  text-align: center;
 }
 
-.outcome {
+.final-result p:nth-child(1) {
+  font-size: 3.4rem;
 }
 
-.hidden-score {
+.final-result p:nth-child(2) {
+  font-size: 10.2rem;
+  margin-bottom: 8.2rem;
 }
 
-.play-again {
+.final-result button {
+  font-size: 2.4rem;
+  padding: 1.6rem 4rem;
+  border: none;
+  text-transform: uppercase;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  margin-bottom: 4.8rem;
+  transition: all 0.3s;
+}
+
+.final-result button:hover {
+  transform: scale(1.1);
 }
 
 .fields {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.field {
+.fields ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.field--1 {
+.field p:nth-child(1) {
+  margin: 5.8rem 0;
 }
 
-.scores {
+.field p:nth-child(2) {
+  font-size: 2.3rem;
+  margin-bottom: 3.2rem;
 }
 
-.pick {
-}
-
-.imgs-list {
+li img {
+  width: 9.8rem;
+  margin-bottom: 4.2rem;
 }
 
 /* 
