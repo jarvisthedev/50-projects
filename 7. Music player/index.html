@@ -12,29 +12,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="queries.css" /> -->
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
     <section class="section-music">
       <div class="container">
-        <div class="hero-section">
+        <head>
           <div class="section">
-            <div class="header">
-              <div class="menu-and-list">
-                <img class="svg menu" src="svgs/menu-sv.svg" alt="menu_logo" />
-                <h1 class="head">Playlist</h1>
-              </div>
-              <div class="search-and-playlist">
-                <img class="svg" src="svgs/search.svg" alt="Search_logo" />
-                <img class="svg" src="svgs/playlist.svg" alt="Playlist_logo" />
-              </div>
-            </div>
+            <i class="ph ph-list"></i>
+            <h1 class="head">Playlist</h1>
+            <i class="ph ph-magnifying-glass"></i>
+            <i class="ph ph-playlist"></i>
           </div>
-          <div class="name"><h1 class="current-song-name">Hello</h1></div>
+          <p class="current-song-name">Hello</p>
           <div class="swift-control">
-            <img class="svg" src="svgs/replay.svg" alt="replay_logo" />
-            <div class="artist-current"><p class="song-artist">Adele</p></div>
-            <img class="svg" src="svgs/volume.svg" alt="replay_logo" />
+            <i class="ph ph-repeat"></i>
+            <p class="song-artist">Adele</p>
+            <i class="ph ph-speaker-high"></i>
           </div>
           <div class="seek-bar-container">
             <span class="current-time hide">00 : 00</span>
@@ -42,86 +39,64 @@
             <p class="duration hide">00 : 00</p>
           </div>
           <div class="controls">
-            <img class="svg" src="svgs/previous.svg" alt="previous_logo" />
-            <img class="svg" src="svgs/play.svg" alt="play_logo" />
-            <img class="svg" src="svgs/next.svg" alt="next_logo" />
+            <i class="ph ph-skip-back"></i>
+            <i class="ph-fill ph-play"></i>
+            <i class="ph ph-skip-back"></i>
           </div>
-        </div>
-        <ul class="play-list">
-          <li class="detail current">
-            <div class="list">
+        </head>
+        <main>
+          <ul class="songs">
+            <li class="song song--current">
               <img
                 class="cover-photo"
-                src="images/ben iwara.jpg"
+                src="images/ben.jpg"
                 alt="ben iwara photo"
               />
-              <div class="song-detail">
-                <p class="song-name">Hello</p>
-                <p class="artist">Adele</p>
-              </div>
-              <img class="svg svg--playlist" src="svgs/stats.svg" alt="" />
-            </div>
-            <hr class="hr" />
-          </li>
+              <p>
+                <span class="song-name">Hello</span>
+                <span class="artist">Adele</span>
+              </p>
+              <i class="ph-fill ph-chart-bar"></i>
+            </li>
 
-          <li class="detail">
-            <div class="list">
+            <li class="song">
               <img
                 class="cover-photo"
                 src="images/master-unknown.jpg"
                 alt="master unknown photo"
               />
-              <div class="song-detail">
-                <p class="song-name">Californication</p>
-                <p class="artist">Red Hot Chili Pepers</p>
-              </div>
-              <img
-                class="svg svg--playlist"
-                src="svgs/play.svg"
-                alt="play_logo"
-              />
-            </div>
-            <hr class="hr" />
-          </li>
-          <li class="detail">
-            <div class="list">
+              <p>
+                <span class="song-name">Californication</span>
+                <span class="artist">Red Hot Chili Pepers</span>
+              </p>
+              <i class="ph-fill ph-play"></i>
+            </li>
+            <li class="song">
               <img
                 class="cover-photo"
                 src="images/matheo-joubert.jpg"
                 alt="Matheo Joubert Photo"
               />
-              <div class="song-detail">
-                <p class="song-name">6 INCH</p>
-                <p class="artist">beyoncé</p>
-              </div>
-              <img
-                class="svg svg--playlist"
-                src="svgs/play.svg"
-                alt="play_logo"
-              />
-            </div>
-            <hr class="hr" />
-          </li>
-          <li class="detail">
-            <div class="list">
+              <p>
+                <span class="song-name">6 INCH</span>
+                <span class="artist">beyoncé</span>
+              </p>
+              <i class="ph-fill ph-play"></i>
+            </li>
+            <li class="song">
               <img
                 class="cover-photo"
                 src="images/riccardo-cervia.jpg"
                 alt="Riccardo Cervia Photo"
               />
-              <div class="song-detail">
-                <p class="song-name">Purple rain</p>
-                <p class="artist">Prince & The Revolution</p>
-              </div>
-              <img
-                class="svg svg--playlist"
-                src="svgs/play.svg"
-                alt="play_logo"
-              />
-            </div>
-            <hr class="hr" />
-          </li>
-        </ul>
+              <p>
+                <span class="song-name">Purple rain</span>
+                <span class="artist">Prince & The Revolution</span>
+              </p>
+              <i class="ph-fill ph-play"></i>
+            </li>
+          </ul>
+        </main>
       </div>
     </section>
   </body>

@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -10,33 +10,26 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 3.2rem;
   font-weight: 400;
   background-color: #f7f7f7;
+  background-color: #111;
 }
 
-.container {
-  max-width: 120rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  margin: 0.2rem auto;
-}
-
-.svg {
-  width: 1.8rem;
+.ph-fill,
+.ph {
+  color: #fff;
   cursor: pointer;
 }
 
-.hero-section {
+.head {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url("images/ben iwara.jpg");
+    url('images/ben.jpg');
   background-size: cover;
-  width: 34rem;
-  height: 32rem;
+  /* width: 34rem; */
+  /* height: 32rem; */
 }
-
+/* 
 .header {
   display: flex;
   align-items: center;
@@ -120,12 +113,12 @@ body {
   background: #63ff69;
   cursor: pointer;
   border-radius: 5rem;
-}
+} */
 
 /* //////////////////////// */
 /* PLAYLIST */
 /* //////////////////////// */
-
+/* 
 .play-list {
   list-style: none;
   background-color: #222;
@@ -184,4 +177,4 @@ body {
   border: 0;
   border-top: 1px solid rgba(204, 204, 204, 0.5);
   padding: 0;
-}
+} */
