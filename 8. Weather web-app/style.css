@@ -24,7 +24,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   margin: 4.8rem auto;
   color: #f7f7f7;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('	https://images3.alphacoders.com/109/1091500.jpg');
   background-size: cover;
   background-position: center center;
@@ -68,7 +68,7 @@ input {
   font-weight: 400;
 }
 
-.hi-low {
+.min-max-temp {
   font-size: 1.8rem;
   font-weight: 400;
 }

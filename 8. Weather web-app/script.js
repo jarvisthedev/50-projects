@@ -1,20 +1,22 @@
-const inputText = document.querySelector(".input-text");
-const city = document.querySelector(".city");
-const dateIn = document.querySelector(".date");
-const temp = document.querySelector(".temp");
-const weather = document.querySelector(".weather");
-const hi_Low = document.querySelector(".hi-low");
+const container = document.querySelector('.section--weather');
+const input = document.querySelector('.input');
+const dateIn = document.querySelector('.date');
+
+const city = document.querySelector('.city');
+const temp = document.querySelector('.temp-number');
+const weather = document.querySelector('.weather');
+const min_maxTemp = document.querySelector('.min-max-temp');
 
 function dateUpdate() {
   const newDate = new Date();
 
   const date = newDate.getDate();
   const year = newDate.getFullYear();
-  const month = new Intl.DateTimeFormat("en-US", {
-    month: "long",
+  const month = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
   }).format(newDate);
-  const day = new Intl.DateTimeFormat("en-US", {
-    weekday: "long",
+  const day = new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
   }).format(newDate);
 
   dateIn.textContent = `${day}, ${date} ${month} ${year}`;
@@ -26,23 +28,34 @@ setInterval(() => {
 }, 1000);
 
 const api = {
-  key: "2fa73590fd8b5a4c6e68098ad5625395",
-  base: "https://api.openweathermap.org/data/2.5/",
+  key: 'a0e909bc2034aa3e7a07f999e095251e',
+  base: 'https://api.openweathermap.org/data/2.5/',
 };
 
 function getResults(query) {
   fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-    .then((weather) => {
-      return weather.json();
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not OK');
+      }
+      return response.json();
     })
-    .then(displayResults);
+    .then(weatherData => {
+      displayResults(weatherData);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 }
 
-// https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
+function displayResults(weatherData) {
+  city.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
+  temp.textContent = `${weatherData.main.temp}`;
+  weather.textContent = `${weatherData.weather[0].main}`;
+  min_maxTemp.textContent = `${weatherData.main.temp_min}°C / ${weatherData.main.temp_max}°C`;
+}
 
-// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
-// a0e909bc2034aa3e7a07f999e095251e
-// a1e9fb02d683f637a96db2f58a38e793
-
-// https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+container.addEventListener('click', function (e) {
+  if (!input.value) return;
+  getResults(input.value);
+});
