@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="queries.css" /> -->
+    <link rel="stylesheet" href="queries.css" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="script.js"></script>
@@ -20,30 +20,32 @@
   <body>
     <section class="section-music">
       <div class="container">
-        <head>
-          <div class="section">
-            <i class="ph ph-list"></i>
-            <h1 class="head">Playlist</h1>
-            <i class="ph ph-magnifying-glass"></i>
-            <i class="ph ph-playlist"></i>
-          </div>
-          <p class="current-song-name">Hello</p>
-          <div class="swift-control">
-            <i class="ph ph-repeat"></i>
-            <p class="song-artist">Adele</p>
-            <i class="ph ph-speaker-high"></i>
-          </div>
-          <div class="seek-bar-container">
-            <span class="current-time hide">00 : 00</span>
-            <input type="range" class="music-seek-bar" value="0" />
-            <p class="duration hide">00 : 00</p>
-          </div>
-          <div class="controls">
-            <i class="ph ph-skip-back"></i>
-            <i class="ph-fill ph-play"></i>
-            <i class="ph ph-skip-back"></i>
-          </div>
-        </head>
+        <div class="head">
+          <head>
+            <div class="nav-div">
+              <i class="ph ph-list"></i>
+              <h1>Playlist</h1>
+              <i class="ph ph-magnifying-glass"></i>
+              <i class="ph ph-playlist"></i>
+            </div>
+            <div class="current-song-controls">
+              <i class="ph ph-repeat"></i>
+              <p class="current-song-name">Hello</p>
+              <p class="song-artist">Adele</p>
+              <i class="ph ph-speaker-high"></i>
+            </div>
+            <div class="seek-bar">
+              <p class="time time--current">00 : 00</p>
+              <input type="range" class="music-seek" value="0" />
+              <p class="time time--duration">00 : 00</p>
+            </div>
+            <div class="controls">
+              <i class="ph ph-skip-back"></i>
+              <i class="ph-fill ph-play"></i>
+              <i class="ph ph-skip-forward"></i>
+            </div>
+          </head>
+        </div>
         <main>
           <ul class="songs">
             <li class="song song--current">

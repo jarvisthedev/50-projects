@@ -10,171 +10,141 @@ html {
 }
 
 body {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: 400;
+  line-height: 1;
   background-color: #f7f7f7;
-  background-color: #111;
+  color: #222;
 }
 
 .ph-fill,
 .ph {
   color: #fff;
   cursor: pointer;
+  font-size: 2rem;
 }
 
-.head {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url('images/ben.jpg');
-  background-size: cover;
-  /* width: 34rem; */
-  /* height: 32rem; */
-}
-/* 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.6rem;
-  margin-bottom: 3.6rem;
+.song img {
+  height: 5rem;
+  width: 5rem;
 }
 
-.menu-and-list,
-.search-and-playlist {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.head {
+.container {
+  max-width: 34rem;
+  margin: 0.1rem auto;
   color: #f7f7f7;
-  font-size: 1.8rem;
 }
 
-.name {
+.head {
+  background-image: url('images/ben.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding-bottom: 6.2rem;
+}
+
+.nav-div {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 1.4rem;
+  justify-content: flex-start;
+  gap: 1.4rem;
+  margin-bottom: 7.8rem;
+  padding: 1.4rem;
+}
+
+.nav-div h1 {
+  font-size: 1.8rem;
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.current-song-controls {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-bottom: 4.8rem;
 }
 
 .current-song-name {
-  color: #f7f7f7;
+  position: absolute;
+  bottom: 3.2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
   font-size: 2.8rem;
   font-weight: 500;
 }
 
-.swift-control,
-.controls {
+.song-artist {
+  font-size: 1.8rem;
+  color: #dedede;
+}
+
+.seek-bar {
   display: grid;
-  grid-auto-flow: column;
-  justify-content: space-around;
-  align-content: center;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  padding: 0 1.2rem;
+  margin-bottom: 2.8rem;
 }
 
-.swift-control {
-  margin-bottom: 3.6rem;
-}
-
-.controls {
-  padding: 0 2.8rem;
-}
-
-.seek-bar-container {
-  display: grid;
-  grid-template-columns: 5rem 1fr 5rem;
-  justify-content: start;
-  align-content: center;
-  padding: 1rem 0.72rem;
-  margin-bottom: 1.8rem;
-}
-
-.current-time,
-.duration {
+.seek-bar p {
   font-size: 1.4rem;
-  color: #f7f7f7;
 }
 
-.music-seek-bar {
+.music-seek {
   -webkit-appearance: none;
   height: 0.5rem;
   background: #000;
-  overflow: hidden;
-  justify-self: stretch;
-  align-self: center;
-  margin: 0 0.3rem;
   cursor: pointer;
+  align-self: center;
 }
 
-.music-seek-bar::-webkit-slider-thumb {
+.music-seek::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 10px;
-  width: 5px;
+  height: 0.5rem;
+  width: 0.5rem;
   background: #63ff69;
   cursor: pointer;
-  border-radius: 5rem;
-} */
-
-/* //////////////////////// */
-/* PLAYLIST */
-/* //////////////////////// */
-/* 
-.play-list {
-  list-style: none;
-  background-color: #222;
-  padding: 1.8rem 2.4rem 1.2rem 2.4rem;
+  align-self: center;
 }
 
-.detail {
-  padding: 0.42rem 0;
-}
-
-.list {
-  display: grid;
-  grid-template-columns: 5rem 1fr 2.4rem;
-  margin-bottom: 0.8rem;
-}
-
-.cover-photo {
-  width: 5rem;
-  height: 5rem;
-}
-
-.song-detail {
+.controls {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.24rem;
-  padding: 0 1.2rem;
+  justify-content: space-around;
+  padding: 0 2.8rem;
 }
 
-.song-name {
-  color: #f7f7f7;
-  font-size: 1.6rem;
+.songs {
+  background-color: #222;
+  list-style: none;
+  padding: 2.2rem 2.4rem 2.4rem 2.4rem;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 0.3rem 0;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.song p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: auto;
+  gap: 0.2rem;
+}
+
+.song p span:first-child {
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
-.artist,
-.song-artist {
-  color: rgba(247, 247, 247, 0.8);
-  font-size: 1.4rem;
+.song p span:last-child {
+  font-size: 1.3rem;
   font-weight: 400;
+  color: #dedede;
 }
-
-.song-artist {
-  font-size: 1.8rem;
-}
-
-.svg--playlist {
-  justify-self: center;
-  align-self: center;
-}
-
-.hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid rgba(204, 204, 204, 0.5);
-  padding: 0;
-} */
