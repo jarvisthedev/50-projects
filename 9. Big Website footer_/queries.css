@@ -1,0 +1,75 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1146px) */
+/* ////////////////////////////////// */
+@media (max-width: 74em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (936px) */
+/* ////////////////////////////////// */
+@media (max-width: 58.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (672px) */
+/* ////////////////////////////////// */
+@media (max-width: 42em) {
+  .footer-list--1,
+  .main-footer {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
+  }
+
+  .list--1 {
+    margin-bottom: 2.8rem;
+  }
+
+  .social-media {
+    margin-bottom: 4.8rem;
+  }
+
+  .useful-links {
+    margin-bottom: 4.8rem;
+  }
+
+  .foot-footer {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .footer-list--4 {
+    margin-left: 0;
+    font-size: 1.6rem;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .foot-footer p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+/* ////////////////////////////////// */
+/* MOBILE (500px) */
+/* ////////////////////////////////// */
+@media (max-width: 31.25em) {
+  .primary-text {
+    font-size: 1.8rem;
+  }
+
+  .footer-list--1,
+  .main-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe-newLater {
+    margin-bottom: 4.8rem;
+  }
+}

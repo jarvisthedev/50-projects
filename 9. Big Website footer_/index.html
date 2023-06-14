@@ -12,143 +12,119 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="queries.css" />
   </head>
   <body>
-    <div class="container">
-      <section class="section-footer">
-        <!-- FOOTER MAIN BODY -->
-
-        <ul class="footer-head">
-          <li class="header-list">
-            <img
-              class="svg-icon"
-              src="icons/location1.svg"
-              alt="location_svg"
-            />
-            <div class="list-content">
-              <div class="head--1">Find us</div>
-              <div class="list-content-info">
-                1010 Avenue, sw 54321, chandigarh
-              </div>
+    <section class="section-footer">
+      <div class="container">
+        <ul class="footer-list footer-list--1">
+          <li class="list--1">
+            <img class="svg-icon" src="icons/lcn.svg" alt="loc_svg" />
+            <div>
+              <p class="primary-text">Find us</p>
+              <p class="list-detail">1010 Avenue, sw 54321, chandigarh</p>
             </div>
           </li>
-          <li class="header-list">
+          <li class="list--1">
             <img class="svg-icon" src="icons/phone.svg" alt="phone_svg" />
-            <div class="list-content">
-              <div class="head--1">Call us</div>
-              <div class="list-content-info">9876543210 0</div>
+            <div>
+              <p class="primary-text">Call us</p>
+              <p class="list-detail">9876543210 0</p>
             </div>
           </li>
-          <li class="header-list">
+          <li class="list--1">
             <img class="svg-icon" src="icons/mail-open.svg" alt="mail_svg" />
-
-            <div class="list-content">
-              <div class="head--1">Mail us</div>
-              <div class="list-content-info">mail@info.com</div>
+            <div>
+              <p class="primary-text">Mail us</p>
+              <p class="list-detail">mail@info.com</p>
             </div>
           </li>
         </ul>
         <hr class="hr" />
 
-        <!-- FOOTER MAIN BODY -->
-
-        <div class="footer-body">
-          <div class="logo-design">
+        <div class="main-footer">
+          <div>
             <img
-              class="logo-design-img"
+              class="website-logo"
               src="icons/ak-logo.png"
               alt="Design ak_Logo"
             />
-            <span class="logo-design-text"
-              >Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
+            <p class="website-text">
+              Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
               eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem
-              ipsum dolor sit amet.</span
-            >
-
-            <div class="social-media">
-              <div class="social-title head--1">Follow us</div>
-              <ul class="social-media-logos">
-                <li>
-                  <a class="link" href="#"
-                    ><img
-                      class="social-logo facebook"
-                      src="icons/facebook.svg"
-                      alt="facebook_logo"
-                  /></a>
-                </li>
-                <li>
-                  <a class="link media-logo" href="#"
-                    ><img
-                      class="social-logo"
-                      src="icons/twitter.svg"
-                      alt="twitter_logo"
-                  /></a>
-                </li>
-                <li>
-                  <a class="link media-logo" href="#"
-                    ><img
-                      class="social-logo"
-                      src="icons/google-plus.svg"
-                      alt="google_plus_logo"
-                  /></a>
-                </li>
-              </ul>
-            </div>
+              ipsum dolor sit amet.
+            </p>
           </div>
 
           <div class="useful-links">
-            <div class="useful-links-text head--1 btm-line">Useful Links</div>
-            <ul class="links-list">
-              <li><a class="link link-detail" href="#">Home</a></li>
-              <li><a class="link link-detail" href="#">About</a></li>
-              <li><a class="link link-detail" href="#">Services</a></li>
-              <li><a class="link link-detail" href="#">Portfolio</a></li>
-              <li><a class="link link-detail" href="#">Contact</a></li>
-              <li><a class="link link-detail" href="#">About Us</a></li>
-              <li><a class="link link-detail" href="#">Our Services</a></li>
-              <li><a class="link link-detail" href="#">Expert Team</a></li>
-              <li><a class="link link-detail" href="#">Contact Us</a></li>
-              <li><a class="link link-detail" href="#">Latest News</a></li>
+            <p class="primary-text btm-line">Useful Links</p>
+            <ul class="footer-list footer-list--3">
+              <li><a class="list list--3" href="#">Home</a></li>
+              <li><a class="list list--3" href="#">About</a></li>
+              <li><a class="list list--3" href="#">Services</a></li>
+              <li><a class="list list--3" href="#">Portfolio</a></li>
+              <li><a class="list list--3" href="#">Contact</a></li>
+              <li><a class="list list--3" href="#">About Us</a></li>
+              <li><a class="list list--3" href="#">Our Services</a></li>
+              <li><a class="list list--3" href="#">Expert Team</a></li>
+              <li><a class="list list--3" href="#">Contact Us</a></li>
+              <li><a class="list list--3" href="#">Latest News</a></li>
             </ul>
           </div>
 
           <div class="subscribe-newLater">
-            <div class="subscribe-head head--1 btm-line">Subscribe</div>
-            <div class="subscribe-text">
+            <p class="primary-text btm-line">Subscribe</p>
+            <p class="subscribe-text">
               Don’t miss to subscribe to our new feeds, kindly fill the form
               below.
-            </div>
+            </p>
             <div class="mail-input">
               <input
                 class="subscribe-input"
                 placeholder="Email Address"
-                type="text"
+                type="email"
               />
-              <div class="subscribe-mail-logo">
-                <img
-                  class="svg-icon"
-                  src="icons/sent-mail.svg"
-                  alt="Send_mail_logo"
-                />
-              </div>
+              <span class="sub-logo">
+                <img class="svg-icon" src="icons/mail.svg" alt="mail_logo" />
+              </span>
             </div>
           </div>
+
+          <div class="social-media">
+            <p class="primary-text">Follow us</p>
+            <ul class="footer-list footer-list--2">
+              <li>
+                <a class="list--2" href="#"
+                  ><img class="sm-logo" src="icons/fb.svg" alt="meta_logo"
+                /></a>
+              </li>
+              <li>
+                <a class="list--2" href="#"
+                  ><img class="sm-logo" src="icons/tw.svg" alt="twitter_logo"
+                /></a>
+              </li>
+              <li>
+                <a class="list--2" href="#"
+                  ><img class="sm-logo" src="icons/gp.svg" alt="google_logo"
+                /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-bottom-text"
-        >Copyright © 2018, All Right Reserved
-        <a class="link" href="#">Anup</a>
-      </span>
-      <ul class="summary-list">
-        <li><a class="link summary-list-details" href="#">Home</a></li>
-        <li><a class="link summary-list-details" href="#">Terms</a></li>
-        <li><a class="link summary-list-details" href="#">Privacy</a></li>
-        <li><a class="link summary-list-details" href="#">Policy</a></li>
-        <li><a class="link summary-list-details" href="#">Contact</a></li>
-      </ul>
-    </div>
+      </div>
+      <div class="foot-footer">
+        <p>
+          Copyright © 2018, All Right Reserved
+          <a class="list list--4" href="#">Anup</a>
+        </p>
+        <ul class="footer-list footer-list--4">
+          <li><a class="list list--4" href="#">Home</a></li>
+          <li><a class="list list--4" href="#">Terms</a></li>
+          <li><a class="list list--4" href="#">Privacy</a></li>
+          <li><a class="list list--4" href="#">Policy</a></li>
+          <li><a class="list list--4" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
