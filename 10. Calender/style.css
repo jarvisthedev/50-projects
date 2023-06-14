@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -12,118 +12,107 @@ html {
 /* ////////////////////////// */
 /* GENERAL STYLE */
 /* ////////////////////////// */
-body,
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+body {
   font-size: 2.4rem;
   font-weight: 400;
   background-color: #1a1a1a;
   color: #f7f7f7;
+  line-height: 1;
+}
+
+.section--calender {
+  padding: 0 0.8rem;
 }
 
 .container {
+  max-width: 34rem;
   margin: 5rem auto;
   border: 1px solid #888888;
   border-radius: 0.5rem;
 }
 
-.header {
-  flex-direction: column;
+.container div {
+  text-align: center;
+  justify-content: center;
   padding: 0.8rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
   background-color: #3131f2;
 }
 
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-.grid-list {
-  list-style-type: none;
-
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  row-gap: 0.3rem;
-  column-gap: 0.3rem;
-  padding: 1.4rem;
+.container div p:first-child {
+  font-size: 1.6rem;
+  color: #dedede;
 }
 
-.flex {
+.container div p:last-child {
+  font-size: 1.7rem;
+}
+
+nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-/* ////////////////////////// */
-/* SYSTEMATIC STYLE */
-/* ////////////////////////// */
-.calender-nav-list {
-  list-style-type: none;
-  padding: 0.2rem;
   justify-content: space-between;
+  padding: 1.2rem;
 }
 
-.calender-nav-detail.current-month {
+nav p {
   font-size: 1.6rem;
 }
 
-.today-weekday {
-  font-size: 1.6rem;
-}
-
-.today-date {
-  font-size: 1.8rem;
-}
-
-.icon {
+.ph {
   font-size: 2.4rem;
   padding: 0.8rem;
   border-radius: 50%;
-
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.week-day,
-.day-details {
-  font-size: 1.4rem;
-  padding: 0.8rem;
-  transition: all 0.3s;
-}
-
-.day-details:hover,
-.icon:hover {
+.ph:hover,
+.day-details:hover {
   background-color: #333;
 }
 
+.week-days,
+.days-list {
+  padding: 0 1.2rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.2rem;
+}
+
+.days-list {
+  column-gap: 0.3rem;
+}
+
+.week-days {
+  color: #888;
+  font-size: 1.6rem;
+}
+
 .day-details {
-  border-radius: 10rem;
-  height: 4.2rem;
-}
-
-.grid-list.week-days {
-  padding: 0;
-  color: #888888;
-}
-
-.grid-list.days-list {
-  padding: 0.5rem 1.2rem;
+  padding: 1.4rem;
   font-size: 1.4rem;
-}
-
-.day-clicked,
-.day-clicked:hover {
-  border: 2px solid #5f5ff5;
-  background-color: #333333;
-}
-
-.day-details.flex.current-day {
-  border: 2px solid #3131f2;
-  background-color: #3131f2;
+  border-radius: 50%;
+  color: #dedede;
 }
 
 .prev-month-day,
 .next-month-day {
   color: #888888;
+}
+
+.day-clicked,
+.day-clicked:hover {
+  box-shadow: inset 0 0 0 2px #8383f7;
+  background-color: #333333;
+}
+
+.day-details.current-day {
+  box-shadow: inset 0 0 0 2px #5a5af5;
+  background-color: #5a5af5;
 }

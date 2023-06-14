@@ -12,55 +12,33 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <link rel="stylesheet" href="queries.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="calender">
-        <div class="header flex">
-          <div class="header-day today-weekday">--------</div>
-          <div class="header-day today-date">-------- - ---</div>
+    <section class="section--calender">
+      <div class="container">
+        <div>
+          <p class="today-weekday">--------</p>
+          <p class="today-date">-------- - ---</p>
         </div>
-        <ul class="calender-nav-list flex">
-          <li class="calender-nav-detail">
-            <ion-icon
-              class="icon left-arrow trans"
-              name="chevron-back-outline"
-            ></ion-icon>
-          </li>
-          <li class="calender-nav-detail current-month">--------</li>
-          <li class="calender-nav-detail">
-            <ion-icon
-              class="icon right-arrow trans"
-              name="chevron-forward-outline"
-            ></ion-icon>
-          </li>
+        <nav>
+          <i class="ph ph-caret-left"></i>
+          <p class="current-month">--------</p>
+          <i class="ph ph-caret-right"></i>
+        </nav>
+        <ul class="week-days">
+          <li><p class="week-day">Sun</p></li>
+          <li><p class="week-day">Mon</p></li>
+          <li><p class="week-day">Teu</p></li>
+          <li><p class="week-day">Wed</p></li>
+          <li><p class="week-day">Thu</p></li>
+          <li><p class="week-day">Fri</p></li>
+          <li><p class="week-day">Sat</p></li>
         </ul>
-
-        <ul class="grid-list week-days">
-          <li class="week-day flex">Sun</li>
-          <li class="week-day flex">Mon</li>
-          <li class="week-day flex">Teu</li>
-          <li class="week-day flex">Wed</li>
-          <li class="week-day flex">Thu</li>
-          <li class="week-day flex">Fri</li>
-          <li class="week-day flex">Sat</li>
-        </ul>
-
-        <ul class="grid-list days-list">
-          <!-- prev-month-day -->
-          <!-- current-day -->
-          <!-- day-clicked -->
-        </ul>
+        <ul class="days-list"></ul>
       </div>
-    </div>
+    </section>
   </body>
 </html>
