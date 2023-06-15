@@ -1,0 +1,67 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1146px) */
+/* ////////////////////////////////// */
+@media (max-width: 74em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (992px) */
+/* ////////////////////////////////// */
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (488px) */
+/* ////////////////////////////////// */
+@media (max-width: 30.5em) {
+  .ph,
+  .page-dots,
+  .container a:link,
+  .container a:visited {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 0.4rem;
+    font-size: 1.8rem;
+  }
+
+  input[name='btn'] {
+    padding: 0.4rem 0.5rem;
+    font-size: 1.4rem;
+    width: 4rem;
+  }
+
+  .helper-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* MOBILE (352px) */
+/* ////////////////////////////////// */
+@media (max-width: 22em) {
+  .ph,
+  .page-dots,
+  .container a:link,
+  .container a:visited {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+  }
+
+  input[name='btn'] {
+    padding: 0.4rem 0.3rem;
+    font-size: 1.2rem;
+    width: 3.3rem;
+  }
+
+  .helper-text {
+    font-size: 1.2rem;
+  }
+}
