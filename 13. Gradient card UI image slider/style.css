@@ -2,43 +2,31 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
 
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
-
-body,
-.container {
+body {
   font-size: 1.8rem;
   font-weight: 400;
-  background-color: #f7f7f7;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #ffe53b;
   background-image: linear-gradient(147deg, #ffe53b 0%, #fd3838 74%);
   min-height: 100vh;
 }
 
+.hidden {
+  display: none;
+}
+
+/* 
 .container {
   margin: 10rem auto;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
   border-radius: 1.8rem;
-}
-
-.hidden {
-  display: none;
+  background-color: #f7f7f7;
 }
 
 .card-img {
@@ -60,7 +48,7 @@ body {
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
-    url("img/national-cancer.jpg");
+    url('img/national-cancer.jpg');
 }
 
 .card-img:nth-of-type(3) {
@@ -69,7 +57,7 @@ body {
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
-    url("img/research-ongoing.jpg");
+    url('img/research-ongoing.jpg');
 }
 
 .card-img:nth-child(5) {
@@ -78,7 +66,7 @@ body {
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
-    url("img/medical-gadgets.jpg");
+    url('img/medical-gadgets.jpg');
 }
 
 .card_holder {
@@ -163,4 +151,4 @@ body {
   height: 2.4rem;
   width: 0.8rem;
   border-radius: 0.3rem;
-}
+} */
