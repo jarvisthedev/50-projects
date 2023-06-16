@@ -24,6 +24,10 @@ body {
   display: none;
 }
 
+.section--imageFlex {
+  padding: 0 1.8rem;
+}
+
 .container {
   margin: 3.4rem auto;
   max-width: 100rem;
@@ -46,7 +50,6 @@ ul {
 
 .img-list {
   position: relative;
-  color: #f7f7f7;
   width: 6.8rem;
   height: 84vh;
   border-radius: 5rem;
@@ -55,6 +58,7 @@ ul {
   background-size: cover;
   background-position: center center;
   transition: all 0.3s;
+  margin-bottom: 2.4rem;
 }
 
 .img-list:nth-child(1) {
@@ -97,15 +101,14 @@ ul {
 .img-holder {
   position: absolute;
   bottom: 1.2rem;
-  left: 1.8rem;
+  left: 1.4rem;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* align-items: start; */
-  /* justify-content: start; */
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  justify-content: start;
   row-gap: 0.5rem;
   column-gap: 1.2rem;
-  background-color: rgb(68, 52, 52);
 }
 
 .flag-logo {
@@ -123,6 +126,7 @@ ul {
   grid-column: 2/-1;
   font-size: 1.8rem;
   color: #adadad;
+  margin-top: -0.5rem;
 }
 
 .dot-list {
