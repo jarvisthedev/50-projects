@@ -27,8 +27,6 @@
 
   .links h3 {
     font-size: 5.2rem;
-    /* margin: 3.2rem auto 2.4rem auto; */
-    /* margin-bottom: 12.8rem; */
   }
 
   .links p {
@@ -37,19 +35,63 @@
 }
 
 /* ////////////////////////////////// */
-/* PORTRAIT TABLETS (688px) */
+/* PORTRAIT TABLETS (832px) */
 /* ////////////////////////////////// */
-@media (max-width: 43em) {
+@media (max-width: 52em) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    width: 90vw;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  article p {
+    font-size: 1.8rem;
+  }
+
+  .links {
+    margin: auto;
+  }
+
+  .links .link:link,
+  .links .link:visited {
+    padding: 5.2rem;
+    width: 44vw;
+  }
 }
 
 /* ////////////////////////////////// */
-/* TABLETS (544px) */
+/* TABLETS (608px) */
 /* ////////////////////////////////// */
-@media (max-width: 34em) {
-}
+@media (max-width: 38em) {
+  .question {
+    padding: 1.8rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
 
-/* ////////////////////////////////// */
-/* SMARTPHONES (444px) */
-/* ////////////////////////////////// */
-@media (max-width: 27.75em) {
+  article p {
+    font-size: 1.8rem;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  .links .link:link,
+  .links .link:visited {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .links h3 {
+    font-size: 4.8rem;
+    margin-bottom: 9.8rem;
+  }
 }
