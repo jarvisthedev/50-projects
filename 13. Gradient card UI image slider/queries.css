@@ -1,0 +1,97 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1146px) */
+/* ////////////////////////////////// */
+@media (max-width: 74em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (992px) */
+/* ////////////////////////////////// */
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (688px) */
+/* ////////////////////////////////// */
+@media (max-width: 43em) {
+  .container {
+    column-gap: 2.4rem;
+  }
+
+  .container div {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  .date {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-text {
+    font-size: 1.6rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .btn:link,
+  .btn:active {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (544px) */
+/* ////////////////////////////////// */
+@media (max-width: 34em) {
+  .container {
+    grid-template-columns: auto 1fr;
+    column-gap: 0.8rem;
+  }
+
+  .card-text {
+    font-size: 1.4rem;
+  }
+
+  ul {
+    flex-direction: row;
+    grid-column: 1/-1;
+  }
+
+  .current-dot {
+    width: 2.4rem;
+    height: 0.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (444px) */
+/* ////////////////////////////////// */
+@media (max-width: 27.75em) {
+  .section--card_holder {
+    padding: 0 0.8rem;
+  }
+
+  .container {
+    grid-template-columns: auto;
+    row-gap: 0;
+  }
+
+  .container div {
+    margin: -6.8rem auto 0 auto;
+    padding: 0 0.8rem;
+  }
+
+  ul {
+    margin-top: 4.8rem;
+  }
+}
