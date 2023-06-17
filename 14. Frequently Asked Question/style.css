@@ -2,23 +2,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
 
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
+body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #f7f7f7;
+  background-color: #000;
+}
 
-.question,
-.buttons,
-.quiz-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hidden {
+  display: none;
 }
 
 .hr {
@@ -30,55 +29,27 @@ html {
   margin-bottom: 4.8rem;
 }
 
-.icon {
-  font-size: 2.4rem;
-  color: #cdcdcd;
-  cursor: pointer;
-}
-
-.icon:hover {
-  color: #ffff;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
-
-body {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #f7f7f7;
-  background-color: #000;
-}
-
-.section--faq {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.8rem;
-
-  margin: 6.4rem 2.2rem;
-  padding: 1.2rem;
+.container {
+  max-width: 128rem;
+  margin: 10rem auto;
 }
 
 .question {
-  grid-row: 1/2;
-  grid-column: 1/-1;
-  border-radius: 1.8rem;
   background-color: rgba(34, 34, 34, 0.9);
-
+  padding: 6.4rem 4.8rem 2.4rem 4.8rem;
+  border-radius: 2.4rem;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  padding: 1.2rem 3.2rem;
+  margin-bottom: 4.8rem;
 }
 
-.heading {
-  font-size: 4.2rem;
+h1 {
+  font-size: 3.8rem;
   font-weight: 500;
   color: #f7f7f7;
-  margin: 3.8rem auto;
+  margin-bottom: 3.8rem;
+  text-align: center;
 }
 
 .contact-us:link,
@@ -90,102 +61,86 @@ body {
   font-weight: 500;
   padding: 1.2rem 2.8rem;
   border-radius: 4rem;
-  margin-bottom: 5.6rem;
+  margin-bottom: 6.8rem;
+  display: inline-block;
 }
 
-.quizes {
+ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2.4rem;
   row-gap: 1.8rem;
-  padding: 2rem;
   transition: all 0.3s;
 }
 
-.quiz {
-  align-self: start;
-  justify-self: stretch;
-  font-size: 1.6rem;
-  padding: 0.8rem 1.2rem;
-  border-radius: 1.8rem;
+article {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.8rem;
+  background-color: #fff;
   background-color: rgba(68, 68, 68, 0.8);
+  border-radius: 1.4rem;
+  padding: 1.8rem;
 }
 
-.quiz-top {
-  justify-content: space-between;
-  padding: 0.5rem 0.5rem;
-  gap: 3.9rem;
-}
-
-.quiz-head {
+h2 {
+  font-size: 1.8rem;
   font-weight: 400;
   color: #fff;
-  padding: 10rem auto;
 }
 
-.quiz-text {
+article p {
+  grid-column: 1/-1;
   color: #7c7c7c;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.8em;
-  margin-top: 0.8rem;
 }
 
-/* ////////////////////////// */
-/* SECOND PART */
-/* ////////////////////////// */
-
-.buttons {
-  grid-row: 2/3;
-  grid-column: 1/-1;
-
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 3.2rem;
 }
 
-.btn:link,
-.btn:visited {
+.links .link:link,
+.links .link:visited {
   text-decoration: none;
-
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  column-gap: 2.2rem;
-
-  background-color: #ffe385;
-  color: #111;
-  padding: 5.6rem;
-
+  color: #000;
+  display: inline-block;
+  padding: 5.2rem 24rem 5.2rem 5.2rem;
   border-radius: 6rem;
   transition: all 0.3s;
 }
 
-.btn:hover,
-.btn:active {
+.links .link:hover,
+.links .link:active {
   text-decoration: underline;
 }
 
-.btn.btn--2 {
+.btn--1 {
+  background-color: #ffe385;
+}
+
+.btn--2 {
   background-color: #00fab0;
 }
 
-.btn-text1 {
+.links h3 {
   font-size: 5.6rem;
   line-height: 1.1;
   font-weight: 700;
   margin: 3.2rem auto 2.4rem auto;
+  margin-bottom: 12.8rem;
 }
 
-.btn-text2 {
+.links p {
   font-size: 2.4rem;
   font-weight: 500;
 }
 
-.empty-space {
-  height: 30rem;
-  grid-row: 1/-1;
-  grid-column: 2/3;
-}
-
-.last-text{
-  font-size: 1.2rem;
+.about {
+  font-size: 1.4rem;
+  color: #888;
 }
