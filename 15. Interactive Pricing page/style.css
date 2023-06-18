@@ -17,23 +17,28 @@ body {
 }
 
 .section--pricing {
+  padding: 0 1.8rem;
 }
 
 .container {
+  max-width: 130rem;
+  margin: 7.2rem auto;
 }
 
 .pricing-intro {
+  text-align: center;
+  margin-bottom: 12.8rem;
 }
 
 .pricing-intro h1 {
-  font-size: 4.8rem;
-  margin-bottom: 3.2rem;
+  font-size: 5.8rem;
   font-weight: 400;
+  margin-bottom: 4.8rem;
 }
 
 .pricing-intro p {
   color: #c6c6c6;
-  margin-bottom: 2.8rem;
+  margin-bottom: 3.6rem;
 }
 
 .container a:link,
@@ -51,7 +56,6 @@ body {
 .pricing-intro a:visited {
   background-color: #fff;
   color: #000;
-  margin-bottom: 7.2rem;
 }
 
 .pricing-intro a:hover,
@@ -59,129 +63,27 @@ body {
   background-color: #dedede;
 }
 
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.4rem;
+}
+
 .pricing-option {
   background-color: #f7f7f7;
   color: #000;
   font-size: 1.8rem;
-}
-
-.plan-head {
-}
-
-.plan-head h2 {
-  margin-bottom: 1.2rem;
-}
-
-.plan-head p {
-}
-
-.plan-billing {
-}
-
-.plan-billing span {
-  font-size: 2.4rem;
-  display: inline-block;
-  padding-right: 1.4rem;
-}
-
-.plan-billing a:link,
-.plan-billing a:visited {
-  background-color: #111;
-  color: #f7f7f7;
-  /* margin-bottom: 7.2rem; */
-}
-
-.plan-features {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.8rem;
-  row-gap: 1.8rem;
-}
-
-.ph {
-  font-size: 2rem;
-}
-
-.plan-benefts {
-}
-
-/* 
-.section--pricing {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 132rem;
-  gap: 2.8rem;
-
-  margin: 6.4rem auto;
-  padding: 0.8rem;
-}
-
-.pricing-intro {
-  grid-column: 1/-1;
-  grid-row: 1/2;
-  align-self: center;
-  justify-self: center;
-  flex-direction: column;
-  gap: 2rem;
-  color: #f7f7f7;
-  margin-bottom: 8.4rem;
-}
-
-.pricing-text {
-  font-size: 5.8rem;
-  margin-bottom: 3.2rem;
-  font-weight: 400;
-}
-
-.pricing-more-text {
-  color: #c6c6c6;
-  margin-bottom: 2.8rem;
-}
-
-.pricing-intro .btn {
-  background-color: #fff;
-  color: #000;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.plan-name {
-  margin-bottom: 1rem;
-}
-
-.pricing-option {
-  border-radius: 2.4rem;
-  padding: 3rem 2.4rem;
-}
-
-.plan-head {
-  padding: 1rem;
-  margin-bottom: 2.4rem;
-}
-
-.monthly {
-  font-size: 1.4rem;
-}
-
-.plan-billing {
-  justify-content: space-between;
-  padding: 1.2rem 2.4rem;
-  border-radius: 2rem;
-  margin-bottom: 1.2rem;
-  gap: 3.8rem;
-}
-
-.plan-price {
-  font-size: 2.8rem;
+  padding: 4.8rem 2.4rem 2.4rem 2.4rem;
+  border-radius: 3.2rem;
 }
 
 .option--1 {
   background-color: #ffe385;
 }
 
-.option--1 .plan-description,
 .option--1 .plan-billing,
-.option--1 .plan-features {
+.option--1 .plan-features,
+.option--1 .plan-benefts {
   background-color: #e6cc78;
 }
 
@@ -189,9 +91,9 @@ body {
   background-color: #00fab0;
 }
 
-.option--2 .plan-description,
 .option--2 .plan-billing,
-.option--2 .plan-features {
+.option--2 .plan-features,
+.option--2 .plan-benefts {
   background-color: #00e19e;
 }
 
@@ -199,61 +101,69 @@ body {
   background-color: #50bfff;
 }
 
-.option--3 .plan-description,
 .option--3 .plan-billing,
-.option--3 .plan-features {
+.option--3 .plan-features,
+.option--3 .plan-benefts {
   background-color: #48ace6;
 }
 
-.plan-description {
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  border-radius: 2rem;
-  gap: 1rem;
-  padding: 2rem 2.2rem;
+.plan-head {
+  margin-left: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.plan-head h2 {
+  margin-bottom: 1rem;
+}
+
+.plan-billing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem;
+  border-radius: 1.8rem;
   margin-bottom: 1.2rem;
 }
 
-.plan-desc {
-  padding: 1rem 0.2rem;
-
-  justify-content: flex-start;
-  gap: 1.2rem;
+.plan-billing span {
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
-.plan-features {
-  border-radius: 2rem;
-  flex-direction: column;
-
-  gap: 1rem;
-  padding: 2rem 2.2rem;
-}
-
-.icon img {
-  width: 1.8rem;
-}
-
-.feature-top {
-  margin-bottom: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.feature {
-  padding: 1rem 0.2rem;
-}
-
-.btn {
-  text-decoration: none;
-  color: #f7f7f7;
-  background-color: #000;
+.plan-billing a:link,
+.plan-billing a:visited {
   font-size: 1.4rem;
   padding: 1.2rem 2.4rem;
-  border-radius: 2rem;
+  color: #f7f7f7;
+  background-color: #111;
 }
 
 .plan-features {
-  list-style-type: none;
-} */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.8rem;
+  padding: 2.4rem 1.8rem;
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.ph {
+  font-size: 2rem;
+}
+
+.plan-benefts {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.plan-benefts p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: -0.4rem;
+}
