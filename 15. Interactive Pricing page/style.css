@@ -2,52 +2,110 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
 
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-body,
-.section-pricing,
-.pricing-intro,
-.plan-billing,
-.plan-description,
-.plan-desc,
-.plan-featuress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hr {
-  display: block;
-  height: 0.5px;
-  border: 0;
-  border-top: 0.5px solid rgba(204, 204, 204, 0.3);
-  padding: 0;
-  margin-bottom: 4.8rem;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
-
 body {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #000;
+  color: #f7f7f7;
   background-color: #000;
 }
 
+.section--pricing {
+}
+
+.container {
+}
+
+.pricing-intro {
+}
+
+.pricing-intro h1 {
+  font-size: 4.8rem;
+  margin-bottom: 3.2rem;
+  font-weight: 400;
+}
+
+.pricing-intro p {
+  color: #c6c6c6;
+  margin-bottom: 2.8rem;
+}
+
+.container a:link,
+.container a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.2rem 1.8rem;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.pricing-intro a:link,
+.pricing-intro a:visited {
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 7.2rem;
+}
+
+.pricing-intro a:hover,
+.pricing-intro a:active {
+  background-color: #dedede;
+}
+
+.pricing-option {
+  background-color: #f7f7f7;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.plan-head {
+}
+
+.plan-head h2 {
+  margin-bottom: 1.2rem;
+}
+
+.plan-head p {
+}
+
+.plan-billing {
+}
+
+.plan-billing span {
+  font-size: 2.4rem;
+  display: inline-block;
+  padding-right: 1.4rem;
+}
+
+.plan-billing a:link,
+.plan-billing a:visited {
+  background-color: #111;
+  color: #f7f7f7;
+  /* margin-bottom: 7.2rem; */
+}
+
+.plan-features {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.8rem;
+  row-gap: 1.8rem;
+}
+
+.ph {
+  font-size: 2rem;
+}
+
+.plan-benefts {
+}
+
+/* 
 .section--pricing {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -198,4 +256,4 @@ body {
 
 .plan-features {
   list-style-type: none;
-}
+} */

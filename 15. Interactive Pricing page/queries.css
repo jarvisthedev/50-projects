@@ -1,0 +1,97 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1146px) */
+/* ////////////////////////////////// */
+@media (max-width: 74em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (1056px) */
+/* ////////////////////////////////// */
+@media (max-width: 66em) {
+  html {
+    font-size: 50%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .links .link:link,
+  .links .link:visited {
+    padding: 4.8rem 18rem 4.8rem 4.8rem;
+    border-radius: 5.2rem;
+  }
+
+  .links h3 {
+    font-size: 5.2rem;
+  }
+
+  .links p {
+    font-size: 1.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (832px) */
+/* ////////////////////////////////// */
+@media (max-width: 52em) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    width: 90vw;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  article p {
+    font-size: 1.8rem;
+  }
+
+  .links {
+    margin: auto;
+  }
+
+  .links .link:link,
+  .links .link:visited {
+    padding: 5.2rem;
+    width: 44vw;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (608px) */
+/* ////////////////////////////////// */
+@media (max-width: 38em) {
+  .question {
+    padding: 1.8rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  article p {
+    font-size: 1.8rem;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  .links .link:link,
+  .links .link:visited {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .links h3 {
+    font-size: 4.8rem;
+    margin-bottom: 9.8rem;
+  }
+}
