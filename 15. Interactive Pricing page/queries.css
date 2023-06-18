@@ -1,29 +1,83 @@
 /* ////////////////////////////////// */
-/* SMALLER LAPTOP (1146px) */
+/* SMALLER LAPTOP (1256px) */
 /* ////////////////////////////////// */
-@media (max-width: 74em) {
+@media (max-width: 78.5em) {
   html {
     font-size: 56.25%;
   }
-}
 
-/* ////////////////////////////////// */
-/* LANDSCAPE TABLETS (1056px) */
-/* ////////////////////////////////// */
-@media (max-width: 66em) {
-  html {
-    /* font-size: 50%; */
+  .plan-billing span {
+    font-size: 2rem;
+  }
+
+  .plan-billing a:link,
+  .plan-billing a:visited {
+    font-size: 1.3rem;
+    padding: 1.2rem 1.8rem;
   }
 }
 
 /* ////////////////////////////////// */
-/* PORTRAIT TABLETS (832px) */
+/* LANDSCAPE TABLETS (1072px) */
 /* ////////////////////////////////// */
-@media (max-width: 52em) {
+@media (max-width: 67em) {
+  html {
+    font-size: 50%;
+  }
+
+  .plan-billing span {
+    font-size: 1.8rem;
+  }
+
+  .plan-billing a:link,
+  .plan-billing a:visited {
+    font-size: 1.2rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* TABLETS (608px) */
+/* PORTRAIT TABLETS (908px) */
 /* ////////////////////////////////// */
-@media (max-width: 38em) {
+@media (max-width: 56.75em) {
+  .plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .option--3 {
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 47.5vw;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (632px) */
+/* ////////////////////////////////// */
+@media (max-width: 39.5em) {
+  .pricing-intro h1 {
+    font-size: 4.8rem;
+  }
+
+  .plans {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-option {
+    width: 80vw;
+    justify-self: center;
+  }
+}
+
+/* ////////////////////////////////// */
+/* SMARTPHONE (408px) */
+/* ////////////////////////////////// */
+@media (max-width: 25.5em) {
+  .pricing-intro h1 {
+    font-size: 4.2rem;
+  }
+
+  .pricing-option {
+    width: 90vw;
+    justify-self: center;
+  }
 }

@@ -48,7 +48,6 @@ body {
   font-weight: 500;
   padding: 1.2rem 1.8rem;
   border-radius: 10rem;
-  display: inline-block;
   transition: all 0.3s;
 }
 
@@ -67,6 +66,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2.4rem;
+  row-gap: 4.2rem;
 }
 
 .pricing-option {
