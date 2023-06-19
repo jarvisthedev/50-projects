@@ -2,52 +2,37 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
 
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-body,
-.section--partnership,
-.partnership {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
-
 body {
   background-color: #f7f7f7;
 }
 
 .section--partnership {
-  margin: 10rem auto;
+  padding: 0 1.8rem;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 9.8rem auto;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3.2rem;
 }
 
-.partnership {
-  gap: 3rem;
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4.2rem;
 }
 
-.partnership-logo {
-  height: 3rem;
-  color: #f7f7f7;
+.partners img {
+  height: 2.8rem;
 }
