@@ -1,21 +1,17 @@
-const review = document.querySelectorAll(".review");
+const review = document.querySelectorAll('.review');
+let currentIndex = 0;
 
-function addingRemovingHiddenClass() {
-  for (let i = 0; i < review.length; i++) {
-    if (!review[i].classList.contains("hidden")) {
-      let hiddenClass = i + 2;
-      review[i].classList.add("hidden");
-      hiddenClass =
-        hiddenClass >= review.length
-          ? hiddenClass - review.length
-          : hiddenClass;
+function displayTwoItems() {
+  review.forEach(item => (item.style.display = 'none'));
+  const endIndex = currentIndex + 2;
 
-      review[hiddenClass].classList.remove("hidden");
-      return;
-    }
+  for (let i = currentIndex; i < endIndex; i++) {
+    const index = i % review.length;
+    review[index].style.display = 'block';
   }
+  currentIndex = (currentIndex + 1) % review.length;
+
+  setTimeout(displayTwoItems, 1000 * 30);
 }
 
-setInterval(() => {
-  addingRemovingHiddenClass();
-}, 1000 * 45);
+displayTwoItems();
