@@ -9,8 +9,8 @@ function displayTwoItems() {
     const index = i % review.length;
     review[index].style.display = 'block';
   }
-  currentIndex = (currentIndex + 1) % review.length;
 
+  currentIndex = (currentIndex + 1) % review.length;
   setTimeout(displayTwoItems, 1000 * 30);
 }
 

@@ -12,37 +12,36 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
     <script defer src="script.js"></script>
   </head>
 
   <body>
-    <div class="section--notes">
-      <h1 class="head-note">Notes App</h1>
+    <section class="section--notes">
+      <div class="container">
+        <h1>Notes App</h1>
 
-      <textarea
-        class="input-text"
-        name="input-text"
-        id="input-text"
-        cols="30"
-        rows="10"
-        placeholder="Enter your notes here..."
-      ></textarea>
-      <div class="additional">
-        <div class="left">
-          <div class="color-picker">
-            <div class="text">Pick a color:</div>
+        <textarea
+          class="user-input"
+          name="user-input"
+          id="user-input"
+          cols="30"
+          rows="10"
+          placeholder="Enter your notes here..."
+        ></textarea>
+
+        <div class="controls">
+          <div class="properties">
+            <p class="text">Pick a color:</p>
             <input class="color" type="color" name="color" id="color" />
+            <p class="text">Size:</p>
+            <input class="size" type="size" value="17" />
           </div>
-          <div class="size">
-            <div class="text">Size:</div>
-            <input class="note-size" type="note-size" value="17" />
-          </div>
+          <button class="btn--add">Add</button>
         </div>
-        <button class="add">Add</button>
-      </div>
 
-      <ul class="notes-saved"></ul>
-    </div>
-    <!-- <hr class="hr" /> -->
+        <ul class="notes-saved"></ul>
+      </div>
+    </section>
   </body>
 </html>
