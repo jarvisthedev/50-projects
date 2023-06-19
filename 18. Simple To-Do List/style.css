@@ -2,19 +2,27 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
 
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-body,
-.section--to-do-list,
-.adding-todo {
+body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000;
+  background-color: #f7f7f7;
+}
+
+.section--to-do {
+}
+
+.container {
+}
+
+.container div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,28 +37,12 @@ input:focus {
   display: none;
 }
 
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
-
-body {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #000;
-  background-color: #f7f7f7;
-}
-
-.section--to-do-list {
-  align-items: stretch;
-  flex-direction: column;
-}
-
 .headline {
   margin: 3.2rem auto 2.4rem 0;
   font-size: 2.4rem;
 }
 
-.input-text {
+.user-input {
   width: 40vw;
   height: 30vh;
   border: none;
@@ -86,7 +78,7 @@ body {
   background-color: #dedede;
 }
 
-.to-do-list {
+.list {
   list-style-type: none;
   padding-bottom: 1.8rem;
 }

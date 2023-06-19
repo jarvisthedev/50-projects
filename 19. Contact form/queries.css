@@ -1,0 +1,67 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1304px) */
+/* ////////////////////////////////// */
+@media (max-width: 81.5em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    padding: 4.2rem;
+  }
+
+  .description h2 {
+    font-size: 4.2rem;
+    padding-right: 1.8rem;
+  }
+
+  .input {
+    font-size: 1.2rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (1040px) */
+/* ////////////////////////////////// */
+@media (max-width: 65em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (896px) */
+/* ////////////////////////////////// */
+@media (max-width: 56em) {
+  .container {
+    grid-template-columns: 1fr;
+    /* max-width: 84vw; */
+  }
+
+  .description {
+    margin-bottom: 4.8rem;
+    text-align: center;
+  }
+}
+
+/* ////////////////////////////////// */
+/* SMARTPHONE (488px) */
+/* ////////////////////////////////// */
+@media (max-width: 30.5em) {
+  .section--contact-form {
+    padding: 0;
+  }
+
+  .description h2 {
+    font-size: 3.2rem;
+  }
+
+  .input {
+    font-size: 1rem;
+  }
+
+  .btn--send {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+}
