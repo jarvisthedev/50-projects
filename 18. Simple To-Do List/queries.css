@@ -20,24 +20,4 @@
 /* SMARTPHONE (400px) */
 /* ////////////////////////////////// */
 @media (max-width: 25em) {
-  .btn--add {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
-    height: 2.8rem;
-    margin-top: -1.8rem;
-  }
-
-  .properties p {
-    font-size: 1.4rem;
-  }
-
-  .properties .size {
-    width: 3.2rem;
-    padding: 0.1rem;
-  }
-
-  .properties .color {
-    width: 2.8rem;
-    height: 2.8rem;
-  }
 }
