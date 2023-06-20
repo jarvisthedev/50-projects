@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -37,11 +37,10 @@ input:focus {
   display: none;
 }
 
-.site {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-}
+/* <!--  intro-text intro-text--name -->
+        <!--  -->
+        <!-- intro-text intro-text--group -->
+        <!--  --> */
 
 .hr {
   display: block;
@@ -50,6 +49,12 @@ input:focus {
   border-top: 0.5px solid #02081e67;
   margin-bottom: 1.6rem;
   margin: 0 0.8rem 0.8rem 0.8rem;
+}
+
+.intro-text.intro-text--name,
+.intro-text.intro-text--group {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 /* ////////////////////////// */
@@ -350,7 +355,7 @@ button {
 
 .nav.nav--thin-light .notice-thin::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: -1px;
   right: -1px;
   display: inline-block;
@@ -364,6 +369,7 @@ button {
 .thin--parent {
   position: relative;
 }
+
 .thin--child {
   position: absolute;
   right: -10rem;
