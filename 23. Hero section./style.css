@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
-
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
+/* 
 body,
 .section--hero,
 .nav-bar-list,
@@ -19,42 +19,40 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
+} */
 
 .hidden {
   display: none;
 }
-
-.site {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-}
-
-.hr {
-  display: block;
-  border: none;
-
-  border-top: 0.5px solid #02081e67;
-  margin-bottom: 1.6rem;
-  margin: 0 0.8rem 0.8rem 0.8rem;
-}
-
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
+/* 
+<header class="header">
+  <div class="section--hero">
+    <p class="home">Explore</p>
+    <nav>
+      <ul class="nav-bar-list">
+        <li><a class="nav-detail sea" href="#">Sea</a></li>
+        <li><a class="nav-detail forest" href="#">Forest</a></li>
+        <li><a class="nav-detail skiing" href="#">Skiing</a></li>
+        <li><a class="nav-detail biking" href="#">Biking</a></li>
+        <li><a class="nav-detail golfing" href="#">Golf</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="detail">
+    <p class="text">Explore</p>
+    <h1 class="more-text">Sea Life</h1>
+    <!-- <h1 class="more-text hidden">Forest Life</h1> -->
+    <!-- <h1 class="more-text hidden">Skiing</h1> -->
+    <!-- <h1 class="more-tex hidden">Biking</h1> -->
+    <!-- <h1 class="more-text hidden">Golfing</h1> -->
+  </div>
+</header> */
 
 body {
   font-size: 1.8rem;
   font-weight: 400;
   color: #000;
   background-color: #dedede;
-  flex-direction: column;
 }
 
 .header {
@@ -63,7 +61,7 @@ body {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url("./imgs/see-life.jpg");
+    url('./imgs/see-life.jpg');
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -72,10 +70,10 @@ body {
   height: 100vh;
   color: #fefefe;
 }
-
-.section--hero {
+/* 
+.hero {
   margin: 0 auto;
-  gap: 3rem;
+  gap: 3.2rem;
   font-size: 2.8rem;
   justify-content: space-between;
   padding: 0.5rem 8.4rem;
@@ -87,7 +85,7 @@ body {
 
 .home {
   font-weight: 500;
-  font-family: "Yellowtail", cursive;
+  font-family: 'Yellowtail', cursive;
   font-size: 4.2rem;
   padding: 0;
 }
@@ -123,4 +121,4 @@ body {
 
 .more-text {
   font-size: 4.8rem;
-}
+} */
