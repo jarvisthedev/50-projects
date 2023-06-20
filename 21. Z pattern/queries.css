@@ -14,38 +14,73 @@
   html {
     font-size: 50%;
   }
+
+  .holder {
+    padding: 7.8rem 6.6rem;
+    gap: 6.6rem;
+  }
+
+  .img img {
+    height: 38rem;
+  }
+
+  .text h2 {
+    font-size: 3.2rem;
+  }
+
+  .text p {
+    font-size: 1.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* PORTRAIT TABLETS (672px) */
+/* LANDSCAPE TABLETS (840px) */
 /* ////////////////////////////////// */
-@media (max-width: 56em) {
-  .container {
-    gap: 2.4rem;
+@media (max-width: 52.5em) {
+  .holder {
+    grid-template-columns: 1fr;
   }
 
-  .partners {
-    gap: 3.2rem;
+  .holder--1 text,
+  .holder--3 text {
+    grid-row: 1/2;
   }
 
-  .partners img {
-    height: 1.8rem;
+  .holder--1 .img,
+  .holder--3 .img {
+    grid-row: 2/3;
+    text-align: center;
+  }
+
+  .holder--2 .img,
+  .holder--4 .img {
+    text-align: center;
   }
 }
 
 /* ////////////////////////////////// */
-/* SMARTPHONE (440px) */
+/* SMARTPHONE (472px) */
 /* ////////////////////////////////// */
-@media (max-width: 27.5em) {
+@media (max-width: 29.5em) {
   .container {
-    gap: 1rem;
+    margin: 7.2rem auto;
   }
 
-  .partners {
-    gap: 0.8rem;
+  .holder {
+    padding: 7.2rem 5.2rem;
+    gap: 4.8rem;
   }
 
-  .partners img {
-    height: 1.6rem;
+  .img img {
+    width: 100%;
+  }
+
+  .text h2 {
+    font-size: 2.4rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .text p {
+    font-size: 1.4rem;
   }
 }
