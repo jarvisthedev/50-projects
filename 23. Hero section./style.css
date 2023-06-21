@@ -10,49 +10,18 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
-/* 
-body,
-.section--hero,
-.nav-bar-list,
-.detail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .hidden {
   display: none;
 }
-/* 
-<header class="header">
-  <div class="section--hero">
-    <p class="home">Explore</p>
-    <nav>
-      <ul class="nav-bar-list">
-        <li><a class="nav-detail sea" href="#">Sea</a></li>
-        <li><a class="nav-detail forest" href="#">Forest</a></li>
-        <li><a class="nav-detail skiing" href="#">Skiing</a></li>
-        <li><a class="nav-detail biking" href="#">Biking</a></li>
-        <li><a class="nav-detail golfing" href="#">Golf</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="detail">
-    <p class="text">Explore</p>
-    <h1 class="more-text">Sea Life</h1>
-    <!-- <h1 class="more-text hidden">Forest Life</h1> -->
-    <!-- <h1 class="more-text hidden">Skiing</h1> -->
-    <!-- <h1 class="more-tex hidden">Biking</h1> -->
-    <!-- <h1 class="more-text hidden">Golfing</h1> -->
-  </div>
-</header> */
 
 body {
-  font-size: 1.8rem;
   font-weight: 400;
   color: #000;
   background-color: #dedede;
+  overflow-x: hidden;
 }
 
 .header {
@@ -69,56 +38,77 @@ body {
   width: 100vw;
   height: 100vh;
   color: #fefefe;
+  position: relative;
 }
-/* 
-.hero {
-  margin: 0 auto;
-  gap: 3.2rem;
-  font-size: 2.8rem;
-  justify-content: space-between;
-  padding: 0.5rem 8.4rem;
-  margin: 0 auto;
 
-  margin-bottom: 24.2rem;
+.container {
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 3.2rem;
 }
 
-.home {
+.navbar {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rem;
+}
+
+.logo {
+  font-size: 4.2rem;
   font-weight: 500;
   font-family: 'Yellowtail', cursive;
-  font-size: 4.2rem;
-  padding: 0;
+  margin-right: auto;
 }
 
-.nav-bar-list {
-  list-style-type: none;
+.btn {
+  border: none;
+  display: none;
+  cursor: pointer;
+  background: none;
+  color: #fff;
+}
+
+.btn--close {
+  display: none;
+}
+
+.ph {
+  font-size: 3.2rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
   justify-content: space-around;
   gap: 4.8rem;
 }
 
-.nav-detail:link,
-.nav-detail:active {
-  text-decoration: none;
+.nav:link,
+.nav:active {
+  font-size: 2.8rem;
   color: #f7f7f7;
-  padding-bottom: 1px;
+  text-decoration: none;
+  padding-bottom: 0.8px;
   border-bottom: 2px solid inherit;
   transition: all 0.3s;
 }
 
-.nav-detail:hover,
-.nav-detail:visited {
-  color: #f7f7f7;
+.nav:hover,
+.nav:visited {
   border-bottom: 2px solid #f7f7f7;
 }
 
-.detail {
-  flex-direction: column;
+.text {
+  text-align: center;
 }
 
-.text {
+.secondary-text {
   font-size: 2.4rem;
 }
 
-.more-text {
+.primary-text {
   font-size: 4.8rem;
-} */
+}

@@ -17,9 +17,39 @@
 }
 
 /* ////////////////////////////////// */
-/* LANDSCAPE TABLETS (840px) */
+/* POTTRAIT TABLETS (696px) */
 /* ////////////////////////////////// */
-@media (max-width: 52.5em) {
+@media (max-width: 43.5em) {
+  /* nav-active */
+
+  .btn {
+    display: block;
+  }
+  /* 
+  .nav-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .btn-active.nav-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  } */
 }
 
 /* ////////////////////////////////// */
