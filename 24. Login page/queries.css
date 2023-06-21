@@ -1,0 +1,99 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1304px) */
+/* ////////////////////////////////// */
+@media (max-width: 81.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (1040px) */
+/* ////////////////////////////////// */
+@media (max-width: 65em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* POTTRAIT TABLETS (800px) */
+/* ////////////////////////////////// */
+@media (max-width: 50em) {
+  .secondary-heading {
+    font-size: 1.8rem;
+  }
+
+  .form button {
+    font-size: 1.2rem;
+    padding: 0.8rem 0.4rem;
+  }
+
+  .bg-pic-support .secondary-heading {
+    font-size: 2.2rem;
+    padding: 0 9.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (680px) */
+/* ////////////////////////////////// */
+@media (max-width: 42.5em) {
+  .container {
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3.2rem;
+    border-top-right-radius: 3.2rem;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .bg-pic-support {
+    padding-bottom: 60rem;
+    grid-row: 1/2;
+    border-bottom-right-radius: 0;
+  }
+
+  .secondary-heading {
+    font-size: 2.4rem;
+  }
+
+  .supporting-text {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .form button {
+    font-size: 1.8rem;
+  }
+
+  .bg-pic-support .secondary-heading {
+    font-size: 2.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* SMARTPHONE (488px) */
+/* ////////////////////////////////// */
+@media (max-width: 30.5em) {
+  .bg-pic-support .secondary-heading {
+    font-size: 2.2rem;
+    padding: 0;
+  }
+
+  .bg-pic-support {
+    padding-bottom: 50vh;
+  }
+
+  .pic-text {
+    font-size: 1.6rem;
+  }
+
+  .form button {
+    font-size: 1.2rem;
+  }
+
+  .feature-btn {
+    font-size: 1.2rem;
+  }
+}

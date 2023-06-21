@@ -5,97 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script defer src="script.js"></script>
   </head>
 
   <body>
-    <div class="section--loginForm">
-      <!-- FIRST PART -->
-      <div class="form">
-        <div class="header-name">Dotty</div>
-        <div class="header-intro">Create an account</div>
-        <div class="header-texts">
-          Let's get started with your 30 days free trial
-        </div>
+    <section class="section--signInForm">
+      <div class="container">
+        <!-- FIRST PART -->
+        <form class="form" action="" method="post">
+          <h1 class="primary-heading">Dotty</h1>
+          <h2 class="secondary-heading">Create an account</h2>
+          <p class="supporting-text">
+            Let's get started with your 30 days free trial
+          </p>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          class="input name"
-          required
-        />
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="input"
+            required
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          class="input email"
-          required
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="input"
+            required
+          />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          class="input password"
-          required
-        />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input"
+            required
+          />
 
-        <button class="btn sighup">Create account</button>
-        <button class="btn google">
-          <img class="svg" src="imgs/google.svg" alt="google logo" />
-          <div class="form-text">Sign up with Google</div>
-        </button>
-        <button class="btn twitter">
-          <img class="svg" src="imgs/twitter.svg" alt="google logo" />
-          <div class="form-text">Sign up with Twitter</div>
-        </button>
+          <button class="sighup">Create account</button>
+          <button class="google">
+            <img class="svg" src="imgs/google.svg" alt="google logo" />
+            <p class="form-text">Sign up with Google</p>
+          </button>
+          <button class="twitter">
+            <img class="svg" src="imgs/twitter.svg" alt="twitter logo" />
+            <p class="form-text">Sign up with Twitter</p>
+          </button>
 
-        <div class="method">
-          Already have an account? <a class="account" href="#">Log in</a>
+          <p class="logIn-text">
+            Already have an account? <a class="account" href="#">Log in</a>
+          </p>
+        </form>
+
+        <!-- SECOND PART -->
+        <div
+          class="bg-pic-support"
+          role="img"
+          aria-label="beutiful chair in a sitting rool with a green flower next to it"
+        >
+          <h2 class="secondary-heading">
+            Discover the Best Furniture for Your Home
+          </h2>
+          <p class="pic-text">
+            Our practice is Designing Complete Environments exceptional
+            buildings communities and places in special situations
+          </p>
+          <div class="features">
+            <p class="feature-btn">
+              <i class="icon ph-light ph-shield-check"></i>
+              <span class="feature-text">100% Guarantee</span>
+            </p>
+            <p class="feature-btn">
+              <i class="icon ph-light ph-truck"></i>
+              <span class="feature-text">Free delivery London area</span>
+            </p>
+          </div>
         </div>
       </div>
-
-      <!-- SECOND PART -->
-      <div class="picture-background login">
-        <div class="picture-header">
-          Discover the Best Furniture for Your Home
-        </div>
-        <div class="picture-text">
-          Our practice is Designing Complete Environments exceptional buildings
-          communities and places in special situations
-        </div>
-        <div class="feature">
-          <div class="form-div btn btn-feature">
-            <i class="form-logo ph-light ph-shield-check"></i>
-            <div class="form-text btn-text">100% Guarantee</div>
-          </div>
-          <div class="form-div btn btn-feature">
-            <i class="form-logo ph-light ph-truck"></i>
-            <div class="form-text btn-text">Free delivery London area</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="oficial-site">
-      <!-- <a href="#https://paycove.io/" class="site">visit offial site</a> -->
-    </div>
+    </section>
   </body>
 </html>
