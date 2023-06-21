@@ -1,6 +1,8 @@
 const header = document.querySelector('.header');
 const primaryText = document.querySelector('.primary-text');
-const navDetail = document.querySelectorAll('.nav');
+const sectionHero = document.querySelector('.section--hero');
+const btnMenu = document.querySelector('.btn--menu');
+const btnClose = document.querySelector('.btn--close');
 
 let dynamicImageUrl = './imgs/see-life.jpg';
 let gradient =
@@ -9,6 +11,9 @@ let gradient =
 header.addEventListener('click', function (e) {
   e.preventDefault();
   const clicked = e.target;
+  if (clicked === btnMenu || clicked === btnClose)
+    header.classList.toggle('nav-open');
+
   if (clicked.classList.contains('nav')) {
     if (clicked.classList.contains('sea')) {
       dynamicImageUrl = './imgs/see-life.jpg';
@@ -26,6 +31,7 @@ header.addEventListener('click', function (e) {
       dynamicImageUrl = './imgs/golf1.jpg';
       primaryText.textContent = 'Golfing';
     }
+    header.classList.remove('nav-open');
   }
-  header.style.backgroundImage = `${gradient}, url("${dynamicImageUrl}")`;
+  sectionHero.style.backgroundImage = `${gradient}, url("${dynamicImageUrl}")`;
 });
