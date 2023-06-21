@@ -1,73 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
 
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-body,
-.section--accordion,
-.answer-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
 .hidden {
   display: none;
 }
-
-.site {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-}
-
-.hr {
-  display: block;
-  border: none;
-
-  border-top: 0.5px solid #02081e67;
-  margin-bottom: 1.6rem;
-  margin: 0 0.8rem 0.8rem 0.8rem;
-}
-
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
 
 body {
   font-size: 1.8rem;
   font-weight: 400;
   color: #000;
   background-color: #f2f2f2;
-  flex-direction: column;
 }
 
 .section--accordion {
-  flex-direction: column;
-  gap: 2rem;
-  margin: 10rem auto;
-  padding: 1rem 5rem;
-  max-width: 100rem;
-  align-items: stretch;
+  padding: 0 1.8rem;
+}
+
+.container {
+  margin: 9.8rem auto;
+  padding: 0 1.8rem;
+  max-width: 98rem;
 }
 
 .component {
   display: grid;
-  grid-template-columns: 4rem 1fr 4rem;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   justify-content: center;
   column-gap: 2.4rem;
@@ -77,6 +44,11 @@ body {
   border-top: 3px solid transparent;
   background-color: #fefefe;
   color: #222;
+  box-shadow: 0 0.2rem 0.2rem -5px;
+}
+
+.component:not(:last-child) {
+  margin-bottom: 1.8rem;
 }
 
 .active.component {
@@ -118,7 +90,7 @@ body {
 .answer-list {
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 2.2rem;
+  margin-left: 1.8rem;
   color: #555;
   line-height: 1.6;
 }

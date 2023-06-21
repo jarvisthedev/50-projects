@@ -1,0 +1,54 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1304px) */
+/* ////////////////////////////////// */
+@media (max-width: 81.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (1040px) */
+/* ////////////////////////////////// */
+@media (max-width: 65em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* POTTRAIT TABLETS (672px) */
+/* ////////////////////////////////// */
+@media (max-width: 42em) {
+  .response-detail,
+  .response-text {
+    font-size: 1.4rem;
+  }
+
+  .number,
+  .question,
+  .arrow-down {
+    font-size: 2.2rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (408px) */
+/* ////////////////////////////////// */
+@media (max-width: 25.5em) {
+  .number,
+  .question,
+  .arrow-down {
+    font-size: 1.4rem;
+  }
+
+  .response-detail,
+  .response-text {
+    font-size: 1.2rem;
+  }
+
+  .section--accordion,
+  .container {
+    padding: 0 0.8rem;
+  }
+}
