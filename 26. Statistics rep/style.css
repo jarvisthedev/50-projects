@@ -1,56 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 62.5%;
 }
-
-/* ////////////////////////// */
-/* REUSABLE STYLE */
-/* ////////////////////////// */
-body,
-.section--statistics,
-.container,
-.contain-icons,
-.contain,
-.rep--2,
-.rep--2-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.site {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-}
-
-.hr {
-  display: block;
-  border: none;
-
-  border-top: 0.5px solid #02081e67;
-  margin-bottom: 1.6rem;
-  margin: 0 0.8rem 0.8rem 0.8rem;
-}
-
-/* ////////////////////////// */
-/* GENERAL STYLE */
-/* ////////////////////////// */
 
 body {
   font-size: 1.8rem;
@@ -61,76 +20,76 @@ body {
 }
 
 .section--statistics {
-  flex-direction: column;
-  gap: 5rem;
-  margin: 2rem auto;
-  padding: 1rem 5rem;
+  padding: 0 1.8rem;
 }
 
-/* FIRST STAT */
+.container {
+  margin: 3.2rem auto;
+  max-width: 72rem;
+}
+
 .rep--1 {
-  background-color: #444;
   color: #f7f7f7;
-  padding: 4rem;
-  max-width: 70rem;
+  padding: 4.2rem;
+  background-color: #444;
+  margin-bottom: 7.2rem;
 }
 
 .rep-head {
-  padding: 0 4rem;
-  margin-bottom: 2rem;
+  padding: 0 4.2rem;
+  margin-bottom: 1.8rem;
   text-align: center;
   font-size: 3.2rem;
 }
 
-.container {
-  gap: 2rem;
-}
-
-.contain {
-  background-color: #222;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 0.8rem;
-  flex-direction: column;
-}
-
-.contain-icons {
-  gap: 0.8rem;
-  margin: 1.8rem;
+.inner-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.4rem;
 }
 
 .icon {
   font-size: 2.4rem;
   color: rgb(237, 158, 10);
-  display: block;
-  margin: 1.6rem auto;
 }
 
 .icon.star {
   font-size: 1.2rem;
 }
 
+.contain {
+  background-color: #222;
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 4.2rem;
+  white-space: nowrap;
+}
+
+.contain-icons {
+  margin-bottom: 2.8rem;
+}
+
 .contain-head {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
 .contain-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #c8c8c8;
   margin-bottom: 1.8rem;
 }
 
-/* SECOND STAT */
 .rep--2 {
-  flex-direction: column;
-  padding: 2rem;
+  text-align: center;
   background-color: #dedede;
+  padding: 2.4rem;
 }
 
 .rep--2-num {
-  font-size: 5.4rem;
+  font-size: 5.2rem;
   margin-bottom: 0.8rem;
 }
 
@@ -141,15 +100,19 @@ body {
 }
 
 .rep--2-container {
-  gap: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
 }
 
 .holder-num {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  font-size: 1.8rem;
 }
 
 .holder-text {
   font-size: 1.2rem;
   color: #444;
+  white-space: nowrap;
 }

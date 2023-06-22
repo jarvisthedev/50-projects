@@ -1,0 +1,78 @@
+/* ////////////////////////////////// */
+/* SMALLER LAPTOP (1304px) */
+/* ////////////////////////////////// */
+@media (max-width: 81.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (1040px) */
+/* ////////////////////////////////// */
+@media (max-width: 65em) {
+  html {
+    font-size: 50%;
+  }
+
+  .contain {
+    padding: 3.6rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* POTTRAIT TABLETS (582px) */
+/* ////////////////////////////////// */
+@media (max-width: 36.5em) {
+  .rep-head {
+    margin-bottom: 3.2rem;
+    padding: 0 2.4rem;
+  }
+
+  .inner-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .first {
+    grid-column: 1/-1;
+    align-self: center;
+    width: 47%;
+    justify-self: center;
+  }
+
+  .contain {
+    padding: 1.8rem;
+  }
+
+  .rep--1 {
+    padding: 3.6rem;
+  }
+
+  .rep-head {
+    padding: 0 3.6rem;
+    font-size: 2.8rem;
+  }
+
+  .rep--2-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-holder {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* TABLETS (408px) */
+/* ////////////////////////////////// */
+@media (max-width: 25.5em) {
+  .rep-head {
+    margin-bottom: 2.8rem;
+    padding: 0 1.2rem;
+  }
+
+  .inner-container,
+  .rep--2-container {
+    grid-template-columns: 1fr;
+  }
+}
