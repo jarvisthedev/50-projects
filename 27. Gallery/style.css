@@ -42,7 +42,7 @@ div img {
 
 .container div {
   width: 13rem;
-  height: 13rem;
+  padding-bottom: 13rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
