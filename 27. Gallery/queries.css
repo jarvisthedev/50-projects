@@ -17,13 +17,16 @@
 }
 
 /* ////////////////////////////////// */
-/* POTTRAIT TABLETS (582px) */
+/* POTTRAIT TABLETS (680px) */
 /* ////////////////////////////////// */
-@media (max-width: 36.5em) {
-}
+@media (max-width: 42.5em) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-/* ////////////////////////////////// */
-/* TABLETS (408px) */
-/* ////////////////////////////////// */
-@media (max-width: 25.5em) {
+  .container div:nth-child(4) {
+    background-image: url('imgs/car12.jpg');
+    grid-column: 1/4;
+    grid-row: 4/6;
+  }
 }
