@@ -23,4 +23,67 @@
   .grid--container-6 {
     grid-template-columns: 1fr;
   }
+
+  .hidden {
+    display: block;
+  }
+
+  .number,
+  .btn {
+    display: none;
+  }
+
+  .article-content {
+    font-size: 2.4rem;
+  }
+
+  .vertical-title {
+    writing-mode: horizontal-tb;
+  }
+
+  .article-title {
+    font-size: 4.2rem;
+  }
+
+  .article {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+  }
+
+  .article:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('imgs/maize.jpg');
+  }
+
+  .article:nth-child(2) {
+    background-image: url('imgs/chicks1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('imgs/chicks1.jpg');
+  }
+
+  .article:nth-child(3) {
+    background-image: url('imgs/meat2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('imgs/meat2.jpg');
+  }
+
+  .article:nth-child(4) {
+    background-image: url('imgs/transport.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('imgs/transport.jpg');
+  }
+
+  .article:nth-child(5) {
+    background-image: url('imgs/partnership.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('imgs/partnership.jpg');
+  }
+
+  .article:nth-child(6) {
+    background-image: url('imgs/satisfaction.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('imgs/satisfaction.jpg');
+  }
 }
