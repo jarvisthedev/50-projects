@@ -58,32 +58,40 @@
   }
 
   .article:nth-child(2) {
-    background-image: url('imgs/chicks1.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url('imgs/chicks1.jpg');
   }
 
   .article:nth-child(3) {
-    background-image: url('imgs/meat2.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url('imgs/meat2.jpg');
   }
 
   .article:nth-child(4) {
-    background-image: url('imgs/transport.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url('imgs/transport.jpg');
   }
 
   .article:nth-child(5) {
-    background-image: url('imgs/partnership.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url('imgs/partnership.jpg');
   }
 
   .article:nth-child(6) {
-    background-image: url('imgs/satisfaction.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url('imgs/satisfaction.jpg');
+  }
+}
+
+/* ////////////////////////////////// */
+/* POTTRAIT TABLETS (584px) */
+/* ////////////////////////////////// */
+@media (max-width: 36.5em) {
+  .article-content {
+    font-size: 2rem;
+  }
+
+  .article-title {
+    font-size: 3.6rem;
   }
 }
