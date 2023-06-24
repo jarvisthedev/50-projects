@@ -12,7 +12,6 @@ html {
 /* ////////////////////////// */
 /* GENERAL STYLE */
 /* ////////////////////////// */
-
 body {
   font-size: 1.8rem;
   color: #f7f7f7;
@@ -27,7 +26,6 @@ body {
 /* ////////////////////////// */
 /* HEADER */
 /* ////////////////////////// */
-
 .header {
   padding: 0 9.8rem;
   height: 12rem;
@@ -89,12 +87,29 @@ body {
 .nav-hover-detail .grid-ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 3.2rem;
 }
 
 .nav-hover-detail.grid {
   width: 54rem;
   position: absolute;
   left: -18rem;
+}
+
+.nav-detail {
+  /* position: relative; */
+}
+
+.nav-detail::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2.4rem;
+  width: 10.2rem;
+  height: 0.2rem;
+  color: red;
+  background-color: blue;
+  display: inline-block;
 }
 
 /* 
@@ -209,7 +224,6 @@ body {
 /* //////////////////////////// */
 /* SECTION HERO */
 /* //////////////////////////// */
-
 .section-hero {
   margin: 0 auto;
   padding: 4.8rem;
