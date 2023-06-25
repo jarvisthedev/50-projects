@@ -19,10 +19,100 @@ body {
   background-color: rgba(17, 17, 17, 0.05);
 }
 
+.logo {
+  width: 1.8rem;
+}
+
+.sec-text {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .container {
-  background-color: #f7f7f7;
+  background-color: #2b2e37;
+  color: #f7f7f7;
+  padding: 7.2rem 1.8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.primary-text {
+  font-size: 1.6rem;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  padding-bottom: 1.4rem;
+  border-bottom: 2.4px solid #dedede;
+  width: 8rem;
+  margin-bottom: 4.8rem;
+}
+
+.teams-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 7.2rem;
+  row-gap: 8.4rem;
+}
+
+.team-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3.2rem;
+}
+
+.box-image {
+  height: 16rem;
+  width: 16rem;
+  border-radius: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.team-name {
+  margin-bottom: 1.2rem;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: #7c7c7c;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.article {
+  max-width: 26rem;
+  background-color: #dedede;
+  border-radius: 0.3rem;
+  padding: 3.2rem 1.8rem 1.8rem 1.8rem;
+  position: relative;
+}
+
+.article::before {
+  position: absolute;
+  top: 5.8rem;
+  left: -0.4rem;
+  transform: rotate(45deg);
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-color: #dedede;
+}
+
+.article h3 {
   color: #111;
-  margin: 4.8rem auto;
-  padding: 4.2rem 2.4rem;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.07);
+  margin-bottom: 1.2rem;
+}
+
+.article blockquote {
+  color: #222;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
