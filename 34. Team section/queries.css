@@ -14,16 +14,34 @@
   html {
     font-size: 50%;
   }
+
+  .teams-box {
+    column-gap: 6.4rem;
+  }
+
+  .team-box {
+    gap: 2.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* POTRAIT TABLETS (600px) */
+/* POTRAIT TABLETS (752px) */
 /* ////////////////////////////////// */
-@media (max-width: 37.5em) {
+@media (max-width: 47em) {
+  .teams-box {
+    grid-template-columns: 1fr;
+  }
+
+  .team-box {
+    gap: 3.2rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* PHONES (580px) */
+/* PHONES (392px) */
 /* ////////////////////////////////// */
-@media (max-width: 36em) {
+@media (max-width: 24.5em) {
+  .team-box {
+    gap: 2.4rem;
+  }
 }
