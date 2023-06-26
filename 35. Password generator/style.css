@@ -14,28 +14,30 @@ html {
 /* ////////////////////////// */
 
 body {
-  font-size: 1.8rem;
-  font-weight: 300;
-
-  color: #222;
-  background-color: #dedede;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #333;
+  background-color: #f7fbfd;
   line-height: 1.2;
 }
 
 .section--password {
+  padding: 0 1.8rem;
 }
 
 .container {
-  max-width: 32rem;
+  max-width: 36rem;
   margin: 2.4rem auto;
   padding: 3.2rem 2.4rem;
-  box-shadow: 0 0 0.8rem 0.8rem rgba(0, 0, 0, 0.02);
+  background-color: #f7fbfd;
+  box-shadow: 0.1rem -0.1rem 0.8rem 0.8rem rgba(0, 0, 0, 0.02);
 }
 
 .primary-text {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
+  text-align: center;
 }
 
 .textbox {
@@ -52,26 +54,28 @@ body {
 .checkboxes {
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 1.2rem;
-  margin-bottom: 1.8rem;
-  /* font-weight: 400; */
+  row-gap: 1.8rem;
+  margin-bottom: 4.8rem;
 }
 
-input[type='checkbox'] {
-  border: none;
-  /* background-color: red; */
-}
-
-.checkboxes label {
+input:focus {
+  outline: none;
 }
 
 .checkboxes input {
   width: 1.4rem;
   height: 1.4rem;
+  justify-self: end;
+}
+
+.paswrd-len {
+  width: 5.2rem !important;
+  padding: 0.8rem;
 }
 
 .btns {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.2rem;
 }
@@ -79,8 +83,8 @@ input[type='checkbox'] {
 .btn {
   border: none;
   font-size: 1.6rem;
-  padding: 0.6rem 2.4rem;
+  padding: 0.8rem 2.4rem;
   color: #333;
   background-color: transparent;
-  box-shadow: -0.8rem 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.09);
+  box-shadow: -0.2rem 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.07);
 }
