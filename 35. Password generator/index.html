@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <section class="section--password">
+      <div class="container">
+        <h2 class="primary-text">Password Generator</h2>
+        <input class="textbox" placeholder="Wde3)fKm90#" type="text" />
+        <form class="checkboxes">
+          <label for="length">Password length</label>
+          <input type="number" name="length" class="paswrd-len" />
+          <label for="uppercase">Include uppercase letters</label>
+          <input type="checkbox" name="uppercase" class="upper" />
+          <label for="lowercase">Include lowercase letters</label>
+          <input type="checkbox" name="lowercase" class="lower" />
+          <label for="in-number">Include number</label>
+          <input type="checkbox" name="in-number" id="upper" />
+          <label for="symbols">Include symbols</label>
+          <input type="checkbox" name="symbols" class="symbols" />
+        </form>
+        <div class="btns">
+          <button class="btn generate">
+            <i class="ph-fill ph-key"></i> <span> Generate</span>
+          </button>
+          <button class="btn copy">
+            <i class="ph ph-clipboard"></i> <span> Copy</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
