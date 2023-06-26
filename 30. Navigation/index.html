@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
     <script
       defer
       type="module"
@@ -31,10 +32,8 @@
       <nav class="nav-list">
         <ul>
           <li class="parent-header-hover">
-            <a class="nav-detail padding--horizontal parent-header" href="#"
-              >Demos</a
-            >
-            <div class="nav-hover-detail child-header-hover">
+            <a class="nav-detail" href="#">Demos</a>
+            <div class="nav-hover-detail hidden">
               <ul>
                 <li class="hover-state">
                   <a class="nav-detail" href="#">
@@ -52,8 +51,8 @@
             </div>
           </li>
           <li class="parent-header-hover">
-            <a class="nav-detail padding--horizontal" href="#">Academy</a>
-            <div class="nav-hover-detail child-header-hover flex--2 hidden">
+            <a class="nav-detail" href="#">Academy</a>
+            <div class="nav-hover-detail hidden">
               <ul>
                 <li class="hover-state">
                   <a class="nav-detail" href="#">
@@ -89,14 +88,14 @@
             </div>
           </li>
           <li>
-            <a class="nav-detail padding--horizontal" href="#">Programs</a>
+            <a class="nav-detail" href="#">Programs</a>
           </li>
           <li>
-            <a class="nav-detail padding--horizontal" href="#">Schedule</a>
+            <a class="nav-detail" href="#">Schedule</a>
           </li>
           <li class="parent-header-hover">
-            <a class="nav-detail padding--horizontal" href="#">All pages</a>
-            <div class="nav-hover-detail child-header-hover grid hidden">
+            <a class="nav-detail" href="#">All pages</a>
+            <div class="nav-hover-detail grid hidden">
               <ul class="grid-ul">
                 <li class="hover-state">
                   <a class="nav-detail" href="#">
@@ -229,19 +228,28 @@
           </li>
 
           <li>
-            <a class="nav-detail padding--horizontal" href="#">Get in Touch</a>
+            <a class="nav-detail" href="#">Get in Touch</a>
           </li>
           <li>
-            <a class="nav-detail padding--horizontal" href="#"
+            <a class="nav-detail" href="#"
               ><ion-icon class="icon" name="cart-outline"></ion-icon
             ></a>
           </li>
         </ul>
       </nav>
+      <a class="nav-cart hidden" href="#"
+        ><ion-icon class="icon" name="cart-outline"></ion-icon
+      ></a>
     </header>
 
     <main>
       <section class="section-hero">
+        <div class="video-container">
+          <video class="video-background" autoplay loop muted>
+            <source src="./video/vid3.mp4" type="video/mp4" />
+          </video>
+        </div>
+
         <div class="hero">
           <h1 class="primary-header">Being fast in tennis is everything.</h1>
           <ul>

@@ -1,5 +1,10 @@
 const sectionHead = document.querySelector('.header');
-const innerHover = document.querySelector('.hover-state');
+const sectionHero = document.querySelector('.section-hero');
+const navList = document.querySelector('.nav-list');
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') navList.classList.add('hidden');
+});
 
 sectionHead.addEventListener('mouseover', function (e) {
   e.preventDefault();
@@ -17,4 +22,16 @@ sectionHead.addEventListener('mouseout', function (e) {
   if (hoverState) hoverState.classList.remove('inner-list');
   if (parentHover)
     parentHover.querySelector('.nav-hover-detail').classList.add('hidden');
+});
+
+sectionHero.addEventListener('click', function (e) {
+  navList.classList.add('hidden');
+});
+
+sectionHead.addEventListener('click', function (e) {
+  if (e.target.classList.contains('logo')) navList.classList.remove('hidden');
+});
+
+navList.addEventListener('click', function (e) {
+  if (e.target.classList.contains('sec-link')) navList.classList.add('hidden');
 });
