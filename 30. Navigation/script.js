@@ -1,31 +1,20 @@
-const sectionHead = document.querySelector(".section--head");
+const sectionHead = document.querySelector('.header');
+const innerHover = document.querySelector('.hover-state');
 
-sectionHead.addEventListener("mouseover", function (e) {
+sectionHead.addEventListener('mouseover', function (e) {
   e.preventDefault();
-  const parentHover = e.target.closest(".parent-header-hover");
-  if (!parentHover) return;
-  const childHover = parentHover.querySelector(".child-header-hover");
-
-  if (e.target.classList.contains("sec-link")) {
-    const secLink = e.target.parentElement;
-    secLink.firstChild.classList.add("sec-link-hover");
-    secLink.firstChild.style.position = "relative";
-  }
-
-  if (childHover.classList.contains("hidden"))
-    childHover.classList.remove("hidden");
+  const parentHover = e.target.closest('.parent-header-hover');
+  const hoverState = e.target.closest('.hover-state');
+  if (hoverState) hoverState.classList.add('inner-list');
+  if (parentHover)
+    parentHover.querySelector('.nav-hover-detail').classList.remove('hidden');
 });
 
-sectionHead.addEventListener("mouseout", function (e) {
+sectionHead.addEventListener('mouseout', function (e) {
   e.preventDefault();
-  const parentHover = e.target.closest(".parent-header-hover");
-  if (!parentHover) return;
-  const childHover = parentHover.querySelector(".child-header-hover");
-  childHover.classList.add("hidden");
-
-  if (e.target.classList.contains("sec-link")) {
-    const secLink = e.target.parentElement;
-    secLink.firstChild.classList.remove("sec-link-hover");
-    secLink.firstChild.style.position = "absolute";
-  }
+  const parentHover = e.target.closest('.parent-header-hover');
+  const hoverState = e.target.closest('.hover-state');
+  if (hoverState) hoverState.classList.remove('inner-list');
+  if (parentHover)
+    parentHover.querySelector('.nav-hover-detail').classList.add('hidden');
 });
