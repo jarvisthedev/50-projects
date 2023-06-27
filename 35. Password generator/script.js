@@ -73,12 +73,10 @@ sectionPassword.addEventListener('click', function (e) {
     let i = uppercaseIndex + lowercaseIndex + numberIndex + symbolsIndex;
     i < passLength;
     i++
-  ) {
+  )
     finalPassword += uniqAlphabet().toLowerCase();
-  }
 
-  if (e.target.closest('.generate')) {
-    console.log(finalPassword);
-    viewBox.value = finalPassword;
-  }
+  if (e.target.closest('.generate')) viewBox.value = finalPassword;
+
+  if (e.target.closest('.copy')) navigator.clipboard.writeText(viewBox.value);
 });
