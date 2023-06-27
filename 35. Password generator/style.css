@@ -68,9 +68,9 @@ input:focus {
   justify-self: end;
 }
 
-.paswrd-len {
+.pswrd_len {
   width: 5.2rem !important;
-  padding: 0.8rem;
+  padding: 0.8rem 0;
 }
 
 .btns {
