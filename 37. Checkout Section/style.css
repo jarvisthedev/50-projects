@@ -24,3 +24,116 @@ body {
 .hidden {
   display: none;
 }
+
+.section--checkout {
+  /* padding: 0%; */
+  background-color: #19152dde;
+  height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+}
+
+.img-holder {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  background-image: linear-gradient(
+      rgba(204, 204, 204, 0.3),
+      rgba(204, 204, 204, 0.3)
+    ),
+    url('./imgs/1.png');
+}
+
+.header-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: blue;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.primary-text {
+  text-transform: capitalize;
+}
+
+.img {
+}
+
+.watch-img {
+  width: 30rem;
+}
+
+.dots {
+}
+
+.dots-list {
+}
+
+.dot {
+}
+
+.current-img {
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: blue;
+  gap: 2.4rem;
+  padding: 4.8rem 2.4rem;
+}
+
+.form input {
+  border: 1px solid #adadad;
+  padding: 0.8rem;
+  background-color: transparent;
+}
+
+.form input::placeholder {
+  color: #f7f7f7;
+}
+
+.form input:focus {
+  outline: none;
+  border: none;
+}
+
+.card-name {
+  grid-column: 1/-1;
+}
+
+.card-number {
+  grid-column: 1/-1;
+}
+
+.cardholder {
+  grid-column: 1/-1;
+}
+
+.cvv {
+}
+
+.expiry-date {
+}
+
+.checkout {
+}
+
+.form-text {
+  grid-column: 1/-1;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.checkout {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1.2rem;
+  width: 55%;
+  grid-column: 1/-1;
+}
