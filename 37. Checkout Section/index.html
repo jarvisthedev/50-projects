@@ -17,7 +17,47 @@
 
   <body>
     <section class="section--checkout">
-      <div class="container"></div>
+      <div class="container">
+        <div class="img-holder" role="img" aria-label="Snekers photos">
+          <p class="header-text">redux</p>
+          <h2 class="primary-text">Analog Men’s Watch</h2>
+          <div class="img">
+            <img
+              class="watch-img"
+              src="./imgs/1.png"
+              alt="Analog wrist watch clock"
+            />
+            <img
+              class="watch-img"
+              src="./imgs/2.png"
+              alt="Analog wrist watch clock"
+            />
+            <img
+              class="watch-img"
+              src="./imgs/3.png"
+              alt="Analog wrist watch clock"
+            />
+          </div>
+
+          <div class="dots">
+            <ul class="dots-list">
+              <li class="dot"></li>
+              <li class="dot current-img"></li>
+              <li class="dot"></li>
+            </ul>
+          </div>
+        </div>
+        <form class="form" action="post">
+          <h3 class="form-text">Checkout</h3>
+          <input class="card-name" placeholder="Card Name" type="text" />
+          <input class="card-number" placeholder="Card Number" type="number" />
+          <input class="cardholder" placeholder="Cardholder Name" type="text" />
+          <input class="cvv" placeholder="CVV" type="number" />
+          <input class="expiry-date" placeholder="Expiry Date" type="text" />
+
+          <button class="checkout">Complete Order</button>
+        </form>
+      </div>
     </section>
   </body>
 </html>
