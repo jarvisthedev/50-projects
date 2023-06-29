@@ -26,23 +26,33 @@ body {
 }
 
 .section--checkout {
-  /* padding: 0%; */
   background-color: #19152dde;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .container {
   display: grid;
-  grid-template-columns: 55fr 45fr;
+  grid-template-columns: 60fr 40fr;
+  align-items: center;
+  justify-content: center;
+  max-width: 98rem;
+  column-gap: 4.8rem;
 }
 
 .img-holder {
+  text-align: center;
+  padding: 2.4rem;
+  transform: scale(1.1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-image: linear-gradient(
-      rgba(204, 204, 204, 0.3),
-      rgba(204, 204, 204, 0.3)
+      rgba(204, 204, 204, 0.8),
+      rgba(204, 204, 204, 0.8)
     ),
     url('./imgs/1.png');
 }
@@ -57,6 +67,7 @@ body {
 
 .primary-text {
   text-transform: capitalize;
+  color: #111;
 }
 
 .img {
@@ -70,12 +81,25 @@ body {
 }
 
 .dots-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
 }
 
 .dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid blue;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .current-img {
+  background-color: blue;
 }
 
 .form {
@@ -101,25 +125,10 @@ body {
   border: none;
 }
 
-.card-name {
-  grid-column: 1/-1;
-}
-
-.card-number {
-  grid-column: 1/-1;
-}
-
+.card-name,
+.card-number,
 .cardholder {
   grid-column: 1/-1;
-}
-
-.cvv {
-}
-
-.expiry-date {
-}
-
-.checkout {
 }
 
 .form-text {
