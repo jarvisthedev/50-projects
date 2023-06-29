@@ -14,16 +14,71 @@
   html {
     font-size: 50%;
   }
+
+  .section--imageslider {
+    padding: 2.8rem;
+  }
+
+  .container {
+    column-gap: 3.6rem;
+  }
+
+  .ph-bold {
+    padding: 2rem 0.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
 /* POTRAIT TABLETS (752px) */
 /* ////////////////////////////////// */
 @media (max-width: 47em) {
+  .section--imageslider {
+    padding: 1.8rem;
+  }
+
+  .container {
+    column-gap: 2.8rem;
+  }
+
+  .ph-bold {
+    padding: 1.6rem 0.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* PHONES (392px) */
+/* PHONES (544px) */
 /* ////////////////////////////////// */
-@media (max-width: 24.5em) {
+@media (max-width: 34em) {
+  .section--imageslider {
+    padding: 0.8rem;
+    align-items: center;
+  }
+
+  .container {
+    margin: 7.2rem auto;
+    max-width: 98vw;
+    column-gap: 0.8rem;
+    padding: 3.6rem 0.4rem;
+  }
+
+  .ph-bold {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PHONES (440px) */
+/* ////////////////////////////////// */
+@media (max-width: 27.5em) {
+  .container {
+    margin: 9.8rem auto;
+    padding: 2.4rem 0.4rem;
+  }
+
+  .caption-text,
+  .container h2 {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
 }
