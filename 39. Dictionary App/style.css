@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ////////////////////////// */
+/* GENERAL STYLE */
+/* ////////////////////////// */
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+.section--dictionary {
+  background-color: #ae9cff;
+  padding: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 72rem;
+  padding: 4.8rem 2.4rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.word-search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.word-search input {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 0.8rem 0;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #ae9cff;
+}
+
+.word-search button {
+  padding: 0.8rem 2.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ae9cff;
+  color: #f7f7f7;
+}
+
+.word-speaker {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.word-speaker h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.ph {
+  color: #575a7b;
+}
+
+.span {
+  color: #b3b6d4;
+  margin-bottom: 1.8rem;
+}
+
+.word-meaning {
+  margin-bottom: 1.8rem;
+  color: #575a7b;
+}
+
+.word-example {
+  font-style: italic;
+  color: #575a7b;
+  padding-left: 1.8rem;
+  border-left: 0.3rem solid #ae9cff;
+}
