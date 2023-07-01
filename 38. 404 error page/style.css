@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -16,7 +18,63 @@ html {
 body {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #f7f7f7;
-  background-color: #111;
-  line-height: 1.2;
+  color: #000;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+.section--error-page {
+  padding: 1.8rem;
+}
+
+.container {
+  max-width: 112rem;
+  padding: 3.2rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-msg h1 {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.error-msg p {
+  font-size: 2.4rem;
+  padding-right: 2.4rem;
+  margin-bottom: 2.8rem;
+}
+
+.error-msg a:link,
+.error-msg a:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.4rem 3.2rem;
+  display: inline-block;
+  background-color: #ff4f5b;
+  color: #dedede;
+}
+
+.img-holder img {
+  width: 52rem;
+  animation-name: infiniteupdown;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes infiniteupdown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
