@@ -19,17 +19,15 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #000;
-  background-color: #fff;
   line-height: 1.4;
+  background-color: #ae9cff;
 }
 
 .section--dictionary {
-  background-color: #ae9cff;
   padding: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .container {

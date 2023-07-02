@@ -20,6 +20,10 @@
 /* SMARTPHONE (432px) */
 /* ////////////////////////////////// */
 @media (max-width: 27em) {
+  .section--dictionary {
+    justify-content: start;
+  }
+
   .word-search button {
     padding: 0.8rem 1.2rem;
   }
