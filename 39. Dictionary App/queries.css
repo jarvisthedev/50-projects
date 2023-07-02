@@ -21,7 +21,7 @@
 /* ////////////////////////////////// */
 @media (max-width: 27em) {
   .section--dictionary {
-    justify-content: start;
+    align-items: start;
   }
 
   .word-search button {
