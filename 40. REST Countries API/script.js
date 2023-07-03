@@ -8,7 +8,9 @@ const searchOutput = document.querySelector('.search-output');
 sectionCountries.addEventListener('click', function (e) {
   e.preventDefault();
   if (e.target === searchBtn)
-    fetch(`https://restcountries.com/v3.1/name/${input.value}?fullText=true`)
+    fetch(
+      `https://restcountries.com/v3.1/name/${input.value.trim()}?fullText=true`
+    )
       .then(response => response.json())
       .then(data => {
         [data] = data;
@@ -50,7 +52,8 @@ sectionCountries.addEventListener('click', function (e) {
         searchOutput.innerHTML = '';
         searchOutput.insertAdjacentHTML(
           'beforeend',
-          `<p>Country not found check your spelling and try again</p>`
+          `<p>Country not found
+           check your spelling and try again</p>`
         );
       });
 });
