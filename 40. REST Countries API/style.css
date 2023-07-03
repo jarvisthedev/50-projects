@@ -67,16 +67,26 @@ body {
 }
 
 .flag-holder {
-  background-color: #999;
   width: 24rem;
-  padding-bottom: 14rem;
   display: inline-block;
+}
+
+.flag-holder img {
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 0.8rem 0.8rem rgba(0, 0, 0, 0.03);
 }
 
 .country-info h2 {
   font-size: 2.8rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+h2 a:link,
+h2 a:visited {
+  text-decoration: none;
+  color: #000;
 }
 
 .detailed-info {
