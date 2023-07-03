@@ -13,7 +13,48 @@
 
   <body>
     <section class="section--marvel">
-      <div class="container"></div>
+      <div class="container">
+        <form class="search-div">
+          <input
+            placeholder="Favourite marvels name"
+            class="input-text"
+            type="text"
+          />
+          <button class="search-btn">Search</button>
+        </form>
+        <div class="search-output">
+          <div class="img-holder">
+            <img src="imicdm" alt="mvjsdk" />
+          </div>
+        </div>
+
+        <!-- <div class="country-info">
+                <div
+                  role="img"
+                  aria-label="Searched country flag rendered"
+                  class="flag-holder"
+                >
+                  <img src="${data.flags.svg}" alt="${data.flags.alt}" />
+                </div>
+                <h2 class="country-name">THanos</h2>
+            </div>
+
+            <div class="detailed-info">
+              <p>Capital: <span class="capital">${data.capital[0]}</span></p>
+              <p>Continent: <span class="continent">${
+                data.continents[0]
+              }</span></p>
+              <p>Population: <span class="population">${
+                data.population
+              }</span></p>
+              <p>Currency: <span class="currency">${
+                Object.values(data.currencies)[0].name
+              } - ${Object.keys(data.currencies)[0]}</span></p>
+              <p>Common Language: <span class="language">${Object.values(
+                data.languages
+              ).join(', ')}</span></p>
+            </div> -->
+      </div>
     </section>
   </body>
 </html>
