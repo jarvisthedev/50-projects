@@ -22,3 +22,83 @@ body {
   background-color: #fff;
   line-height: 1;
 }
+
+.section--marvel {
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 72rem;
+  color: #f7f7f7;
+  background-color: #222;
+  padding: 4.8rem 2.8rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.search-div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.search-div input {
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  color: #f7f7f7;
+  background-color: rgba(153, 153, 153, 0.3);
+}
+
+.search-div button {
+  border: none;
+  color: #f7f7f7;
+  background-color: #c62828;
+  padding: 0.8rem 2.4rem;
+  border-radius: 0.6rem;
+}
+
+.search-output {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.search-output div {
+  width: 24rem;
+  display: inline-block;
+  padding-bottom: 14rem;
+  background-color: #c62828;
+  margin-bottom: 1.2rem;
+}
+
+.search-output img {
+  width: 100%;
+  width: 16rem;
+  height: 16rem;
+  cursor: pointer;
+  background-color: rgb(76, 187, 39);
+  box-shadow: 0 0 0.8rem 0.8rem rgba(0, 0, 0, 0.03);
+  border: 0.6px solid #fff;
+  border-radius: 50%;
+}
+
+.search-output h2 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.detailed-marvel {
+  margin-bottom: 2.8rem;
+}
+
+.detailed-text {
+  line-height: 1.8;
+  color: #7c7c7c;
+}

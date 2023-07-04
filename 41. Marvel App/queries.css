@@ -20,4 +20,11 @@
 /* SMARTPHONE (432px) */
 /* ////////////////////////////////// */
 @media (max-width: 27em) {
+  .section--marvel {
+    align-items: start;
+  }
+
+  .search-div button {
+    padding: 0.8rem 1.8rem;
+  }
 }
