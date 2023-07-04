@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-  max-width: 72rem;
+  max-width: 64rem;
   color: #f7f7f7;
   background-color: #222;
   padding: 4.8rem 2.8rem;
@@ -44,6 +44,29 @@ body {
   grid-template-columns: 1fr auto;
   gap: 1.8rem;
   margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.list-container {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+}
+
+.list {
+  width: 64%;
+  color: #fff;
+}
+
+.autocomplete-items {
+  padding: 0.5rem;
+  background-color: #555;
+  cursor: pointer;
+}
+
+.autocomplete-items:hover {
+  background-color: #ddd;
+  color: #171821;
 }
 
 .search-div input {
@@ -72,19 +95,16 @@ body {
 .search-output div {
   width: 24rem;
   display: inline-block;
-  padding-bottom: 14rem;
-  background-color: #c62828;
   margin-bottom: 1.2rem;
 }
 
 .search-output img {
-  width: 100%;
-  width: 16rem;
-  height: 16rem;
+  width: 24rem;
+  height: 24rem;
   cursor: pointer;
   background-color: rgb(76, 187, 39);
   box-shadow: 0 0 0.8rem 0.8rem rgba(0, 0, 0, 0.03);
-  border: 0.6px solid #fff;
+  border: 1.2rem solid #fff;
   border-radius: 50%;
 }
 
