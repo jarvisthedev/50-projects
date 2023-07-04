@@ -25,7 +25,4 @@ body {
 
 .section--editor {
   padding: 1.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
