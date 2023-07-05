@@ -20,6 +20,7 @@ body {
   color: #000;
   background-color: lightblue;
   line-height: 1;
+  font-weight: 500;
 }
 
 .section--editor {
@@ -27,7 +28,7 @@ body {
 }
 
 .container {
-  max-width: 112rem;
+  max-width: 98rem;
   margin: 4.8rem auto;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -113,6 +114,10 @@ body {
 
 .img-holder {
   background-color: #999;
+}
+
+.img-holder img {
+  max-width: 40rem;
 }
 
 .btn.btn--reset {
