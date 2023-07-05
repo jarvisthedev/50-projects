@@ -10,45 +10,45 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="./script.js"></script>
   </head>
 
   <body>
     <section class="section--editor">
       <div class="container">
+        <h1 class="primary-text">Easy Image Editor</h1>
         <div class="controls">
-          <div class="control">
-            <label for="blur">Blur</label>
-            <input type="range" name="blur" id="blur" />
+          <h2 class="secondary-text">Filters</h2>
+          <div class="btn-controls">
+            <button class="btn btn--brightness active">Brightness</button>
+            <button class="btn btn--saturation">Saturation</button>
+            <button class="btn btn--inversion">Inversion</button>
+            <button class="btn btn--grayscale">Grayscale</button>
           </div>
-          <div class="control">
-            <label for="contrast">Contract</label>
-            <input type="range" name="contrast" id="contrast" />
-          </div>
-          <div class="control">
-            <label for="hue-rotate">Hue-Rotate</label>
-            <input type="range" name="hue-rotate" id="hue-rotate" />
-          </div>
-          <div class="control last_child">
-            <label for="sepia">Sepia</label>
-            <input type="range" name="sepia" id="sepia" />
-          </div>
+          <label class="label-control" for="control">
+            <p class="text">Brightness</p>
+            <p class="percentage">100%</p>
+          </label>
+          <input type="range" name="control" class="control" id="control" />
 
-          <input type="radio" id="no-flip" name="image_pos" value="no-flip" />
-          <label for="no-flip">No Flip</label><br />
-
-          <input type="radio" id="flip-hor" name="image_pos" value="flip-hor" />
-          <label for="flip-hor">Flip Horizontal</label><br />
-
-          <input type="radio" id="flip-ver" name="image_pos" value="flip-ver" />
-          <label for="flip-ver">Flip Vertical</label>
+          <h2 class="secondary-text filter-selected">Rotate & Flip</h2>
+          <div class="flip-rotate">
+            <i class="ph left ph-arrow-counter-clockwise"></i>
+            <i class="ph right ph-arrow-clockwise"></i>
+            <i class="ph to-right ph-arrows-in-line-horizontal"></i>
+            <i class="ph to-upside-down ph-arrows-in-line-vertical"></i>
+          </div>
         </div>
 
-        <div class="picked-image">
-          <div class="img-holder">
-            <!-- <img src=".img/img" alt="img picked" /> -->
-          </div>
-          <button class="btn">Choose An Image</button>
+        <div class="img-holder">
+          <img src=".img/img" alt="img picked" />
+        </div>
+        <button class="btn btn--reset">reset filters</button>
+
+        <div class="btns">
+          <button class="btn btn--chose">Choose An Image</button>
+          <button class="btn btn--save">Save Image</button>
         </div>
       </div>
     </section>

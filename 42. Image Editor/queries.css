@@ -1,26 +1,57 @@
 /* ////////////////////////////////// */
-/* SMALLER LAPTOP (1032px) */
+/* SMALLER LAPTOP (816px) */
 /* ////////////////////////////////// */
-@media (max-width: 64.5em) {
+@media (max-width: 51em) {
   html {
     font-size: 56.25%;
-  }
-}
-
-/* ////////////////////////////////// */
-/* LANDSCAPE TABLETS (864px) */
-/* ////////////////////////////////// */
-@media (max-width: 54em) {
-  html {
-    font-size: 50%;
   }
 
   .container {
     grid-template-columns: 1fr;
+    row-gap: 0.8rem;
   }
 
-  .picked-image {
-    grid-row: 1/2;
-    margin-bottom: 2.4rem;
+  .primary-text {
+    margin-bottom: 1.8rem;
+  }
+
+  .img-holder {
+    background-color: #999;
+    grid-row: 2/3;
+    padding-bottom: 28rem;
+  }
+
+  .btns {
+    grid-row: 3/4;
+    margin-bottom: 1.8rem;
+  }
+
+  .btn--reset {
+    grid-row: 4/5;
+  }
+
+  .controls {
+    margin-bottom: 2.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* LANDSCAPE TABLETS (600px) */
+/* ////////////////////////////////// */
+@media (max-width: 37.5rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ////////////////////////////////// */
+/* SMARTPHONE (432px) */
+/* ////////////////////////////////// */
+@media (max-width: 27rem) {
+  .btn--chose,
+  .btn--save,
+  .btn--reset {
+    font-size: 1rem;
+    padding: 0.8rem;
   }
 }
