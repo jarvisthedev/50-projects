@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
-    <script defer src="./api-data.js"></script>
     <script defer src="./script.js"></script>
   </head>
 
@@ -18,35 +17,35 @@
     <section class="section--editor">
       <div class="container">
         <div class="controls">
-          <label for="blur">Blur</label>
-          <input type="range" name="blur" id="blur" />
-          <label for="contrast">Contract</label>
-          <input type="range" name="contrast" id="contrast" />
-          <label for="hue-rotate">Hue-Rotate</label>
-          <input type="range" name="hue-rotate" id="hue-rotate" />
-          <label for="sepia">Sepia</label>
-          <input type="range" name="sepia" id="sepia" />
+          <div class="control">
+            <label for="blur">Blur</label>
+            <input type="range" name="blur" id="blur" />
+          </div>
+          <div class="control">
+            <label for="contrast">Contract</label>
+            <input type="range" name="contrast" id="contrast" />
+          </div>
+          <div class="control">
+            <label for="hue-rotate">Hue-Rotate</label>
+            <input type="range" name="hue-rotate" id="hue-rotate" />
+          </div>
+          <div class="control last_child">
+            <label for="sepia">Sepia</label>
+            <input type="range" name="sepia" id="sepia" />
+          </div>
 
           <input type="radio" id="no-flip" name="image_pos" value="no-flip" />
           <label for="no-flip">No Flip</label><br />
-          <input
-            type="radio"
-            id="flip-horizontal"
-            name="image_pos"
-            value="flip-horizontal"
-          />
-          <label for="flip-horizontal">Flip Horizontal</label><br />
-          <input
-            type="radio"
-            id="flip-vertical"
-            name="image_pos"
-            value="flip-vertical"
-          />
-          <label for="flip-vertical">Flip Vertical</label>
+
+          <input type="radio" id="flip-hor" name="image_pos" value="flip-hor" />
+          <label for="flip-hor">Flip Horizontal</label><br />
+
+          <input type="radio" id="flip-ver" name="image_pos" value="flip-ver" />
+          <label for="flip-ver">Flip Vertical</label>
         </div>
 
         <div class="picked-image">
-          <div class="img">
+          <div class="img-holder">
             <!-- <img src=".img/img" alt="img picked" /> -->
           </div>
           <button class="btn">Choose An Image</button>

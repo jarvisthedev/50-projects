@@ -19,10 +19,53 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #000;
-  background-color: #f7f7f7;
+  background-color: lightblue;
   line-height: 1;
 }
 
 .section--editor {
   padding: 1.8rem;
+}
+
+.container {
+  margin: 9.8rem auto;
+  max-width: 120rem;
+  padding: 3.2rem 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f7f7f7;
+}
+
+.control {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.last_child {
+  margin-bottom: 3.2rem;
+}
+
+.picked-image {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.img-holder {
+  width: 40rem;
+  padding-bottom: 20rem;
+  background-color: #888;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  background-color: blue;
+  padding: 0.8rem 0.8rem;
+  font-size: 1.4rem;
+  border-radius: 0.2rem;
+  text-align: center;
 }

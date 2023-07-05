@@ -14,10 +14,13 @@
   html {
     font-size: 50%;
   }
-}
 
-/* ////////////////////////////////// */
-/* SMARTPHONE (432px) */
-/* ////////////////////////////////// */
-@media (max-width: 27em) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .picked-image {
+    grid-row: 1/2;
+    margin-bottom: 2.4rem;
+  }
 }
