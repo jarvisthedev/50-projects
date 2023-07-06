@@ -16,7 +16,6 @@
   }
 
   .img-holder {
-    background-color: #999;
     grid-row: 2/3;
     padding-bottom: 28rem;
   }
@@ -41,6 +40,10 @@
 @media (max-width: 37.5rem) {
   html {
     font-size: 50%;
+  }
+
+  .img-holder {
+    padding-bottom: 14rem;
   }
 }
 
