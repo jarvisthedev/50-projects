@@ -16,7 +16,7 @@
 
   <body>
     <section class="section--editor">
-      <div class="container">
+      <div class="container disable">
         <h1 class="primary-text">Easy Image Editor</h1>
         <div class="controls">
           <h2 class="secondary-text">Filters</h2>
@@ -32,7 +32,7 @@
             <p class="text">Brightness</p>
             <p class="percentage">100%</p>
           </label>
-          <input type="range" name="control" class="control" id="control" />
+          <input type="range" value="100" min="0" max="200" class="control" />
 
           <h2 class="secondary-text filter-selected">Rotate & Flip</h2>
           <div class="flip-rotate">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="img-holder">
-          <img src="./imgs/1.jpg" alt="img picked" />
+          <img src="./imgs/.jpg" alt="Select any image" />
         </div>
         <button class="btn btn--reset">reset filters</button>
 
