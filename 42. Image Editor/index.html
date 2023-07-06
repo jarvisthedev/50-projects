@@ -21,10 +21,12 @@
         <div class="controls">
           <h2 class="secondary-text">Filters</h2>
           <div class="btn-controls">
-            <button class="btn btn--brightness active">Brightness</button>
-            <button class="btn btn--saturation">Saturation</button>
-            <button class="btn btn--inversion">Inversion</button>
-            <button class="btn btn--grayscale">Grayscale</button>
+            <button class="btn filter btn--brightness active">
+              Brightness
+            </button>
+            <button class="btn filter btn--saturation">Saturation</button>
+            <button class="btn filter btn--inversion">Inversion</button>
+            <button class="btn filter btn--grayscale">Grayscale</button>
           </div>
           <label class="label-control" for="control">
             <p class="text">Brightness</p>
@@ -47,6 +49,13 @@
         <button class="btn btn--reset">reset filters</button>
 
         <div class="btns">
+          <input
+            type="file"
+            name="file-input"
+            class="file-input"
+            accept="image/*"
+            hidden
+          />
           <button class="btn btn--chose">Choose An Image</button>
           <button class="btn btn--save">Save Image</button>
         </div>
