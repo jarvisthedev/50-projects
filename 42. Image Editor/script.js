@@ -129,7 +129,7 @@ const saveImage = el => {
   ctx.translate(canvas.width / 2, canvas.height / 2);
   if (rotate !== 0) ctx.rotate((rotate * Math.PI) / 180);
 
-  ctx.scale(flipRigth, flipBtm);
+  ctx.scale(flipRigth === -1 ? 1 : -1, flipBtm === -1 ? 1 : -1);
   ctx.drawImage(
     img,
     -canvas.width / 2,
