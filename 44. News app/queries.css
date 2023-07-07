@@ -41,11 +41,11 @@
     column-gap: 2.8rem;
   }
 
-  .active-menu .menu-btns {
+  .menu-btns {
     display: block;
   }
 
-  .active-menu .btn--close {
+  .btn--close {
     display: none;
   }
 
@@ -54,12 +54,12 @@
     top: 0;
     left: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(110, 178, 102);
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #add8e6;
     width: 80%;
     height: 100vh;
-
+    padding: 7.2rem 7.8rem;
     z-index: 10;
     display: none;
   }
@@ -68,14 +68,51 @@
     gap: 4.8rem;
     flex-direction: column;
   }
+
+  .more {
+    left: 40%;
+    width: 50%;
+    background-color: transparent;
+    padding: 9.2rem 0;
+    display: none;
+  }
+
+  .links-disappear {
+    display: none;
+  }
+
+  .search-bar {
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 4.8rem;
+    display: block;
+    background-color: #add8e6;
+    display: none;
+  }
+
+  .search-news {
+    width: 70vw;
+  }
 }
 
 /* ////////////////////////////////// */
-/* MOBILE (504px) */
+/* SMARTPHONE (504px) */
 /* ////////////////////////////////// */
 @media (max-width: 31.5em) {
   .container {
     grid-template-columns: 1fr;
     row-gap: 2.8rem;
+  }
+
+  .search-bar {
+    padding: 1.2rem 3.2rem;
+  }
+
+  .search-news {
+    width: 100%;
+  }
+
+  .nav {
+    padding: 7.2rem 4.2rem;
   }
 }
