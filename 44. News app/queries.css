@@ -1,7 +1,7 @@
 /* ////////////////////////////////// */
-/* SMALLER LAPTOP (1146px) */
+/* SMALLER LAPTOP (1216px) */
 /* ////////////////////////////////// */
-@media (max-width: 74em) {
+@media (max-width: 76em) {
   html {
     font-size: 56.25%;
   }
@@ -14,12 +14,28 @@
   html {
     font-size: 50%;
   }
+
+  .header {
+    padding: 0 4.8rem;
+  }
+
+  .nav-list {
+    gap: 3.2rem;
+  }
+
+  .container {
+    column-gap: 1.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* PORTRAIT TABLETS (560px) */
+/* PORTRAIT TABLETS (776px) */
 /* ////////////////////////////////// */
-@media (max-width: 35em) {
+@media (max-width: 48.5em) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
