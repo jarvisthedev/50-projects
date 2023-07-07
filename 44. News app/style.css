@@ -97,6 +97,20 @@ body {
   font-size: 1.4rem;
 }
 
+/* ///////////////////////// */
+/* MENU NAVIGATION */
+/* ///////////////////////// */
+
+.menu-btns {
+  display: none;
+}
+
+.btn {
+  font-size: 2.4rem;
+  border: none;
+  background-color: transparent;
+}
+
 .section--hero {
   margin: 12.4rem auto;
   padding: 1.8rem;
