@@ -118,8 +118,6 @@ header.addEventListener('click', function (e) {
   }
 });
 
-window.addEventListener('load', fetchNews('us'));
-
 btn__Search.addEventListener('click', function (e) {
   if (!searchInput.value) return;
   window.addEventListener('load', fetchNews(`${searchInput.value}`));
@@ -127,3 +125,5 @@ btn__Search.addEventListener('click', function (e) {
   searchBar.style.display = `none`;
   searchInput.value = '';
 });
+
+window.addEventListener('load', fetchNews('world'));
