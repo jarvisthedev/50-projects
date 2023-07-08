@@ -39,6 +39,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .home.nav-detail {
@@ -132,8 +133,11 @@ body {
   justify-content: space-around;
 }
 
-.article {
-  display: inline-block;
+.news-card {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
   max-width: 36rem;
   min-height: 40rem;
   border-radius: 0.8rem;
@@ -145,7 +149,7 @@ body {
   padding: 0 0 2.4rem 0;
 }
 
-.article:hover {
+.news-card:hover {
   transform: translateY(-2px);
   background-color: #f9fdff;
   box-shadow: 1px 1px 8px #d4ecff;
