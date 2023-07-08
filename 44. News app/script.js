@@ -5,6 +5,8 @@ const newsContainer = document.querySelector('.section--hero .container');
 const btns = document.querySelector('.menu-btns');
 const btn__menu = document.querySelector('.btn--menu');
 const btn__close = document.querySelector('.btn--close');
+const btn__Search = document.querySelector('.btn--search');
+const searchInput = document.querySelector('.search-news');
 
 const navLinks = document.querySelector('.nav');
 const moreLinks = document.querySelector('.more');
@@ -110,13 +112,18 @@ header.addEventListener('click', function (e) {
     clicked.classList.contains('nav-detail') &&
     !clicked.classList.contains('links-disappear')
   ) {
+    moreLinks.style.display = `none`;
+    searchBar.style.display = `none`;
     window.addEventListener('load', fetchNews(`${clicked.textContent}`));
-    // state = 'none';
-    // menuControlHelper();
-    // moreLinks.style.display = `${state}`;
-    // searchBar.style.display = `${state}`;
-    // navLinks.style.display = `${state}`;
   }
 });
 
 window.addEventListener('load', fetchNews('us'));
+
+btn__Search.addEventListener('click', function (e) {
+  if (!searchInput.value) return;
+  window.addEventListener('load', fetchNews(`${searchInput.value}`));
+  moreLinks.style.display = `none`;
+  searchBar.style.display = `none`;
+  searchInput.value = '';
+});

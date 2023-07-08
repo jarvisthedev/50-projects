@@ -96,7 +96,14 @@ body {
   border: none;
   padding: 1.2rem;
   outline: none;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+}
+
+.btn--search {
+  padding: 1.5rem 1.2rem;
+  border: none;
+  background-color: #111;
+  color: #fff;
 }
 
 /* ///////////////////////// */
@@ -134,12 +141,7 @@ body {
 }
 
 .news-card {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
-  /* justify-content: flex-start; */
   max-width: 42rem;
-  /* min-height: 40rem; */
   border-radius: 0.8rem;
   box-shadow: 0 0 4px #d4ecff;
   cursor: pointer;
