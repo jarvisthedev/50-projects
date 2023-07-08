@@ -1,5 +1,6 @@
 `use strict`;
 
+const header = document.querySelector('.header');
 const newsContainer = document.querySelector('.section--hero .container');
 const btns = document.querySelector('.menu-btns');
 const btn__menu = document.querySelector('.btn--menu');
@@ -50,12 +51,12 @@ navLinks.addEventListener('click', function (e) {
 // //////////////////
 //  PROJECT API RENDERS
 // //////////////////
-const newsCardRender = function (data) {
+const newsCardRender = function (articleData) {
   const image =
-    data.articles[70]?.urlToImage &&
-    `<img src="${data.articles[70].urlToImage}" alt="Image loading" />`;
+    articleData?.urlToImage &&
+    `<img src="${articleData.urlToImage}" alt="Failed to load image please reload" />`;
 
-  const dateObj = new Date(data.articles[70].publishedAt);
+  const dateObj = new Date(articleData.publishedAt);
   const dateFormat = `${dateObj.getDate().toString().padStart(2, '0')}/${(
     dateObj.getMonth() + 1
   )
@@ -65,11 +66,12 @@ const newsCardRender = function (data) {
     .toString()
     .padStart(2, '0')}:${dateObj.getMinutes().toString().padStart(2, '0')}`;
 
-  let dataDescription = data.articles[70].content;
+  let dataDescription = articleData.content;
   dataDescription = dataDescription.replace(/\s*\[\+\d+ chars\]/g, '');
 
   const html = `
     <div class="news-card">
+    <a class="more-info" target="_blank" href="${articleData.url}"> 
       <div
         role="img"
         aria-label="news-card image holder"
@@ -78,16 +80,18 @@ const newsCardRender = function (data) {
         ${image === null ? `` : image}
       </div>
       <h2 class="secondary-text">
-        ${data.articles[70].title}
+        ${articleData.title}
       </h2>
-      <p class="date">${data.articles[70].source.name} ${dateFormat}</p>
+      <p class="date"> <b class="sourceName">${
+        articleData.source.name
+      }</b>  ${dateFormat}</p>
       <article class="blockquote">
          ${dataDescription}
       </article>
+      </a>
     </div>
     `;
 
-  newsContainer.innerHTML = '';
   newsContainer.insertAdjacentHTML('afterbegin', html);
 };
 
@@ -95,8 +99,24 @@ async function fetchNews(query) {
   const res = await fetch(`${URL}${query}&apiKey=${API_KEY}`);
   const data = await res.json();
   console.log(data);
+  newsContainer.innerHTML = '';
 
-  newsCardRender(data);
+  data.articles.forEach(card => newsCardRender(card));
 }
 
-window.addEventListener('load', fetchNews('Kenya'));
+header.addEventListener('click', function (e) {
+  const clicked = e.target;
+  if (
+    clicked.classList.contains('nav-detail') &&
+    !clicked.classList.contains('links-disappear')
+  ) {
+    window.addEventListener('load', fetchNews(`${clicked.textContent}`));
+    // state = 'none';
+    // menuControlHelper();
+    // moreLinks.style.display = `${state}`;
+    // searchBar.style.display = `${state}`;
+    // navLinks.style.display = `${state}`;
+  }
+});
+
+window.addEventListener('load', fetchNews('us'));
