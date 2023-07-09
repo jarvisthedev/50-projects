@@ -1,7 +1,8 @@
 `use strict`;
 
-const header = document.querySelector('.header');
 const newsContainer = document.querySelector('.section--hero .container');
+const header = document.querySelector('.header');
+
 const btns = document.querySelector('.menu-btns');
 const btn__menu = document.querySelector('.btn--menu');
 const btn__close = document.querySelector('.btn--close');
@@ -11,6 +12,7 @@ const searchInput = document.querySelector('.search-news');
 const navLinks = document.querySelector('.nav');
 const moreLinks = document.querySelector('.more');
 const searchBar = document.querySelector('.search-bar');
+const navDetails = document.querySelectorAll('.nav-detail');
 
 let state = 'flex';
 let checkMoreState = 'flex';
@@ -100,27 +102,41 @@ const newsCardRender = function (articleData) {
 async function fetchNews(query) {
   const res = await fetch(`${URL}${query}&apiKey=${API_KEY}`);
   const data = await res.json();
-  console.log(data);
   newsContainer.innerHTML = '';
 
   data.articles.forEach(card => newsCardRender(card));
 }
 
+// /////////////////////////
+// Nav elements news dynamic render
+// /////////////////////////
 header.addEventListener('click', function (e) {
   const clicked = e.target;
   if (
     clicked.classList.contains('nav-detail') &&
+    !clicked.classList.contains('home') &&
     !clicked.classList.contains('links-disappear')
   ) {
     moreLinks.style.display = `none`;
     searchBar.style.display = `none`;
     window.addEventListener('load', fetchNews(`${clicked.textContent}`));
+    Array.from(navDetails).map(el => el.classList.remove('active'));
+    clicked.classList.add('active');
+  }
+
+  if (clicked.classList.contains('home')) {
+    window.addEventListener('load', fetchNews('world'));
+    Array.from(navDetails).map(el => el.classList.remove('active'));
   }
 });
 
+// /////////////////////////
+// Search functionality
+// /////////////////////////
 btn__Search.addEventListener('click', function (e) {
   if (!searchInput.value) return;
   window.addEventListener('load', fetchNews(`${searchInput.value}`));
+  Array.from(navDetails).map(el => el.classList.remove('active'));
   moreLinks.style.display = `none`;
   searchBar.style.display = `none`;
   searchInput.value = '';
