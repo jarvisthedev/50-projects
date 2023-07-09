@@ -18,3 +18,60 @@ body {
   color: #222;
   background-color: #f7f7f7;
 }
+
+.hidden {
+  display: none;
+}
+
+.section--chatbot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  /* position: sticky; */
+  margin-top: 4rem;
+}
+
+.convers-holder {
+  border: 1px solid #000;
+}
+
+.convers-holder h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: blue;
+  text-align: center;
+  padding: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.conversations {
+}
+
+.robot-msg {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.4rem;
+}
+
+.ph {
+}
+
+.msg {
+}
+
+.user-msg {
+  /* text-align: right; */
+}
+
+.input-text {
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
