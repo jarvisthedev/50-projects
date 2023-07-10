@@ -1,7 +1,6 @@
 `use strict`;
 
-// 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
-const API_KEY = `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`;
+const API_KEY = `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`;
 
 const innerContainer = document.querySelector('.inner-container');
 const conversation = document.querySelector('.conversations');
@@ -50,7 +49,7 @@ const generateResponse = input => {
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: 'hello' }],
+      messages: [{ role: 'user', content: input }],
     }),
   };
 
@@ -77,7 +76,4 @@ sendBtn.addEventListener('click', function (e) {
 
   conversation.insertAdjacentHTML('beforeend', userHtml);
   setTimeout(() => conversation.insertAdjacentHTML('beforeend', robot), 600);
-
-  //   inputText.value;
-  generateResponse(inputText.value);
 });

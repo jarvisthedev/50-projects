@@ -16,31 +16,16 @@
 /* ////////////////////////////////// */
 @media (max-width: 29.5em) {
   .section--chatbot {
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 0;
+    padding: 0 1.2rem;
+    width: 100vw;
   }
 
   .container {
-    margin-top: 0;
-    max-width: 90rem;
-    height: 100vh;
-    /* position: absolute;
-    bottom: 0;
-    right: 0; */
-  }
-
-  .inner-container {
-    border-radius: 0;
+    width: 100%;
   }
 
   .conversations {
     height: 85vh;
-  }
-
-  .btn--close {
-    position: absolute;
-    top: 0.3rem;
-    right: 1.2rem;
+    width: 100%;
   }
 }
