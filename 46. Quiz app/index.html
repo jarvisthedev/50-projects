@@ -15,77 +15,49 @@
   <body>
     <section class="section--quiz">
       <div class="container">
-        <div class="first--page">
+        <form class="form first--page">
           <h1 class="primary-text">Quiz App</h1>
 
-          <label for="cars"
-            >Choose a car:
-
-            <select name="category" id="cars">
-              <option value="volvo"></option>
-              <!-- <option value="volvo">Choose a car:</option> -->
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+          <label for="category">
+            <select name="category" class="questions-options">
+              <option value=""></option>
+              <option value="sport">Sport</option>
+              <option value="celebrity">Celebrity</option>
+              <option value="history">history</option>
+              <option value="politics">politics</option>
+              <option value="animals">animals</option>
+              <option value="arts">Arts</option>
+              <option value="vehicles">Vehicles</option>
             </select>
+            <span> Category</span>
           </label>
-          <br />
 
-          <label for="cars"
-            >Choose a car:
-
-            <select name="category" id="cars">
-              <option value="volvo"></option>
-              <!-- <option value="volvo">Choose a car:</option> -->
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+          <label for="difficulty">
+            <select name="difficulty" class="questions-options">
+              <option value=""></option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
             </select>
+            <span> Difficulty</span>
           </label>
-          <br />
 
-          <label for="cars"
-            >Choose a car:
-
-            <select name="category" id="cars">
-              <option value="volvo"></option>
-              <!-- <option value="volvo">Choose a car:</option> -->
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+          <label for="quiz-type">
+            <select name="quiz-type" class="questions-options">
+              <option value=""></option>
+              <option value="multipleAns">Multiple choice</option>
+              <option value="true-false">True/False</option>
             </select>
+            <span> Type</span>
           </label>
-          <br />
 
-          <label for="cars"
-            >Choose a car:
-
-            <select name="category" id="cars">
-              <option value="volvo"></option>
-              <!-- <option value="volvo">Choose a car:</option> -->
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select> </label
-          ><br />
-
-          <label for="cars"
-            >Choose a car:
-
-            <select name="category" id="cars">
-              <option value="volvo"></option>
-              <!-- <option value="volvo">Choose a car:</option> -->
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
+          <label for="input">
+            <input class="quiz_number" type="number" />
+            <span> Number of questions</span>
           </label>
-        </div>
+
+          <button class="btn--submit">Get started</button>
+        </form>
       </div>
     </section>
   </body>

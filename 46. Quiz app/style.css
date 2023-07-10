@@ -15,8 +15,70 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   color: #222;
-  background-color: #e3f2fd;
+  background-color: #f7f7f7;
 }
 
 .section--quiz {
+  /* margin: 10rem auto; */
+}
+
+.form {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  font-size: 1.6rem;
+  gap: 1.2rem;
+
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.form h1 {
+  font-size: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.form select,
+.form input,
+.form button {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f7f7f7;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+label {
+  position: relative;
+}
+
+label span {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+}
+
+select {
+  padding-right: 10rem;
+}
+
+.form select:focus ~ span,
+.form input:focus ~ span,
+.form select:valid ~ span,
+.form input:valid ~ span {
+  top: -0.8rem;
+  color: blue;
+  background-color: #f7f7f7;
+  transform: scale(0.8);
+  padding: 0 0.8rem;
+}
+
+.form button {
+  color: #f7f7f7;
+  background-color: blue;
+  text-transform: uppercase;
+  font-weight: 600;
 }
