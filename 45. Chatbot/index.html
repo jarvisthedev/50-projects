@@ -17,12 +17,14 @@
   <body>
     <section class="section--chatbot">
       <div class="container">
-        <div class="convers-holder">
+        <div class="inner-container">
           <h1>Chatbot</h1>
           <div class="conversations">
             <p class="chatbot">
               <i class="ph ph-robot"></i>
-              <span class="bot-msg">Hi There How can i help you today?</span>
+              <span class="bot-msg"
+                >Hi There 👋️ How can i help you today?</span
+              >
             </p>
             <p class="user-msg">Hello there</p>
 
@@ -78,15 +80,16 @@
               id="story"
               name="story"
               rows="1"
+              required
             ></textarea>
-            <button class="btn">
-              <i class="ph-fill ph-telegram-logo"></i>
-            </button>
+            <i class="ph-fill ph-telegram-logo"></i>
           </form>
         </div>
         <div class="btns">
-          <button class="btn"><i class="ph ph-x"></i></button>
-          <button class="btn hidden"><i class="ph ph-chat"></i></button>
+          <button class="btn btn--open hidden">
+            <i class="ph ph-chat"></i>
+          </button>
+          <button class="btn btn--close"><i class="ph ph-x"></i></button>
         </div>
       </div>
     </section>
