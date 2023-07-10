@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -48,7 +49,7 @@
             </p>
             <p class="user-msg">just talk</p>
 
-            <p class="robot-msg">
+            <!-- <p class="robot-msg">
               <i class="ph ph-robot"></i>
               <span class="msg">Lorem ipsum dolor sit amet</span>
             </p>
@@ -70,14 +71,16 @@
               <i class="ph ph-robot"></i>
               <span class="msg">Lorem ipsum dolor sit amet</span>
             </p>
-            <p class="user-msg">just talk</p>
+            <p class="user-msg">just talk</p> -->
           </div>
           <form class="form">
-            <input
-              type="text"
+            <textarea
               placeholder="Enter a message..."
               class="input-text"
-            />
+              id="story"
+              name="story"
+              rows="1"
+            ></textarea>
             <button><i class="ph-fill ph-telegram-logo"></i></button>
           </form>
         </div>
