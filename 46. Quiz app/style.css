@@ -43,7 +43,8 @@ body {
 /* SPINNER */
 /* ///////////////////////// */
 
-.spinner-div {
+.spinner-div,
+.last-page {
   width: 100%;
   display: flex;
   align-items: center;
@@ -152,7 +153,7 @@ select {
   align-items: center;
   flex-direction: column;
   gap: 1.2rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4.2rem;
 }
 
 .ans {
@@ -182,6 +183,8 @@ select {
 
 .score {
   text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 /* ///////////////////////// */
@@ -189,7 +192,8 @@ select {
 /* ///////////////////////// */
 
 .last-page {
-  text-align: center;
+  /* text-align: center; */
+  flex-direction: column;
 }
 
 .last-page h1 {
