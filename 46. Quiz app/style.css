@@ -35,8 +35,36 @@ body {
   width: 100%;
 }
 
-.hidden {
+.section--quiz .hidden {
   display: none;
+}
+
+/* ///////////////////////// */
+/* SPINNER */
+/* ///////////////////////// */
+
+.spinner-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #f7f7f7;
+}
+
+.spinner {
+  height: 5.8rem;
+  width: 5.8rem;
+  border: 0.4rem solid;
+  border-color: #000 transparent #000 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ///////////////////////// */

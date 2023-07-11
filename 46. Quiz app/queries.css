@@ -11,7 +11,4 @@
 /* SMARTPHONE (472px) */
 /* ////////////////////////////////// */
 @media (max-width: 29.5em) {
-  html {
-    font-size: 50%;
-  }
 }
