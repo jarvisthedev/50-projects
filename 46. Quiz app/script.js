@@ -1,12 +1,9 @@
 `use strict`;
 
-const innerContainer = document.querySelector('.section--quiz');
-const btnSubmit = document.querySelector('.btn--submit');
+const container = document.querySelector('.section--quiz');
 const form = document.querySelector('.form');
 const questions = document.querySelector('.questions');
 const last_page = document.querySelector('.last-page');
-const totalQuestions = document.querySelector('.total-questions');
-
 const quizes = document.querySelector('.quizes');
 const answers = document.querySelectorAll('.ans');
 
@@ -55,58 +52,59 @@ const apiTo_html = data => {
 };
 
 const quizes_Func = async number => {
-  // const res = await fetch(`quizes.json`);
   const res = await fetch(consuming_API());
   const data = await res.json();
-
   numberOfQuestions = data.results.length;
   apiTo_html(data.results[number]);
 };
 
-btnSubmit.addEventListener('click', function (e) {
-  e.preventDefault();
+// HELPER FUNCTIONS
+const submitBtn = () => {
   form.classList.add('hidden');
   questions.classList.remove('hidden');
-
   quizes_Func(questionNum);
-});
+};
 
-innerContainer.addEventListener('click', function (e) {
-  e.preventDefault();
-  const clicked = e.target;
+const renderAnswer = () => {
+  Array.from(answers).map(el => el.classList.remove('ans--correct'));
+  clicked.classList.add('ans--correct');
+  if (clicked.classList.contains('correct')) current_score += 1;
+  questionNum += 1;
 
-  if (clicked.classList.contains('ans')) {
-    Array.from(answers).map(el => el.classList.remove('ans--correct'));
-    clicked.classList.add('ans--correct');
-    if (clicked.classList.contains('correct')) current_score += 1;
-
-    questionNum += 1;
-
-    if (questionNum === numberOfQuestions) {
-      currentScore.textContent = current_score;
-      last_page.classList.remove('hidden');
-      questions.classList.add('hidden');
-      return;
-    }
-    setTimeout(() => quizes_Func(questionNum), 1000);
+  if (questionNum === numberOfQuestions) {
+    currentScore.textContent = current_score;
+    last_page.classList.remove('hidden');
+    questions.classList.add('hidden');
+    return;
   }
+  setTimeout(() => quizes_Func(questionNum), 1000);
+};
 
-  if (clicked.classList.contains('btn--back')) {
-    last_page.classList.add('hidden');
-    form.classList.remove('hidden');
+const resetFunc = () => {
+  last_page.classList.add('hidden');
+  form.classList.remove('hidden');
 
-    quiz_number.value = 10;
-    numberOfQuestions = 0;
-    questionNum = 0;
-    quizes.innerHTML = `
+  quizes.innerHTML = `
       <div class="spinner-div">
         <div class="spinner"></div>
       </div>
       `;
 
-    quiz_difficulty.value = 0;
-    quiz_category.value = 0;
-    quiz_type.value = 0;
-    current_score = 0;
-  }
+  quiz_category.value = 0;
+  quiz_difficulty.value = 0;
+  quiz_number.value = 10;
+  quiz_type.value = 0;
+
+  numberOfQuestions = 0;
+  questionNum = 0;
+  current_score = 0;
+};
+
+container.addEventListener('click', function (e) {
+  e.preventDefault();
+  const clicked = e.target;
+
+  if (clicked.classList.contains('btn--submit')) submitBtn();
+  if (clicked.classList.contains('ans')) renderAnswer();
+  if (clicked.classList.contains('btn--back')) resetFunc();
 });

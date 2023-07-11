@@ -1,8 +1,8 @@
 /* ////////////////////////////////// */
-/* SMALLER LAPTOP (700px) */
+/* SMARTPHONE (480px) */
 /* ////////////////////////////////// */
-@media (max-width: 43.75em) {
+@media (max-width: 30em) {
   html {
-    /* font-size: 56.25%; */
+    font-size: 58.25%;
   }
 }
