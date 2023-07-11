@@ -19,23 +19,33 @@ body {
 }
 
 .section--quiz {
-  /* margin: 10rem auto; */
+  padding: 0 1.8rem;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 9.8rem auto;
 }
 
 .form {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   font-size: 1.6rem;
-  gap: 1.2rem;
-
-  width: 60rem;
-  margin: 0 auto;
+  gap: 1.8rem;
+  width: 100%;
 }
+
+.hidden {
+  display: none;
+}
+
+/* ///////////////////////// */
+/* FORM ~ FIRST PAGE */
+/* ///////////////////////// */
 
 .form h1 {
   font-size: 3.2rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .form select,
@@ -70,7 +80,7 @@ select {
 .form select:valid ~ span,
 .form input:valid ~ span {
   top: -0.8rem;
-  color: blue;
+  color: #5697be;
   background-color: #f7f7f7;
   transform: scale(0.8);
   padding: 0 0.8rem;
@@ -78,7 +88,94 @@ select {
 
 .form button {
   color: #f7f7f7;
-  background-color: blue;
+  background-color: #39657f;
   text-transform: uppercase;
   font-weight: 600;
+  margin-top: 1.4rem;
+  transition: all 0.3s;
+}
+
+.form button:hover {
+  background-color: #1c323f;
+}
+
+/* ///////////////////////////// */
+/* QUESTIONS ~ SECOND PAGE */
+/* //////////////////////////// */
+
+.questions {
+  list-style: none;
+}
+
+.secondary-text {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.quiz {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.answers {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.ans {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  width: 100%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.ans:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.ans.ans--correct {
+  background-color: #2fbe0f95;
+  color: #111;
+}
+
+.ans.ans--picked {
+  background-color: #ec9999;
+  color: #111;
+}
+
+.score {
+  text-align: center;
+}
+
+/* ///////////////////////// */
+/* FORM ~ LAST PAGE */
+/* ///////////////////////// */
+
+.last-page {
+  text-align: center;
+}
+
+.last-page h1 {
+  margin-bottom: 1.2rem;
+  font-size: 3.2rem;
+}
+
+.last-page button {
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #5697be;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.245);
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  font-weight: 500;
 }
