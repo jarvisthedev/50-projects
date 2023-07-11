@@ -19,20 +19,22 @@
           <h1 class="primary-text">Quiz App</h1>
 
           <label for="category">
-            <select name="category" class="questions-options">
-              <option value="sport">Sport</option>
-              <option value="celebrity">Celebrity</option>
-              <option value="history">history</option>
-              <option value="politics">politics</option>
-              <option value="animals">animals</option>
-              <option value="arts">Arts</option>
-              <option value="vehicles">Vehicles</option>
+            <select name="category" class="questions-options quiz-category">
+              <option></option>
+              <option value="21">Sport</option>
+              <option value="26">Celebrity</option>
+              <option value="23">history</option>
+              <option value="24">politics</option>
+              <option value="27">animals</option>
+              <option value="25">Arts</option>
+              <option value="28">Vehicles</option>
             </select>
             <span> Category</span>
           </label>
 
           <label for="difficulty">
-            <select name="difficulty" class="questions-options">
+            <select name="difficulty" class="questions-options quiz-difficulty">
+              <option></option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
@@ -41,15 +43,16 @@
           </label>
 
           <label for="quiz-type">
-            <select name="quiz-type" class="questions-options">
-              <option value="multipleAns">Multiple choice</option>
-              <option value="true-false">True/False</option>
+            <select name="quiz-type" class="questions-options quiz-type">
+              <option></option>
+              <option value="multiple">Multiple choice</option>
+              <option value="boolean">True/False</option>
             </select>
             <span> Type</span>
           </label>
 
           <label for="input">
-            <input class="quiz_number" type="number" />
+            <input value="10" class="quiz_number" type="number" />
             <span> Number of questions</span>
           </label>
 
@@ -62,7 +65,7 @@
 
         <ul class="questions hidden">
           <li class="quizes">
-            <h2 class="secondary-text">Question 1</h2>
+            <!-- <h2 class="secondary-text">Question 1</h2>
             <p class="quiz">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
               suscipi
@@ -73,16 +76,20 @@
               <li class="ans">ullam blanditiis repudiandae!</li>
               <li class="ans">Sequi, velit! Corrupti</li>
               <li class="ans">inventore dolorum</li>
-            </ul>
+            </ul> -->
+
+            <div class="spinner-div">
+              <div class="spinner"></div>
+            </div>
           </li>
 
-          <p class="score">
+          <!-- <p class="score">
             Score <span class="current-scrore"> 0</span>/<span
               class="total-questions"
             >
               10</span
             >
-          </p>
+          </p> -->
         </ul>
 
         <form class="last-page hidden">
