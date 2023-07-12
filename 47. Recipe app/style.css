@@ -23,6 +23,32 @@ body {
 /* REUSABLE */
 /* ////////////////// */
 
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.secondary-text {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 1.8rem 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4.2rem;
+}
+
+.secondary-text::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  width: 6.8rem;
+  background-color: #e67e22;
+}
+
 .grid {
   display: grid;
 }
@@ -35,8 +61,26 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-columns--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid-columns--5 {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.tertiary-text--1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  padding-bottom: 1.2rem;
+  margin-bottom: 3.2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.286);
+}
+
+.tertiary-text--2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
 }
 
 /* 
@@ -51,10 +95,7 @@ body {
 - Shades: 
 #cf711f
 #45260a
-
-- Accents:
-- Greys */
-
+/* ? */
 .hidden {
   display: none;
 }
@@ -129,86 +170,41 @@ body {
 /* //////////////////////////// */
 .section--meal-details {
   background-color: #fdf2e9;
-  padding: 6.8rem;
-}
-
-.container {
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
-.secondary-text {
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 1.8rem 0;
-  position: relative;
-  margin-bottom: 4.2rem;
-}
-
-.secondary-text::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  height: 3px;
-  width: 6.8rem;
-  background-color: #e67e22;
+  background-color: #b5601a;
+  padding: 9.8rem 0;
 }
 
 .selected-meal-details {
   background-color: #f7f7f7;
-  gap: 4.8rem;
   padding: 3.2rem;
+  gap: 4.8rem;
 }
 
 .selected-meal {
-  background-color: red;
-  height: 48rem;
+  max-height: 48rem;
 }
 
 .selected-meal img {
-  width: 100%;
-  height: 48rem;
+  max-height: 48rem;
 }
 
-.supporting-img-text {
-  /* background-color: blue; */
-}
-
-.tertiary-text {
-  font-size: 2.4rem;
-  font-weight: 500;
-  padding-bottom: 1.2rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.286);
-  margin-bottom: 3.2rem;
+.supporting-img-text p {
+  font-size: 1.6rem;
 }
 
 .supporting-img-text span {
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
 .category {
-  font-size: 1.8rem;
   font-weight: 600;
-  text-transform: uppercase;
   margin-bottom: 0.8rem;
 }
 
-.category span {
-  font-size: 1.4rem;
-}
-
 .source {
-  font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 1.8rem;
-}
-
-.source span {
-  font-size: 1.4rem;
 }
 
 .tags {
@@ -226,36 +222,41 @@ body {
 .ingredients {
   color: #f7f7f7;
   background-color: #cf711f;
-  padding: 1.2rem;
+  padding: 1.8rem 1.8rem 4.8rem 1.8rem;
 }
 
-.teriary-text--2 {
+.section--meal-details .tertiary-text--2 {
+  font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
 
 .ingredients ol {
-  padding: 0 2.8rem;
-  gap: 0.4rem;
+  font-size: 1.4rem;
+  margin-left: 1.2rem;
+  column-gap: 0.4rem;
+  row-gap: 1rem;
   list-style: none;
   counter-reset: item;
 }
 
 .ingredients li {
   counter-increment: item;
-  margin-bottom: 0.5rem;
 }
+
 .ingredients li:before {
-  margin-right: 0.8rem;
   content: counter(item);
-  background: lightblue;
-  border-radius: 50%;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   width: 1.4em;
   height: 1.4em;
-  padding-top: 0.3rem;
-  text-align: center;
+  font-size: 1em;
+  color: white;
+  background: lightblue;
+  margin-right: 0.8rem;
+  border-radius: 50%;
   border: 2px solid #222;
-  display: inline-block;
 }
 
 .measurements {
@@ -264,18 +265,12 @@ body {
 
 .measurements ul,
 .instructions ul {
-  list-style: none;
-  padding: 0 1.2rem;
-  gap: 1.2rem;
+  /* list-style: none; */
+  gap: 1rem;
+  margin-left: 3.6rem;
   font-size: 1.6rem;
   /* list-style-image: url(<i class="ph ph-champagne"></i>); */
   /* <i class="ph ph-check-square"></i> */
-}
-
-.tertiary-text--3 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 1.8rem;
 }
 
 .instructions {
@@ -283,38 +278,31 @@ body {
 }
 
 .instructions ul {
-  font-size: 1.6rem;
   line-height: 1.3;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1.2rem;
 }
 
 /* //////////////////////////// */
 /* SECTION MEALs */
 /* //////////////////////////// */
 .section--meals {
-  /* background-color: #fdf2e9; */
-  padding: 6.8rem;
+  padding: 6.8rem 0;
 }
 
-.list-items {
+.section--meals .list-items {
   list-style: none;
-  column-gap: 1.8rem;
-  row-gap: 2.4rem;
+  column-gap: 3.2rem;
+  row-gap: 3.2rem;
 }
 
-.list-details {
-  /* background-color: blue; */
+.section--meals .list-img {
+  max-height: 28rem;
 }
 
-.list-img {
-  position: relative;
-  width: 100%;
-  height: 18rem;
-  background-color: red;
-  margin-bottom: 0.4rem;
+.section--meals .list-img img:hover {
+  transform: scale(0.98);
 }
 
 .list-img p {
@@ -328,11 +316,6 @@ body {
   padding: 0.2rem 1.2rem;
 }
 
-.list-img img {
-  width: 100%;
-  height: 18rem;
-}
-
 .strArea {
   padding-left: 0.8rem;
   color: #333;
@@ -344,7 +327,11 @@ body {
   font-weight: 500;
 }
 
+/* //////////////////////////// */
+/* SECTION CATEGORIES */
+/* //////////////////////////// */
 .section--categories {
+  padding: 6.8rem 0;
 }
 
 .section--categories p {
@@ -354,14 +341,29 @@ body {
   background-color: #cf711f;
 }
 
+.list-items {
+  list-style: none;
+  column-gap: 1.8rem;
+  row-gap: 3.2rem;
+}
+
 .list-img {
+  position: relative;
+  width: 100%;
+  max-height: 18rem;
+  margin-bottom: 0.4rem;
   overflow: hidden;
 }
 
-.section--categories img {
+.list-img img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-img img {
   transition: all 0.3s;
 }
 
-.section--categories img:hover {
+.list-img img:hover {
   transform: scale(1.09);
 }
