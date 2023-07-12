@@ -15,226 +15,269 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
-      <a href="#">Home</a>
+    <header class="header">
+      <a href="#">HommyEats</a>
       <div class="btns">
         <button class="btn btn--menu">
           <i class="ph ph-list"></i>
         </button>
-        <button class="btn btn--close">
+        <button class="btn btn--close hidden">
           <i class="ph ph-x"></i>
         </button>
       </div>
+      <nav class="nav hidden">
+        <ul class="nav-list">
+          <li class="nav-details">Beef</li>
+          <li class="nav-details">Chicken</li>
+          <li class="nav-details">Dessert</li>
+          <li class="nav-details">Lamb</li>
+          <li class="nav-details">Miscellaneous</li>
+          <li class="nav-details">Pasta</li>
+          <li class="nav-details">Pork</li>
+          <li class="nav-details">Seafood</li>
+          <li class="nav-details">Side</li>
+          <li class="nav-details">Starter</li>
+          <li class="nav-details">Vegan</li>
+          <li class="nav-details">Vegetarian</li>
+          <li class="nav-details">Breakfast</li>
+          <li class="nav-details">Goat</li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="section--hero">
-      <div class="hero"></div>
-    </section>
+    <main>
+      <section class="section--hero">
+        <div class="hero"></div>
+      </section>
 
-    <section class="section--meal-details">
-      <div class="container">
-        <h2 class="secondary-text">Meal Details</h2>
-        <div class="selected-meal-details">
-          <div class="selected-meal" role="img" aria-label="meal-img">
-            <img src="./img/car15.jpg" alt="list img" />
-            <!-- <p class="strCategory">dessert</p> -->
-          </div>
-          <div class="supporting-img-text">
-            <h3 class="tertiary-text">Tuna and Eggs Briks</h3>
-            <p class="category">Category: <span>Seafood</span></p>
-            <p class="source">
-              source:
-              <span
-                >https://www.themealdb.com/api/json/v1/1/search.php?f=a</span
-              >
-            </p>
-            <p class="tags">tags: <span>Seafood</span></p>
-
-            <div class="ingredients">
-              <h4 class="teriary-text--2">Ingredients</h4>
-              <ol>
-                <li>Olive oil</li>
-                <li>Olive oil</li>
-                <li>lemon juice</li>
-                <li>Eggs</li>
-                <li>Spinach</li>
-                <li>Cuccumber</li>
-              </ol>
+      <section class="section--meal-details">
+        <div class="container">
+          <h2 class="secondary-text">Meal Details</h2>
+          <div class="selected-meal-details grid grid-columns--2">
+            <div class="selected-meal" role="img" aria-label="meal-img">
+              <img src="./img/car15.jpg" alt="list img" />
             </div>
-          </div>
+            <div class="supporting-img-text">
+              <h3 class="tertiary-text">Tuna and Eggs Briks</h3>
+              <p class="category">Category: <span>Seafood</span></p>
+              <p class="source">
+                Source:
+                <span
+                  >https://www.themealdb.com/api/json/v1/1/search.php?f=a</span
+                >
+              </p>
+              <p class="tags">tags: <span>Seafood</span></p>
 
-          <div class="measurements">
-            <h4 class="tertiary-text--3">Measure:</h4>
-            <ul>
-              <li>1/2</li>
-              <li>1can</li>
-              <li>200g</li>
-              <li>1tsp</li>
-              <li>4tbs</li>
-              <li>2tabs</li>
-              <li>Chopped</li>
-            </ul>
-          </div>
+              <div class="ingredients">
+                <h4 class="teriary-text--2">Ingredients</h4>
+                <ol class="grid grid-columns--3">
+                  <li>Olive oil</li>
+                  <li>Olive oil</li>
+                  <li>lemon juice</li>
+                  <li>Eggs</li>
+                  <li>Spinach</li>
+                  <li>Cuccumber</li>
+                  <li>Olive oil</li>
+                  <li>Olive oil</li>
+                  <li>lemon juice</li>
+                  <li>Eggs</li>
+                  <li>Spinach</li>
+                  <li>Cuccumber</li>
+                </ol>
+              </div>
+            </div>
 
-          <div class="instructions">
-            <h4 class="tertiary-text--3">Instructions:</h4>
-            <ul>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                earum illum itaque quia maxime sunt! Voluptatibus assumenda at
-                molestias amet quisquam quia praesentium in id
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                earum illum itaque quia maxime sunt! Voluptatibus assumenda at
-                molestias amet quisquam
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                earum illum itaque.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                earum illum itaque quia maxime sunt! Voluptatibus assumenda at
-                molestias amet quisquam quia praesentium in id. Laboriosam
-                voluptate voluptatum beatae distinctio.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                earum illum itaque quia maxime sunt! Voluptatibus assumenda at
-                molestias amet quisquam quia praesentium in id
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. .
-              </li>
+            <div class="measurements">
+              <h4 class="tertiary-text--3">Measure:</h4>
+              <ul class="grid grid-columns--2">
+                <li>1/2</li>
+                <li>1can</li>
+                <li>200g</li>
+                <li>1tsp</li>
+                <li>4tbs</li>
+                <li>2tabs</li>
+                <li>Chopped</li>
+              </ul>
+            </div>
 
-              <li>Lorem ipsum dolor sit amet consectetur .</li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-                earum illum itaque quia maxime sunt! Voluptatibus assumenda at .
-              </li>
-            </ul>
+            <div class="instructions">
+              <h4 class="tertiary-text--3">Instructions:</h4>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora earum illum itaque quia maxime sunt! Voluptatibus
+                    assumenda at molestias amet quisquam quia praesentium in id
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora earum illum itaque quia maxime sunt! Voluptatibus
+                    assumenda at molestias amet quisquam
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora earum illum itaque.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora earum illum itaque quia maxime sunt! Voluptatibus
+                    assumenda at molestias amet quisquam
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora earum illum itaque quia maxime sunt! Voluptatibus
+                    assumenda at
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. .
+                  </p>
+                </li>
+
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora earum illum itaque quia maxime sunt! Voluptatibus
+                    assumenda at .
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section--meals">
-      <div class="container">
-        <h2 class="secondary-text">Meals</h2>
-        <ul class="list-items">
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-            <p class="strArea">british</p>
-            <p class="strMeal">egg suop drop</p>
-          </li>
+      <section class="section--meals">
+        <div class="container">
+          <h2 class="secondary-text">Meals</h2>
+          <ul class="list-items grid grid-columns--5">
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+              <p class="strArea">british</p>
+              <p class="strMeal">egg suop drop</p>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-            <p class="strArea">british</p>
-            <p class="strMeal">egg suop drop</p>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+              <p class="strArea">british</p>
+              <p class="strMeal">egg suop drop</p>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-            <p class="strArea">british</p>
-            <p class="strMeal">egg suop drop</p>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+              <p class="strArea">british</p>
+              <p class="strMeal">egg suop drop</p>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-            <p class="strArea">british</p>
-            <p class="strMeal">egg suop drop</p>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+              <p class="strArea">british</p>
+              <p class="strMeal">egg suop drop</p>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-            <p class="strArea">british</p>
-            <p class="strMeal">egg suop drop</p>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+              <p class="strArea">british</p>
+              <p class="strMeal">egg suop drop</p>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-            <p class="strArea">british</p>
-            <p class="strMeal">egg suop drop</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+              <p class="strArea">british</p>
+              <p class="strMeal">egg suop drop</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="section--categories">
-      <div class="container">
-        <h2 class="secondary-text">Categories</h2>
-        <ul class="list-items">
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">dessert</p>
-            </div>
-          </li>
+      <section class="section--categories">
+        <div class="container">
+          <h2 class="secondary-text">Categories</h2>
+          <ul class="list-items grid grid-columns--5">
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">dessert</p>
+              </div>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">misellenious</p>
-            </div>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">misellenious</p>
+              </div>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">misellenious</p>
-            </div>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">misellenious</p>
+              </div>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">misellenious</p>
-            </div>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">misellenious</p>
+              </div>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">misellenious</p>
-            </div>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">misellenious</p>
+              </div>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">misellenious</p>
-            </div>
-          </li>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">misellenious</p>
+              </div>
+            </li>
 
-          <li class="list-details">
-            <div class="list-img" role="img" aria-label="meal-img">
-              <img src="./img/car15.jpg" alt="list img" />
-              <p class="strCategory">misellenious</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
+            <li class="list-details">
+              <div class="list-img" role="img" aria-label="meal-img">
+                <img src="./img/car15.jpg" alt="list img" />
+                <p class="strCategory">misellenious</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
