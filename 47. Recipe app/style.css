@@ -23,6 +23,13 @@ body {
 /* REUSABLE */
 /* ////////////////// */
 
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4.8rem;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
@@ -169,9 +176,8 @@ body {
 /* SECTION MEAL DETAILS */
 /* //////////////////////////// */
 .section--meal-details {
-  background-color: #fdf2e9;
   background-color: #b5601a;
-  padding: 9.8rem 0;
+  padding: 9.8rem 2.8rem;
 }
 
 .selected-meal-details {
@@ -217,7 +223,8 @@ body {
 .tags span {
   font-size: 1.2rem;
   padding: 0.4rem;
-  border: 1px solid blue;
+  border: 1px solid #cf711f;
+  margin: 0 0.8rem;
 }
 
 .ingredients {
@@ -253,11 +260,11 @@ body {
   width: 1.4em;
   height: 1.4em;
   font-size: 1em;
-  color: white;
-  background: lightblue;
+  color: #cf711f;
+  background: #f7f7f7;
   margin-right: 0.8rem;
   border-radius: 50%;
-  border: 2px solid #222;
+  border: 2px solid #fae5d3;
 }
 
 .measurements {
@@ -289,7 +296,8 @@ body {
 /* SECTION MEALs */
 /* //////////////////////////// */
 .section--meals {
-  padding: 6.8rem 0;
+  padding: 6.8rem 1.8rem;
+  background-color: #fdf2e9;
 }
 
 .section--meals .list-items {
@@ -332,7 +340,7 @@ body {
 /* SECTION CATEGORIES */
 /* //////////////////////////// */
 .section--categories {
-  padding: 6.8rem 0;
+  padding: 6.8rem 1.8rem;
 }
 
 .section--categories p {
@@ -354,6 +362,7 @@ body {
   max-height: 18rem;
   margin-bottom: 0.4rem;
   overflow: hidden;
+  box-shadow: 0 0 1.2rem 0.2rem rgba(0, 0, 0, 0.07);
 }
 
 .list-img img {

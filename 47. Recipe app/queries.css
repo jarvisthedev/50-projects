@@ -73,6 +73,12 @@
     font-size: 50%;
   }
 
+  section,
+  body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+  }
+
   .grid-columns--4 {
     grid-template-columns: 1fr;
   }
@@ -102,5 +108,9 @@
 
   .list-img {
     max-height: 14rem;
+  }
+
+  .supporting-img-text p {
+    font-size: 1.4rem;
   }
 }
