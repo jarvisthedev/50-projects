@@ -1,29 +1,106 @@
 /* ////////////////////////////////// */
-/* SMALLER LAPTOP (1146px) */
+/* SMALLER LAPTOP (1064px) */
 /* ////////////////////////////////// */
-@media (max-width: 74em) {
+@media (max-width: 66.5em) {
   html {
-    /* font-size: 56.25%; */
+    font-size: 56.25%;
+  }
+
+  /* //////////////////////////// */
+  /* HEADER */
+  /* //////////////////////////// */
+  .header {
+    padding: 0 4.8rem;
   }
 }
 
 /* ////////////////////////////////// */
-/* LANDSCAPE TABLETS (992px) */
+/* LANDSCAPE TABLETS (832px) */
 /* ////////////////////////////////// */
-@media (max-width: 62em) {
-  html {
-    /* font-size: 50%; */
+@media (max-width: 52em) {
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .grid-columns--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-columns--4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-columns--5 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* ////////////////////////////////// */
-/* PORTRAIT TABLETS (560px) */
+/* PORTRAIT TABLETS (648px) */
 /* ////////////////////////////////// */
-@media (max-width: 35em) {
+@media (max-width: 40.5em) {
+  html {
+    font-size: 53%;
+  }
+
+  .grid-columns--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-columns--5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section--categories p {
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem;
+  }
+
+  .section--meals .list-img {
+    max-height: 24rem;
+  }
+
+  .list-img {
+    max-height: 14rem;
+  }
 }
 
 /* ////////////////////////////////// */
-/* SMARTPHONE (408px) */
+/* SMARTPHONE (440px) */
 /* ////////////////////////////////// */
-@media (max-width: 25.5em) {
+@media (max-width: 27.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .grid-columns--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-columns--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .selected-meal-details {
+    padding: 0;
+  }
+
+  .selected-meal {
+    max-height: 42rem;
+    width: 100%;
+  }
+
+  .measurements,
+  .instructions,
+  .supporting-img-text {
+    padding: 0 2.4rem;
+  }
+
+  .instructions {
+    margin-bottom: 3.6rem;
+  }
+
+  .list-img {
+    max-height: 14rem;
+  }
 }
