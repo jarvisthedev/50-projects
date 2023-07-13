@@ -24,7 +24,6 @@ body {
 /* ////////////////// */
 /* REUSABLE */
 /* ////////////////// */
-
 section {
   display: flex;
   align-items: center;
@@ -137,26 +136,6 @@ section {
   }
 }
 
-/* --- 02 COLORS
-- Primary: #e67e22
-- Tints:
-#fdf2e9
-#fae5d3
-#eb984e
-
-- Shades: 
-#cf711f
-#45260a
-
-- Accents:
-- Greys
-
-#888
-#767676 (lightest grey allowed on #fff)
-#6f6f6f (lightest grey allowed on #fdf2e9)
-#555
-#333 */
-
 .hidden {
   display: none;
 }
@@ -164,7 +143,6 @@ section {
 /* //////////////////////////// */
 /* HEADER */
 /* //////////////////////////// */
-
 .header {
   padding: 0 9.8rem;
   display: flex;
@@ -231,7 +209,6 @@ section {
 /* //////////////////////////// */
 /* SECTION HERO */
 /* //////////////////////////// */
-
 .section--hero {
   position: relative;
   width: 100%;
@@ -420,11 +397,6 @@ section {
   gap: 1rem;
   margin-left: 3.6rem;
   font-size: 1.6rem;
-}
-
-.instructions ul {
-  list-style-image: url('./img/checkbox.svg');
-  list-style-position: inherit;
 }
 
 .instructions {

@@ -10,6 +10,7 @@ const navList = document.querySelector('.nav-list');
 const section__single_Meal = document.querySelector('#section--individualMeal');
 const section__Meals = document.querySelector('#section--meals');
 const section__Categories = document.querySelector('#section--categories');
+const section__hero = document.querySelector('.section--hero');
 
 const mapping__individualMeal_details = async mealId => {
   try {
@@ -157,6 +158,10 @@ const mapping__categories_list = async () => {
     console.error('An error occurred while fetching meal categories:', err);
   }
 };
+
+section__hero.addEventListener('click', function (e) {
+  if (e.target.closest('.section--hero')) navList.classList.add('hidden');
+});
 
 section__Categories.addEventListener('click', function (e) {
   const clicked = e.target;
