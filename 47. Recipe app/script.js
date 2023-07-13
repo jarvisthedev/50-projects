@@ -1,31 +1,28 @@
 `use strict`;
 
-const sectionMealDetail = document.querySelector(
-  '.section--meal-details .selected-meal-details'
+const sectionIndividualMeal = document.querySelector(
+  '.section--individualMeal .selected-meal-details'
 );
 const sectionMeals = document.querySelector('.section--meals .list-items');
 const sectionCategories = document.querySelector(
   '.section--categories .list-items'
 );
 
-const mapping__sectionMealDetail = async () => {
-  const res = await fetch(
-    'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772'
-  );
+const mapping__sectionIndividualMeal = async mealId => {
+  const res = await fetch(mealId);
   const data = await res.json();
   const [meal] = data.meals;
 
-  const measureData = [];
-  const ingredientData = [];
+  const measureData = Object.keys(meal)
+    .filter(key => key.includes('strMeasure') && meal[key])
+    .map(key => meal[key]);
 
-  for (let key in meal)
-    if (key.includes('strMeasure') && meal[key] !== null && meal[key] !== '')
-      measureData.push(meal[key]);
-    else if (key.includes('strIngre') && meal[key] !== null && meal[key] !== '')
-      ingredientData.push(meal[key]);
+  const ingredientData = Object.keys(meal)
+    .filter(key => key.includes('strIngre') && meal[key])
+    .map(key => meal[key]);
 
   const html = `
-    <div class="selected-meal" role="img" aria-label="meal-img">
+        <div class="selected-meal" role="img" aria-label="meal-img">
           <img src="${meal.strMealThumb}" alt="list img" />
         </div>
         <div class="supporting-img-text">
@@ -33,12 +30,13 @@ const mapping__sectionMealDetail = async () => {
           <p class="category">Category: <span>${meal.strCategory}</span></p>
           <p class="source">
             Source:
-            <span
-              >${meal.strYoutube}</span
-            >
+            <span>
+              <a href="${meal.strYoutube}" target="_blank">${meal.strYoutube}
+                </a>
+            </span>
           </p>
-          <p class="tags">Tags:${meal.strTags
-            .split(',')
+          <p class="tags">Tags:${meal?.strTags
+            ?.split(',')
             .map(el => `<span>${el}</span>`)
             .join('')} </p>
           <div class="ingredients">
@@ -58,7 +56,7 @@ const mapping__sectionMealDetail = async () => {
           <h4 class="tertiary-text--2">Instructions:</h4>
           <ul>
           ${meal.strInstructions
-            .split('.')
+            ?.split('.')
             .map(el => ` <li><p> ${el}</p></li>`)
             .join('')}
           </ul>
@@ -66,14 +64,12 @@ const mapping__sectionMealDetail = async () => {
       </div>
     `;
 
-  sectionMealDetail.innerHTML = ``;
-  sectionMealDetail.insertAdjacentHTML('afterbegin', html);
+  sectionIndividualMeal.innerHTML = ``;
+  sectionIndividualMeal.insertAdjacentHTML('afterbegin', html);
 };
 
-const mapping__sectionMeals = async () => {
-  const res = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/search.php?f=e`
-  );
+const mapping__sectionMeals = async meal => {
+  const res = await fetch(meal);
   const data = await res.json();
   const { meals } = data;
 
@@ -82,7 +78,7 @@ const mapping__sectionMeals = async () => {
           .map(
             el => `<li class="list-details">
                 <div class="list-img" role="img" aria-label="meal-img">
-                  <img src="${el.strMealThumb}" alt="list img" />
+                  <img id="${el.idMeal}" src="${el.strMealThumb}" alt="list img" />
                   <p class="strCategory">${el.strCategory}</p>
                 </div>
                 <p class="strArea">${el.strArea}</p>
@@ -108,7 +104,7 @@ const mapping__sectionCategories = async () => {
         el => `<li class="list-details">
             <div class="list-img" role="img" aria-label="meal-img">
               <img src="${el.strCategoryThumb}" alt="list img" />
-              <p class="strCategory">${el.strCategory}</p>
+              <p class="strCategory">${el?.strCategory}</p>
             </div>
           </li>`
       )
@@ -118,6 +114,33 @@ const mapping__sectionCategories = async () => {
   sectionCategories.insertAdjacentHTML('afterbegin', html);
 };
 
-mapping__sectionMealDetail();
-mapping__sectionMeals();
+sectionCategories.addEventListener('click', function (e) {
+  const clicked = e.target;
+  if (clicked.closest('.list-details')) {
+    const parentEl = clicked.closest('.list-details');
+    const filterLetter = parentEl
+      .querySelector('.strCategory')
+      .textContent.at(0);
+
+    mapping__sectionMeals(
+      `https://www.themealdb.com/api/json/v1/1/search.php?f=${filterLetter}`
+    );
+  }
+});
+
+sectionMeals.addEventListener('click', function (e) {
+  const clicked = e.target;
+  if (clicked.closest('.list-details')) {
+    const parentEl = clicked.closest('.list-details');
+    const imgId = parentEl.querySelector(`img`).id;
+    mapping__sectionIndividualMeal(
+      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${imgId}`
+    );
+  }
+});
+
+mapping__sectionIndividualMeal(
+  'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772'
+);
+mapping__sectionMeals(`https://www.themealdb.com/api/json/v1/1/search.php?f=v`);
 mapping__sectionCategories();

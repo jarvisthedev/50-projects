@@ -175,7 +175,7 @@ section {
 /* //////////////////////////// */
 /* SECTION MEAL DETAILS */
 /* //////////////////////////// */
-.section--meal-details {
+.section--individualMeal {
   background-color: #b5601a;
   padding: 9.8rem 2.8rem;
 }
@@ -189,6 +189,7 @@ section {
 .selected-meal {
   max-height: 48rem;
   overflow: hidden;
+  box-shadow: 0 0 0.8rem 0.8rem #fae5d3;
 }
 
 .selected-meal img {
@@ -214,6 +215,12 @@ section {
   margin-bottom: 1.8rem;
 }
 
+.source a:link,
+.source a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
 .tags {
   font-size: 1.8rem;
   font-weight: 500;
@@ -222,7 +229,7 @@ section {
 
 .tags span {
   font-size: 1.2rem;
-  padding: 0.4rem;
+  padding: 0.3rem 0.6rem;
   border: 1px solid #cf711f;
   margin: 0 0.8rem;
 }
@@ -233,7 +240,7 @@ section {
   padding: 1.8rem 1.8rem 4.8rem 1.8rem;
 }
 
-.section--meal-details .tertiary-text--2 {
+.section--individualMeal .tertiary-text--2 {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
@@ -261,10 +268,10 @@ section {
   height: 1.4em;
   font-size: 1em;
   color: #cf711f;
-  background: #f7f7f7;
+  background: #fae5d3;
   margin-right: 0.8rem;
   border-radius: 50%;
-  border: 2px solid #fae5d3;
+  border: 2px solid #45260a;
 }
 
 .measurements {
@@ -290,6 +297,11 @@ section {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+
+.list-details img,
+.list-details p {
+  cursor: pointer;
 }
 
 /* //////////////////////////// */
