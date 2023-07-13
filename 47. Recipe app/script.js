@@ -1,5 +1,9 @@
 `use strict`;
 
+const form = document.querySelector('.search-area');
+const searchInput = document.querySelector('.search-input');
+const btn__search = document.querySelector('.btn--serch');
+
 const section__single_Meal = document.querySelector('#section--individualMeal');
 const section__Meals = document.querySelector('#section--meals');
 const section__Categories = document.querySelector('#section--categories');
@@ -13,21 +17,25 @@ const categories_list = document.querySelector(
 );
 
 const mapping__individualMeal_details = async mealId => {
-  const res = await fetch(mealId);
-  const data = await res.json();
-  const [meal] = data.meals;
+  try {
+    const res = await fetch(mealId);
+    if (!res.ok) {
+      throw new Error('Failed to fetch meal details');
+    }
+    const data = await res.json();
+    const [meal] = data.meals;
 
-  const measureData = Object.keys(meal)
-    .filter(key => key.includes('strMeasure') && meal[key])
-    .map(key => meal[key])
-    .filter(key => key !== ' ');
+    const measureData = Object.keys(meal)
+      .filter(key => key.includes('strMeasure') && meal[key])
+      .map(key => meal[key])
+      .filter(key => key !== ' ');
 
-  const ingredientData = Object.keys(meal)
-    .filter(key => key.includes('strIngre') && meal[key])
-    .map(key => meal[key])
-    .filter(key => key !== ' ');
+    const ingredientData = Object.keys(meal)
+      .filter(key => key.includes('strIngre') && meal[key])
+      .map(key => meal[key])
+      .filter(key => key !== ' ');
 
-  const html = `
+    const html = `
         <div class="selected-meal" role="img" aria-label="meal-img">
           <img src="${meal.strMealThumb}" alt="list img" />
         </div>
@@ -75,16 +83,22 @@ const mapping__individualMeal_details = async mealId => {
       </div>
     `;
 
-  individualMeal_details.innerHTML = ``;
-  individualMeal_details.insertAdjacentHTML('afterbegin', html);
+    individualMeal_details.innerHTML = ``;
+    individualMeal_details.insertAdjacentHTML('afterbegin', html);
+  } catch (error) {
+    console.error('An error occurred while searching for meals:', error);
+  }
 };
 
 const mapping_sectionMeals_list = async meal => {
-  const res = await fetch(meal);
-  const data = await res.json();
-  const { meals } = data;
+  try {
+    const res = await fetch(meal);
+    if (!res.ok) throw new Error('Failed to search for meals');
 
-  const html = `
+    const data = await res.json();
+    const { meals } = data;
+
+    const html = `
         ${meals
           .map(
             el => `<li class="list-details">
@@ -98,8 +112,12 @@ const mapping_sectionMeals_list = async meal => {
           )
           .join('')}
         `;
-  meals_list.innerHTML = ``;
-  meals_list.insertAdjacentHTML(`afterbegin`, html);
+    meals_list.innerHTML = ``;
+    meals_list.insertAdjacentHTML(`afterbegin`, html);
+  } catch (error) {
+    console.error('An error occurred while searching for meals:', error);
+    // Handle the error gracefully
+  }
 };
 
 const mapping__categories_list = async () => {
@@ -159,3 +177,16 @@ mapping_sectionMeals_list(
   `https://www.themealdb.com/api/json/v1/1/search.php?f=v`
 );
 mapping__categories_list();
+
+btn__search.addEventListener('click', function (e) {
+  e.preventDefault();
+  const userInput = searchInput.value.trim();
+  if (!userInput) return;
+
+  searchInput.value = '';
+
+  mapping__individualMeal_details(
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
+  );
+  section__single_Meal.scrollIntoView({ behavior: 'smooth' });
+});
