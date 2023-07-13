@@ -75,6 +75,10 @@
   .list-img {
     max-height: 14rem;
   }
+
+  .nav-list {
+    width: 36vw;
+  }
 }
 
 /* ////////////////////////////////// */
@@ -112,7 +116,7 @@
   .measurements,
   .instructions,
   .supporting-img-text {
-    padding: 0 1.2rem;
+    padding: 0 1.8rem;
   }
 
   .instructions {
@@ -120,7 +124,7 @@
   }
 
   .ingredients {
-    padding: 1.8rem 1rem 4.8rem 1rem;
+    padding: 1.8rem 1.2rem 4.8rem 1.2rem;
   }
 
   .list-img {
