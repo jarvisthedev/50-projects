@@ -112,11 +112,15 @@
   .measurements,
   .instructions,
   .supporting-img-text {
-    padding: 0 2.4rem;
+    padding: 0 1.2rem;
   }
 
   .instructions {
     margin-bottom: 3.6rem;
+  }
+
+  .ingredients {
+    padding: 1.8rem 1rem 4.8rem 1rem;
   }
 
   .list-img {

@@ -8,20 +8,10 @@ const section__single_Meal = document.querySelector('#section--individualMeal');
 const section__Meals = document.querySelector('#section--meals');
 const section__Categories = document.querySelector('#section--categories');
 
-const individualMeal_details = document.querySelector(
-  '.section--individualMeal .selected-meal-details'
-);
-const meals_list = document.querySelector('.section--meals .list-items');
-const categories_list = document.querySelector(
-  '.section--categories .list-items'
-);
-
 const mapping__individualMeal_details = async mealId => {
   try {
     const res = await fetch(mealId);
-    if (!res.ok) {
-      throw new Error('Failed to fetch meal details');
-    }
+    if (!res.ok) throw new Error('Failed to fetch meal details');
     const data = await res.json();
     const [meal] = data.meals;
 
@@ -83,7 +73,14 @@ const mapping__individualMeal_details = async mealId => {
       </div>
     `;
 
-    individualMeal_details.innerHTML = ``;
+    section__single_Meal.innerHTML = `
+        <div class="container">
+          <h2 class="secondary-text">Meal Details</h2>
+          <div class="selected-meal-details meal-details grid grid-columns--2"></div>
+        </div>
+    `;
+
+    const individualMeal_details = document.querySelector('.meal-details');
     individualMeal_details.insertAdjacentHTML('afterbegin', html);
   } catch (error) {
     console.error('An error occurred while searching for meals:', error);
@@ -94,7 +91,6 @@ const mapping_sectionMeals_list = async meal => {
   try {
     const res = await fetch(meal);
     if (!res.ok) throw new Error('Failed to search for meals');
-
     const data = await res.json();
     const { meals } = data;
 
@@ -112,22 +108,29 @@ const mapping_sectionMeals_list = async meal => {
           )
           .join('')}
         `;
-    meals_list.innerHTML = ``;
+    section__Meals.innerHTML = `
+        <div class="container">
+          <h2 class="secondary-text">Meals</h2>
+          <ul class="list-items grid grid-columns--4"></ul>
+        </div>
+    `;
+    const meals_list = document.querySelector('.section--meals .list-items');
     meals_list.insertAdjacentHTML(`afterbegin`, html);
   } catch (error) {
     console.error('An error occurred while searching for meals:', error);
-    // Handle the error gracefully
   }
 };
 
 const mapping__categories_list = async () => {
-  const res = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/categories.php`
-  );
-  const data = await res.json();
-  const { categories } = data;
+  try {
+    const res = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/categories.php`
+    );
+    if (!res.ok) throw new Error('Failed to fetch meal categories');
+    const data = await res.json();
+    const { categories } = data;
 
-  const html = `
+    const html = `
     ${categories
       .map(
         el => `<li class="list-details">
@@ -139,44 +142,44 @@ const mapping__categories_list = async () => {
       )
       .join('')}
     `;
-  categories_list.innerHTML = '';
-  categories_list.insertAdjacentHTML('afterbegin', html);
+    section__Categories.innerHTML = `
+        <div class="container">
+          <h2 class="secondary-text">Categories</h2>
+          <ul class=" categories_list list-items grid grid-columns--5"></ul>
+        </div>`;
+
+    const categories_list = document.querySelector('.categories_list');
+    categories_list.insertAdjacentHTML('afterbegin', html);
+  } catch (err) {
+    console.error('An error occurred while fetching meal categories:', err);
+  }
 };
 
-categories_list.addEventListener('click', function (e) {
+section__Categories.addEventListener('click', function (e) {
   const clicked = e.target;
-  if (clicked.closest('.list-details')) {
-    const parentEl = clicked.closest('.list-details');
-    const filterLetter = parentEl
-      .querySelector('.strCategory')
-      .textContent.at(0);
+  if (!clicked.closest('.list-details')) return;
 
-    mapping_sectionMeals_list(
-      `https://www.themealdb.com/api/json/v1/1/search.php?f=${filterLetter}`
-    );
-  }
+  const parentEl = clicked.closest('.list-details');
+  const filterLetter = parentEl.querySelector('.strCategory').textContent.at(0);
   section__Meals.scrollIntoView({ behavior: 'smooth' });
+
+  mapping_sectionMeals_list(
+    `https://www.themealdb.com/api/json/v1/1/search.php?f=${filterLetter}`
+  );
 });
 
-meals_list.addEventListener('click', function (e) {
+section__Meals.addEventListener('click', function (e) {
   const clicked = e.target;
-  if (clicked.closest('.list-details')) {
-    const parentEl = clicked.closest('.list-details');
-    const imgId = parentEl.querySelector(`img`).id;
-    mapping__individualMeal_details(
-      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${imgId}`
-    );
-  }
-  section__single_Meal.scrollIntoView({ behavior: 'smooth' });
-});
+  if (!clicked.closest('.list-details')) return;
 
-mapping__individualMeal_details(
-  'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772'
-);
-mapping_sectionMeals_list(
-  `https://www.themealdb.com/api/json/v1/1/search.php?f=v`
-);
-mapping__categories_list();
+  const parentEl = clicked.closest('.list-details');
+  const imgId = parentEl.querySelector(`img`).id;
+  section__single_Meal.scrollIntoView({ behavior: 'smooth' });
+
+  mapping__individualMeal_details(
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${imgId}`
+  );
+});
 
 btn__search.addEventListener('click', function (e) {
   e.preventDefault();
@@ -184,9 +187,21 @@ btn__search.addEventListener('click', function (e) {
   if (!userInput) return;
 
   searchInput.value = '';
+  section__single_Meal.scrollIntoView({ behavior: 'smooth' });
 
   mapping__individualMeal_details(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
   );
-  section__single_Meal.scrollIntoView({ behavior: 'smooth' });
 });
+
+const mappingAllApis = () => {
+  mapping__individualMeal_details(
+    'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772'
+  );
+  mapping_sectionMeals_list(
+    `https://www.themealdb.com/api/json/v1/1/search.php?f=v`
+  );
+  mapping__categories_list();
+};
+
+mappingAllApis();

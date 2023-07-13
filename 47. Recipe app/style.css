@@ -93,6 +93,50 @@ section {
   margin-bottom: 1.8rem;
 }
 
+/* /////////////////////// */
+/* LOADING  BOUNCER  */
+/* /////////////////////// */
+.bouncer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  gap: 0.8rem;
+}
+
+.bouncer div {
+  width: 2rem;
+  height: 2rem;
+  background-color: #e67e22;
+  border-radius: 50%;
+  animation: effect 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+
+.bouncer div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+}
+
+.bouncer div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+
+.bouncer div:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4;
+}
+
+@keyframes effect {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10rem);
+  }
+}
+
 /* 
 --- 02 COLORS
 
@@ -180,7 +224,6 @@ section {
   width: 100%;
   height: 100vh;
   color: #fdf2e9;
-  padding-top: 4.8rem;
 }
 
 .section--hero::before {
