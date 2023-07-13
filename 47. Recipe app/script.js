@@ -1,25 +1,31 @@
 `use strict`;
 
-const sectionIndividualMeal = document.querySelector(
+const section__single_Meal = document.querySelector('#section--individualMeal');
+const section__Meals = document.querySelector('#section--meals');
+const section__Categories = document.querySelector('#section--categories');
+
+const individualMeal_details = document.querySelector(
   '.section--individualMeal .selected-meal-details'
 );
-const sectionMeals = document.querySelector('.section--meals .list-items');
-const sectionCategories = document.querySelector(
+const meals_list = document.querySelector('.section--meals .list-items');
+const categories_list = document.querySelector(
   '.section--categories .list-items'
 );
 
-const mapping__sectionIndividualMeal = async mealId => {
+const mapping__individualMeal_details = async mealId => {
   const res = await fetch(mealId);
   const data = await res.json();
   const [meal] = data.meals;
 
   const measureData = Object.keys(meal)
     .filter(key => key.includes('strMeasure') && meal[key])
-    .map(key => meal[key]);
+    .map(key => meal[key])
+    .filter(key => key !== ' ');
 
   const ingredientData = Object.keys(meal)
     .filter(key => key.includes('strIngre') && meal[key])
-    .map(key => meal[key]);
+    .map(key => meal[key])
+    .filter(key => key !== ' ');
 
   const html = `
         <div class="selected-meal" role="img" aria-label="meal-img">
@@ -35,10 +41,14 @@ const mapping__sectionIndividualMeal = async mealId => {
                 </a>
             </span>
           </p>
-          <p class="tags">Tags:${meal?.strTags
-            ?.split(',')
-            .map(el => `<span>${el}</span>`)
-            .join('')} </p>
+          <p class="tags">Tags:${
+            meal.strTags
+              ? meal?.strTags
+                  ?.split(',')
+                  .map(el => `<span>${el}</span>`)
+                  .join('')
+              : ''
+          } </p>
           <div class="ingredients">
             <h4 class="tertiary-text--2">Ingredients</h4>
             <ol class="grid grid-columns--3">
@@ -57,6 +67,7 @@ const mapping__sectionIndividualMeal = async mealId => {
           <ul>
           ${meal.strInstructions
             ?.split('.')
+            .filter(el => el !== '')
             .map(el => ` <li><p> ${el}</p></li>`)
             .join('')}
           </ul>
@@ -64,11 +75,11 @@ const mapping__sectionIndividualMeal = async mealId => {
       </div>
     `;
 
-  sectionIndividualMeal.innerHTML = ``;
-  sectionIndividualMeal.insertAdjacentHTML('afterbegin', html);
+  individualMeal_details.innerHTML = ``;
+  individualMeal_details.insertAdjacentHTML('afterbegin', html);
 };
 
-const mapping__sectionMeals = async meal => {
+const mapping_sectionMeals_list = async meal => {
   const res = await fetch(meal);
   const data = await res.json();
   const { meals } = data;
@@ -87,11 +98,11 @@ const mapping__sectionMeals = async meal => {
           )
           .join('')}
         `;
-  sectionMeals.innerHTML = ``;
-  sectionMeals.insertAdjacentHTML(`afterbegin`, html);
+  meals_list.innerHTML = ``;
+  meals_list.insertAdjacentHTML(`afterbegin`, html);
 };
 
-const mapping__sectionCategories = async () => {
+const mapping__categories_list = async () => {
   const res = await fetch(
     `https://www.themealdb.com/api/json/v1/1/categories.php`
   );
@@ -110,11 +121,11 @@ const mapping__sectionCategories = async () => {
       )
       .join('')}
     `;
-  sectionCategories.innerHTML = '';
-  sectionCategories.insertAdjacentHTML('afterbegin', html);
+  categories_list.innerHTML = '';
+  categories_list.insertAdjacentHTML('afterbegin', html);
 };
 
-sectionCategories.addEventListener('click', function (e) {
+categories_list.addEventListener('click', function (e) {
   const clicked = e.target;
   if (clicked.closest('.list-details')) {
     const parentEl = clicked.closest('.list-details');
@@ -122,25 +133,29 @@ sectionCategories.addEventListener('click', function (e) {
       .querySelector('.strCategory')
       .textContent.at(0);
 
-    mapping__sectionMeals(
+    mapping_sectionMeals_list(
       `https://www.themealdb.com/api/json/v1/1/search.php?f=${filterLetter}`
     );
   }
+  section__Meals.scrollIntoView({ behavior: 'smooth' });
 });
 
-sectionMeals.addEventListener('click', function (e) {
+meals_list.addEventListener('click', function (e) {
   const clicked = e.target;
   if (clicked.closest('.list-details')) {
     const parentEl = clicked.closest('.list-details');
     const imgId = parentEl.querySelector(`img`).id;
-    mapping__sectionIndividualMeal(
+    mapping__individualMeal_details(
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${imgId}`
     );
   }
+  section__single_Meal.scrollIntoView({ behavior: 'smooth' });
 });
 
-mapping__sectionIndividualMeal(
+mapping__individualMeal_details(
   'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772'
 );
-mapping__sectionMeals(`https://www.themealdb.com/api/json/v1/1/search.php?f=v`);
-mapping__sectionCategories();
+mapping_sectionMeals_list(
+  `https://www.themealdb.com/api/json/v1/1/search.php?f=v`
+);
+mapping__categories_list();

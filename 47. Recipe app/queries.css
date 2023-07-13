@@ -94,12 +94,13 @@
   .selected-meal {
     max-height: 42rem;
     width: 100%;
+    box-shadow: none;
   }
 
   .measurements,
   .instructions,
   .supporting-img-text {
-    padding: 0 2.4rem;
+    padding: 0 1.8rem;
   }
 
   .instructions {
