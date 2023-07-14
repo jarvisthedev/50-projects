@@ -14,6 +14,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 9.8rem;
 }
 
 .home {
@@ -98,8 +99,8 @@ ion-icon[name='globe-outline'] {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -160,9 +161,12 @@ ion-icon[name='play-outline'] {
 .section-upcoming {
   color: #f7f7f7;
   background-color: #111;
+  padding: 9.8rem 0;
 }
 
 .container {
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .h2-intro {
@@ -173,9 +177,17 @@ ion-icon[name='play-outline'] {
   margin-bottom: 1.2rem;
 }
 
+.top {
+  margin-bottom: 5.8rem;
+}
+
 .secondary-text {
   font-size: 3.2rem;
-  margin-bottom: 3.6rem;
+  margin-bottom: 5.8rem;
+}
+
+.top .secondary-text {
+  margin-bottom: 0;
 }
 
 .upcoming--btns {
@@ -200,29 +212,63 @@ ion-icon[name='play-outline'] {
 }
 
 .inner-container {
+  column-gap: 2.8rem;
+  row-gap: 4.8rem;
 }
 
 .upcoming--movie {
-  column-gap: 1.8rem;
-  row-gap: 1.8rem;
 }
 
 .img-holder {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.img-holder img {
+  width: 100%;
 }
 
 .upcoming-details {
+  column-gap: 0.8rem;
+  row-gap: 0.8rem;
 }
 
 .tetiary-text--1 {
+  font-size: 1.8rem;
 }
 
 .release-year {
+  justify-self: end;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--citrine);
 }
 
 .btn-video-quality {
+  justify-self: start;
+  color: var(--citrine);
+}
+
+.btn--small.btn-video-quality {
+  padding: 0.1rem 0.6rem;
 }
 
 .duration-rating {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  justify-self: end;
+  font-size: 1.2rem;
+  font-weight: 600;
+  gap: 1.2rem;
+}
+
+.duration-rating p {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .upcoming-duration {
