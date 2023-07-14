@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Moflix Movies App | Stream Movies at Comfort | HTML CSS javascript
+      FlexStream Movies App | Stream Movies at Comfort | HTML CSS javascript
       projects
     </title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="./general.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./queries.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -23,7 +24,10 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" class="home">MovFlix</a>
+      <a href="#" class="home">
+        <img src="./imgs/icons/vr.svg" alt="vr icon" />
+        <span>FlexStream</span></a
+      >
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-detail">home</li>
@@ -39,14 +43,14 @@
         <ion-icon name="globe-outline"></ion-icon>
 
         <label for="lang">
-          <select name="lan" id="lang">
+          <select name="lan" class="lang" id="lang">
             <option value="en">EN</option>
             <option value="au">AU</option>
             <option value="ar">AR</option>
             <option value="tu">TU</option>
           </select>
         </label>
-        <button class="btn btn--signin">sign in</button>
+        <button class="btn btn--big btn-signin">sign in</button>
       </div>
     </header>
 
@@ -54,9 +58,9 @@
       <section class="section--hero">
         <div class="hero">
           <div class="hero-text">
-            <p class="h1-intro">Movflix</p>
+            <p class="h1-intro">FlexStream</p>
             <h1 class="primary-text">
-              Unlimited <span class="highlight">Movie</span>,TVs SHows, & More.
+              Unlimited <span class="highlight">Movie</span>, TVs Shows, & More.
             </h1>
             <div class="hero-movie-details">
               <div class="btns">
@@ -95,10 +99,7 @@
           <div class="inner-container">
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -119,10 +120,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -143,10 +141,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -167,10 +162,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -191,10 +183,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -215,10 +204,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -239,10 +225,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -267,10 +250,10 @@
       <section class="section--movie-highlight">
         <div class="container">
           <div role="img" aria-label="highlight-movie-cover" class="img-holder">
-            <img src="./res/assets/movie-1.png" alt="northman cover photo" />
+            <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
           </div>
           <div class="movie-hightlight-details">
-            <p class="h3-tertiary-text--6">New Episodes</p>
+            <p class="h1-intro">New Episodes</p>
             <h1 class="primary-text">Free <span>Guy</span></h1>
             <div class="hero-movie-details">
               <div class="btns">
@@ -385,10 +368,7 @@
           <div class="inner-container">
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -409,10 +389,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -433,10 +410,7 @@
 
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -456,10 +430,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -479,10 +450,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -502,10 +470,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -525,10 +490,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -548,10 +510,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -571,10 +530,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -594,10 +550,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -617,10 +570,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -648,10 +598,7 @@
           <div class="inner-container">
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -671,10 +618,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -694,10 +638,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -717,10 +658,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -740,10 +678,7 @@
             </div>
             <div class="upcoming--movie">
               <div role="img" aria-label="movie-cover-photo" class="img-holder">
-                <img
-                  src="./res/assets/movie-1.png"
-                  alt="northman cover photo"
-                />
+                <img src="./imgs/img/movie-1.png" alt="northman cover photo" />
               </div>
               <div class="upcoming-details">
                 <h3 class="tetiary-text--1">The Northman</h3>
@@ -782,7 +717,7 @@
       <section class="section--footer">
         <div class="container">
           <head>
-            <a href="#" class="home">movflix</a>
+            <a href="#" class="home">FlexStream</a>
             <nav class="nav">
               <ul class="nav-list">
                 <li class="nav-detail">home</li>
@@ -807,10 +742,18 @@
 
               <div class="social media">
                 <ul class="media">
-                  <li class="media-detail">fb icons</li>
-                  <li class="media-detail">twitter</li>
-                  <li class="media-detail">web world</li>
-                  <li class="media-detail">linkedin</li>
+                  <li class="media-detail">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </li>
+                  <li class="media-detail">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </li>
+                  <li class="media-detail">
+                    <ion-icon name="globe-outline"></ion-icon>
+                  </li>
+                  <li class="media-detail">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -822,10 +765,21 @@
           &copy; 2023 <span>moflix</span>. All Rights Reserved
         </p>
         <ul class="payment-list">
-          <li class="payment-detail">paypal</li>
-          <li class="payment-detail">ebay</li>
-          <li class="payment-detail">visa</li>
-          <li class="payment-detail">bitcoin</li>
+          <li class="payment-detail">
+            <img src="./imgs/logos/PayPal .svg" alt="PayPal logo" />
+          </li>
+          <li class="payment-detail">
+            <img src="./imgs/logos/EBay_logo.svg" alt="Ebay logo" />
+          </li>
+          <li class="payment-detail">
+            <img src="./imgs/logos/Visa_debit.svg" alt="Visa_debit logo" />
+          </li>
+          <li class="payment-detail">
+            <img src="./imgs/logos/Bitcoin.svg" alt="bitcoin logo" />
+          </li>
+          <li class="payment-detail">
+            <img src="./imgs/logos/Skrill_logo.svg" alt="Skrill_logo logo" />
+          </li>
         </ul>
       </div>
     </footer>

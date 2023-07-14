@@ -1,21 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* /////////////////////// */
+/* HEADER */
+/* /////////////////////// */
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.8rem;
+  height: 7.2rem;
+  /* background-color: var(--xiketic); */
+  color: #f7f7f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-html {
-  font-size: 65.2%;
-  scroll-behavior: smooth;
+.home {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #f7f7f7;
 }
 
-body {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.1;
-  color: #222;
-  background-color: #f7f7f7;
+.home img {
+  width: 4.8rem;
+}
+
+.nav {
+}
+
+.nav-list {
+  gap: 2.4rem;
+}
+
+.nav-detail {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-detail:hover {
+  color: var(--citrine);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+ion-icon[name='search-outline'] {
+  padding-right: 1rem;
+  margin-right: 0.8rem;
+  border-right: 1px solid #cecaca43;
+}
+
+ion-icon[name='globe-outline'] {
+  color: var(--citrine);
+}
+
+.lang {
+  border: none;
+  color: #f7f7f7;
+  background-color: transparent;
+}
+
+.btn-signin {
+  margin-left: 2.8rem;
+}
+
+/* /////////////////////// */
+/* SECTION HERO */
+/* /////////////////////// */
+.section--hero {
+  background-image: url('./imgs/img/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  color: #f7f7f7;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.h1-intro {
+  color: var(--citrine);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.primary-text {
+  font-size: 4.8rem;
+  margin-bottom: 3.6rem;
+}
+
+.highlight {
+  color: var(--citrine);
+}
+
+.hero-movie-details {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 5.2rem;
+}
+
+.btn-pg {
+  color: var(--eerie-black);
+  background-color: var(--gray-x);
+}
+
+.time-duration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time-duration p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+p ion-icon {
+  color: var(--citrine);
+}
+
+.btn-watch-now {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+ion-icon[name='play-outline'] {
+  font-weight: 700;
+}
+
+img {
+  width: 30rem;
+}
+
+.payment-detail {
+  width: 10rem;
+}
+
+.payment-detail img {
+  width: 100%;
 }
