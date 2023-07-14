@@ -66,9 +66,16 @@ ion-icon[name='globe-outline'] {
 }
 
 .lang {
+  margin-left: 0.4rem;
+  border-radius: 0.2rem;
   border: none;
   color: #f7f7f7;
+  font-weight: 500;
   background-color: transparent;
+}
+
+.lang:active {
+  color: #000;
 }
 
 .btn-signin {
@@ -95,18 +102,6 @@ ion-icon[name='globe-outline'] {
   grid-template-columns: repeat(2, 1fr);
   max-width: 120rem;
   margin: 0 auto;
-}
-
-.h1-intro {
-  color: var(--citrine);
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 2.4rem;
-}
-
-.primary-text {
-  font-size: 4.8rem;
-  margin-bottom: 3.6rem;
 }
 
 .highlight {
@@ -149,8 +144,100 @@ p ion-icon {
   gap: 0.4rem;
 }
 
+.btn-watch-now:hover {
+  color: var(--black);
+  font-weight: 600;
+  padding: 0.8rem 2.9rem;
+}
+
 ion-icon[name='play-outline'] {
   font-weight: 700;
+}
+
+/* /////////////////////// */
+/* SECTION UPCOMING */
+/* /////////////////////// */
+.section-upcoming {
+  color: #f7f7f7;
+  background-color: #111;
+}
+
+.container {
+}
+
+.h2-intro {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--citrine);
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.secondary-text {
+  font-size: 3.2rem;
+}
+
+.upcoming--btns {
+  align-self: end;
+  justify-self: end;
+}
+
+.btn--big.btn-up {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.8rem;
+  text-transform: capitalize;
+  border: 1px solid var(--gray-x);
+}
+
+.btn--big.btn-up:not(:last-child) {
+  margin-right: 1.4rem;
+}
+
+.inner-container {
+}
+
+.upcoming--movie {
+}
+
+.img-holder {
+}
+
+.upcoming-details {
+}
+
+.tetiary-text--1 {
+}
+
+.release-year {
+}
+
+.btn-video-quality {
+}
+
+.duration-rating {
+}
+
+.upcoming-duration {
+}
+
+.time-outline {
+}
+
+.duration-time {
+}
+
+.upcoming-duration {
+}
+
+ion-icon[name='star-outline'] {
+}
+
+.upcoming-rating {
 }
 
 img {
