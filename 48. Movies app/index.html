@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Movies App | Stream Movies at Comfort | HTML CSS javascript projects
+      Moflix Movies App | Stream Movies at Comfort | HTML CSS javascript
+      projects
     </title>
 
     <link rel="stylesheet" href="style.css" />
@@ -20,5 +21,813 @@
     ></script>
     <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <a href="#" class="home">MovFlix</a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-detail">home</li>
+          <li class="nav-detail">movie</li>
+          <li class="nav-detail">Tv show</li>
+          <li class="nav-detail">web servers</li>
+          <li class="nav-detail">pricing</li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="globe-outline"></ion-icon>
+
+        <label for="lang">
+          <select name="lan" id="lang">
+            <option value="en">EN</option>
+            <option value="au">AU</option>
+            <option value="ar">AR</option>
+            <option value="tu">TU</option>
+          </select>
+        </label>
+        <button class="btn btn--signin">sign in</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section--hero">
+        <div class="hero">
+          <div class="hero-text">
+            <p class="h1-intro">Movflix</p>
+            <h1 class="primary-text">
+              Unlimited <span class="highlight">Movie</span>,TVs SHows, & More.
+            </h1>
+            <div class="hero-movie-details">
+              <div class="btns">
+                <button class="btn btn--small btn-pg">pg 18</button>
+                <button class="btn btn--small btn-hd">hd</button>
+              </div>
+
+              <p class="hero-movie-type">
+                <span>Romance, </span>
+                <span>Drama</span>
+              </p>
+              <div class="time-duration">
+                <p class="hero-movie-date">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span class="release-date">2022</span>
+                </p>
+                <p class="hero-movie-duration">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span class="duration">128 min</span>
+                </p>
+              </div>
+            </div>
+
+            <button class="btn btn--big btn-watch-now">
+              <ion-icon name="play-outline"></ion-icon> <span>watch now</span>
+            </button>
+          </div>
+          <div class="empty-div"></div>
+        </div>
+      </section>
+
+      <section class="section-upcoming">
+        <div class="container">
+          <p class="h2-intro">online streaming</p>
+          <h2 class="secondary-text">Upcoming Movies</h2>
+          <div class="inner-container">
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--movie-highlight">
+        <div class="container">
+          <div role="img" aria-label="highlight-movie-cover" class="img-holder">
+            <img src="./res/assets/movie-1.png" alt="northman cover photo" />
+          </div>
+          <div class="movie-hightlight-details">
+            <p class="h3-tertiary-text--6">New Episodes</p>
+            <h1 class="primary-text">Free <span>Guy</span></h1>
+            <div class="hero-movie-details">
+              <div class="btns">
+                <button class="btn btn--small btn-pg">pg 18</button>
+                <button class="btn btn--small btn-hd">hd</button>
+              </div>
+
+              <p class="hero-movie-type">
+                <span>Romance, </span>
+                <span>Drama</span>
+              </p>
+              <div class="time-duration">
+                <p class="hero-movie-date">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span class="release-date">2022</span>
+                </p>
+                <p class="hero-movie-duration">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span class="duration">128 min</span>
+                </p>
+              </div>
+            </div>
+            <p class="hightlight-text-details">
+              A bank teller called Guy relialises he is a background character
+              in a open world video game called Free City that will soon go
+              offline
+            </p>
+
+            <div class="share-watch">
+              <p class="share">
+                <!-- share icon -->
+                <span>Share</span>
+              </p>
+              <p class="prime-text">
+                <span class="text">Prime Video</span>
+                <span>Streaming Channels</span>
+              </p>
+              <button class="btn btn--big btn-watch-now">
+                <ion-icon name="play-outline"></ion-icon> <span>watch now</span>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn--big btn-download">
+            <span>download</span>
+            <ion-icon name="download-outline"></ion-icon>
+          </button>
+        </div>
+      </section>
+
+      <section class="section--services">
+        <div class="container">
+          <div class="service-img">
+            <div class="imm-support">
+              <img src="./res/assets/service-bg.jpg" alt="service img" />
+            </div>
+            <button class="btn btn--big btn-download">
+              <span>download</span>
+              <ion-icon name="download-outline"></ion-icon>
+            </button>
+          </div>
+          <div class="services-texts">
+            <p class="h2-explainer">
+              <span class="yellow-line"></span>
+              <span class="text">Our services</span>
+            </p>
+
+            <h2 class="tertiary-text--1">Download Your Shows Watch Offline.</h2>
+            <p class="explainer-text">
+              Amet a possimus nisi libero impedit illo esse eius. Quia sint
+              reprehenderit quidem, et quos, ducimus sequi culpa reiciendis
+              praesentium incidunt hic.
+            </p>
+
+            <div class="service">
+              <!-- <div class="img-service"> -->
+              <ion-icon name="tv-outline"></ion-icon>
+              <!-- </div> -->
+              <h3 class="tertiary-text--4">Enjoy on Your TV.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Necessitatibus nostrum doloribus
+              </p>
+            </div>
+
+            <hr class="hr" />
+
+            <div class="service">
+              <!-- <div class="img-service"> -->
+              <ion-icon name="videocam-outline"></ion-icon>
+              <!-- </div> -->
+              <h3 class="tertiary-text--4">Watch Everywhere.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Necessitatibus nostrum doloribus
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--toprated">
+        <div class="container">
+          <p class="h2-explainer">online streaming</p>
+          <h2 class="secondary-text">Top Rated Movies</h2>
+
+          <div class="shows-types">
+            <button class="btn btn--big btn-movies">movies</button>
+            <button class="btn btn--big btn-tvshow">tv shows</button>
+            <button class="btn btn--big btn-doc">documentary</button>
+            <button class="btn btn--big btn-sports">sports</button>
+          </div>
+
+          <div class="inner-container">
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--series">
+        <div class="container">
+          <p class="h2-explainer">best tv series</p>
+          <h2 class="secondary-text">World Best TV Series</h2>
+          <div class="inner-container">
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming--movie">
+              <div role="img" aria-label="movie-cover-photo" class="img-holder">
+                <img
+                  src="./res/assets/movie-1.png"
+                  alt="northman cover photo"
+                />
+              </div>
+              <div class="upcoming-details">
+                <h3 class="tetiary-text--1">The Northman</h3>
+                <p class="release-year">2022</p>
+                <button class="btn btn--small btn-video-quality">hd</button>
+                <div class="duration-rating">
+                  <p class="upcoming-duration">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="duration-time">137 min</span>
+                  </p>
+                  <p class="upcoming-duration">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <span class="upcoming-rating">8.5</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <section class="section--CTA">
+              <div class="container">
+                <div class="cta text">
+                  <h3 class="tertiary-text--6">trial start first 30 days.</h3>
+                  <p class="cta-more">
+                    enter your email to create or restart your memnership.
+                  </p>
+                </div>
+                <input class="email-input" type="email" />
+                <button class="btn-btn--big btn-submit">Get started</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="section--footer">
+        <div class="container">
+          <head>
+            <a href="#" class="home">movflix</a>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-detail">home</li>
+                <li class="nav-detail">movie</li>
+                <li class="nav-detail">tv show</li>
+                <li class="nav-detail">web series</li>
+                <li class="nav-detail">pricing</li>
+              </ul>
+            </nav>
+          </head>
+          <hr class="hr hr-foot" />
+          <main>
+            <div class="links">
+              <div class="tools-help">
+                <ul class="help">
+                  <li class="help-detail">faq</li>
+                  <li class="help-detail">help center</li>
+                  <li class="help-detail">terms of use</li>
+                  <li class="help-detail">privacy</li>
+                </ul>
+              </div>
+
+              <div class="social media">
+                <ul class="media">
+                  <li class="media-detail">fb icons</li>
+                  <li class="media-detail">twitter</li>
+                  <li class="media-detail">web world</li>
+                  <li class="media-detail">linkedin</li>
+                </ul>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+      <div class="last-foot-div">
+        <p class="copyright">
+          &copy; 2023 <span>moflix</span>. All Rights Reserved
+        </p>
+        <ul class="payment-list">
+          <li class="payment-detail">paypal</li>
+          <li class="payment-detail">ebay</li>
+          <li class="payment-detail">visa</li>
+          <li class="payment-detail">bitcoin</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
