@@ -117,6 +117,18 @@ body {
   margin-bottom: 3.6rem;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid-template--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-template--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 img {
   width: 30rem;
 }
