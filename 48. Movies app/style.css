@@ -99,8 +99,6 @@ ion-icon[name='globe-outline'] {
 }
 
 .hero {
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 1fr); */
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -161,28 +159,10 @@ ion-icon[name='play-outline'] {
 .section-upcoming {
   color: #f7f7f7;
   background-color: #111;
-  padding: 9.8rem 0;
-}
-
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
-.h2-intro {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--citrine);
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
+  padding: 12rem 0;
 }
 
 .top {
-  margin-bottom: 5.8rem;
-}
-
-.secondary-text {
-  font-size: 3.2rem;
   margin-bottom: 5.8rem;
 }
 
@@ -211,31 +191,9 @@ ion-icon[name='play-outline'] {
   background-color: transparent;
 }
 
-.inner-container {
-  column-gap: 2.8rem;
-  row-gap: 4.8rem;
-}
-
-.upcoming--movie {
-}
-
-.img-holder {
-  border-radius: 1.2rem;
-  overflow: hidden;
-  margin-bottom: 1.8rem;
-}
-
-.img-holder img {
-  width: 100%;
-}
-
 .upcoming-details {
   column-gap: 0.8rem;
   row-gap: 0.8rem;
-}
-
-.tetiary-text--1 {
-  font-size: 1.8rem;
 }
 
 .release-year {
@@ -271,22 +229,59 @@ ion-icon[name='play-outline'] {
   gap: 0.6rem;
 }
 
-.upcoming-duration {
+/* /////////////////////// */
+/* SECTION SERVICES */
+/* /////////////////////// */
+
+.section--services {
 }
 
-.time-outline {
+.container {
 }
 
-.duration-time {
+.service-img {
 }
 
-.upcoming-duration {
+.imm-support {
 }
 
-ion-icon[name='star-outline'] {
+.btn-download {
 }
 
-.upcoming-rating {
+ion-icon[name='download-outline'] {
+}
+
+.services-texts {
+}
+
+.h2-explainer {
+}
+
+.tertiary-text--1 {
+}
+
+.explainer-text {
+}
+
+.service {
+}
+
+ion-icon[name='tv-outline'] {
+}
+
+.tertiary-text--4 {
+}
+
+.hr {
+}
+
+.service {
+}
+
+ion-icon[name='videocam-outline'] {
+}
+
+.tertiary-text--4 {
 }
 
 img {

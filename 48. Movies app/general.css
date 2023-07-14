@@ -125,8 +125,49 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-template--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .grid-template--4 {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.h2-intro {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--citrine);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.tetiary-text--1 {
+  font-size: 1.8rem;
+}
+
+.secondary-text {
+  font-size: 3.2rem;
+  margin-bottom: 5.8rem;
+}
+
+.inner-container {
+  column-gap: 2.8rem;
+  row-gap: 4.8rem;
+}
+
+.img-holder {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.img-holder img {
+  width: 100%;
 }
 
 img {
