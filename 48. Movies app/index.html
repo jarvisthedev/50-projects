@@ -366,10 +366,10 @@
           <h2 class="secondary-text">Top Rated Movies</h2>
 
           <div class="shows-types">
-            <button class="btn btn--big btn-movies">movies</button>
-            <button class="btn btn--big btn-tvshow">tv shows</button>
-            <button class="btn btn--big btn-doc">documentary</button>
-            <button class="btn btn--big btn-sports">sports</button>
+            <button class="btn btn--big btn-rated btn-movies">movies</button>
+            <button class="btn btn--big btn-rated btn-tvshow">tv shows</button>
+            <button class="btn btn--big btn-rated btn-doc">documentary</button>
+            <button class="btn btn--big btn-rated btn-sports">sports</button>
           </div>
 
           <div class="inner-container grid grid-template--4">
@@ -703,41 +703,47 @@
                 </div>
               </div>
             </div>
-
-            <section class="section--CTA">
-              <div class="container">
-                <div class="cta text">
-                  <h3 class="tertiary-text--2">trial start first 30 days.</h3>
-                  <p class="cta-more">
-                    enter your email to create or restart your memnership.
-                  </p>
-                </div>
-                <input class="email-input" type="email" />
-                <button class="btn-btn--big btn-submit">Get started</button>
-              </div>
-            </section>
           </div>
+        </div>
+      </section>
+
+      <section class="section--CTA">
+        <div class="container grid grid-template--2">
+          <div class="cta-text">
+            <h3 class="tertiary-text--2">trial start first 30 days.</h3>
+            <p class="cta-more">
+              Enter your email to create or restart your membership.
+            </p>
+          </div>
+
+          <form class="email-holder grid">
+            <input class="email-input" type="email" />
+            <button class="btn btn--big btn-submit">Get started</button>
+          </form>
         </div>
       </section>
     </main>
     <footer>
       <section class="section--footer">
         <div class="container">
-          <head>
-            <a href="#" class="home">FlexStream</a>
+          <header class="head">
+            <a href="#" class="home">
+              <img src="./imgs/icons/vr.svg" alt="vr icon" />
+              <span>FlexStream</span>
+            </a>
             <nav class="nav">
               <ul class="nav-list">
                 <li class="nav-detail">home</li>
                 <li class="nav-detail">movie</li>
-                <li class="nav-detail">tv show</li>
-                <li class="nav-detail">web series</li>
+                <li class="nav-detail">Tv show</li>
+                <li class="nav-detail">web servers</li>
                 <li class="nav-detail">pricing</li>
               </ul>
             </nav>
-          </head>
-          <hr class="hr hr-foot" />
+          </header>
+
           <main>
-            <div class="links">
+            <div class="tools-media-links">
               <div class="tools-help">
                 <ul class="help">
                   <li class="help-detail">faq</li>
@@ -747,7 +753,7 @@
                 </ul>
               </div>
 
-              <div class="social media">
+              <div class="social-media">
                 <ul class="media">
                   <li class="media-detail">
                     <ion-icon name="logo-facebook"></ion-icon>
@@ -767,27 +773,11 @@
           </main>
         </div>
       </section>
-      <div class="last-foot-div">
-        <p class="copyright">
-          &copy; 2023 <span>moflix</span>. All Rights Reserved
-        </p>
-        <ul class="payment-list">
-          <li class="payment-detail">
-            <img src="./imgs/logos/PayPal .svg" alt="PayPal logo" />
-          </li>
-          <li class="payment-detail">
-            <img src="./imgs/logos/EBay_logo.svg" alt="Ebay logo" />
-          </li>
-          <li class="payment-detail">
-            <img src="./imgs/logos/Visa_debit.svg" alt="Visa_debit logo" />
-          </li>
-          <li class="payment-detail">
-            <img src="./imgs/logos/Bitcoin.svg" alt="bitcoin logo" />
-          </li>
-          <li class="payment-detail">
-            <img src="./imgs/logos/Skrill_logo.svg" alt="Skrill_logo logo" />
-          </li>
-        </ul>
+      <div class="last-foot-div grid grid-template--2">
+        <p>&copy; 2023 <span>moflix</span>. All Rights Reserved</p>
+        <div role="img" aria-label="payment options">
+          <img src="./imgs/img/footer-bottom-img.png" alt="payment options" />
+        </div>
       </div>
     </footer>
   </body>
