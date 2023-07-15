@@ -8,7 +8,6 @@
   justify-content: space-between;
   padding: 0 2.8rem;
   height: 7.2rem;
-  /* background-color: var(--xiketic); */
   color: #f7f7f7;
   position: absolute;
   top: 0;
@@ -29,9 +28,6 @@
 
 .home img {
   width: 4.8rem;
-}
-
-.nav {
 }
 
 .nav-list {
@@ -62,7 +58,7 @@ ion-icon[name='search-outline'] {
   border-right: 1px solid #cecaca43;
 }
 
-ion-icon[name='globe-outline'] {
+.header ion-icon[name='globe-outline'] {
   color: var(--citrine);
 }
 
@@ -458,43 +454,60 @@ footer {
   background-color: var(--black);
 }
 
-.hr.hr-foot {
-  margin-bottom: 4.8rem;
-  border-top: 4px solid #f7f7f7;
-}
-
 .section--footer {
-  padding: 5.6rem;
+  padding: 6.4rem;
 }
 
-.section--footer .container {
-  padding: 5.6rem;
+.section--footer .nav {
+  justify-self: end;
 }
 
 .head {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 4.8rem;
-  padding: 4.8rem 0;
-  border-bottom: 1px solid #f7f7f7;
-  margin-bottom: 1px;
+  grid-column: 1/3;
+  height: 9.8rem;
+  border-bottom: 1px solid #f7f7f736;
+  margin-bottom: 2px;
 }
 
 .tools-media-links {
-  border-top: 1px solid #f7f7f7;
-  padding: 4.8rem 0;
-
-  display: flex;
+  height: 9.8rem;
   align-items: center;
-  justify-content: space-between;
+  grid-column: 1/3;
 }
 
 .help {
-  gap: 1.2rem;
+  gap: 1.8rem;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+.help-detail:link,
+.media-detail:link,
+.help-detail:visited,
+.media-detail:visited {
+  text-decoration: none;
+  color: #dedede;
+  transition: all 0.3s;
+}
+
+.help-detail:link,
+.help-detail:visited {
+  font-size: 1.2rem;
+}
+
+.media-detail:hover,
+.media-detail:active {
+  color: var(--citrine);
+}
+
+.tools-help {
+  justify-self: start;
+}
+
+.social-media {
+  justify-self: end;
 }
 
 .media {
@@ -502,9 +515,19 @@ footer {
 }
 
 .last-foot-div {
-  padding: 0 3.2rem;
+  padding: 1.2rem 3.2rem;
+  align-items: center;
+  background-color: #111;
+}
+
+.last-foot-div p {
+  font-size: 1.3rem;
 }
 
 .last-foot-div div {
   justify-self: end;
+}
+
+.last-foot-div img {
+  height: 2rem;
 }
