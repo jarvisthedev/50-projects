@@ -1,7 +1,6 @@
 /* /////////////////////// */
 /* HEADER */
 /* /////////////////////// */
-
 .header {
   display: flex;
   align-items: center;
@@ -32,11 +31,11 @@
 
 .nav-list {
   gap: 2.4rem;
+  font-size: 1.6rem;
 }
 
 .nav-detail {
   text-transform: uppercase;
-  font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -76,7 +75,7 @@ ion-icon[name='search-outline'] {
 }
 
 .btn-signin {
-  margin-left: 2.8rem;
+  margin-left: 1.8rem;
 }
 
 /* /////////////////////// */
@@ -92,6 +91,7 @@ ion-icon[name='search-outline'] {
   color: #f7f7f7;
   display: flex;
   align-items: center;
+  padding: 9.8rem 2.8rem;
 }
 
 .hero {
@@ -155,7 +155,7 @@ ion-icon[name='play-outline'] {
 .section-upcoming {
   color: #f7f7f7;
   background-color: #111;
-  padding: 12rem 0;
+  padding: 12rem 2.8rem;
 }
 
 .top {
@@ -203,9 +203,16 @@ ion-icon[name='play-outline'] {
   box-shadow: 0 0 0.8rem 0.8rem #d3d4d108;
 }
 
-.upcoming-details {
-  column-gap: 0.8rem;
-  row-gap: 0.8rem;
+.name-date,
+.download-duration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.name-date {
+  margin-bottom: 0.8rem;
 }
 
 .release-year {
@@ -247,7 +254,11 @@ ion-icon[name='play-outline'] {
 .section--services {
   color: #f7f7f7;
   background-color: #000;
-  padding: 9.8rem 0;
+  padding: 9.8rem 2.8rem;
+}
+
+.section--services .container {
+  align-items: end;
 }
 
 .service-img {
@@ -356,7 +367,7 @@ ion-icon[name='download-outline'] {
   text-align: center;
   color: #f7f7f7;
   background-color: #222;
-  padding: 9.8rem 0;
+  padding: 9.8rem 2.8rem;
 }
 
 .shows-types {
@@ -389,7 +400,7 @@ ion-icon[name='download-outline'] {
 .section--series {
   color: #f7f7f7;
   background-color: #111;
-  padding: 9.8rem 0;
+  padding: 9.8rem 2.8rem;
 }
 
 /* /////////////////////// */
@@ -401,12 +412,14 @@ ion-icon[name='download-outline'] {
   background-size: cover;
   background-position: center center;
   width: 100%;
-  padding: 5.6rem 0;
+  padding: 5.6rem 2.8rem;
 }
 
 .section--CTA .container {
   max-width: 110rem;
   align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 18.4rem;
 }
 
 .cta-text .tertiary-text--2 {
