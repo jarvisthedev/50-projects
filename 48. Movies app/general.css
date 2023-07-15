@@ -111,10 +111,27 @@ body {
   margin-bottom: 1.8rem;
 }
 
+.h2-intro {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--citrine);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
 .primary-text {
   font-size: 4.8rem;
   font-weight: 700;
   margin-bottom: 3.6rem;
+}
+
+.secondary-text {
+  font-size: 3.2rem;
+  margin-bottom: 5.8rem;
+}
+
+.tetiary-text--1 {
+  font-size: 1.8rem;
 }
 
 .grid {
@@ -138,23 +155,6 @@ body {
   margin: 0 auto;
 }
 
-.h2-intro {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--citrine);
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-}
-
-.tetiary-text--1 {
-  font-size: 1.8rem;
-}
-
-.secondary-text {
-  font-size: 3.2rem;
-  margin-bottom: 5.8rem;
-}
-
 .inner-container {
   column-gap: 2.8rem;
   row-gap: 4.8rem;
@@ -164,6 +164,7 @@ body {
   border-radius: 1.2rem;
   overflow: hidden;
   margin-bottom: 1.8rem;
+  transition: var(--transition-1);
 }
 
 .img-holder img {
