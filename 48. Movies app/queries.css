@@ -144,10 +144,7 @@
     grid-template-columns: 1fr;
   }
 
-  .tools-help {
-    justify-self: center;
-  }
-
+  .tools-help,
   .social-media {
     justify-self: center;
   }
@@ -157,24 +154,44 @@
 /* SMARTPHONE (432px) */
 /* ////////////////////////////////// */
 @media (max-width: 27em) {
+  .grid-template--4 {
+    grid-template-columns: 1fr;
+  }
+
   /* SERVICE SECTION */
   .service-img {
     width: 100%;
   }
 
-  /* CTA SECTION */
-  /* .section--CTA .container {
-    gap: 4rem;
-    grid-template-columns: 1fr;
-    align-items: center;
+  .section--footer {
+    padding: 6.4rem 2.4rem;
   }
 
-  .cta-text {
-    justify-self: center;
-  } */
+  .top.grid {
+    grid-template-columns: 1fr;
+  }
 
-  .btn-submit {
-    /* width: 10rem; */
+  .upcoming--btns {
+    margin-top: 3.6rem;
+    justify-self: start;
+  }
+
+  /*  */
+  .shows-types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  /* CTA SECTION */
+  .cta-text .tertiary-text--2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-text p {
+    font-size: 1.2rem;
   }
 
   .email-holder {
