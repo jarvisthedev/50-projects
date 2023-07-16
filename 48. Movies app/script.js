@@ -19,10 +19,13 @@ const mostPopular_list = async options => {
     const response = await fetch(most_popular_URL, options);
     const result = await response.json();
 
-    return result
+    array = result
       .filter((_, i) => i < 20)
       .map(el => el.replace('/title/', ''))
       .map(el => el.replace('/', ''));
+
+    console.log(array);
+    return array;
   } catch (error) {
     console.error(error);
   }
@@ -34,8 +37,13 @@ const metaData = async (options, id) => {
   const metaData_URL = `https://imdb8.p.rapidapi.com/title/get-meta-data?ids=${id}&region=US`;
 
   try {
-    const response = await fetch(metaData_URL, options);
+    const response = await fetch(metaData_URL);
     const { [id]: movieData } = await response.json();
+
+    if (!movieData) {
+      return;
+      options;
+    }
 
     const movie_rating = movieData.ratings.rating;
     const movie_releaseYear = movieData.ratings.year;
@@ -70,7 +78,7 @@ const metaData = async (options, id) => {
         </div>
       </div>
     `;
-    section__upcoming.innerHTML = ``;
+    // section__upcoming.innerHTML = ``;
     section__upcoming.insertAdjacentHTML('afterbegin', html);
   } catch (error) {
     console.error(error);
@@ -78,4 +86,40 @@ const metaData = async (options, id) => {
 };
 
 mostPopular_list(options);
-metaData(options, id);
+//metaData(options, id);
+
+const mapping_section__upcoming = async () => {
+  section__upcoming.innerHTML = ``;
+
+  const movieList = fetch(
+    'https://imdb8.p.rapidapi.com/title/get-most-popular-movies?homeCountry=GB&purchaseCountry=US&currentCountry=US',
+    options
+  )
+    .then(response => response.json())
+    .then(listIds => {
+      const array = listIds
+        .filter((_, i) => i < 20)
+        .map(el => el.replace('/title/', ''))
+        .map(el => el.replace('/', ''));
+
+      displayMetadata(array, 0);
+      //setTimeout(() => displayMetadata(array, 5), 2000);
+    })
+    .catch(console.error);
+
+  // const data = movieList.map(el => {
+  //   metaData(options, el);
+  // });
+
+  // console.log(movieList);
+  // console.log(data);
+  return movieList;
+};
+
+const displayMetadata = (array, start) => {
+  for (const id of array.slice(start, start + 5)) {
+    metaData(options, id);
+  }
+};
+
+mapping_section__upcoming();
