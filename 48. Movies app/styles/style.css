@@ -82,7 +82,7 @@ ion-icon[name='search-outline'] {
 /* SECTION HERO */
 /* /////////////////////// */
 .section--hero {
-  background-image: url('./imgs/img/hero-bg.jpg');
+  background-image: url('../imgs/img/hero-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -407,7 +407,7 @@ ion-icon[name='download-outline'] {
 /* SECTION SERIES */
 /* /////////////////////// */
 .section--CTA {
-  background-image: url('./imgs/img/cta-bg.jpg');
+  background-image: url('../imgs/img/cta-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

@@ -1,0 +1,136 @@
+[
+  [
+    {
+      "imgUrl": "./imgs/cover_photo/upcoming-1.png",
+      "title": "The Northman",
+      "releaseYear": "2022",
+      "quality": "HD",
+      "duration": "137",
+      "rating": "8.5"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/upcoming-2.png",
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "releaseYear": "2022",
+      "quality": "4K",
+      "duration": "126",
+      "rating": "NR"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/upcoming-3.png",
+      "title": "Memory",
+      "releaseYear": "2022",
+      "quality": "2K",
+      "duration": "N/A",
+      "rating": "NR"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/upcoming-4.png",
+      "title": "The Unbelievable Weight of massive Talent",
+      "releaseYear": "2022",
+      "quality": "HD",
+      "duration": "107",
+      "rating": "NR"
+    }
+  ],
+  [
+    {
+      "imgUrl": "./imgs/cover_photo/movie-1.png",
+      "title": "Sonic the Hedgehog 2",
+      "releaseYear": "2022",
+      "quality": "HD",
+      "duration": "122",
+      "rating": "7.8"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-2.png",
+      "title": "Morbius",
+      "releaseYear": "2022",
+      "quality": "HD",
+      "duration": "104",
+      "rating": "5.9"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-3.png",
+      "title": "The Adam Project",
+      "releaseYear": "2022",
+      "quality": "4K",
+      "duration": "106",
+      "rating": "7.0"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-4.png",
+      "title": "Free guy",
+      "releaseYear": "2021",
+      "quality": "4K",
+      "duration": "115",
+      "rating": "7.7"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-5.png",
+      "title": "The Batman",
+      "releaseYear": "2022",
+      "quality": "4K",
+      "duration": "116",
+      "rating": "7.0"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-6.png",
+      "title": "The Batman",
+      "releaseYear": "2022",
+      "quality": "4K",
+      "duration": "116",
+      "rating": "7.0"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-7.png",
+      "title": "Death on the Nile",
+      "releaseYear": "2022",
+      "quality": "2K",
+      "duration": "127",
+      "rating": "6.5"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/movie-8.png",
+      "title": "The King's Man",
+      "releaseYear": "2021",
+      "quality": "HD",
+      "duration": "131",
+      "rating": "7.0"
+    }
+  ],
+  [
+    {
+      "imgUrl": "./imgs/cover_photo/series-1.png",
+      "title": "Moon Knight",
+      "releaseYear": "2022",
+      "quality": "2K",
+      "duration": "47",
+      "rating": "8.6"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/series-2.png",
+      "title": "Hola",
+      "releaseYear": "2022",
+      "quality": "2K",
+      "duration": "59",
+      "rating": "8.8"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/series-3.png",
+      "title": "Vikings: Valhalla",
+      "releaseYear": "2022",
+      "quality": "2K",
+      "duration": "51",
+      "rating": "8.3"
+    },
+    {
+      "imgUrl": "./imgs/cover_photo/series-4.png",
+      "title": "Money Heist",
+      "releaseYear": "2017",
+      "quality": "2K",
+      "duration": "70",
+      "rating": "8.3"
+    }
+  ]
+]
