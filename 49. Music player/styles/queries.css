@@ -3,12 +3,7 @@
 /* ////////////////////////////////// */
 @media (max-width: 72.5em) {
   html {
-    font-size: 56.25%;
-  }
-
-  .nav-list {
-    gap: 1.8rem;
-    font-size: 1.6rem;
+    /* font-size: 56.25%; */
   }
 }
 
@@ -16,75 +11,6 @@
 /* LANDSCAPE TABLETS (1000px) */
 /* ////////////////////////////////// */
 @media (max-width: 62.5em) {
-  .header--top .nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    width: 40vw;
-    z-index: 2;
-    color: #222;
-    background-color: #dedede;
-    display: none;
-  }
-
-  .header--top .nav-list {
-    width: 100%;
-    gap: 2.4rem;
-    padding: 3.6rem 0;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-
-  .btn-signin {
-    margin-left: 0;
-    color: #333;
-  }
-
-  .grid-template--4 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .nav-list {
-    gap: 1.2rem;
-    font-size: 1.2rem;
-  }
-
-  /* SECTION HIGHTLIGHT  */
-  .section--movie-highlight .container {
-    grid-template-columns: 1fr auto;
-    gap: 3.2rem;
-  }
-
-  .section--movie-highlight .img-holder {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    justify-self: center;
-    width: 50%;
-  }
-
-  /* SECTION SERVICE */
-  .section--services .container {
-    grid-template-columns: 1fr;
-    gap: 4.8rem;
-  }
-
-  .service-img {
-    width: 70%;
-  }
-
-  /* SECTION CTA */
-  .section--CTA .container {
-    gap: 4.8rem;
-  }
-
-  .email-holder {
-    grid-template-columns: 2fr 1fr;
-  }
 }
 
 /* ////////////////////////////////// */
@@ -92,28 +18,7 @@
 /* ////////////////////////////////// */
 @media (max-width: 51em) {
   html {
-    font-size: 50%;
-  }
-
-  /* HERO SECTION */
-  .hero.grid {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  /* CTA SECTION */
-  .section--CTA .container {
-    gap: 4rem;
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
-
-  .cta-text {
-    justify-self: center;
-  }
-
-  .email-holder {
-    justify-self: center;
-    grid-template-columns: 3fr 1fr;
+    /* font-size: 50%; */
   }
 }
 
@@ -121,146 +26,10 @@
 /* SMARTPHONE (600px) */
 /* ////////////////////////////////// */
 @media (max-width: 37.5em) {
-  .grid-template--4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* HERO SECTION */
-  .hero.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-movie-details {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  /* SECTION HIGHLIGHT */
-  .section--movie-highlight .img-holder {
-    width: 70%;
-  }
-
-  .share-watch.grid {
-    grid-template-columns: 1fr 4fr;
-    column-gap: 1.2rem;
-    row-gap: 2.4rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .section--movie-highlight .prime-text {
-    grid-column: 1/-1;
-    grid-row: 1/-1;
-  }
-
-  .section--movie-highlight .btn-watch-now {
-    justify-self: center;
-  }
-
-  /* SERVICE SECTION */
-  .service-img {
-    width: 80%;
-  }
-
-  /* FOOTER SECTION */
-  .section--footer .head {
-    grid-template-columns: 1fr;
-  }
-
-  .section--footer .nav {
-    justify-self: center;
-  }
-
-  .section--footer .home {
-    display: none;
-  }
-
-  .tools-media-links.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-help,
-  .social-media {
-    justify-self: center;
-  }
 }
 
 /* ////////////////////////////////// */
 /* SMARTPHONE (432px) */
 /* ////////////////////////////////// */
 @media (max-width: 27em) {
-  .grid-template--4 {
-    grid-template-columns: 1fr;
-  }
-
-  /* SECTION HIGHTLIGHT */
-  .share-watch.grid {
-    grid-template-columns: auto 1fr;
-  }
-
-  ion-icon[name='share-social'] {
-    font-size: 1.8rem;
-  }
-
-  .section--movie-highlight .btn-watch-now {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
-  }
-
-  /* SERVICE SECTION */
-  .service-img {
-    width: 100%;
-  }
-
-  .section--footer {
-    padding: 6.4rem 2.4rem;
-  }
-
-  .top.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .upcoming--btns {
-    margin-top: 3.6rem;
-    justify-self: start;
-  }
-
-  /*  */
-  .shows-types {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-  }
-
-  /* CTA SECTION */
-  .cta-text .tertiary-text--2 {
-    font-size: 1.8rem;
-  }
-
-  .cta-text p {
-    font-size: 1.2rem;
-  }
-
-  .email-holder {
-    width: 100%;
-
-    justify-self: center;
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .last-foot-div.grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-
-  .last-foot-div div,
-  .last-foot-div p {
-    justify-self: center;
-  }
-
-  .last-foot-div div {
-    grid-row: 1/2;
-  }
 }
