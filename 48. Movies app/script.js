@@ -1,16 +1,8 @@
 `use strict`;
 
-const container__upcoming = document.querySelector(
-  '.section-upcoming .inner-container'
-);
-
-const container__tvSeries = document.querySelector(
-  '.section--series .inner-container'
-);
-
-const container__topRated = document.querySelector(
-  '.section--toprated .inner-container'
-);
+const container__upcoming = document.querySelector('.upcoming_container');
+const container__topRated = document.querySelector('.toprated_container');
+const container__tvSeries = document.querySelector('.series_container');
 
 const rendering_Movie = (movies, section) => {
   section.innerHTML = ``;

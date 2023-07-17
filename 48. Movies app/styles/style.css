@@ -249,6 +249,71 @@ ion-icon[name='play-outline'] {
 }
 
 /* /////////////////////// */
+/* SECTION HIGHTLIGHT */
+/* /////////////////////// */
+.section--movie-highlight {
+  background-image: url('../imgs/img/movie-detail-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  color: #f7f7f7;
+  padding: 9.8rem 2.8rem;
+}
+
+.section--movie-highlight .container {
+  grid-template-columns: auto 1fr auto;
+  gap: 3.2rem;
+}
+
+.section--movie-highlight .img-holder {
+  width: 28rem;
+  margin-bottom: 0;
+}
+
+.movie-hightlight-details {
+  align-self: center;
+}
+
+.movie-hightlight-details .hero-movie-details {
+  margin-bottom: 2.4rem;
+}
+
+.hightlight-description {
+  margin-bottom: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.share-watch {
+  max-width: 48rem;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: #000;
+  padding: 1.8rem;
+  border-radius: 0.5rem;
+}
+
+.share,
+.prime-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.share {
+  cursor: pointer;
+}
+
+.share span {
+  font-size: 1.2rem;
+}
+
+.prime-text {
+  font-size: 1.6rem;
+}
+
+/* /////////////////////// */
 /* SECTION SERVICES */
 /* /////////////////////// */
 .section--services {
@@ -290,6 +355,7 @@ ion-icon[name='play-outline'] {
   margin-bottom: 0.4rem;
 }
 
+ion-icon[name='share-social'],
 ion-icon[name='download-outline'] {
   font-size: 2.8rem;
   --ionicon-stroke-width: 2.4rem;
@@ -535,6 +601,9 @@ footer {
 
 .last-foot-div p {
   font-size: 1.3rem;
+}
+.last-foot-div span {
+  color: var(--citrine);
 }
 
 .last-foot-div div {

@@ -54,6 +54,19 @@
     font-size: 1.2rem;
   }
 
+  /* SECTION HIGHTLIGHT  */
+  .section--movie-highlight .container {
+    grid-template-columns: 1fr auto;
+    gap: 3.2rem;
+  }
+
+  .section--movie-highlight .img-holder {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    width: 50%;
+  }
+
   /* SECTION SERVICE */
   .section--services .container {
     grid-template-columns: 1fr;
@@ -122,6 +135,28 @@
     grid-template-columns: 1fr;
   }
 
+  /* SECTION HIGHLIGHT */
+  .section--movie-highlight .img-holder {
+    width: 70%;
+  }
+
+  .share-watch.grid {
+    grid-template-columns: 1fr 4fr;
+    column-gap: 1.2rem;
+    row-gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section--movie-highlight .prime-text {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  .section--movie-highlight .btn-watch-now {
+    justify-self: center;
+  }
+
   /* SERVICE SECTION */
   .service-img {
     width: 80%;
@@ -156,6 +191,20 @@
 @media (max-width: 27em) {
   .grid-template--4 {
     grid-template-columns: 1fr;
+  }
+
+  /* SECTION HIGHTLIGHT */
+  .share-watch.grid {
+    grid-template-columns: auto 1fr;
+  }
+
+  ion-icon[name='share-social'] {
+    font-size: 1.8rem;
+  }
+
+  .section--movie-highlight .btn-watch-now {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
   }
 
   /* SERVICE SECTION */
