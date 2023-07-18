@@ -19,17 +19,12 @@ body {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.1;
-  color: #222;
-  background-color: #f7f7f7;
+  background-color: #222;
   position: relative;
-  /* overflow-x: hidden; */
 }
 
 ul {
   list-style: none;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
 }
 
 .hidden {
@@ -42,4 +37,20 @@ ul {
 
 .grid-template--3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-template--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.section {
+  margin-left: 9.5rem;
+  padding: 3.2rem 2.8rem;
+  border-radius: 2.8rem;
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 92%;
 }
