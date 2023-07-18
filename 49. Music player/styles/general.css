@@ -14,3 +14,32 @@ html {
 /* /////////////////////// */
 /* REUSABLE CODE */
 /* /////////////////////// */
+
+body {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: #222;
+  background-color: #f7f7f7;
+  position: relative;
+  /* overflow-x: hidden; */
+}
+
+ul {
+  list-style: none;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.hidden {
+  display: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-template--3 {
+  grid-template-columns: repeat(3, 1fr);
+}

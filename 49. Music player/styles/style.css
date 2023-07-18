@@ -1,0 +1,154 @@
+/* /////////////////////////////// */
+/* HEADER */
+/* /////////////////////////////// */
+
+.header {
+  color: #f7f7f7;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 12rem;
+  border-radius: 4rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding: 1.2rem;
+  height: 100vh;
+  flex-direction: column;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+
+.home-icon {
+}
+
+.img-holder {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.4rem 0.4rem rgba(0, 0, 0, 0.111);
+  display: block;
+  /* align-items: center; */
+}
+
+.img-holder img {
+  width: 100%;
+}
+
+.nav {
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nav-detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem;
+  width: 7.2rem;
+  height: 7.2rem;
+  background-color: red;
+  border-radius: 1rem;
+}
+
+.nav-detail:hover {
+}
+
+.nav-detail ion-icon {
+  font-size: 1.8rem;
+}
+
+.nav-detail span {
+  font-size: 1.2rem;
+}
+
+/* /////////////////////////////// */
+/* SECITON PLAYER */
+/* /////////////////////////////// */
+.section-player {
+  background-color: yellow;
+}
+
+.containers-colletcion-1 {
+}
+
+.container {
+}
+
+/* /////////////////////////////// */
+/* CONTAINER --1 */
+
+.container--1 {
+}
+
+.part--1.img-holder {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+}
+
+.container--1 {
+  grid-template-columns: auto 1fr;
+  gap: 3.6rem;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.part--1 {
+}
+
+.part--2 {
+}
+
+.primary-text {
+  font-size: 4.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.container--1 {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.artist {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1.8rem;
+}
+
+.music-range {
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.range {
+}
+
+.musci-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.musci-controls ion-icon {
+  font-size: 2.8rem;
+}
+
+ion-icon {
+  cursor: pointer;
+}
+
+/* /////////////////////////////// */
+/* CONTAINER--2 */
