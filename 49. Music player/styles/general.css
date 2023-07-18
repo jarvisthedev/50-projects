@@ -67,6 +67,12 @@ ion-icon {
   box-shadow: 0 0 0.4rem 0.4rem rgba(0, 0, 0, 0.07);
 }
 
+.primary-text {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+}
+
 .secondary-text {
   font-size: 1.8rem;
   font-weight: 600;
@@ -80,11 +86,27 @@ ion-icon {
 
 .p--1 {
   font-size: 1.6rem;
-  font-weight: 600;
-  color: #222;
+  font-weight: 500;
+  color: #c8c8c8;
 }
 
 .p--2 {
   font-size: 1.2rem;
-  color: #444;
+  color: #b2b2b2;
+}
+
+.hover-playlist ion-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.2rem;
+
+  opacity: 0.01;
+  padding: 1.2rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.hover-playlist:hover ion-icon {
+  background-color: rgb(11, 11, 11);
+  opacity: 1;
 }
