@@ -19,12 +19,30 @@ body {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.1;
+  color: #f7f7f7;
   background-color: #222;
   position: relative;
 }
 
 ul {
   list-style: none;
+}
+
+ion-icon {
+  cursor: pointer;
+}
+
+.section {
+  margin-left: 9.5rem;
+  padding: 3.2rem 2.8rem;
+  border-radius: 2.8rem;
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 121rem;
+  width: 100%;
 }
 
 .hidden {
@@ -43,14 +61,30 @@ ul {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.section {
-  margin-left: 9.5rem;
-  padding: 3.2rem 2.8rem;
-  border-radius: 2.8rem;
-  height: 100vh;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 92%;
+.img-holder {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.4rem 0.4rem rgba(0, 0, 0, 0.07);
+}
+
+.secondary-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.tertary-text--1 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.p--1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.p--2 {
+  font-size: 1.2rem;
+  color: #444;
 }
