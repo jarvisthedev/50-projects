@@ -101,7 +101,6 @@ ion-icon {
   position: absolute;
   bottom: 1rem;
   right: 1.2rem;
-
   opacity: 0.01;
   padding: 1.2rem;
   border-radius: 50%;
@@ -114,4 +113,13 @@ ion-icon {
   background-color: #007aff;
   transform: translateY(0);
   opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #13213e);
+  border-radius: 0.8rem;
 }

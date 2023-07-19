@@ -73,19 +73,21 @@
                 <p class="artist">Ed Sheeran</p>
 
                 <div class="music-range grid">
-                  <span>0:07</span>
+                  <span class="time_current">0:07</span>
                   <input type="range" name="music-duration-range" />
-                  <span>3:01</span>
+                  <span class="time_duration">3:01</span>
                 </div>
 
                 <div class="musci-controls">
-                  <ion-icon name="shuffle-outline"></ion-icon>
-                  <ion-icon name="play-skip-back"></ion-icon>
-                  <ion-icon name="play"></ion-icon>
-                  <ion-icon name="play-skip-forward"></ion-icon>
-                  <ion-icon name="repeat"></ion-icon>
+                  <ion-icon class="shuffle" name="shuffle-outline"></ion-icon>
+                  <ion-icon class="playback" name="play-skip-back"></ion-icon>
+                  <ion-icon class="play" name="play"></ion-icon>
+                  <ion-icon class="pause hidden" name="pause"></ion-icon>
+                  <ion-icon class="playnxt" name="play-skip-forward"></ion-icon>
+                  <ion-icon class="repeat" name="repeat"></ion-icon>
                 </div>
               </div>
+              <audio hidden src="./audio files/1.mp3"></audio>
             </div>
 
             <div class="container container--2 grid grid-template--3">
