@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Player</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="audio">
+        <div class="progress"></div>
+
+        <div class="info">
+          <div class="thumbnail">
+            <img src="./dice-1.png" alt="Dice rolling" />
+            <span class="play_pause">
+              <i class="bx bx-play-circle"></i>
+            </span>
+          </div>
+
+          <div class="volume">
+            <span class="volume-down"> - </span>
+            <div class="volume-progress">
+              <div class="volume-bar"></div>
+            </div>
+            <span class="volume-up"> + </span>
+          </div>
+
+          <div class="action">
+            <div class="song">
+              <div class="name">Warbinger</div>
+              <div class="artist">The FatRat & Ever</div>
+            </div>
+            <div class="time">
+              <span class="current currentTime_UI">0:00</span>/
+              <span class="current duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <audio hidden src="./1.mp3"></audio>
+  </body>
+</html>
