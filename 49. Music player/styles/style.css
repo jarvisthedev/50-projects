@@ -4,6 +4,7 @@
 .header {
   color: #f7f7f7;
   background-color: #3c5964;
+  background-color: #111;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -126,6 +127,13 @@
   font-size: 2.8rem;
 }
 
+.musci-controls ion-icon[name='play'] {
+  padding: 1.2rem;
+  color: #fff;
+  background-color: #007aff;
+  border-radius: 50%;
+}
+
 /* /////////////////////////////// */
 /* CONTAINER--2 */
 .container--2 {
@@ -230,7 +238,7 @@
   align-items: center;
   justify-content: space-between;
   color: #b2b2b2;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .music-list:not(:last-child) {
