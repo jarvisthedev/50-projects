@@ -10,7 +10,14 @@
   }
 })();
 
+const section = document.querySelector('section');
+const sectionLibrary = document.querySelector('.section--library');
+const sectionPlay = document.querySelector('.section-player');
+
+const header = document.querySelector('.header');
+const navDetails = document.querySelectorAll('.nav-detail');
 const audio = document.querySelector('audio');
+
 const user_time_current = document.querySelector('.time_current');
 const user_time_duration = document.querySelector('.time_duration');
 const list_span = document.querySelectorAll('.img-holder span');
@@ -22,6 +29,27 @@ const user_play = document.querySelector('.play');
 const user_pause = document.querySelector('.pause');
 const user_playnxt = document.querySelector('.playnxt');
 const user_repeat = document.querySelector('.repeat');
+
+// HEADER NAV FUNCTIONALITY
+header.addEventListener('click', function (e) {
+  const clicked = e.target;
+  const navParent = clicked.closest('.nav-detail');
+
+  if (navParent) {
+    Array.from(navDetails).map(el => el.classList.remove('active-page'));
+    navParent.classList.add('active-page');
+
+    if (navParent.classList.contains('header-library')) {
+      Array.from(section).map(el => el.classList.add('hidden'));
+      sectionLibrary.classList.remove('hidden');
+      sectionPlay.classList.add('hidden');
+    } else if (navParent.classList.contains('header-play')) {
+      Array.from(section).map(el => el.classList.add('hidden'));
+      sectionPlay.classList.remove('hidden');
+      sectionLibrary.classList.add('hidden');
+    }
+  }
+});
 
 // AUDIO TRACK CONTROLS
 const timeFormat = time => {
