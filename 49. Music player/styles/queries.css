@@ -67,11 +67,15 @@
     position: relative;
   }
 
+  .btns.hidden {
+    display: block;
+  }
+
   .container--3 {
     position: absolute;
     backdrop-filter: blur(2rem);
     height: 100vh;
-    /* display: none; */
+    display: none;
   }
 }
 

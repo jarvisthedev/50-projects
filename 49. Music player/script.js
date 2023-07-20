@@ -10,6 +10,7 @@
   }
 })();
 
+const hidden_container = document.querySelector('.container--3');
 const section = document.querySelector('section');
 const sectionLibrary = document.querySelector('.section--library');
 const sectionPlay = document.querySelector('.section-player');
@@ -112,16 +113,11 @@ list_span.forEach((el, i) => {
   });
 });
 
+let display = 'block';
 btns_menu.addEventListener('click', function (e) {
-  const clicked = e.target;
+  btn_close.classList.toggle('hidden');
+  btn_menu.classList.toggle('hidden');
 
-  console.log(clicked);
-  if (clicked.contains('.btn-menu')) {
-    btn_close.classList.remove('hidden');
-    btn_menu.classList.add('hidden');
-  }
-  if (clicked.contains('.btn-close')) {
-    btn_close.classList.add('hidden');
-    btn_menu.classList.remove('hidden');
-  }
+  hidden_container.style.display = display;
+  display = display === 'none' ? 'block' : 'none';
 });
