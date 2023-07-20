@@ -71,7 +71,7 @@
     position: absolute;
     backdrop-filter: blur(2rem);
     height: 100vh;
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -81,6 +81,10 @@
 @media (max-width: 31.25em) {
   .grid-template--5 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 3.2rem 0.8rem 3.2rem 1.2rem;
   }
 }
 

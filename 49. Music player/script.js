@@ -13,6 +13,9 @@
 const section = document.querySelector('section');
 const sectionLibrary = document.querySelector('.section--library');
 const sectionPlay = document.querySelector('.section-player');
+const btns_menu = document.querySelector('.btns');
+const btn_menu = document.querySelector('.btn-menu');
+const btn_close = document.querySelector('.btn-close');
 
 const header = document.querySelector('.header');
 const navDetails = document.querySelectorAll('.nav-detail');
@@ -107,4 +110,18 @@ list_span.forEach((el, i) => {
     const time_go = (i * audio.duration) / 100;
     audio.currentTime = time_go;
   });
+});
+
+btns_menu.addEventListener('click', function (e) {
+  const clicked = e.target;
+
+  console.log(clicked);
+  if (clicked.contains('.btn-menu')) {
+    btn_close.classList.remove('hidden');
+    btn_menu.classList.add('hidden');
+  }
+  if (clicked.contains('.btn-close')) {
+    btn_close.classList.add('hidden');
+    btn_menu.classList.remove('hidden');
+  }
 });
