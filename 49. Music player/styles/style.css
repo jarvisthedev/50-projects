@@ -3,20 +3,20 @@
 /* /////////////////////////////// */
 .header {
   color: #f7f7f7;
-  background-color: #3c5964;
   background-color: #111;
+  gap: 2.4rem;
+  border-radius: 2.8rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 2.4rem 1.2rem;
+}
+
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  gap: 2.4rem;
-  border-radius: 2.8rem;
-  padding: 2.4rem 1.2rem;
-  padding-right: 7.2rem;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
+  gap: 3.2rem;
 }
 
 .header .img-holder {
@@ -175,7 +175,6 @@
 /* CONTAINER--2 */
 .container--2 {
   gap: 2.8rem;
-  /* padding: 2.8rem; */
   border-radius: 2.4rem;
 }
 
