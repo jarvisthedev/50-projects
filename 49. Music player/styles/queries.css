@@ -77,6 +77,23 @@
     height: 100vh;
     display: none;
   }
+
+  .song-play {
+    font-size: 1.8rem;
+  }
+
+  .song-description {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .music-list {
+    font-size: 1.6rem;
+  }
+
+  .music-list:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
 }
 
 /* ////////////////////////////////// */
