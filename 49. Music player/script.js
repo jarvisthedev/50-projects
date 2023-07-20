@@ -45,8 +45,8 @@ header.addEventListener('click', function (e) {
       sectionPlay.classList.add('hidden');
     } else if (navParent.classList.contains('header-play')) {
       Array.from(section).map(el => el.classList.add('hidden'));
-      sectionPlay.classList.remove('hidden');
       sectionLibrary.classList.add('hidden');
+      sectionPlay.classList.remove('hidden');
     }
   }
 });
