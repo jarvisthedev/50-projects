@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 2.8rem;
-  padding: 1.2rem;
-  padding-right: 7.2rem;
-  height: 100vh;
   flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 2.8rem;
+  padding: 2.4rem 1.2rem;
+  padding-right: 7.2rem;
+  min-height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +34,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.8rem;
 }
 
 .nav-detail {
@@ -174,7 +175,7 @@
 /* CONTAINER--2 */
 .container--2 {
   gap: 2.8rem;
-  padding: 2.8rem;
+  /* padding: 2.8rem; */
   border-radius: 2.4rem;
 }
 
@@ -199,6 +200,7 @@
 }
 
 .ul--small:hover {
+  padding-right: 2.4rem;
   background-color: rgba(255, 255, 255, 0.075);
 }
 

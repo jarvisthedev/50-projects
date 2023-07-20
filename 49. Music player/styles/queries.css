@@ -3,7 +3,13 @@
 /* ////////////////////////////////// */
 @media (max-width: 72.5em) {
   html {
-    /* font-size: 56.25%; */
+    font-size: 56.25%;
+  }
+
+  .outer-container {
+    /* grid-template-columns: 2.5fr 1fr; */
+    gap: 4.8rem;
+    gap: 3.6rem;
   }
 }
 
@@ -11,6 +17,31 @@
 /* LANDSCAPE TABLETS (1000px) */
 /* ////////////////////////////////// */
 @media (max-width: 62.5em) {
+  .container--1 {
+    grid-template-columns: 1fr;
+    /* align-items: center; */
+    /* column-gap: 3.6rem; */
+    /* row-gap: 4.8rem; */
+    /* text-align: center; */
+    /* margin-bottom: 3.6rem; */
+    /* justify-content: center; */
+  }
+
+  .container--1 .img-holder {
+    /* position: relative;
+  background-color: transparent;
+  width: 24rem;
+  height: 24rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  overflow: visible;
+  cursor: pointer; */
+    /* align-self: center; */
+    /* text-align: center; */
+  }
 }
 
 /* ////////////////////////////////// */

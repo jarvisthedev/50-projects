@@ -35,7 +35,7 @@ ion-icon {
   margin-left: 9.5rem;
   padding: 3.2rem 2.8rem;
   border-radius: 2.8rem;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 2;
   position: absolute;
   top: 0;
@@ -113,7 +113,7 @@ ion-icon {
 }
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 0.8rem;
 }
 
 ::-webkit-scrollbar-thumb {
