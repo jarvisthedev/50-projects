@@ -37,7 +37,6 @@ const list_span = document.querySelectorAll('.img-holder span');
 
 const music_controls = document.querySelector('.musci-controls');
 const user_shuffle = document.querySelector('.shuffle');
-const user_playback = document.querySelector('.playback');
 const user_play = document.querySelector('.play');
 const user_pause = document.querySelector('.pause');
 const user_playnxt = document.querySelector('.playnxt');
@@ -45,7 +44,9 @@ const user_repeat = document.querySelector('.repeat');
 
 let display = 'block';
 let music_no = 0;
+let number_of_songs = 0;
 let random_number_state = false;
+let tracks_array = [];
 
 // HEADER NAV FUNCTIONALITY
 header.addEventListener('click', function (e) {
@@ -68,7 +69,7 @@ header.addEventListener('click', function (e) {
   }
 });
 
-const playRandom_music = () => Math.floor(Math.random() * 17 + 1);
+const playRandom_music = () => Math.floor(Math.random() * number_of_songs + 1);
 
 const timeFormat = time => {
   const hour = Math.floor(time / 3600);
@@ -100,11 +101,8 @@ btns.addEventListener('click', function (e) {
   display = display === 'none' ? 'block' : 'none';
 });
 
-// 1.
-const musicAPI_Data = async () => {
-  const res = await fetch('music.json');
-  const tracks = await res.json();
-  const track = tracks[music_no];
+const update_track_UI = songs => {
+  const track = songs[music_no];
 
   img_container__1.src = track.img_url;
   trackNam.textContent = track.name;
@@ -115,50 +113,22 @@ const musicAPI_Data = async () => {
   trackRelease.textContent = `21/07/2022`;
 
   audio.src = `${track.track}`;
-  // update_audio_track();
-  // audio.play();
-  // user_pause.classList.remove('hidden');
-  // user_play.classList.add('hidden');
+  update_audio_track();
+};
 
-  // console.log(tracks);
-  // console.log(track);
+// 1.
+const musicAPI_Data = async () => {
+  const res = await fetch('music.json');
+  const tracks = await res.json();
+
+  update_track_UI(tracks);
+  number_of_songs = tracks.length - 1;
+  tracks_array = [...tracks];
 };
 
 musicAPI_Data();
 
 // 2.
-const update_audio_track = () => {
-  audio.addEventListener(
-    'loadedmetadata',
-    () => (user_time_duration.textContent = timeFormat(audio.duration))
-  );
-
-  audio.addEventListener('timeupdate', () => {
-    const time_duration = audio.duration;
-    const time_current = audio.currentTime;
-    const position = Math.floor((time_current * 100) / time_duration);
-    user_time_current.textContent = timeFormat(time_current);
-    rangeSlider.value = position;
-
-    if (Math.floor(time_duration) === Math.floor(time_current)) {
-      list_span.forEach(el => el.classList.remove('active'));
-      user_time_current.textContent = `0:00`;
-      music_no += 1;
-      rangeSlider.value = 0;
-      audio.src = ` ./audio/${music_no}.mp3`;
-      audio.play();
-
-      user_play.classList.add('hidden');
-      user_pause.classList.remove('hidden');
-    }
-
-    if (position < 100) list_span[position].classList.add('active');
-  });
-};
-
-// update_audio_track();
-
-// 3.
 music_controls.addEventListener('click', function (e) {
   e.preventDefault();
   const clicked = e.target;
@@ -175,19 +145,19 @@ music_controls.addEventListener('click', function (e) {
     if (clicked === user_playnxt) music_no += 1;
     else music_no -= 1;
 
-    if (music_no > 17) music_no = 1;
-    else if (music_no <= 0) music_no = 17;
+    if (music_no > number_of_songs) music_no = 1;
+    else if (music_no < 0) music_no = number_of_songs;
 
     music_no = random_number_state ? playRandom_music() : music_no;
 
-    audio.src = ` ./audio/${music_no}.mp3`;
+    update_track_UI(tracks_array);
+
     update_audio_track();
     audio.play();
+
     user_pause.classList.remove('hidden');
     user_play.classList.add('hidden');
     list_span.forEach(el => el.classList.remove('active'));
-    console.log(music_no);
-    // console.log(audio);
   }
 
   if (clicked.classList.contains('rep_shuf')) {
@@ -195,3 +165,36 @@ music_controls.addEventListener('click', function (e) {
       random_number_state = random_number_state ? false : true;
   }
 });
+
+// 3.
+const update_audio_track = () => {
+  audio.addEventListener(
+    'loadedmetadata',
+    () => (user_time_duration.textContent = timeFormat(audio.duration))
+  );
+
+  audio.addEventListener('timeupdate', () => {
+    const time_duration = audio.duration;
+    const time_current = audio.currentTime;
+    const position = Math.floor((time_current * 100) / time_duration);
+    user_time_current.textContent = timeFormat(time_current);
+    rangeSlider.value = position;
+
+    if (Math.floor(time_duration) === Math.floor(time_current)) {
+      list_span.forEach(el => el.classList.remove('active'));
+      user_play.classList.add('hidden');
+      user_pause.classList.remove('hidden');
+      user_time_current.textContent = `0:00`;
+
+      music_no += 1;
+      rangeSlider.value = 0;
+      music_no = random_number_state ? playRandom_music() : music_no;
+
+      update_track_UI(tracks_array);
+      update_audio_track();
+      audio.play();
+    }
+
+    if (position < 100) list_span[position].classList.add('active');
+  });
+};
