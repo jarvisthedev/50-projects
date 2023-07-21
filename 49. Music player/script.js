@@ -43,15 +43,15 @@ header.addEventListener('click', function (e) {
   const navParent = clicked.closest('.nav-detail');
 
   if (navParent) {
-    Array.from(navDetails).map(el => el.classList.remove('active-page'));
+    navDetails.forEach(el => el.classList.remove('active-page'));
     navParent.classList.add('active-page');
 
     if (navParent.classList.contains('header-library')) {
-      Array.from(section).map(el => el.classList.add('hidden'));
+      section.forEach(el => el.classList.add('hidden'));
       sectionLibrary.classList.remove('hidden');
       sectionPlay.classList.add('hidden');
     } else if (navParent.classList.contains('header-play')) {
-      Array.from(section).map(el => el.classList.add('hidden'));
+      section.forEach(el => el.classList.add('hidden'));
       sectionLibrary.classList.add('hidden');
       sectionPlay.classList.remove('hidden');
     }
@@ -71,37 +71,76 @@ const timeFormat = time => {
   }${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
 };
 
-audio.addEventListener(
-  'loadedmetadata',
-  () => (user_time_duration.textContent = timeFormat(audio.duration))
-);
+const playRandom_music = () => Math.floor(Math.random() * 17 + 1);
 
-audio.addEventListener('timeupdate', () => {
-  const time_duration = audio.duration;
-  const time_current = audio.currentTime;
-  const position = Math.floor((time_current * 100) / time_duration);
-  user_time_current.textContent = timeFormat(time_current);
-  rangeSlider.value = position;
+const update_audio_track = () => {
+  audio.addEventListener(
+    'loadedmetadata',
+    () => (user_time_duration.textContent = timeFormat(audio.duration))
+  );
 
-  if (Math.floor(time_duration) === Math.floor(time_current)) {
-    Array.from(list_span).map(el => el.classList.remove('active'));
-    rangeSlider.value = 0;
-    user_time_current.textContent = `0:00`;
-    user_play.classList.remove('hidden');
-    user_pause.classList.add('hidden');
-  }
+  audio.addEventListener('timeupdate', () => {
+    const time_duration = audio.duration;
+    const time_current = audio.currentTime;
+    const position = Math.floor((time_current * 100) / time_duration);
+    user_time_current.textContent = timeFormat(time_current);
+    rangeSlider.value = position;
 
-  if (position < 100) list_span[position].classList.add('active');
-});
+    if (Math.floor(time_duration) === Math.floor(time_current)) {
+      list_span.forEach(el => el.classList.remove('active'));
+      user_time_current.textContent = `0:00`;
+      music_no += 1;
+      rangeSlider.value = 0;
+      audio.src = ` ./audio/${music_no}.mp3`;
+      audio.play();
+
+      user_play.classList.add('hidden');
+      user_pause.classList.remove('hidden');
+    }
+
+    if (position < 100) list_span[position].classList.add('active');
+  });
+};
+
+update_audio_track();
+
+let music_no = 0;
+let random_number_state = false;
 
 music_controls.addEventListener('click', function (e) {
   e.preventDefault();
   const clicked = e.target;
 
-  user_pause.classList.toggle('hidden');
-  clicked.classList.toggle('hidden');
-  if (clicked === user_play) audio.play();
-  if (clicked === user_pause) audio.pause();
+  if (clicked.classList.contains('pause_play')) {
+    if (clicked === user_play) audio.play();
+    else audio.pause();
+
+    user_pause.classList.toggle('hidden');
+    clicked.classList.toggle('hidden');
+  }
+
+  if (clicked.classList.contains('nxt_prev')) {
+    if (clicked === user_playnxt) music_no += 1;
+    else music_no -= 1;
+
+    music_no = random_number_state ? playRandom_music() : music_no;
+
+    audio.src = ` ./audio/${music_no}.mp3`;
+    update_audio_track();
+    audio.play();
+    user_pause.classList.remove('hidden');
+    user_play.classList.add('hidden');
+    list_span.forEach(el => el.classList.remove('active'));
+    // console.log(music_no);
+    // console.log(audio);
+  }
+
+  if (clicked.classList.contains('rep_shuf')) {
+    if (clicked === user_shuffle) {
+      random_number_state = random_number_state ? false : true;
+      // console.log(music_no);
+    }
+  }
 });
 
 list_span.forEach((el, i) => {
@@ -115,7 +154,7 @@ list_span.forEach((el, i) => {
 });
 
 rangeSlider.addEventListener('click', e => {
-  console.log(rangeSlider.value);
+  // console.log(rangeSlider.value);
 });
 
 btns_menu.addEventListener('click', function (e) {
