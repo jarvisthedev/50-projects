@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Mans not hot",
+    "artist": "Big Shaq",
+    "track": "./audio/17.mp4"
+  },
+  {
+    "name": "soweto",
+    "artist": "Victony & Tempoe",
+    "track": "./audio/16.mp4"
+  },
+  {
+    "name": "Girlfriend",
+    "artist": "Ruger",
+    "track": "./audio/15.mp4"
+  },
+  {
+    "name": "Rush",
+    "artist": "Ayra Starr",
+    "track": "./audio/14.mp4"
+  },
+  {
+    "name": "Gwagwalada",
+    "artist": "BNXN fka Buju, Kizz Daniel & Seyi Vibes",
+    "track": "./audio/13.mp4"
+  },
+  {
+    "name": "Shu-Peru",
+    "artist": "Kizz Daniel",
+    "track": "./audio/12.mp4"
+  },
+  {
+    "name": "Cough",
+    "artist": "Kizz Daniel",
+    "track": "./audio/11.mp4"
+  },
+  {
+    "name": "Unavailable",
+    "artist": "Davido",
+    "track": "./audio/9.mp4"
+  },
+  {
+    "name": "Who is your Guy?",
+    "artist": "Spyro ft Tiwa Savage",
+    "track": "./audio/8.mp4"
+  },
+  {
+    "name": "Costa Titch",
+    "artist": "Big Flexa ft. C'buda M",
+    "track": "./audio/7.mp4"
+  },
+  {
+    "name": "Nitongeze",
+    "artist": "Rayvanny Ft Diamond Platnumz",
+    "track": "./audio/10.mp4"
+  },
+  {
+    "name": "Shetani",
+    "artist": "Mbosso Ft Costa Titch & Alfa Kat",
+    "track": "./audio/6.mp4"
+  },
+  {
+    "name": "Properly",
+    "artist": "Nyashinski ft Femi One",
+    "track": "./audio/5.mp4"
+  },
+  {
+    "name": "Free",
+    "artist": "Nyaskinki",
+    "track": "./audio/2.mp4"
+  },
+  {
+    "name": "Beutiful",
+    "artist": "Nyaskinki",
+    "track": "./audio/3.mp4"
+  },
+  {
+    "name": "Good to Me",
+    "artist": "Nyashinski",
+    "track": "./audio/1.mp4"
+  },
+  {
+    "name": "Godzilla",
+    "artist": "Eminem",
+    "track": "./audio/4.mp4"
+  }
+]

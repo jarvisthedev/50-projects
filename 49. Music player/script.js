@@ -14,6 +14,7 @@ const hidden_container = document.querySelector('.container--3');
 const section = document.querySelector('section');
 const sectionLibrary = document.querySelector('.section--library');
 const sectionPlay = document.querySelector('.section-player');
+const rangeSlider = document.querySelector('.range-slider .slider');
 const btns_menu = document.querySelector('.btns');
 const btn_menu = document.querySelector('.btn-menu');
 const btn_close = document.querySelector('.btn-close');
@@ -33,6 +34,8 @@ const user_play = document.querySelector('.play');
 const user_pause = document.querySelector('.pause');
 const user_playnxt = document.querySelector('.playnxt');
 const user_repeat = document.querySelector('.repeat');
+
+let display = 'block';
 
 // HEADER NAV FUNCTIONALITY
 header.addEventListener('click', function (e) {
@@ -78,9 +81,11 @@ audio.addEventListener('timeupdate', () => {
   const time_current = audio.currentTime;
   const position = Math.floor((time_current * 100) / time_duration);
   user_time_current.textContent = timeFormat(time_current);
+  rangeSlider.value = position;
 
   if (Math.floor(time_duration) === Math.floor(time_current)) {
     Array.from(list_span).map(el => el.classList.remove('active'));
+    rangeSlider.value = 0;
     user_time_current.textContent = `0:00`;
     user_play.classList.remove('hidden');
     user_pause.classList.add('hidden');
@@ -92,19 +97,15 @@ audio.addEventListener('timeupdate', () => {
 music_controls.addEventListener('click', function (e) {
   e.preventDefault();
   const clicked = e.target;
-  if (clicked === user_play) {
-    user_pause.classList.remove('hidden');
-    clicked.classList.add('hidden');
-    audio.play();
-  } else if (clicked === user_pause) {
-    audio.pause();
-    user_play.classList.remove('hidden');
-    clicked.classList.add('hidden');
-  }
+
+  user_pause.classList.toggle('hidden');
+  clicked.classList.toggle('hidden');
+  if (clicked === user_play) audio.play();
+  if (clicked === user_pause) audio.pause();
 });
 
 list_span.forEach((el, i) => {
-  el.addEventListener('click', e => {
+  el.addEventListener('click', () => {
     list_span.forEach(e => e.classList.remove('active'));
     for (k = 0; k <= i; k++) list_span[k].classList.add('active');
 
@@ -113,7 +114,10 @@ list_span.forEach((el, i) => {
   });
 });
 
-let display = 'block';
+rangeSlider.addEventListener('click', e => {
+  console.log(rangeSlider.value);
+});
+
 btns_menu.addEventListener('click', function (e) {
   btn_close.classList.toggle('hidden');
   btn_menu.classList.toggle('hidden');
