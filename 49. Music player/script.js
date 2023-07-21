@@ -10,6 +10,14 @@
   }
 })();
 
+const img_container__1 = document.querySelector('.container--1 img');
+const trackNam = document.querySelector('.container--1 h1');
+const trackArtist = document.querySelector('.artist');
+const img_container__2 = document.querySelector('.currently-playing img');
+const trackName = document.querySelector('.song-play span');
+const trackDescription = document.querySelector('.song-description');
+const trackRelease = document.querySelector('.date-release span');
+
 const hidden_container = document.querySelector('.container--3');
 const section = document.querySelector('section');
 const sectionLibrary = document.querySelector('.section--library');
@@ -123,6 +131,9 @@ music_controls.addEventListener('click', function (e) {
     if (clicked === user_playnxt) music_no += 1;
     else music_no -= 1;
 
+    if (music_no > 17) music_no = 1;
+    else if (music_no <= 0) music_no = 17;
+
     music_no = random_number_state ? playRandom_music() : music_no;
 
     audio.src = ` ./audio/${music_no}.mp3`;
@@ -131,15 +142,13 @@ music_controls.addEventListener('click', function (e) {
     user_pause.classList.remove('hidden');
     user_play.classList.add('hidden');
     list_span.forEach(el => el.classList.remove('active'));
-    // console.log(music_no);
+    console.log(music_no);
     // console.log(audio);
   }
 
   if (clicked.classList.contains('rep_shuf')) {
-    if (clicked === user_shuffle) {
+    if (clicked === user_shuffle)
       random_number_state = random_number_state ? false : true;
-      // console.log(music_no);
-    }
   }
 });
 
@@ -153,10 +162,6 @@ list_span.forEach((el, i) => {
   });
 });
 
-rangeSlider.addEventListener('click', e => {
-  // console.log(rangeSlider.value);
-});
-
 btns_menu.addEventListener('click', function (e) {
   btn_close.classList.toggle('hidden');
   btn_menu.classList.toggle('hidden');
@@ -164,3 +169,25 @@ btns_menu.addEventListener('click', function (e) {
   hidden_container.style.display = display;
   display = display === 'none' ? 'block' : 'none';
 });
+
+const musicAPI_Data = async () => {
+  const res = await fetch('music.json');
+  const tracks = await res.json();
+  const track = tracks[11];
+
+  img_container__1.src = track.img_url;
+  trackNam.textContent = track.name;
+  trackArtist.textContent = track.artist;
+  img_container__2.src = track.img_url;
+  trackName.textContent = track.name;
+  trackDescription.textContent = `${track.name} by ${track.artist}  is a single and has one track(s)`;
+  trackRelease.textContent = `21/07/2022`;
+
+  audio.src = `${track.track}`;
+  update_audio_track();
+  // audio.play();
+  // user_pause.classList.remove('hidden');
+  // user_play.classList.add('hidden');
+};
+
+musicAPI_Data();

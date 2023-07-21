@@ -2,103 +2,103 @@
   {
     "name": "Mans not hot",
     "artist": "Big Shaq",
-    "track": "./audio/17.mp4",
+    "track": "./audio/17.mp3",
     "img_url": "./imgs/1.jpg"
   },
   {
     "name": "soweto",
     "artist": "Victony & Tempoe",
-    "track": "./audio/16.mp4",
+    "track": "./audio/16.mp3",
     "img_url": "./imgs/2.jpg"
   },
   {
     "name": "Girlfriend",
     "artist": "Ruger",
-    "track": "./audio/15.mp4",
+    "track": "./audio/15.mp3",
     "img_url": "./imgs/3.jpg"
   },
   {
     "name": "Rush",
     "artist": "Ayra Starr",
-    "track": "./audio/14.mp4",
+    "track": "./audio/14.mp3",
     "img_url": "./imgs/4.jpg"
   },
   {
     "name": "Gwagwalada",
     "artist": "BNXN fka Buju, Kizz Daniel & Seyi Vibes",
-    "track": "./audio/13.mp4",
+    "track": "./audio/13.mp3",
     "img_url": "./imgs/5.jpg"
   },
   {
     "name": "Shu-Peru",
     "artist": "Kizz Daniel",
-    "track": "./audio/12.mp4",
+    "track": "./audio/12.mp3",
     "img_url": "./imgs/6.jpg"
   },
   {
     "name": "Cough",
     "artist": "Kizz Daniel",
-    "track": "./audio/11.mp4",
+    "track": "./audio/11.mp3",
     "img_url": "./imgs/7.jpg"
   },
   {
     "name": "Unavailable",
     "artist": "Davido",
-    "track": "./audio/9.mp4",
+    "track": "./audio/9.mp3",
     "img_url": "./imgs/8.jpg"
   },
   {
     "name": "Who is your Guy?",
     "artist": "Spyro ft Tiwa Savage",
-    "track": "./audio/8.mp4",
+    "track": "./audio/8.mp3",
     "img_url": "./imgs/9.jpg"
   },
   {
     "name": "Costa Titch",
     "artist": "Big Flexa ft. C'buda M",
-    "track": "./audio/7.mp4",
+    "track": "./audio/7.mp3",
     "img_url": "./imgs/10.jpg"
   },
   {
     "name": "Nitongeze",
     "artist": "Rayvanny Ft Diamond Platnumz",
-    "track": "./audio/10.mp4",
+    "track": "./audio/10.mp3",
     "img_url": "./imgs/1.jpg"
   },
   {
     "name": "Shetani",
     "artist": "Mbosso Ft Costa Titch & Alfa Kat",
-    "track": "./audio/6.mp4",
+    "track": "./audio/6.mp3",
     "img_url": "./imgs/2.jpg"
   },
   {
     "name": "Properly",
     "artist": "Nyashinski ft Femi One",
-    "track": "./audio/5.mp4",
+    "track": "./audio/5.mp3",
     "img_url": "./imgs/3.jpg"
   },
   {
     "name": "Free",
     "artist": "Nyaskinki",
-    "track": "./audio/2.mp4",
+    "track": "./audio/2.mp3",
     "img_url": "./imgs/4.jpg"
   },
   {
     "name": "Beutiful",
     "artist": "Nyaskinki",
-    "track": "./audio/3.mp4",
+    "track": "./audio/3.mp3",
     "img_url": "./imgs/5.jpg"
   },
   {
     "name": "Good to Me",
     "artist": "Nyashinski",
-    "track": "./audio/1.mp4",
+    "track": "./audio/1.mp3",
     "img_url": "./imgs/6.jpg"
   },
   {
     "name": "Godzilla",
     "artist": "Eminem",
-    "track": "./audio/4.mp4",
+    "track": "./audio/4.mp3",
     "img_url": "./imgs/7.jpg"
   }
 ]
