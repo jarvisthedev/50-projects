@@ -23,7 +23,7 @@ const section = document.querySelector('section');
 const sectionLibrary = document.querySelector('.section--library');
 const sectionPlay = document.querySelector('.section-player');
 const rangeSlider = document.querySelector('.range-slider .slider');
-const btns_menu = document.querySelector('.btns');
+const btns = document.querySelector('.btns');
 const btn_menu = document.querySelector('.btn-menu');
 const btn_close = document.querySelector('.btn-close');
 
@@ -44,6 +44,8 @@ const user_playnxt = document.querySelector('.playnxt');
 const user_repeat = document.querySelector('.repeat');
 
 let display = 'block';
+let music_no = 0;
+let random_number_state = false;
 
 // HEADER NAV FUNCTIONALITY
 header.addEventListener('click', function (e) {
@@ -66,7 +68,8 @@ header.addEventListener('click', function (e) {
   }
 });
 
-// AUDIO TRACK CONTROLS
+const playRandom_music = () => Math.floor(Math.random() * 17 + 1);
+
 const timeFormat = time => {
   const hour = Math.floor(time / 3600);
   const minute = Math.floor(time / 60);
@@ -79,8 +82,51 @@ const timeFormat = time => {
   }${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
 };
 
-const playRandom_music = () => Math.floor(Math.random() * 17 + 1);
+list_span.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    list_span.forEach(e => e.classList.remove('active'));
+    for (k = 0; k <= i; k++) list_span[k].classList.add('active');
 
+    const time_go = (i * audio.duration) / 100;
+    audio.currentTime = time_go;
+  });
+});
+
+btns.addEventListener('click', function (e) {
+  btn_close.classList.toggle('hidden');
+  btn_menu.classList.toggle('hidden');
+
+  hidden_container.style.display = display;
+  display = display === 'none' ? 'block' : 'none';
+});
+
+// 1.
+const musicAPI_Data = async () => {
+  const res = await fetch('music.json');
+  const tracks = await res.json();
+  const track = tracks[music_no];
+
+  img_container__1.src = track.img_url;
+  trackNam.textContent = track.name;
+  trackArtist.textContent = track.artist;
+  img_container__2.src = track.img_url;
+  trackName.textContent = track.name;
+  trackDescription.textContent = `${track.name} by ${track.artist}  is a single and has one track(s)`;
+  trackRelease.textContent = `21/07/2022`;
+
+  audio.src = `${track.track}`;
+  // update_audio_track();
+  // audio.play();
+  // user_pause.classList.remove('hidden');
+  // user_play.classList.add('hidden');
+
+  // console.log(tracks);
+  // console.log(track);
+};
+
+musicAPI_Data();
+
+// 2.
 const update_audio_track = () => {
   audio.addEventListener(
     'loadedmetadata',
@@ -110,11 +156,9 @@ const update_audio_track = () => {
   });
 };
 
-update_audio_track();
+// update_audio_track();
 
-let music_no = 0;
-let random_number_state = false;
-
+// 3.
 music_controls.addEventListener('click', function (e) {
   e.preventDefault();
   const clicked = e.target;
@@ -151,43 +195,3 @@ music_controls.addEventListener('click', function (e) {
       random_number_state = random_number_state ? false : true;
   }
 });
-
-list_span.forEach((el, i) => {
-  el.addEventListener('click', () => {
-    list_span.forEach(e => e.classList.remove('active'));
-    for (k = 0; k <= i; k++) list_span[k].classList.add('active');
-
-    const time_go = (i * audio.duration) / 100;
-    audio.currentTime = time_go;
-  });
-});
-
-btns_menu.addEventListener('click', function (e) {
-  btn_close.classList.toggle('hidden');
-  btn_menu.classList.toggle('hidden');
-
-  hidden_container.style.display = display;
-  display = display === 'none' ? 'block' : 'none';
-});
-
-const musicAPI_Data = async () => {
-  const res = await fetch('music.json');
-  const tracks = await res.json();
-  const track = tracks[11];
-
-  img_container__1.src = track.img_url;
-  trackNam.textContent = track.name;
-  trackArtist.textContent = track.artist;
-  img_container__2.src = track.img_url;
-  trackName.textContent = track.name;
-  trackDescription.textContent = `${track.name} by ${track.artist}  is a single and has one track(s)`;
-  trackRelease.textContent = `21/07/2022`;
-
-  audio.src = `${track.track}`;
-  update_audio_track();
-  // audio.play();
-  // user_pause.classList.remove('hidden');
-  // user_play.classList.add('hidden');
-};
-
-musicAPI_Data();
