@@ -1,23 +1,17 @@
 .section--registation {
-  /* position: relative; */
-  /* display: grid; */
-  /* place-content: center; */
-}
-
-.grid {
-  display: grid;
 }
 
 .container {
   max-width: 98rem;
   margin: 4.8rem auto;
-  background-color: rgb(183, 34, 34);
+  border: 1px solid #f7f7f760;
+  border-radius: 0.8rem;
 }
 
 .section--registation .container {
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 2fr 1.5fr;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 
 .login-form {
@@ -33,19 +27,31 @@ label {
   margin-bottom: 0.4rem;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
 input {
   padding: 0.8rem 1.2rem;
   font-size: 1.4rem;
   outline: none;
   border: none;
   border-radius: 0.4rem;
-}
-
-input:not(:last-child) {
   margin-bottom: 1.4rem;
+  width: 100%;
+
+  background-color: transparent;
+  border: 1px solid #dedede30;
+  color: #dedede;
 }
 
-.login-form input {
+input:active {
+  background-color: transparent;
+}
+
+.password {
+  margin-bottom: 4.8rem;
+}
+
+input:last-child .login-form input {
   width: 100%;
 }
 
@@ -57,10 +63,7 @@ input:not(:last-child) {
 .login-form .primary-support {
   font-size: 1.6rem;
   align-self: center;
-}
-
-.section--registation .img-holder {
-  width: 70%;
+  margin-bottom: 4.8rem;
 }
 
 .section--registation img {
@@ -73,11 +76,26 @@ input:not(:last-child) {
 
 .btn--big {
   font-size: 1.6rem;
-
-  background-color: red;
+  border: 1px solid #dedede30;
   font-weight: 500;
   width: 100%;
   justify-self: center;
   padding: 0.8rem 1.2rem;
   border-radius: 0.4rem;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+
+.btn--sign-up {
+  color: black;
+  background-color: #dedede;
+}
+
+.btn--sign-in {
+  margin-bottom: 0.8rem;
+}
+
+.reminder {
+  text-align: center;
+  align-self: center;
 }
