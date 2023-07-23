@@ -1,17 +1,26 @@
 .section--registation {
+  padding: 2.8rem;
+}
+
+body {
+  background-color: #000;
+}
+
+.hidden {
+  display: none;
 }
 
 .container {
   max-width: 98rem;
   margin: 4.8rem auto;
   border: 1px solid #f7f7f760;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
 }
 
 .section--registation .container {
   grid-template-columns: 2fr 1.5fr;
   align-items: center;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1.2rem;
 }
 
 .login-form {
@@ -86,6 +95,7 @@ input:last-child .login-form input {
   cursor: pointer;
 }
 
+.btn--sign-in,
 .btn--sign-up {
   color: black;
   background-color: #dedede;
@@ -94,4 +104,9 @@ input:last-child .login-form input {
 .reminder {
   text-align: center;
   align-self: center;
+}
+
+.reminder a:link,
+.reminder a:visited {
+  color: aqua;
 }

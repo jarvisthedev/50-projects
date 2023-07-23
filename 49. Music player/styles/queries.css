@@ -94,6 +94,17 @@
   .music-list:not(:last-child) {
     margin-bottom: 0.8rem;
   }
+
+  /* SECTION LOGIN */
+
+  .section--registation .container {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .section--registation .img-holder {
+    grid-row: 1/2;
+  }
 }
 
 /* ////////////////////////////////// */
