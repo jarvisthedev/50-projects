@@ -21,10 +21,13 @@ body {
   color: #f7f7f7;
   background-color: #222;
   position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr;
   margin: 0 auto;
   width: 100%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 ul {
@@ -42,8 +45,6 @@ main {
 .section {
   padding: 3.2rem 2.8rem;
   border-radius: 2.8rem;
-  top: 0;
-  left: 0;
   max-width: 132rem;
   width: 100%;
 }

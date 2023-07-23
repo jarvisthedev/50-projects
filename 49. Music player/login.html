@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./styles/queries.css" />
   </head>
   <body>
-    <div class="registration-page">
-      <form class="login-form" action="login form" method="post">
-        <h1 class="primary-text">Create an account</h1>
-        <p class="primary-support">Sign up now and access exclusive tunes</p>
+    <section class="section--registation">
+      <div class="container grid">
+        <form class="login-form" action="login form" method="post">
+          <h1 class="primary-text">Create an account</h1>
+          <p class="primary-support">Sign up now and access exclusive tunes</p>
 
-        <label for="first-name">Full name</label>
-        <input name="first-name" type="text" />
+          <label for="name">Your name</label>
+          <input type="text" name="name" placeholder="Joe Doe" class="name" />
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" name="email" class="email" />
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            class="password"
+          />
 
-        <button class="btn btn--sign-up">Create Account</button>
-        <p class="reminder">Already have an account? <a href="#">login</a></p>
-
-        <!-- <button class="btn btn--sigh--in">Sign in</button> -->
-      </form>
-    </div>
-    <div class="img-holder">
-      <img src="./imgs/registration/dus.jpg" alt="login img" />
-    </div>
+          <button class="btns btn--big btn--sign-up">Create Account</button>
+          <button class="btns btn--big btn--sigh--in">Sign in</button>
+          <p class="reminder">Already have an account? <a href="#">login</a></p>
+        </form>
+        <div class="img-holder">
+          <img src="./imgs/registration/dus.jpg" alt="login img" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
