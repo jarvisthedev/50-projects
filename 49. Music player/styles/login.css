@@ -82,17 +82,13 @@ input:last-child .login-form input {
   justify-self: center;
   padding: 0.8rem 1.2rem;
   border-radius: 0.4rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 0.8rem;
   cursor: pointer;
 }
 
 .btn--sign-up {
   color: black;
   background-color: #dedede;
-}
-
-.btn--sign-in {
-  margin-bottom: 0.8rem;
 }
 
 .reminder {
