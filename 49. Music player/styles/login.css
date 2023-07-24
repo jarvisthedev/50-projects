@@ -1,5 +1,5 @@
 .section--registation {
-  padding: 2.8rem;
+  padding: 2.8rem 0;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 
 .container {
   max-width: 98rem;
-  margin: 4.8rem auto;
+  margin: 2.4rem auto;
   border: 1px solid #f7f7f760;
   border-radius: 1rem;
 }
