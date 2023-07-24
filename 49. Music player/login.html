@@ -9,19 +9,34 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/login.css" />
     <link rel="stylesheet" href="./styles/queries.css" />
+
+    <!-- <script defer src="./script.js"></script> -->
+    <script defer src="./login.js"></script>
   </head>
   <body>
     <section class="section--registation">
       <div class="container grid">
-        <form class="login-form" action="login form" method="post">
+        <form class="sign-up login-form" action="login form" method="post">
           <h1 class="primary-text">Create an account</h1>
           <p class="primary-support">Sign up now and access exclusive music</p>
 
           <label for="name">Your name</label>
-          <input type="text" name="name" placeholder="Joe Doe" class="name" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Joe Doe"
+            class="name"
+            required
+          />
 
           <label for="email">Email</label>
-          <input type="email" placeholder="Email" name="email" class="email" />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            class="email"
+            required
+          />
 
           <label for="password">Password</label>
           <input
@@ -29,9 +44,14 @@
             placeholder="Password"
             name="password"
             class="password"
+            required
           />
 
-          <button class="btns btn--big btn--sign-up">Create Account</button>
+          <input
+            class="btns btn--big btn--sign-up"
+            type="submit"
+            value="Create Account"
+          />
           <p class="reminder">Already have an account? <a href="#">login</a></p>
         </form>
         <div class="img-holder">
@@ -39,23 +59,34 @@
         </div>
       </div>
 
-      <div class="container grid">
+      <div class="container grid hidden">
         <form class="login-form" action="login form" method="post">
           <h1 class="primary-text">Welcome back</h1>
           <p class="primary-support">Log in, get in track</p>
 
           <label for="email">Email</label>
-          <input type="email" placeholder="Email" name="email" class="email" />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+            class="email"
+          />
 
           <label for="password">Password</label>
           <input
             type="password"
             placeholder="Password"
             name="password"
+            required
             class="password"
           />
 
-          <button class="btns btn--big btn--sign-in">Sign in</button>
+          <input
+            class="btns btn--big btn--sign-in"
+            type="submit"
+            value="Sign in"
+          />
           <p class="reminder">Don't have an account? <a href="#">sighup</a></p>
         </form>
         <div class="img-holder">
