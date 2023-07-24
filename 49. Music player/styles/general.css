@@ -28,7 +28,6 @@ body {
 .body {
   display: grid;
   grid-template-columns: auto 1fr;
-  overflow: hidden;
 }
 
 ul {
