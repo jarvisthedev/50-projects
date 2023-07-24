@@ -44,3 +44,28 @@ section_reg.addEventListener('click', function (e) {
     signupForm.classList.toggle('hidden');
   }
 });
+
+// Emaill verificaion
+const validateEmail = email => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const validate = mail => {
+  if (validateEmail(mail)) {
+    console.log('valid email');
+  } else {
+    console.log('Invalid email');
+  }
+
+  // .focus()
+  return false;
+};
+
+// Password verificaion
+function verifyPassword(password) {
+  const pattern =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}|:"<>?~`[\]\\;',./])(?!.*\s).{8,}$/;
+  return pattern.test(password);
+}
