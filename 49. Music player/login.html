@@ -43,7 +43,7 @@
           <label for="password">Password</label>
           <!-- <input
             type="password"
-            placeholder="Password"
+            
             name="password"
             class="password"
             required
@@ -52,6 +52,7 @@
           <input
             type="password"
             class="password"
+            placeholder="Password"
             name="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -65,8 +66,8 @@
           />
           <p class="reminder">Already have an account? <a href="#">login</a></p>
         </form>
-        <div class="img-holder">
-          <img src="./imgs/registration/jair.jpg" alt="login img" />
+        <div role="img" aria-label="Signup supporting img" class="img-holder">
+          <img src="./imgs/registration/jair.jpg" alt="signup supporting img" />
         </div>
       </div>
 
@@ -81,23 +82,15 @@
             placeholder="Email"
             name="email"
             required
-            class="email"
+            class="email mail2"
           />
 
           <label for="password">Password</label>
-          <!-- <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-            class="password"
-          /> -->
           <input
             type="password"
-            class="password"
             name="password"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            class="password psrd2"
+            placeholder="Password"
             required
           />
 
@@ -108,10 +101,8 @@
           />
           <p class="reminder">Don't have an account? <a href="#">sighup</a></p>
         </form>
-        <div class="img-holder">
-          <img src="./imgs/registration/dus.jpg" alt="login img" />
-          <!-- <img src="./imgs/registration/jair.jpg" alt="login img" /> -->
-          <!-- <img src="./imgs/registration/mpu.jpg" alt="login img" /> -->
+        <div role="img" aria-label="Signup supporting img" class="img-holder">
+          <img src="./imgs/registration/dus.jpg" alt="login supporting img" />
         </div>
       </div>
     </section>
