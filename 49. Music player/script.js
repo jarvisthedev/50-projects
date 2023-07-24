@@ -1,6 +1,6 @@
 `use strict`;
 
-// CREATING THE UI CIRCULAR SPANS
+// CREATING THE UI CIRCULAR PROGRESS BAR
 (() => {
   const progressBar = document.querySelector('.container--1 .img-holder');
   for (i = 0; i < 100; i++) {
@@ -19,7 +19,7 @@ const trackDescription = document.querySelector('.song-description');
 const trackRelease = document.querySelector('.date-release span');
 
 const hidden_container = document.querySelector('.container--3');
-const section = document.querySelector('section');
+const section = document.querySelectorAll('section');
 const sectionLibrary = document.querySelector('.section--library');
 const sectionPlay = document.querySelector('.section-player');
 const rangeSlider = document.querySelector('.range-slider .slider');

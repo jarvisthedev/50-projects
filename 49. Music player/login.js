@@ -8,14 +8,14 @@ const password = document.querySelector('.password');
 const mail2 = document.querySelector('.mail2');
 const psrd2 = document.querySelector('.psrd2');
 
-const validateEmail = email => {
-  return email.match(
+const validateData = data => {
+  return data.match(
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   );
 };
 
-const validate = mail => {
-  if (validateEmail(mail)) return true;
+const validateEmail = mail => {
+  if (validateData(mail)) return true;
   else return false;
 };
 
@@ -37,12 +37,12 @@ section_reg.addEventListener('click', function (e) {
   const password_val = password.value;
 
   if (clicked.classList.contains('btn--sign-up'))
-    if (name_val && validate(email_val) && verifyPassword(password_val))
+    if (name_val && validateEmail(email_val) && verifyPassword(password_val))
       window.location.href = 'index.html';
     else alert('Please Enter valid email and password then try again.');
 
   if (clicked.classList.contains('btn--sign-in'))
-    if (verifyPassword(psrd2.value) && validate(mail2.value))
+    if (verifyPassword(psrd2.value) && validateEmail(mail2.value))
       window.location.href = 'index.html';
     else alert('Invalid credentials. Please try again.');
 

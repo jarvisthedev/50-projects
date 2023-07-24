@@ -36,9 +36,8 @@ label {
   margin-bottom: 0.4rem;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:focus,
-input {
+input,
+input:active {
   padding: 0.8rem 1.2rem;
   font-size: 1.4rem;
   outline: none;

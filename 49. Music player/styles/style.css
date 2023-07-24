@@ -242,6 +242,7 @@ input[type='range']::-ms-fill-upper {
 .container--2 {
   gap: 2.8rem;
   border-radius: 2.4rem;
+  /* background-color: #fff; */
 }
 
 .container--2 .img-holder {
