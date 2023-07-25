@@ -198,3 +198,19 @@ const update_audio_track = () => {
     if (position < 100) list_span[position].classList.add('active');
   });
 };
+
+// REQUESTION DATA FROM AN API
+
+const client_id = '6a2f209f07c34db6afc027fb4473fe2e';
+const client_secret = '15818ba1439748c9a2d9a0022afac9a5';
+
+const id = `11dFghVXANMlKmJXsNCbNl`;
+
+const API = {
+  GET: `https://api.spotify.com/v1/tracks/${id}`,
+  Authorization: 'Bearer 1POdFZRZbvb...qqillRxMr2z',
+};
+// 'Content-Type': 'application/x-www-form-urlencoded',
+// grant_type: `client_credentials&client_id=${client_id}&client_secret=${client_secret}`,
+
+// http GET https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl \
