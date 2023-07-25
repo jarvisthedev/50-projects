@@ -3,7 +3,7 @@
 // CREATING THE UI CIRCULAR PROGRESS BAR
 (() => {
   const progressBar = document.querySelector('.container--1 .img-holder');
-  for (i = 0; i < 100; i++) {
+  for (let i = 0; i < 100; i++) {
     let span = document.createElement('span');
     span.style.setProperty('--i', i);
     progressBar.append(span);
@@ -200,17 +200,31 @@ const update_audio_track = () => {
 };
 
 // REQUESTION DATA FROM AN API
+const token =
+  'BQD5anbgsYQN1zh0C7-NNQ4193ZPnMhemNmK3wbyIRc3FFplje5QPiT-aSXchNSGl5SlHf-bMi4bNflDYMmIK7vClE9y980Z5-LSAcqpZkD_feQQw8_Z7Dt6r1U2mecEtnZ0xcMzre_Be9ZGLNpKy1P87KDLRZOhHjJa3Q3WJvji0gnUUsioXqFQjXjV6qDf5EZGUmoqH8L8T3Azo3HSN2eQMd6Tt7kDFgpovP4bjtcH-xKWchVEc_CGwqNIQCEVYTbwViWbt-LD7MutDwuMYA2f';
+async function fetchWebApi(endpoint, method, body) {
+  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    method,
+    body: JSON.stringify(body),
+  });
+  return await res.json();
+}
 
-const client_id = '6a2f209f07c34db6afc027fb4473fe2e';
-const client_secret = '15818ba1439748c9a2d9a0022afac9a5';
+async function getTopTracks() {
+  return (
+    await fetchWebApi('v1/me/top/tracks?time_range=short_term&limit=5', 'GET')
+  ).items;
+}
 
-const id = `11dFghVXANMlKmJXsNCbNl`;
+const topTracks = await getTopTracks();
+console.log(
+  topTracks?.map(
+    ({ name, artists }) =>
+      `${name} by ${artists.map(artist => artist.name).join(', ')}`
+  )
+);
 
-const API = {
-  GET: `https://api.spotify.com/v1/tracks/${id}`,
-  Authorization: 'Bearer 1POdFZRZbvb...qqillRxMr2z',
-};
-// 'Content-Type': 'application/x-www-form-urlencoded',
-// grant_type: `client_credentials&client_id=${client_id}&client_secret=${client_secret}`,
-
-// http GET https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl \
+console.log(topTracks);
