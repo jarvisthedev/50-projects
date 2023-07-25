@@ -219,15 +219,62 @@ async function getTopTracks() {
   ).items;
 }
 
+// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
+const token_ =
+  'BQCYrnY4sdAe-5N6DLlq_wDOofkRCbHidmwAeJc9LqxslLgYdVjAOJ2wuRx73Gg0hX4Oe-POC81RjKEFl8pD3r4v7by2znJFfFF_o3p5nGheaVw6wqLCYbm3GA6j7wtsLwh3gSRzVxiblT-QFfHj7edSopZ63lV_8kr6vyir63bs5oAh_ZuoPQcfP0cFEkbjgk0ISVeaM6841QD0tIknldWFRLwOI_lBowB8CeSI4jc66EQkIDSGf1IRRidkXsQaZxMx1SvHkBcOEOgISjAJpFMV';
+async function fetchWebApi(endpoint, method, body) {
+  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token_}`,
+    },
+    method,
+    body: JSON.stringify(body),
+  });
+  return await res.json();
+}
+
+const topTracksIds = [
+  '4T6bmYSQwupoWPbUQHp4lU',
+  '0TTOsyDKykWhCh3qDd9wMY',
+  '19z3b1aFR4hL3H6peU6cGm',
+  '2K7lwIM77amplCz8FCA0RA',
+  '35k0jeXz6vwKCasj2cRkSE',
+];
+
+async function getRecommendations() {
+  return (
+    await fetchWebApi(
+      `v1/recommendations?limit=5&seed_tracks=${topTracksIds.join(',')}`,
+      'GET'
+    )
+  ).tracks;
+}
+
+const recommendedTracks = await getRecommendations();
+// console.log(
+//   recommendedTracks.map(
+//     ({ name, artists }) =>
+//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
+//   )
+// );
+
+async function similarArtists() {
+  // "https://api.spotify.com/"
+  return (await fetchWebApi('v1/me/shows?offset=0&limit=20', 'GET')).items;
+}
+
 const topTracks = await getTopTracks();
-console.log(
-  topTracks?.map(
-    ({ name, artists }) =>
-      `${name} by ${artists.map(artist => artist.name).join(', ')}`
-  )
-);
+const similarArtist = await similarArtists();
+// console.log(
+//   topTracks?.map(
+//     ({ name, artists }) =>
+//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
+//   )
+// );
 
 console.log(topTracks);
+console.log(recommendedTracks);
+console.log(similarArtist);
 
 // up next songs
 // similar artists
