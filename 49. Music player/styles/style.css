@@ -466,7 +466,9 @@ input[type='range']::-ms-fill-upper {
 .more-like {
   grid-template-columns: auto 1fr;
   column-gap: 1.2rem;
-  margin-bottom: 1.8rem;
+  row-gap: 0.4rem;
+  margin-bottom: -1rem;
+  grid-column: 1/-1;
 }
 
 .more-like .img-holder {
@@ -476,18 +478,23 @@ input[type='range']::-ms-fill-upper {
 }
 
 .more-like .p--1 {
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: end;
   text-transform: uppercase;
 }
 
 .more-like .p--2 {
-  font-size: 2.2rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 600;
   text-transform: capitalize;
   color: #f7f7f7;
 }
 
 .feed-detail {
-  margin-bottom: 2.8rem;
+  margin-bottom: 4.2rem;
+}
+
+.feed-text {
+  color: #f7f7f7;
 }
