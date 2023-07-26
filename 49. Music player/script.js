@@ -266,3 +266,41 @@ const update_audio_track = () => {
 //       `${name} by ${artists.map(artist => artist.name).join(', ')}`
 //   )
 // );
+
+// 1.
+// TOP HIPHOP SONGS
+// YOUR SHOWS
+// SHOWS YOU MIGHT LIKE
+// RECENTLY PLAYED
+// MORE OF WHAT YOU LIKE
+// YOUR TOP MIXES
+// EDITORS PICKS
+// POPULAR RADIO
+// MADE FOR YOU
+// TODAY'S BIGGEST HITS
+// BEST OF ARTISTS
+// RECOMMENDED RADIO
+//
+//
+//
+
+// 2.
+// DISOVER MORE FROM
+// FIREBOY
+
+// DISOVER MORE FROM
+// DAVIDO
+
+// DISOVER MORE FROM
+// REMA
+
+// DISOVER MORE FROM
+// EMINEM
+
+// 3.
+// POPULAR ALBUMS
+
+// MORE LIKE
+// ALWZ SNNY
+
+// UNIQUELY YOURS
