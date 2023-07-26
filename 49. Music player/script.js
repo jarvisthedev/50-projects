@@ -199,69 +199,70 @@ const update_audio_track = () => {
   });
 };
 
-// REQUESTION DATA FROM AN API
-const token =
-  'BQCI2twJe1iEr_RsFzue_cUe6ZaVEpOLkLNr3d8LQy0KMMdq_CXCgrCgGmpcS_yBtKxCT3Kod8OCTfk0dQrhE-6N2qkbjgdIM-HExidL-_Z1T92rpRT4U_MS2nR8g_jmiwmouLBtz22nlN-M-BnISqoNLcXxv04CPpWWg5RKPOLIESKIbj3hG-xGOQdNoFyBrz3wfQYLiNejo6XlBZcB7jElCYA82fcNQ0cqbwxgw5awgFAtJBKz1Dik5sZVpL7oQpjRbgPTWaWo9NM_EN17iP6r';
+// UNLOCK
 
-async function fetchWebApi(endpoint, method, body) {
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    method,
-    body: JSON.stringify(body),
-  });
-  return await res.json();
-}
+// // REQUESTION DATA FROM AN API
+// const token =
+//   'BQCI2twJe1iEr_RsFzue_cUe6ZaVEpOLkLNr3d8LQy0KMMdq_CXCgrCgGmpcS_yBtKxCT3Kod8OCTfk0dQrhE-6N2qkbjgdIM-HExidL-_Z1T92rpRT4U_MS2nR8g_jmiwmouLBtz22nlN-M-BnISqoNLcXxv04CPpWWg5RKPOLIESKIbj3hG-xGOQdNoFyBrz3wfQYLiNejo6XlBZcB7jElCYA82fcNQ0cqbwxgw5awgFAtJBKz1Dik5sZVpL7oQpjRbgPTWaWo9NM_EN17iP6r';
 
-async function getTopTracks() {
-  return (
-    await fetchWebApi('v1/me/top/tracks?time_range=short_term&limit=5', 'GET')
-  ).items;
-}
+// async function fetchWebApi(endpoint, method, body) {
+//   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//     method,
+//     body: JSON.stringify(body),
+//   });
+//   return await res.json();
+// }
 
-const topTracksIds = [
-  '4T6bmYSQwupoWPbUQHp4lU',
-  '0TTOsyDKykWhCh3qDd9wMY',
-  '19z3b1aFR4hL3H6peU6cGm',
-  '2K7lwIM77amplCz8FCA0RA',
-  '35k0jeXz6vwKCasj2cRkSE',
-];
+// async function getTopTracks() {
+//   return (
+//     await fetchWebApi('v1/me/top/tracks?time_range=short_term&limit=5', 'GET')
+//   ).items;
+// }
 
-async function getRecommendations() {
-  return (
-    await fetchWebApi(
-      `v1/recommendations?limit=5&seed_tracks=${topTracksIds.join(',')}`,
-      'GET'
-    )
-  ).tracks;
-}
+// const topTracksIds = [
+//   '4T6bmYSQwupoWPbUQHp4lU',
+//   '0TTOsyDKykWhCh3qDd9wMY',
+//   '19z3b1aFR4hL3H6peU6cGm',
+//   '2K7lwIM77amplCz8FCA0RA',
+//   '35k0jeXz6vwKCasj2cRkSE',
+// ];
 
-const recommendedTracks = await getRecommendations();
-const topTracks = await getTopTracks();
+// async function getRecommendations() {
+//   return (
+//     await fetchWebApi(
+//       `v1/recommendations?limit=5&seed_tracks=${topTracksIds.join(',')}`,
+//       'GET'
+//     )
+//   ).tracks;
+// }
 
-console.log(topTracks);
-console.log(
-  topTracks?.map(
-    ({ name, artists }) =>
-      `${name} by ${artists.map(artist => artist.name).join(', ')}`
-  )
-);
+// const recommendedTracks = await getRecommendations();
+// const recommendedTracks_1 = await getRecommendations();
+// const recommendedTracks_2 = await getRecommendations();
+// const recommendedTracks_3 = await getRecommendations();
+// const topTracks = await getTopTracks();
 
-//
-//
-//
-console.log(recommendedTracks);
-console.log(
-  recommendedTracks.map(
-    ({ name, artists }) =>
-      `${name} by ${artists.map(artist => artist.name).join(', ')}`
-  )
-);
+// console.log(topTracks);
+// console.log(
+//   topTracks?.map(
+//     ({ name, artists }) =>
+//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
+//   )
+// );
 
-// up next songs
-// similar artists
-// Made for you
-// New releases
-// Playlist
-// Date produced
+// //
+// //
+// //
+// console.log(recommendedTracks);
+// console.log(recommendedTracks_1);
+// console.log(recommendedTracks_2);
+// console.log(recommendedTracks_3);
+// console.log(
+//   recommendedTracks.map(
+//     ({ name, artists }) =>
+//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
+//   )
+// );
