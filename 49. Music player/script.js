@@ -201,7 +201,8 @@ const update_audio_track = () => {
 
 // REQUESTION DATA FROM AN API
 const token =
-  'BQD5anbgsYQN1zh0C7-NNQ4193ZPnMhemNmK3wbyIRc3FFplje5QPiT-aSXchNSGl5SlHf-bMi4bNflDYMmIK7vClE9y980Z5-LSAcqpZkD_feQQw8_Z7Dt6r1U2mecEtnZ0xcMzre_Be9ZGLNpKy1P87KDLRZOhHjJa3Q3WJvji0gnUUsioXqFQjXjV6qDf5EZGUmoqH8L8T3Azo3HSN2eQMd6Tt7kDFgpovP4bjtcH-xKWchVEc_CGwqNIQCEVYTbwViWbt-LD7MutDwuMYA2f';
+  'BQCI2twJe1iEr_RsFzue_cUe6ZaVEpOLkLNr3d8LQy0KMMdq_CXCgrCgGmpcS_yBtKxCT3Kod8OCTfk0dQrhE-6N2qkbjgdIM-HExidL-_Z1T92rpRT4U_MS2nR8g_jmiwmouLBtz22nlN-M-BnISqoNLcXxv04CPpWWg5RKPOLIESKIbj3hG-xGOQdNoFyBrz3wfQYLiNejo6XlBZcB7jElCYA82fcNQ0cqbwxgw5awgFAtJBKz1Dik5sZVpL7oQpjRbgPTWaWo9NM_EN17iP6r';
+
 async function fetchWebApi(endpoint, method, body) {
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
     headers: {
@@ -217,20 +218,6 @@ async function getTopTracks() {
   return (
     await fetchWebApi('v1/me/top/tracks?time_range=short_term&limit=5', 'GET')
   ).items;
-}
-
-// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
-const token_ =
-  'BQCYrnY4sdAe-5N6DLlq_wDOofkRCbHidmwAeJc9LqxslLgYdVjAOJ2wuRx73Gg0hX4Oe-POC81RjKEFl8pD3r4v7by2znJFfFF_o3p5nGheaVw6wqLCYbm3GA6j7wtsLwh3gSRzVxiblT-QFfHj7edSopZ63lV_8kr6vyir63bs5oAh_ZuoPQcfP0cFEkbjgk0ISVeaM6841QD0tIknldWFRLwOI_lBowB8CeSI4jc66EQkIDSGf1IRRidkXsQaZxMx1SvHkBcOEOgISjAJpFMV';
-async function fetchWebApi(endpoint, method, body) {
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${token_}`,
-    },
-    method,
-    body: JSON.stringify(body),
-  });
-  return await res.json();
 }
 
 const topTracksIds = [
@@ -251,30 +238,26 @@ async function getRecommendations() {
 }
 
 const recommendedTracks = await getRecommendations();
-// console.log(
-//   recommendedTracks.map(
-//     ({ name, artists }) =>
-//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
-//   )
-// );
-
-async function similarArtists() {
-  // "https://api.spotify.com/"
-  return (await fetchWebApi('v1/me/shows?offset=0&limit=20', 'GET')).items;
-}
-
 const topTracks = await getTopTracks();
-const similarArtist = await similarArtists();
-// console.log(
-//   topTracks?.map(
-//     ({ name, artists }) =>
-//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
-//   )
-// );
 
 console.log(topTracks);
+console.log(
+  topTracks?.map(
+    ({ name, artists }) =>
+      `${name} by ${artists.map(artist => artist.name).join(', ')}`
+  )
+);
+
+//
+//
+//
 console.log(recommendedTracks);
-console.log(similarArtist);
+console.log(
+  recommendedTracks.map(
+    ({ name, artists }) =>
+      `${name} by ${artists.map(artist => artist.name).join(', ')}`
+  )
+);
 
 // up next songs
 // similar artists
@@ -282,4 +265,3 @@ console.log(similarArtist);
 // New releases
 // Playlist
 // Date produced
-//
