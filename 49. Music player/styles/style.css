@@ -92,7 +92,6 @@
   gap: 4.8rem;
 
   overflow: auto;
-  /* height: 100vh; */
 }
 
 /* /////////////////////////////// */
@@ -438,4 +437,57 @@ input[type='range']::-ms-fill-upper {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
+}
+
+/* /////////////////////////////// */
+/* SECTION TRENDING */
+/* /////////////////////////////// */
+
+.section--trending {
+  background-color: #1b323c;
+}
+
+.section--trending .container {
+  gap: 2.8rem;
+}
+
+/* /////////////////////////////// */
+/* SECTION FEED */
+/* /////////////////////////////// */
+
+.section--feed {
+  background-color: #1b323c;
+}
+
+.section--feed .container {
+  gap: 2.8rem;
+}
+
+.more-like {
+  grid-template-columns: auto 1fr;
+  column-gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.more-like .img-holder {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.more-like .p--1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.more-like .p--2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #f7f7f7;
+}
+
+.feed-detail {
+  margin-bottom: 2.8rem;
 }
