@@ -77,7 +77,7 @@
 /* SECTION PLAYER */
 /* /////////////////////////////// */
 .section-player {
-  background-color: #1b323c;
+  /* background-color: #1b323c; */
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -384,7 +384,8 @@ input[type='range']::-ms-fill-upper {
 }
 
 .btn {
-  font-size: 3.2rem;
+  /* font-size: 3.2rem; */
+  font-size: 2.4rem;
   border: 2px solid #595959;
   padding: 0.8rem;
   border-radius: 50%;
@@ -394,7 +395,7 @@ input[type='range']::-ms-fill-upper {
 /* SECTION LIBRARY */
 /* /////////////////////////////// */
 .section--library {
-  background-color: #1b323c;
+  /* background-color: #1b323c; */
 }
 
 .section--library .container {
@@ -444,7 +445,7 @@ input[type='range']::-ms-fill-upper {
 /* /////////////////////////////// */
 
 .section--trending {
-  background-color: #1b323c;
+  /* background-color: #1b323c; */
 }
 
 .outer-container--1 {
@@ -483,7 +484,7 @@ input[type='range']::-ms-fill-upper {
 /* SECTION FEED */
 /* /////////////////////////////// */
 .section--feed {
-  background-color: #1b323c;
+  /* background-color: #1b323c; */
 }
 
 .section--feed .container {
@@ -491,7 +492,8 @@ input[type='range']::-ms-fill-upper {
 }
 
 .section--feed .state--1 {
-  gap: 1.2rem;
+  column-gap: 1.2rem;
+  row-gap: 1.8rem;
 }
 
 .section--feed .img-holder {

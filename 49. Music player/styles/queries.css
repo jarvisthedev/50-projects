@@ -34,22 +34,9 @@
 }
 
 /* ////////////////////////////////// */
-/* LANDSCAPE TABLETS (768px) */
+/* LANDSCAPE TABLETS (816px) */
 /* ////////////////////////////////// */
-@media (max-width: 48em) {
-  .grid-template--5 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ////////////////////////////////// */
-/* PORTRAIT TABLETS (680PX) */
-/* ////////////////////////////////// */
-@media (max-width: 42.5rem) {
-  html {
-    font-size: 50%;
-  }
-
+@media (max-width: 51em) {
   .grid-template--5 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -60,7 +47,7 @@
   }
 
   .music-range {
-    padding: 0 2.4rem;
+    padding: 0 7.2rem;
   }
 
   .containers-colletcion {
@@ -71,10 +58,12 @@
     display: block;
   }
 
+  /*  */
   .container--3 {
     position: absolute;
     backdrop-filter: blur(2rem);
-    height: 100vh;
+    height: 80%;
+    width: 80%;
     display: none;
   }
 
@@ -93,6 +82,19 @@
 
   .music-list:not(:last-child) {
     margin-bottom: 0.8rem;
+  }
+}
+
+/* ////////////////////////////////// */
+/* PORTRAIT TABLETS (680PX) */
+/* ////////////////////////////////// */
+@media (max-width: 42.5rem) {
+  html {
+    font-size: 50%;
+  }
+
+  .grid-template--5 {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* SECTION LOGIN */
@@ -116,6 +118,10 @@
 
   .section {
     padding: 3.2rem 0.8rem 3.2rem 1.2rem;
+  }
+
+  .music-range {
+    padding: 0 3.6rem;
   }
 }
 

@@ -16,12 +16,16 @@ const trackArtist = document.querySelector('.artist');
 const img_container__2 = document.querySelector('.currently-playing img');
 const trackName = document.querySelector('.song-play span');
 const trackDescription = document.querySelector('.song-description');
-const trackRelease = document.querySelector('.date-release span');
+const trackRelease_date = document.querySelector('.date-release span');
 
 const hidden_container = document.querySelector('.container--3');
 const section = document.querySelectorAll('section');
-const sectionLibrary = document.querySelector('.section--library');
+const sectionFeed = document.querySelector('.section--feed');
+const sectionTrending = document.querySelector('.section--trending');
 const sectionPlay = document.querySelector('.section-player');
+const sectionFavourite = document.querySelector('.section--favourite');
+const sectionLibrary = document.querySelector('.section--library');
+
 const rangeSlider = document.querySelector('.range-slider .slider');
 const btns = document.querySelector('.btns');
 const btn_menu = document.querySelector('.btn-menu');
@@ -56,16 +60,18 @@ header.addEventListener('click', function (e) {
   if (navParent) {
     navDetails.forEach(el => el.classList.remove('active-page'));
     navParent.classList.add('active-page');
+    section.forEach(el => el.classList.add('hidden'));
 
-    if (navParent.classList.contains('header-library')) {
-      section.forEach(el => el.classList.add('hidden'));
+    if (navParent.classList.contains('header-library'))
       sectionLibrary.classList.remove('hidden');
-      sectionPlay.classList.add('hidden');
-    } else if (navParent.classList.contains('header-play')) {
-      section.forEach(el => el.classList.add('hidden'));
-      sectionLibrary.classList.add('hidden');
+    else if (navParent.classList.contains('header-music-player'))
       sectionPlay.classList.remove('hidden');
-    }
+    else if (navParent.classList.contains('header-feed'))
+      sectionFeed.classList.remove('hidden');
+    else if (navParent.classList.contains('header-trending'))
+      sectionTrending.classList.remove('hidden');
+    else if (navParent.classList.contains('header-favourite'))
+      sectionFavourite.classList.remove('hidden');
   }
 });
 
@@ -110,7 +116,7 @@ const update_track_UI = songs => {
   img_container__2.src = track.img_url;
   trackName.textContent = track.name;
   trackDescription.textContent = `${track.name} by ${track.artist}  is a single and has one track(s)`;
-  trackRelease.textContent = `21/07/2022`;
+  trackRelease_date.textContent = track.release_date;
 
   audio.src = `${track.track}`;
   update_audio_track();
