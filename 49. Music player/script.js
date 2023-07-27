@@ -103,6 +103,7 @@ btns.addEventListener('click', function (e) {
   btn_close.classList.toggle('hidden');
   btn_menu.classList.toggle('hidden');
 
+  sectionPlay.style.backgroundColor = '#1b323c';
   hidden_container.style.display = display;
   display = display === 'none' ? 'block' : 'none';
 });
@@ -115,10 +116,10 @@ const update_track_UI = songs => {
   trackArtist.textContent = track.artist;
   img_container__2.src = track.img_url;
   trackName.textContent = track.name;
-  trackDescription.textContent = `${track.name} by ${track.artist}  is a single and has one track(s)`;
   trackRelease_date.textContent = track.release_date;
-
   audio.src = `${track.track}`;
+  trackDescription.textContent = `${track.name} by ${track.artist}  is a single and has one track(s)`;
+
   update_audio_track();
 };
 
@@ -166,10 +167,9 @@ music_controls.addEventListener('click', function (e) {
     list_span.forEach(el => el.classList.remove('active'));
   }
 
-  if (clicked.classList.contains('rep_shuf')) {
+  if (clicked.classList.contains('rep_shuf'))
     if (clicked === user_shuffle)
       random_number_state = random_number_state ? false : true;
-  }
 });
 
 // 3.
@@ -207,9 +207,12 @@ const update_audio_track = () => {
 
 // UNLOCK
 
-// // REQUESTION DATA FROM AN API
+// REQUESTION DATA FROM AN API
 // const token =
-//   'BQCI2twJe1iEr_RsFzue_cUe6ZaVEpOLkLNr3d8LQy0KMMdq_CXCgrCgGmpcS_yBtKxCT3Kod8OCTfk0dQrhE-6N2qkbjgdIM-HExidL-_Z1T92rpRT4U_MS2nR8g_jmiwmouLBtz22nlN-M-BnISqoNLcXxv04CPpWWg5RKPOLIESKIbj3hG-xGOQdNoFyBrz3wfQYLiNejo6XlBZcB7jElCYA82fcNQ0cqbwxgw5awgFAtJBKz1Dik5sZVpL7oQpjRbgPTWaWo9NM_EN17iP6r';
+//   'BQC7hLBLPOebX-2pTvm4ELYSL7MWkDPR6ieTKoRp1EwRi4_nUHYTkpPWF7QhsRKv_ZrxGR_S067G1m0a0bRsfn6sNaafQrguPuYwAj-iSNyHkflMCZmb7PmaUBg-M2CMcwW5LJSm9j-mWrknPjDcPIaMzyZcSgwUFzH3vPnPway3jJXDwOPTbzOI92v1ZW2NSgFoYYm3oxT0EbDDe_1YazhHefWPD1LYygLqJdDzff-VwkHbx9VzhftPYhq084UfjrH185P2l7Hej0vmVW9EEfss';
+
+// const token =
+//   'BQC2q9T5j8khQ_U713Rgn7Ph0Uu2tBVbPnabKG-bD6S_t93e71_l2bFn9jRoKNly-dagXbiIFKDLsx0Wtc8jni6AC2G-MDik2aekGHlLwxkYhSw90BuanALfKw5314uP-00pH7AaWc1W7b4DaF9cN3PBfdqmva6xXIhI5TWxKRlSnyjkANQHMdBKGUhV3tOsUevK6A98kE9mQd7bGAYap4rO7xlzDxo-gza_U6iyvsi-YlquL1mH_SlQjND0g5kDurGOr85zEeRVzMbqHFto0WVS';
 
 // async function fetchWebApi(endpoint, method, body) {
 //   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
@@ -266,47 +269,47 @@ const update_audio_track = () => {
 // console.log(recommendedTracks_1);
 // console.log(recommendedTracks_2);
 // console.log(recommendedTracks_3);
-// console.log(
-//   recommendedTracks.map(
-//     ({ name, artists }) =>
-//       `${name} by ${artists.map(artist => artist.name).join(', ')}`
-//   )
-// );
+// // console.log(
+// //   recommendedTracks.map(
+// //     ({ name, artists }) =>
+// //       `${name} by ${artists.map(artist => artist.name).join(', ')}`
+// //   )
+// // );
 
-// 1.
-// TOP HIPHOP SONGS
-// YOUR SHOWS
-// SHOWS YOU MIGHT LIKE
-// RECENTLY PLAYED
-// MORE OF WHAT YOU LIKE
-// YOUR TOP MIXES
-// EDITORS PICKS
-// POPULAR RADIO
-// MADE FOR YOU
-// TODAY'S BIGGEST HITS
-// BEST OF ARTISTS
-// RECOMMENDED RADIO
-//
-//
-//
+// // 1.
+// // TOP HIPHOP SONGS
+// // YOUR SHOWS
+// // SHOWS YOU MIGHT LIKE
+// // RECENTLY PLAYED
+// // MORE OF WHAT YOU LIKE
+// // YOUR TOP MIXES
+// // EDITORS PICKS
+// // POPULAR RADIO
+// // MADE FOR YOU
+// // TODAY'S BIGGEST HITS
+// // BEST OF ARTISTS
+// // RECOMMENDED RADIO
+// //
+// //
+// //
 
-// 2.
-// DISOVER MORE FROM
-// FIREBOY
+// // 2.
+// // DISOVER MORE FROM
+// // FIREBOY
 
-// DISOVER MORE FROM
-// DAVIDO
+// // DISOVER MORE FROM
+// // DAVIDO
 
-// DISOVER MORE FROM
-// REMA
+// // DISOVER MORE FROM
+// // REMA
 
-// DISOVER MORE FROM
-// EMINEM
+// // DISOVER MORE FROM
+// // EMINEM
 
-// 3.
-// POPULAR ALBUMS
+// // 3.
+// // POPULAR ALBUMS
 
-// MORE LIKE
-// ALWZ SNNY
+// // MORE LIKE
+// // ALWZ SNNY
 
-// UNIQUELY YOURS
+// // UNIQUELY YOURS
