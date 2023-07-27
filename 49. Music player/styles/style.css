@@ -490,6 +490,14 @@ input[type='range']::-ms-fill-upper {
   gap: 2.8rem;
 }
 
+.section--feed .state--1 {
+  gap: 1.2rem;
+}
+
+.section--feed .img-holder {
+  border-radius: 0.2rem;
+}
+
 .popular-artists .track {
   background-color: transparent;
   padding: 0;
@@ -497,6 +505,10 @@ input[type='range']::-ms-fill-upper {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.section--feed .track:hover {
+  transform: scale(1);
 }
 
 .popular-artists .img-holder {
