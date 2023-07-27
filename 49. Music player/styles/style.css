@@ -447,20 +447,41 @@ input[type='range']::-ms-fill-upper {
   background-color: #1b323c;
 }
 
-.section--trending .container {
+.outer-container--1 {
+  overflow: auto;
+  height: 100%;
+}
+
+.outer-container--1 .container {
   gap: 2.8rem;
+}
+
+.outer-container--1 .new-releases {
+  margin-bottom: 4.8rem;
+}
+
+.outer-container--1 .secondary-text {
+  grid-column: 1/-1;
+  margin-bottom: -1.2rem;
 }
 
 /* /////////////////////////////// */
 /* SECTION FEED */
 /* /////////////////////////////// */
-
 .section--feed {
   background-color: #1b323c;
 }
 
 .section--feed .container {
   gap: 2.8rem;
+}
+
+.feed-detail {
+  margin-bottom: 4.2rem;
+}
+
+.feed-text {
+  color: #f7f7f7;
 }
 
 .more-like {
@@ -488,13 +509,5 @@ input[type='range']::-ms-fill-upper {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: capitalize;
-  color: #f7f7f7;
-}
-
-.feed-detail {
-  margin-bottom: 4.2rem;
-}
-
-.feed-text {
   color: #f7f7f7;
 }
