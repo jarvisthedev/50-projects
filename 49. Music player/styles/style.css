@@ -469,7 +469,7 @@ input[type='range']::-ms-fill-upper {
   margin-bottom: -1.2rem;
 }
 
-.section--trending .track {
+.state--1 .track {
   background-color: transparent;
   box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.02);
   padding: 1.4rem 1rem 1rem 1rem;
@@ -488,6 +488,26 @@ input[type='range']::-ms-fill-upper {
 
 .section--feed .container {
   gap: 2.8rem;
+}
+
+.popular-artists .track {
+  background-color: transparent;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popular-artists .img-holder {
+  border-radius: 50%;
+}
+
+.popular-artists .p--3 {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: #f7f7f7;
 }
 
 .feed-detail {
