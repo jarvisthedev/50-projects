@@ -452,17 +452,31 @@ input[type='range']::-ms-fill-upper {
   height: 100%;
 }
 
-.outer-container--1 .container {
-  gap: 2.8rem;
+.section--trending .container {
+  gap: 1.8rem;
 }
 
-.outer-container--1 .new-releases {
+.section--trending .img-holder {
+  border-radius: 0.2rem;
+}
+
+.section--trending .new-releases {
   margin-bottom: 4.8rem;
 }
 
-.outer-container--1 .secondary-text {
+.section--trending .secondary-text {
   grid-column: 1/-1;
   margin-bottom: -1.2rem;
+}
+
+.section--trending .track {
+  background-color: transparent;
+  box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.02);
+  padding: 1.4rem 1rem 1rem 1rem;
+}
+
+.section--trending .track:hover {
+  transform: scale(1);
 }
 
 /* /////////////////////////////// */
