@@ -445,6 +445,7 @@ input[type='range']::-ms-fill-upper {
 
 .section--trending {
   /* background-color: #1b323c; */
+  /* overflow-x: auto; */
 }
 
 .outer-container--1 {
@@ -477,6 +478,19 @@ input[type='range']::-ms-fill-upper {
 
 .section--trending .track:hover {
   transform: scale(1);
+}
+
+.state--1.scroll {
+  display: flex;
+  overflow-x: auto;
+  /* width: 100%; */
+}
+/* 
+} */
+
+.scroll .track {
+  min-width: 24rem;
+  min-height: 24rem;
 }
 
 /* /////////////////////////////// */
