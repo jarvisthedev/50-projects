@@ -482,8 +482,11 @@ input[type='range']::-ms-fill-upper {
 
 .state--1.scroll {
   display: flex;
+  align-items: center;
   overflow-x: auto;
   /* width: 100%; */
+  width: 88vw;
+  /* background-color: rgb(105, 191, 55); */
 }
 /* 
 } */
@@ -491,6 +494,9 @@ input[type='range']::-ms-fill-upper {
 .scroll .track {
   min-width: 24rem;
   min-height: 24rem;
+}
+
+.scroll h2 {
 }
 
 /* /////////////////////////////// */
