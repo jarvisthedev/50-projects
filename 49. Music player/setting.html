@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/setting.css" />
+    <link rel="stylesheet" href="./styles/queries.css" />
+  </head>
+  <body>
+    <section class="section--settings">
+      <div class="container">
+        <header class="header">
+          <button class="btn btn--person">
+            <ion-icon name="person"></ion-icon>
+          </button>
+
+          <a class="btn btn--overview" href="#">
+            <ion-icon name="home"></ion-icon>
+            <span>Account overview</span>
+          </a>
+
+          <a class="btn btn--prof-edit" href="#">
+            <ion-icon name="pencil"></ion-icon>
+            <span>Edit profile</span>
+          </a>
+
+          <a class="btn btn--password" href="#">
+            <ion-icon name="lock-closed"></ion-icon>
+            <span>Change password</span>
+          </a>
+
+          <a class="btn" href="#">
+            <ion-icon name="notifications"></ion-icon>
+            <span>Notification settings</span>
+          </a>
+
+          <a class="btn btn--privacy" href="#">
+            <ion-icon name="lock-closed"></ion-icon>
+            <span>Privacy settings</span>
+          </a>
+
+          <a class="btn btn--card" href="#">
+            <ion-icon name="card"></ion-icon>
+            <span>Saved payment cards</span>
+          </a>
+        </header>
+
+        <div class="changing--field">
+          <h1 class="primary-text">Account overview</h1>
+
+          <h2 class="secondary-text">Profile</h2>
+          <ul class="profile list">
+            <li class="profile-data">
+              <p>Username</p>
+              <p>joe690</p>
+            </li>
+            <li class="profile-data">
+              <p>Email</p>
+              <p>dummy@mail.com</p>
+            </li>
+            <li class="profile-data">
+              <p>Date of birth</p>
+              <p>28/09/2023</p>
+            </li>
+            <li class="profile-data">
+              <p>Country or region</p>
+              <p>France</p>
+            </li>
+          </ul>
+          <a class="btn btn--prof-edit" href="#">Edit profile</a>
+
+          <h2 class="secondary-text">Your plan</h2>
+
+          <div class="plan-card">
+            <div class="card-top">
+              <p>Music Free</p>
+            </div>
+            <div class="card-bottom">
+              <p>Play music in shufffle mode only, with ads</p>
+              <h2 class="secondary-text">Free</h2>
+            </div>
+          </div>
+
+          <a class="btn btn--premium" href="#">Join Premium</a>
+
+          <a class="btn btn--sign-out" href="#">Sign out everywhere </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
