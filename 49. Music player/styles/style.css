@@ -384,7 +384,6 @@ input[type='range']::-ms-fill-upper {
 }
 
 .btn {
-  /* font-size: 3.2rem; */
   font-size: 2.4rem;
   border: 2px solid #595959;
   padding: 0.8rem;
@@ -558,4 +557,20 @@ input[type='range']::-ms-fill-upper {
   font-weight: 600;
   text-transform: capitalize;
   color: #f7f7f7;
+}
+
+/* /////////////////////////////// */
+/* SECTION FAVIURITE */
+/* /////////////////////////////// */
+.section--favourite {
+  /* background-color: #1b323c; */
+}
+
+.section--favourite .container {
+  gap: 2.8rem;
+}
+
+.section--favourite .secondary-text {
+  grid-column: 1/-1;
+  margin-bottom: -1.2rem;
 }
