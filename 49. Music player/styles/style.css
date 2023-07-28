@@ -74,10 +74,124 @@
 }
 
 /* /////////////////////////////// */
+/* SECTION FEED */
+/* /////////////////////////////// */
+.section--feed .container {
+  gap: 2.8rem;
+}
+
+.section--feed .state--1 {
+  column-gap: 1.2rem;
+  row-gap: 1.8rem;
+}
+
+.section--feed .img-holder {
+  border-radius: 0.2rem;
+}
+
+.popular-artists .track {
+  background-color: transparent;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section--feed .track:hover {
+  transform: scale(1);
+}
+
+.popular-artists .img-holder {
+  border-radius: 50%;
+}
+
+.popular-artists .p--3 {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: #f7f7f7;
+}
+
+.feed-detail {
+  margin-bottom: 4.2rem;
+}
+
+.feed-text {
+  color: #f7f7f7;
+}
+
+.more-like {
+  grid-template-columns: auto 1fr;
+  column-gap: 1.2rem;
+  row-gap: 0.4rem;
+  margin-bottom: -1rem;
+  grid-column: 1/-1;
+}
+
+.more-like .img-holder {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.more-like .p--1 {
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: end;
+  text-transform: uppercase;
+}
+
+.more-like .p--2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #f7f7f7;
+}
+
+.section--feed .track {
+  margin-bottom: 0;
+}
+
+/* /////////////////////////////// */
+/* SECTION TRENDING */
+/* /////////////////////////////// */
+.outer-container--1 {
+  overflow: auto;
+  height: 100%;
+}
+
+.section--trending .container {
+  gap: 1.8rem;
+}
+
+.section--trending .img-holder {
+  border-radius: 0.2rem;
+}
+
+.section--trending .new-releases {
+  margin-bottom: 4.8rem;
+}
+
+.section--trending .secondary-text {
+  grid-column: 1/-1;
+  margin-bottom: -1.2rem;
+}
+
+.state--1 .track {
+  background-color: transparent;
+  box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.02);
+  padding: 1.4rem 1rem 1rem 1rem;
+}
+
+.section--trending .track:hover {
+  transform: scale(1);
+}
+
+/* /////////////////////////////// */
 /* SECTION PLAYER */
 /* /////////////////////////////// */
 .section-player {
-  /* background-color: #1b323c; */
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -391,15 +505,22 @@ input[type='range']::-ms-fill-upper {
 }
 
 /* /////////////////////////////// */
-/* SECTION LIBRARY */
+/* SECTION FAVOURITE */
 /* /////////////////////////////// */
-.section--library {
-  /* background-color: #1b323c; */
+.section--favourite .container {
+  gap: 2.8rem;
 }
 
+.section--favourite .secondary-text {
+  grid-column: 1/-1;
+  margin-bottom: -1.2rem;
+}
+
+/* /////////////////////////////// */
+/* SECTION LIBRARY */
+/* /////////////////////////////// */
 .section--library .container {
   gap: 2.8rem;
-
   height: 92vh;
   overflow: auto;
 }
@@ -437,140 +558,4 @@ input[type='range']::-ms-fill-upper {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
-}
-
-/* /////////////////////////////// */
-/* SECTION TRENDING */
-/* /////////////////////////////// */
-
-.section--trending {
-  /* background-color: #1b323c; */
-}
-
-.outer-container--1 {
-  overflow: auto;
-  height: 100%;
-}
-
-.section--trending .container {
-  gap: 1.8rem;
-}
-
-.section--trending .img-holder {
-  border-radius: 0.2rem;
-}
-
-.section--trending .new-releases {
-  margin-bottom: 4.8rem;
-}
-
-.section--trending .secondary-text {
-  grid-column: 1/-1;
-  margin-bottom: -1.2rem;
-}
-
-.state--1 .track {
-  background-color: transparent;
-  box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.02);
-  padding: 1.4rem 1rem 1rem 1rem;
-}
-
-.section--trending .track:hover {
-  transform: scale(1);
-}
-
-/* /////////////////////////////// */
-/* SECTION FEED */
-/* /////////////////////////////// */
-.section--feed {
-  /* background-color: #1b323c; */
-}
-
-.section--feed .container {
-  gap: 2.8rem;
-}
-
-.section--feed .state--1 {
-  column-gap: 1.2rem;
-  row-gap: 1.8rem;
-}
-
-.section--feed .img-holder {
-  border-radius: 0.2rem;
-}
-
-.popular-artists .track {
-  background-color: transparent;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.section--feed .track:hover {
-  transform: scale(1);
-}
-
-.popular-artists .img-holder {
-  border-radius: 50%;
-}
-
-.popular-artists .p--3 {
-  text-align: center;
-  font-size: 1.8rem;
-  text-transform: capitalize;
-  color: #f7f7f7;
-}
-
-.feed-detail {
-  margin-bottom: 4.2rem;
-}
-
-.feed-text {
-  color: #f7f7f7;
-}
-
-.more-like {
-  grid-template-columns: auto 1fr;
-  column-gap: 1.2rem;
-  row-gap: 0.4rem;
-  margin-bottom: -1rem;
-  grid-column: 1/-1;
-}
-
-.more-like .img-holder {
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 50%;
-}
-
-.more-like .p--1 {
-  font-size: 1rem;
-  font-weight: 500;
-  align-self: end;
-  text-transform: uppercase;
-}
-
-.more-like .p--2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: #f7f7f7;
-}
-
-/* /////////////////////////////// */
-/* SECTION FAVIURITE */
-/* /////////////////////////////// */
-.section--favourite {
-  /* background-color: #1b323c; */
-}
-
-.section--favourite .container {
-  gap: 2.8rem;
-}
-
-.section--favourite .secondary-text {
-  grid-column: 1/-1;
-  margin-bottom: -1.2rem;
 }

@@ -52,6 +52,10 @@ main {
   background-color: #1b323c;
 }
 
+.section .container:last-child {
+  margin-bottom: 0;
+}
+
 .hidden {
   display: none;
 }
@@ -125,6 +129,5 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  /* background: linear-gradient(transparent, #13213e); */
   border-radius: 0.8rem;
 }
