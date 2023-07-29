@@ -106,7 +106,7 @@
             />
 
             <label for="password">Password</label>
-            <input type="password" disabled name="password" class="password" />
+            <input type="password" disabled name="password" class="password pass-disabled" />
 
             <label for="gender">Gender</label>
             <select name="gender" class="gender">
@@ -133,12 +133,32 @@
           <h1 class="primary-text">Change your password</h1>
 
           <form action="Post" class="form tertiary--1">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="password" />
+            <label for="password1">Current password</label>
+            <input
+              type="password"
+              name="password1"
+              class="password password1"
+            />
+
+            <label for="password2">New password</label>
+            <input
+              type="password"
+              name="password2"
+              class="password password2"
+            />
+
+            <label for="password3">Repeat new password</label>
+            <input
+              type="password"
+              name="password3"
+              class="password password3"
+            />
 
             <div class="btns">
               <a class="btn btn--cancel tertiary--1" href="#">Cancel </a>
-              <button class="btn btn--save tertiary--1">Save profile</button>
+              <button class="btn btn--save btn--set-password tertiary--1">
+                Set new password
+              </button>
             </div>
           </form>
         </div>

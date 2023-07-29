@@ -12,6 +12,7 @@
   grid-template-columns: auto 1fr;
   max-width: 112rem;
   margin: 0 auto;
+  min-height: 110vh;
 }
 
 .section--settings .header {
@@ -169,7 +170,7 @@ button {
   border: 1px solid #000;
 }
 
-.form input[type='password'] {
+.pass-disabled {
   border: 1px solid rgba(0, 0, 0, 0.098);
 }
 
@@ -197,5 +198,5 @@ button {
 .btns .btn--save {
   margin-bottom: 0;
   height: auto;
-  background-color: #11d911;
+  background-color: #13cb13;
 }
