@@ -63,11 +63,11 @@ button {
 }
 
 .header .btn:hover:not(:first-child) {
-  border-left: 5px solid green;
+  border-left: 5px solid #008000;
 }
 
 .header .btn.active-btn {
-  border-left: 5px solid green;
+  border-left: 5px solid #008000;
 }
 
 .changing--field {
@@ -108,8 +108,94 @@ button {
   border-radius: 10rem;
   padding: 1.2rem 2.4rem;
   margin-bottom: 2.4rem;
+  margin-bottom: 5.6rem;
 }
 
 .changing--field .btn:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+.plan-card {
+  width: 100%;
+  box-shadow: 0 0 1.2rem 0.4rem rgba(0, 0, 0, 0.197);
+  border-radius: 0.8rem;
+  margin-bottom: 3.2rem;
+  overflow: hidden;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  height: 18rem;
+  background-color: #9b9b9b;
+  padding: 2.8rem;
+}
+
+.tertiary--4 {
+  font-size: 2.4rem;
+}
+
+.card-bottom {
+  padding: 2.8rem;
+}
+
+.tertiary--3 {
+  font-size: 1.6rem;
+}
+
+.tertiary--3 p {
+  margin-bottom: 1.8rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.form input,
+.form select {
+  margin-bottom: 2.4rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #000;
+}
+
+.form input[type='password'] {
+  border: 1px solid rgba(0, 0, 0, 0.098);
+}
+
+.btns {
+  align-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  margin-bottom: 4.8rem;
+}
+
+.btns .btn--cancel {
+  margin-bottom: 0;
+  color: #888;
+  border: none;
+  font-weight: 500;
+}
+
+.btns .btn--cancel:hover {
+  transform: scale(1);
+  color: #000;
+}
+
+.btns .btn--save {
+  margin-bottom: 0;
+  height: auto;
+  background-color: #11d911;
 }
