@@ -1,0 +1,103 @@
+/* REUSABLE */
+.tertiary--1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.section--settings {
+  background-color: rgb(33, 44, 57);
+}
+
+.section--settings .container {
+  grid-template-columns: auto 1fr;
+}
+
+.section--settings .header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #111;
+}
+
+button {
+  display: grid;
+  place-content: center;
+  height: 9.8rem;
+  border: none;
+  background-color: rgba(51, 51, 51, 0.18);
+}
+
+.header button ion-icon {
+  font-size: 7.2rem;
+  border-radius: 50%;
+  color: #3333337a;
+  background-color: #000;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 0.8rem;
+  color: #f7f7f7;
+  width: 100%;
+  text-decoration: none;
+}
+
+.header .btn {
+  border-bottom: 1px solid #dedede14;
+  padding: 1.8rem;
+}
+
+.btn ion-icon {
+  font-size: 1.8rem;
+}
+
+.btn .span {
+}
+
+.header .btn:not(:first-child) {
+  border-left: 5px solid transparent;
+}
+
+.header .btn:hover:not(:first-child) {
+  border-left: 5px solid green;
+}
+
+.header .btn.active-btn {
+  border-left: 5px solid green;
+}
+
+.changing--field {
+  background-color: #f7f7f7;
+  color: #111;
+  padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+}
+
+.primary-text {
+  margin-bottom: 4.2rem;
+}
+
+.secondary-text {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.profile-list {
+}
+
+.profile-data {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.profile-data p:first-child {
+  color: #888;
+}

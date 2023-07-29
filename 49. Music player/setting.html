@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
     <link rel="stylesheet" href="./styles/general.css" />
-    <link rel="stylesheet" href="./styles/setting.css" />
+    <link rel="stylesheet" href="./setting.css" />
     <link rel="stylesheet" href="./styles/queries.css" />
+
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
   </head>
   <body>
     <section class="section--settings">
-      <div class="container">
-        <header class="header">
+      <div class="container grid">
+        <header class="header tertiary--1">
           <button class="btn btn--person">
             <ion-icon name="person"></ion-icon>
           </button>
@@ -22,7 +24,7 @@
             <span>Account overview</span>
           </a>
 
-          <a class="btn btn--prof-edit" href="#">
+          <a class="btn btn--prof-edit active-btn" href="#">
             <ion-icon name="pencil"></ion-icon>
             <span>Edit profile</span>
           </a>
@@ -52,7 +54,7 @@
           <h1 class="primary-text">Account overview</h1>
 
           <h2 class="secondary-text">Profile</h2>
-          <ul class="profile list">
+          <ul class="profile-list tertiary--1">
             <li class="profile-data">
               <p>Username</p>
               <p>joe690</p>
@@ -63,30 +65,32 @@
             </li>
             <li class="profile-data">
               <p>Date of birth</p>
-              <p>28/09/2023</p>
+              <p>July 19, 2023</p>
             </li>
             <li class="profile-data">
               <p>Country or region</p>
               <p>France</p>
             </li>
           </ul>
-          <a class="btn btn--prof-edit" href="#">Edit profile</a>
+          <a class="btn btn--prof-edit tertiary--1" href="#">Edit profile</a>
 
           <h2 class="secondary-text">Your plan</h2>
 
           <div class="plan-card">
             <div class="card-top">
-              <p>Music Free</p>
+              <p class="tertiary--1">Music Free</p>
             </div>
-            <div class="card-bottom">
+            <div class="card-bottom tertiary--3">
               <p>Play music in shufffle mode only, with ads</p>
               <h2 class="secondary-text">Free</h2>
             </div>
           </div>
 
-          <a class="btn btn--premium" href="#">Join Premium</a>
+          <a class="btn btn--premium tertiary--1" href="#">Join Premium</a>
 
-          <a class="btn btn--sign-out" href="#">Sign out everywhere </a>
+          <a class="btn btn--sign-out tertiary--1" href="#"
+            >Sign out everywhere
+          </a>
         </div>
       </div>
     </section>
