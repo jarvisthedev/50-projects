@@ -10,6 +10,8 @@
 
 .section--settings .container {
   grid-template-columns: auto 1fr;
+  max-width: 112rem;
+  margin: 0 auto;
 }
 
 .section--settings .header {
@@ -56,9 +58,6 @@ button {
   font-size: 1.8rem;
 }
 
-.btn .span {
-}
-
 .header .btn:not(:first-child) {
   border-left: 5px solid transparent;
 }
@@ -87,12 +86,12 @@ button {
 }
 
 .profile-list {
+  margin-bottom: 3.2rem;
 }
 
 .profile-data {
-  display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 2fr 3fr;
   gap: 10rem;
   padding: 1.8rem 0;
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);
@@ -100,4 +99,17 @@ button {
 
 .profile-data p:first-child {
   color: #888;
+}
+
+.changing--field .btn {
+  color: #000;
+  border: 1px solid #000;
+  width: fit-content;
+  border-radius: 10rem;
+  padding: 1.2rem 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.changing--field .btn:hover {
+  transform: scale(1.03);
 }
