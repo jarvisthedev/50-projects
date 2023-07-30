@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/queries.css" />
 
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script defer src="./setting.js"></script>
   </head>
   <body>
     <section class="section--settings">
@@ -19,7 +20,7 @@
             <ion-icon name="person"></ion-icon>
           </button>
 
-          <a class="btn btn--overview" href="#">
+          <a class="btn btn--overview active-btn" href="#">
             <ion-icon name="home"></ion-icon>
             <span>Account overview</span>
           </a>
@@ -34,7 +35,7 @@
             <span>Change password</span>
           </a>
 
-          <a class="btn" href="#">
+          <a class="btn btn--notification" href="#">
             <ion-icon name="notifications"></ion-icon>
             <span>Notification settings</span>
           </a>
@@ -44,14 +45,14 @@
             <span>Privacy settings</span>
           </a>
 
-          <a class="btn btn--card active-btn" href="#">
+          <a class="btn btn--card" href="#">
             <ion-icon name="card"></ion-icon>
             <span>Saved payment cards</span>
           </a>
         </header>
 
         <!-- PART --1 -->
-        <!-- <div class="changing--field">
+        <div class="changing--field account-overview">
           <h1 class="primary-text">Account overview</h1>
 
           <h2 class="secondary-text">Profile</h2>
@@ -92,10 +93,10 @@
           <a class="btn btn--sign-out tertiary--1" href="#"
             >Sign out everywhere
           </a>
-        </div> -->
+        </div>
 
         <!-- PART --2 -->
-        <!-- <div class="changing--field">
+        <div class="changing--field profile-edit hidden">
           <h1 class="primary-text">Edit profile</h1>
 
           <form action="Post" class="form tertiary--1">
@@ -108,7 +109,12 @@
             />
 
             <label for="password">Password</label>
-            <input type="password" disabled name="password" class="password pass-disabled" />
+            <input
+              type="password"
+              disabled
+              name="password"
+              class="password pass-disabled"
+            />
 
             <label for="gender">Gender</label>
             <select name="gender" class="gender">
@@ -129,10 +135,10 @@
               <button class="btn btn--save tertiary--1">Save profile</button>
             </div>
           </form>
-        </div> -->
+        </div>
 
         <!-- PART -- 3 -->
-        <!-- <div class="changing--field">
+        <div class="changing--field pass-change hidden">
           <h1 class="primary-text">Change your password</h1>
 
           <form action="Post" class="form tertiary--1">
@@ -164,10 +170,10 @@
               </button>
             </div>
           </form>
-        </div> -->
+        </div>
 
         <!-- PART --4 -->
-        <!-- <div class="changing--field notification">
+        <div class="changing--field notification hidden">
           <h1 class="primary-text">Notifications settings</h1>
 
           <p class="intro-text">
@@ -277,19 +283,19 @@
               <button class="btn btn--save tertiary--1">Save</button>
             </div>
           </form>
-        </div> -->
+        </div>
 
         <!-- PART --5 -->
-        <div class="changing--field">
+        <div class="changing--field privacy intro-text hidden">
           <h1 class="primary-text">Privacy settings</h1>
 
-          <p class="intro-text">
+          <p class="text--1">
             We want to make it easy for you to manage and understand your
             Privacy Settings, so you can use the Spotify service in the way you
             want.
           </p>
 
-          <p class="intro-text">The controls on this page enable you to:</p>
+          <p class="text--1">The controls on this page enable you to:</p>
           <ul>
             <li>Control the tailored ads you see and hear on Spotify.</li>
             <li>Control the Facebook data Spotify processes about you.</li>
@@ -298,7 +304,7 @@
 
           <h2 class="secondary-text">Manage your data</h2>
 
-          <div class="intro-text">
+          <div>
             Additional data controls can be accessed from your device or
             directly from the Spotify service. For more information about your
             data rights, including how and why Spotify collects personal data,
@@ -309,12 +315,12 @@
 
           <div class="ads">
             <h2 class="secondary-text">Tailored ads</h2>
-            <p class="intro-text">
+            <p>
               The tailored ads toggle below controls the tailored ads you
               experience on Spotify's services, as well as Spotify's ads
               targeted to you on other platforms.
             </p>
-            <p class="intro-text">
+            <p>
               While using the Spotify services, we may use certain personal data
               about you in order to deliver advertising that is more relevant to
               you. This data may include information collected about your use of
@@ -327,33 +333,39 @@
               Spotify registration information and your real-time usage of
               Spotify, but the ads may be less relevant to you.
             </p>
-            <p class="intro-text">
+            <p>
               Additionally, Spotify may share limited data with other platforms
               to market Spotify promotions, features, or new releases on those
               other platforms. If you opt out of tailored advertising below, we
               will not share your information with these platforms.
             </p>
-            <input type="checkbox" name="ads" class="ads" />
-            <p class="intro-text">Process my personal data for tailored ads.</p>
+
+            <label for="checkbox" class="grid">
+              <input type="checkbox" name="ads" class="ads" />
+              <p>Process my personal data for tailored ads.</p>
+            </label>
           </div>
 
           <div class="fb-data">
             <h2 class="secondary-text">Facebook data</h2>
 
-            <p class="intro-text">
+            <p>
               When you opt out of Spotify processing your Facebook data, we will
               stop processing any Facebook data shared with Spotify except the
               personal data that enables you to sign into Spotify using your
               Facebook account. For more information, please see your
               <a href="#">data rights and privacy settings.</a>
             </p>
-            <input type="checkbox" name="ads" class="ads" />
-            <p class="intro-text">Process my Facebook data</p>
+
+            <label for="checkbox" class="grid">
+              <input type="checkbox" name="fb-data" class="fb-data" />
+              <p>Process my Facebook data</p>
+            </label>
           </div>
         </div>
 
         <!-- PART --6 -->
-        <!-- <div class="changing--field">
+        <div class="changing--field credit-card hidden">
           <div class="container-inner">
             <h1 class="primary-text">Saved payment cards</h1>
             <p class="description">
@@ -423,7 +435,7 @@
               </div>
             </form>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
   </body>
