@@ -129,7 +129,7 @@
           </form>
         </div> -->
 
-        <div class="changing--field">
+        <!-- <div class="changing--field">
           <h1 class="primary-text">Change your password</h1>
 
           <form action="Post" class="form tertiary--1">
@@ -161,6 +161,70 @@
               </button>
             </div>
           </form>
+        </div> -->
+
+        <div class="changing--field">
+          <div class="container-inner">
+            <h1 class="primary-text">Saved payment cards</h1>
+            <p class="description">
+              Manage your payment details for one-time purchases. To manage
+              payment details for your monthly subscription, go to
+              <a href="#">Account overview.</a>
+            </p>
+
+            <h2 class="secondary-text">
+              <p>My cards</p>
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </h2>
+
+            <form action="Post" class="form tertiary--1">
+              <p class="intro-text">Credit or Debit card</p>
+              <div class="cards">
+                <img src="./imgs/profile/visa.svg" alt="visa logo" />
+                <img
+                  src="./imgs/profile/mastercard.svg"
+                  alt="Mastercard logo"
+                />
+              </div>
+
+              <h2 class="secondary-text">
+                <p>Payment details</p>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </h2>
+
+              <label for="card-number" class="tertiary-text--1">
+                Card number
+              </label>
+
+              <input type="number" name="card-number" class="card-number" />
+
+              <div class="more-details">
+                <label for="exp-date">Expiry date</label>
+                <input type="number" name="exp-date" class="exp-date" />
+
+                <label for="sec-code">Security Code</label>
+                <input type="number" name="sec-code" class="sec-code" />
+              </div>
+
+              <label for="checkbox">
+                <input type="checkbox" name="checkbox" class="checkbox" />
+                <!-- <p class="check-box"> -->
+                <strong
+                  >Save card for future one-time purchases and subscriptions.
+                </strong>
+                This won't affect how you pay for existing subscriptions and can
+                be managed anytime in your Account page.
+                <!-- </p> -->
+              </label>
+
+              <div class="btns">
+                <button class="btn btn--save btn--save-card tertiary--1">
+                  Save
+                </button>
+                <a class="btn btn--cancel tertiary--1" href="#">Cancel </a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

@@ -149,7 +149,8 @@ button {
   margin-bottom: 1.8rem;
 }
 
-.form {
+.form,
+.more-details {
   display: flex;
   flex-direction: column;
 }
@@ -161,7 +162,8 @@ button {
 }
 
 .form input,
-.form select {
+.form select,
+input[type='checkbox'] {
   margin-bottom: 2.4rem;
   padding: 1rem;
   border-radius: 0.4rem;
@@ -199,4 +201,65 @@ button {
   margin-bottom: 0;
   height: auto;
   background-color: #13cb13;
+}
+
+/* ///////////////////////// */
+/* Credti card section */
+/* ///////////////////////// */
+.container-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.container-inner .primary-text {
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  line-height: 1.2;
+}
+
+.container-inner .secondary-text {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.container-inner .form {
+  padding: 1.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.intro-text {
+}
+
+.cards {
+  margin-bottom: 1rem;
+}
+
+.cards img {
+  height: 1.8rem;
+}
+
+input[type='checkbox'] {
+  margin-bottom: 0;
+  margin-right: 0.4rem;
+}
+
+label:last-child {
+}
+
+.btns {
+  margin-top: 2.4rem;
+}
+
+.btns .btn {
+  /* padding: 1.2rem; */
 }
