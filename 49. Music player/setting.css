@@ -201,11 +201,60 @@ input[type='checkbox'] {
   margin-bottom: 0;
   height: auto;
   background-color: #13cb13;
+  border-radius: none;
 }
 
 /*  */
-.changing--field .notifications {
-  grid-template-columns: auto 1fr 1fr;
+
+.notification .intro-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2.8rem;
+}
+
+.form.notifications {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: start;
+  column-gap: 1.8rem;
+  row-gap: 2.4rem;
+}
+
+.notifications ion-icon {
+  font-size: 2.4rem;
+}
+
+.text {
+  font-size: 1.3rem;
+}
+
+.text p:first-child {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.text p:last-child {
+  font-size: 1.2rem;
+}
+
+.mail-top p,
+.phone-top p {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  justify-self: start;
+}
+
+.notifications input[type='checkbox'] {
+  margin: 0;
+  margin-left: -1.4rem;
+}
+
+.notifications .btns {
+  grid-column: 1/-1;
+  align-self: end;
+  justify-self: end;
+  margin-top: 3.2rem;
 }
 
 /* ///////////////////////// */
