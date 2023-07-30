@@ -24,7 +24,7 @@
             <span>Account overview</span>
           </a>
 
-          <a class="btn btn--prof-edit active-btn" href="#">
+          <a class="btn btn--prof-edit" href="#">
             <ion-icon name="pencil"></ion-icon>
             <span>Edit profile</span>
           </a>
@@ -44,7 +44,7 @@
             <span>Privacy settings</span>
           </a>
 
-          <a class="btn btn--card" href="#">
+          <a class="btn btn--card active-btn" href="#">
             <ion-icon name="card"></ion-icon>
             <span>Saved payment cards</span>
           </a>
@@ -177,7 +177,7 @@
               <ion-icon name="lock-closed-outline"></ion-icon>
             </h2>
 
-            <form action="Post" class="form tertiary--1">
+            <form action="Post" class="form card-form tertiary--1">
               <p class="intro-text">Credit or Debit card</p>
               <div class="cards">
                 <img src="./imgs/profile/visa.svg" alt="visa logo" />
@@ -198,23 +198,31 @@
 
               <input type="number" name="card-number" class="card-number" />
 
-              <div class="more-details">
-                <label for="exp-date">Expiry date</label>
-                <input type="number" name="exp-date" class="exp-date" />
-
-                <label for="sec-code">Security Code</label>
-                <input type="number" name="sec-code" class="sec-code" />
+              <div class="more-details grid">
+                <div>
+                  <label for="exp-date">Expiry date</label>
+                  <input
+                    type="number"
+                    placeholder="MM / YY"
+                    name="exp-date"
+                    class="exp-date"
+                  />
+                </div>
+                <div>
+                  <label for="sec-code">Security Code</label>
+                  <input type="number" name="sec-code" class="sec-code" />
+                </div>
               </div>
 
-              <label for="checkbox">
+              <label for="checkbox" class="grid">
                 <input type="checkbox" name="checkbox" class="checkbox" />
-                <!-- <p class="check-box"> -->
-                <strong
-                  >Save card for future one-time purchases and subscriptions.
-                </strong>
-                This won't affect how you pay for existing subscriptions and can
-                be managed anytime in your Account page.
-                <!-- </p> -->
+                <p class="check-box">
+                  <strong
+                    >Save card for future one-time purchases and subscriptions.
+                  </strong>
+                  This won't affect how you pay for existing subscriptions and
+                  can be managed anytime in your Account page.
+                </p>
               </label>
 
               <div class="btns">
