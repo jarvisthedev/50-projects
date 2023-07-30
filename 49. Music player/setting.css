@@ -203,6 +203,11 @@ input[type='checkbox'] {
   background-color: #13cb13;
 }
 
+/*  */
+.changing--field .notifications {
+  grid-template-columns: auto 1fr 1fr;
+}
+
 /* ///////////////////////// */
 /* Credti card section */
 /* ///////////////////////// */
