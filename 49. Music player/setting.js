@@ -12,6 +12,13 @@ const notification = document.querySelector('.changing--field.notification');
 const privacy = document.querySelector('.changing--field.privacy');
 const creditCard = document.querySelector('.changing--field.credit-card');
 
+const btn__overview = document.querySelector('.btn--overview');
+const btn__profEdit = document.querySelector('.btn--prof-edit');
+const btn__password = document.querySelector('.btn--password');
+const btn__notification = document.querySelector('.btn--notification');
+const btn__privacy = document.querySelector('.btn--privacy');
+const btn__card = document.querySelector('.btn--card');
+
 const menu__controls = document.querySelector('.section--settings .menu');
 const menu__open = document.querySelector('.menu-open');
 const menu__close = document.querySelector('.menu-close');
@@ -28,32 +35,35 @@ sectionSettings.addEventListener('click', e => {
     if (clicked.closest('.btn').classList.contains('btn'))
       clicked.closest('.btn').classList.add('active-btn');
 
-    if (clicked.closest('.btn--overview'))
-      accOverview.classList.remove('hidden');
-    else if (clicked.closest('.btn--privacy'))
-      privacy.classList.remove('hidden');
-    else if (clicked.closest('.btn--card'))
-      creditCard.classList.remove('hidden');
-    else if (clicked.closest('.btn--prof-edit'))
-      profileEdit.classList.remove('hidden');
-    else if (clicked.closest('.btn--password'))
-      passChange.classList.remove('hidden');
-    else if (clicked.closest('.btn--notification'))
-      notification.classList.remove('hidden');
+    if (clicked.closest('.btn')) {
+      if (clicked.closest('.btn--overview'))
+        accOverview.classList.remove('hidden');
+      else if (clicked.closest('.btn--privacy'))
+        privacy.classList.remove('hidden');
+      else if (clicked.closest('.btn--card'))
+        creditCard.classList.remove('hidden');
+      else if (clicked.closest('.btn--prof-edit'))
+        profileEdit.classList.remove('hidden');
+      else if (clicked.closest('.btn--password'))
+        passChange.classList.remove('hidden');
+      else if (clicked.closest('.btn--notification'))
+        notification.classList.remove('hidden');
 
+      menu__close.classList.toggle('hidden');
+      menu__open.classList.toggle('hidden');
+      header.classList.toggle('hidden');
+    }
+  } else if (clicked.closest('.account-overview')) {
+    if (clicked.classList.contains('btn--prof-edit')) {
+      accOverview.classList.add('hidden');
+      profileEdit.classList.remove('hidden');
+
+      btn__overview.classList.remove('active-btn');
+      btn__profEdit.classList.add('active-btn');
+    }
+  } else if (clicked.closest('.menu')) {
     menu__close.classList.toggle('hidden');
     menu__open.classList.toggle('hidden');
     header.classList.toggle('hidden');
   }
-});
-
-// header.addEventListener('click', e => {
-//   const clicked = e.target;
-
-// });
-
-menu__controls.addEventListener('click', function (e) {
-  menu__close.classList.toggle('hidden');
-  menu__open.classList.toggle('hidden');
-  header.classList.toggle('hidden');
 });
