@@ -197,8 +197,14 @@ input[type='checkbox'] {
   border: 1px solid #000;
 }
 
-.pass-disabled {
+.section--settings .pass-disabled {
   border: 1px solid rgba(0, 0, 0, 0.098);
+}
+
+.date-of-birth {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.2rem;
 }
 
 .btns {
@@ -227,6 +233,7 @@ input[type='checkbox'] {
   height: auto;
   background-color: #13cb13;
   border-radius: none;
+  border: 1px solid #13cb13 !important;
 }
 
 /* ///////////////////////// */
