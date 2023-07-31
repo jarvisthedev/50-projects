@@ -6,6 +6,7 @@
 
 .section--settings {
   background-color: rgb(33, 44, 57);
+  padding: 0 3.2rem;
 }
 
 .section--settings .container {
@@ -36,7 +37,6 @@ button {
 .header button ion-icon {
   font-size: 7.2rem;
   border-radius: 50%;
-  color: #3333337a;
   background-color: #000;
 }
 

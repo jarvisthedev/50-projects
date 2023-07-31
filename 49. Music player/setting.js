@@ -11,6 +11,10 @@ const notification = document.querySelector('.changing--field.notification');
 const privacy = document.querySelector('.changing--field.privacy');
 const creditCard = document.querySelector('.changing--field.credit-card');
 
+const menu__controls = document.querySelector('.section--settings .menu');
+const menu__open = document.querySelector('.menu-open');
+const menu__close = document.querySelector('.menu-close');
+
 header.addEventListener('click', e => {
   const clicked = e.target;
 
@@ -31,4 +35,11 @@ header.addEventListener('click', e => {
     passChange.classList.remove('hidden');
   else if (clicked.closest('.btn--notification'))
     notification.classList.remove('hidden');
+  header.classList.toggle('hidden');
+});
+
+menu__controls.addEventListener('click', function (e) {
+  menu__close.classList.toggle('hidden');
+  menu__open.classList.toggle('hidden');
+  header.classList.toggle('hidden');
 });
