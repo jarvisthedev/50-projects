@@ -35,6 +35,9 @@ header.addEventListener('click', e => {
     passChange.classList.remove('hidden');
   else if (clicked.closest('.btn--notification'))
     notification.classList.remove('hidden');
+
+  menu__close.classList.toggle('hidden');
+  menu__open.classList.toggle('hidden');
   header.classList.toggle('hidden');
 });
 
