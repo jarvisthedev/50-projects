@@ -92,7 +92,7 @@ const timeFormat = time => {
 list_span.forEach((el, i) => {
   el.addEventListener('click', () => {
     list_span.forEach(e => e.classList.remove('active'));
-    for (k = 0; k <= i; k++) list_span[k].classList.add('active');
+    for (let k = 0; k <= i; k++) list_span[k].classList.add('active');
 
     const time_go = (i * audio.duration) / 100;
     audio.currentTime = time_go;
@@ -142,10 +142,10 @@ music_controls.addEventListener('click', function (e) {
 
   if (clicked.classList.contains('pause_play')) {
     if (clicked === user_play) audio.play();
-    else audio.pause();
+    else if (clicked === user_pause) audio.pause();
 
     user_pause.classList.toggle('hidden');
-    clicked.classList.toggle('hidden');
+    user_play.classList.toggle('hidden');
   }
 
   if (clicked.classList.contains('nxt_prev')) {
@@ -186,6 +186,8 @@ const update_audio_track = () => {
     user_time_current.textContent = timeFormat(time_current);
     rangeSlider.value = position;
 
+    if (position < 100) list_span[position].classList.add('active');
+
     if (Math.floor(time_duration) === Math.floor(time_current)) {
       list_span.forEach(el => el.classList.remove('active'));
       user_play.classList.add('hidden');
@@ -193,6 +195,8 @@ const update_audio_track = () => {
       user_time_current.textContent = `0:00`;
 
       music_no += 1;
+      if (music_no > tracks_array.length) music_no = 0;
+
       rangeSlider.value = 0;
       music_no = random_number_state ? playRandom_music() : music_no;
 
@@ -200,7 +204,5 @@ const update_audio_track = () => {
       update_audio_track();
       audio.play();
     }
-
-    if (position < 100) list_span[position].classList.add('active');
   });
 };
