@@ -4,6 +4,7 @@ const sectionSettings = document.querySelector('.section--settings');
 const header = document.querySelector('.section--settings header');
 const header_btns = document.querySelectorAll('.header .btn');
 const fields = document.querySelectorAll('.changing--field');
+const selectCountries = document.querySelector('.countries-codes');
 
 const accOverview = document.querySelector('.changing--field.account-overview');
 const profileEdit = document.querySelector('.changing--field.profile-edit');
@@ -67,3 +68,17 @@ sectionSettings.addEventListener('click', e => {
     header.classList.toggle('hidden');
   }
 });
+
+const countryData = async () => {
+  const res = await fetch('countries.json');
+  const countries = await res.json();
+
+  for (const country of countries) {
+    const HTML = `
+      <option value="${country.code}">${country.name}</option>
+    `;
+    selectCountries.insertAdjacentHTML('beforeend', HTML);
+  }
+};
+
+countryData();
