@@ -202,6 +202,7 @@ input[type='checkbox'] {
 }
 
 .date-of-birth {
+  width: 100%;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 1.2rem;
