@@ -102,7 +102,9 @@
 }
 
 .section--feed .track:hover {
-  transform: scale(1);
+  transform: scale(1.02);
+  transform: translateY(-0.8rem);
+  box-shadow: 0 1rem 0.6rem 0.6rem rgba(0, 0, 0, 0.12);
 }
 
 .popular-artists .img-holder {
@@ -408,7 +410,7 @@ input[type='range']::-ms-fill-upper {
 .currently-playing {
   padding: 1.8rem;
   border-radius: 0.8rem;
-  margin-bottom: 2.8rem;
+  margin-bottom: 1.8rem;
   background-color: #14213d;
 }
 
@@ -425,6 +427,7 @@ input[type='range']::-ms-fill-upper {
   position: relative;
   margin-bottom: 0.8rem;
   overflow: hidden;
+  width: 100%;
 }
 
 .song-play ion-icon {
@@ -444,8 +447,8 @@ input[type='range']::-ms-fill-upper {
 
 .songName {
   display: inline-block;
-  -webkit-animation: text-animation 20s linear infinite;
-  animation: text-animation 20s linear infinite;
+  -webkit-animation: text-animation 25s linear infinite;
+  animation: text-animation 25s linear infinite;
   animation-delay: 10s;
 }
 
@@ -453,6 +456,7 @@ input[type='range']::-ms-fill-upper {
   0% {
     transform: translateX(100%);
     -webkit-transform: translateX(100%);
+    width: 100%;
   }
   100% {
     transform: translateX(-100%);
@@ -463,6 +467,7 @@ input[type='range']::-ms-fill-upper {
 @-webkit-keyframes text-animation {
   0% {
     -webkit-transform: translateX(100%);
+    width: 100%;
   }
   100% {
     -webkit-transform: translateX(-100%);

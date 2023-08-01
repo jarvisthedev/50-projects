@@ -32,16 +32,7 @@ const password_3 = document.querySelector('.password3');
 const eye__close = document.querySelectorAll('.eye-close');
 const eye__open = document.querySelectorAll('.eye-open');
 
-let input_password_type='password'
-
-
-
-
-
-
-
-
-
+let input_password_type = 'password';
 
 sectionSettings.addEventListener('click', e => {
   const clicked = e.target;
@@ -85,12 +76,17 @@ sectionSettings.addEventListener('click', e => {
     menu__close.classList.toggle('hidden');
     menu__open.classList.toggle('hidden');
     header.classList.toggle('hidden');
-  } else if(clicked.closest(`.password-state div`)){
-eye__close.forEach(el=>el.classList.toggle('hidden'))
-eye__open.forEach(el=>el.classList.toggle('hidden'))
-showHidePassword()
+  } else if (clicked.closest(`.password-state div`)) {
+    eye__close.forEach(el => el.classList.toggle('hidden'));
+    eye__open.forEach(el => el.classList.toggle('hidden'));
+    showHidePassword();
   }
 });
+
+const showHidePassword = () => {
+  input_password_type = input_password_type === `text` ? 'password' : `text`;
+  password_s.forEach(el => (el.type = `${input_password_type}`));
+};
 
 const countryData = async () => {
   const res = await fetch('countries.json');
@@ -103,21 +99,5 @@ const countryData = async () => {
     selectCountries.insertAdjacentHTML('beforeend', HTML);
   }
 };
-
-
-const showHidePassword=() =>{
-  input_password_type=input_password_type===`text`?'password':`text`;
-
-
-  password_s.forEach(el=>el.type=`${input_password_type}`)
-
-  // if (x.type === "password") {
-  //   x.type = "text";
-  // } else {
-  //   x.type = "password";
-  // }
-}
-
-
 
 countryData();

@@ -195,6 +195,12 @@ input[type='checkbox'] {
   background-color: transparent;
   border: none;
   border: 1px solid #000;
+}
+
+.form select,
+.form input[type='number'],
+.form input[type='password'],
+.form input[type='text'] {
   width: 100%;
 }
 
@@ -202,25 +208,17 @@ input[type='checkbox'] {
   border: 1px solid rgba(0, 0, 0, 0.098);
 }
 
-.password-state{
+.password-state {
   position: relative;
 }
 
-.password-state div{
-  position: absolute;
-  /* top:1.1rem; */
-  top:.7rem;
-  top:38%;
-
-  right: 1.8rem;
-  /* font-size: 1.8rem; */
+.password-state div {
   font-size: 2.4rem;
-
+  position: absolute;
+  right: 1.8rem;
+  top: 38%;
   transform: translateY(-50%);
-
-
 }
-
 
 .date-of-birth {
   max-width: 98rem;
@@ -434,6 +432,7 @@ label[for='checkbox'] {
 label[for='checkbox'] {
   display: flex;
   align-items: flex-start;
+
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
