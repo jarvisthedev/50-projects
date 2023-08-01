@@ -208,6 +208,10 @@ input[type='checkbox'] {
   gap: 1.2rem;
 }
 
+.profile-edit {
+  width: 100%;
+}
+
 .btns {
   align-self: flex-end;
 
