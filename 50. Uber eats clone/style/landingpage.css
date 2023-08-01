@@ -1,0 +1,562 @@
+@import url("main.css");
+
+/* ****************** */
+/* MAIN HEADER */
+/* ****************** */
+
+.header {
+  background-color: #fbca18;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem 4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+}
+
+.logo-wrapper,
+.nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  gap: 3.2rem;
+}
+
+.nav ul {
+  list-style: none;
+  gap: 1.6rem;
+}
+
+.bx {
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+.light-bold {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.btns:link,
+.btns:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.4rem 1.6rem;
+  height: 4.8rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn--log-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  background-color: #f7f7f7;
+  color: #000;
+}
+
+.btn--sign-up {
+  background-color: #000;
+  color: #f7f7f7;
+}
+
+.btn--log-in:hover,
+.btn--log-in:active {
+  background-color: #c6c6c6;
+}
+
+.btn--sign-up:hover,
+.btn--sign-up:active {
+  background-color: #333;
+}
+
+/* ****************** */
+/* MAIN BODY */
+/* ****************** */
+
+/*  ASIDE HIDDEN MINI-MENU */
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+.mini-menu {
+  width: 30rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f7f7f7;
+  z-index: 5;
+}
+
+.menu {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 4.4rem);
+}
+
+.getting-started {
+  margin-bottom: 3.6rem;
+}
+
+.signup-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  width: 25rem;
+  padding: 1.4rem 7.4rem;
+  border-radius: 0.8rem;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: all 0.3s;
+}
+
+.btn-signup:link,
+.btn-signup:visited {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-signin:link,
+.btn-signin:visited {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+  background-color: #333;
+}
+
+.btn-signin:hover,
+.btn-signin:active {
+  background-color: #d6d6d6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-links .link:link,
+.nav-links .link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #111;
+  font-weight: 500;
+}
+
+.uber-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.uber-img-logo {
+  display: inline-block;
+  height: 5.4rem;
+  width: 5.4rem;
+}
+
+.uber-text-logo {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+
+.getapp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.getapp-iphone,
+.getapp-android {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.getapp-iphone span,
+.getapp-android span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.getapp a:link,
+.getapp a:visited {
+  display: inline-block;
+  padding: 1.2rem 1.6rem;
+  border-radius: 10rem;
+  text-decoration: none;
+
+  color: #000;
+  background-color: #eeeeee;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  background-color: #fbca18;
+  width: 100%;
+  height: 90vh;
+  padding-inline-start: 4rem;
+  padding-block-start: 10rem;
+}
+
+main h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.address-input {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+.search-box {
+  background-color: #fff;
+  width: 45%;
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.search-box i,
+.deliver-now i {
+  font-size: 2.4rem;
+}
+
+.search-box input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+}
+
+.deliver-now {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 1rem;
+  font-size: 20px;
+  gap: 1rem;
+}
+
+.find-food a {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.4rem 1rem;
+  border-radius: 1rem;
+}
+
+.para-sign-up {
+  margin-block-start: 4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.para-sign-up a {
+  color: #000;
+}
+
+.mini-section {
+  background-color: #fff;
+  padding: 8rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.image {
+  width: 100%;
+  height: 25rem;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a.each-section {
+  text-decoration: none;
+}
+
+a.each-section .text h4 {
+  color: #000;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+a.each-section .text p {
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ****************** */
+/* SECTION LOCATION */
+/* ****************** */
+
+.location--cities-countries {
+  margin: 4.8rem auto;
+  padding: 4.8rem;
+  font-size: 1.8rem;
+}
+
+.location-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.locations-area {
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-bottom: 5.6rem;
+}
+
+.cities-map {
+  margin-bottom: 3.2rem;
+}
+
+.cities-map img {
+  width: 100%;
+}
+
+.location-intro a:link,
+.location-intro a:visited {
+  color: #000;
+}
+
+.current-geolocation-cities {
+  display: flex;
+  gap: 4.8rem;
+  margin-bottom: 6.4rem;
+}
+
+.location-intro {
+  margin-top: 0;
+}
+
+.countries-list,
+.section {
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+.countries-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.country:link,
+.country:visited {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+/* *********************** */
+/* FOOTER STYLING */
+/* *********************** */
+
+.footer {
+  font-size: 2rem;
+  padding: 8rem 4.4rem;
+}
+
+.footer-3-cols {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 6.4rem;
+}
+
+.footer-3-cols li,
+.privacy-policy-terms-and-pricing li {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: normal;
+  padding: 0.4rem;
+}
+
+.footer-3-cols ul,
+.privacy-policy-terms-and-pricing ul {
+  list-style: none;
+}
+
+.footer-3-cols a:link,
+.footer-3-cols a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-3-cols a:hover,
+.footer-3-cols a:active {
+  text-decoration: underline;
+}
+
+.privacy-policy-terms-and-pricing a:link,
+.privacy-policy-terms-and-pricing a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.privacy-policy-terms-and-pricing a:hover,
+.privacy-policy-terms-and-pricing a:active {
+  text-decoration: underline;
+}
+
+.get-app-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+}
+
+.get-app-links img {
+  height: 4rem;
+  width: 13.5rem;
+}
+
+.gethelp-and-sign-up {
+  display: flex;
+  flex: 1;
+}
+
+.gethelp-and-sign-up ul,
+.location-and-about-uber-eats ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: stretch;
+  flex: 1;
+}
+
+.gethelp-and-sign-up li {
+  font-size: 1.6rem;
+  padding: 0.2rem;
+}
+
+.location-and-about-uber-eats {
+  flex: 1;
+}
+
+.lower_details {
+  margin-top: 3.2rem;
+}
+
+.follow-us-terms-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.social-media-handles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.privacy-list {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.privacy-detail {
+  font-size: 1.3rem;
+}
+
+.protection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3.6rem;
+  font-size: 1.3rem;
+}
+
+.protection p a:link,
+.protection p a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.protection p a:hover,
+.protection p a:active {
+  text-decoration: underline;
+}

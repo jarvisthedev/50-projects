@@ -202,6 +202,26 @@ input[type='checkbox'] {
   border: 1px solid rgba(0, 0, 0, 0.098);
 }
 
+.password-state{
+  position: relative;
+}
+
+.password-state div{
+  position: absolute;
+  /* top:1.1rem; */
+  top:.7rem;
+  top:38%;
+
+  right: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 2.4rem;
+
+  transform: translateY(-50%);
+
+
+}
+
+
 .date-of-birth {
   max-width: 98rem;
   display: grid;
