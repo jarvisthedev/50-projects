@@ -195,6 +195,7 @@ input[type='checkbox'] {
   background-color: transparent;
   border: none;
   border: 1px solid #000;
+  width: 100%;
 }
 
 .section--settings .pass-disabled {
@@ -202,14 +203,11 @@ input[type='checkbox'] {
 }
 
 .date-of-birth {
-  width: 100%;
+  max-width: 98rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
+  align-items: center;
   gap: 1.2rem;
-}
-
-.profile-edit {
-  width: 100%;
 }
 
 .btns {

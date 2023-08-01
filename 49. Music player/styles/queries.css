@@ -34,7 +34,7 @@
 
   /* setting.css */
   .date-of-birth {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     gap: 0;
   }
 }
