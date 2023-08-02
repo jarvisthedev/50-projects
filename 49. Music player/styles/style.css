@@ -407,6 +407,10 @@ input[type='range']::-ms-fill-upper {
   border-radius: 0.8rem;
 }
 
+.container--3.hidden {
+  display: block;
+}
+
 .currently-playing {
   padding: 1.8rem;
   border-radius: 0.8rem;

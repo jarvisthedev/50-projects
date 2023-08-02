@@ -102,10 +102,7 @@ list_span.forEach((el, i) => {
 btns.addEventListener('click', function (e) {
   btn_close.classList.toggle('hidden');
   btn_menu.classList.toggle('hidden');
-
-  sectionPlay.style.backgroundColor = '#1b323c';
-  hidden_container.style.display = display;
-  display = display === 'none' ? 'block' : 'none';
+  hidden_container.classList.toggle('hidden');
 });
 
 const update_track_UI = songs => {
