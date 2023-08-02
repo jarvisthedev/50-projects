@@ -90,6 +90,12 @@
     margin-bottom: 0.8rem;
   }
 
+  .section-header {
+    position: absolute;
+    right: 7.2%;
+    top: 7.2%;
+  }
+
   /* settings.css */
   .section--settings .primary-text {
     font-size: 3.2rem;
@@ -157,6 +163,10 @@
 
   .music-range {
     padding: 0 3.6rem;
+  }
+
+  .section-header {
+    right: 1.8%;
   }
 
   /* settings.css */
