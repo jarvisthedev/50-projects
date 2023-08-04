@@ -18,7 +18,7 @@ const trackName = document.querySelector('.song-play span');
 const trackDescription = document.querySelector('.song-description');
 const trackRelease_date = document.querySelector('.date-release span');
 
-const hidden_container = document.querySelector('.container--3');
+const dis = document.querySelector('.container--3');
 const section = document.querySelectorAll('section');
 const sectionFeed = document.querySelector('.section--feed');
 const sectionTrending = document.querySelector('.section--trending');
@@ -46,7 +46,6 @@ const user_pause = document.querySelector('.pause');
 const user_playnxt = document.querySelector('.playnxt');
 const user_repeat = document.querySelector('.repeat');
 
-let display = 'block';
 let music_no = 0;
 let number_of_songs = 0;
 let random_number_state = false;
@@ -102,7 +101,7 @@ list_span.forEach((el, i) => {
 btns.addEventListener('click', function (e) {
   btn_close.classList.toggle('hidden');
   btn_menu.classList.toggle('hidden');
-  hidden_container.classList.toggle('hidden');
+  dis.classList.toggle('hidden');
 });
 
 const update_track_UI = songs => {

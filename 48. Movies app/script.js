@@ -4,6 +4,11 @@ const container__upcoming = document.querySelector('.upcoming_container');
 const container__topRated = document.querySelector('.toprated_container');
 const container__tvSeries = document.querySelector('.series_container');
 
+const header = document.querySelector('.header');
+const footer = document.querySelector('footer');
+const section__topRated = document.querySelector('.section--toprated');
+const section__tvSeries = document.querySelector('.section--series');
+
 const rendering_Movie = (movies, section) => {
   section.innerHTML = ``;
 
@@ -59,3 +64,29 @@ const mappingAPI_Data = async () => {
 };
 
 mappingAPI_Data();
+
+header.addEventListener('click', e => {
+  const clicked = e.target;
+  if (clicked.classList.contains('tv-show'))
+    section__topRated.scrollIntoView({
+      behavior: 'smooth',
+    });
+
+  if (clicked.classList.contains('tv-series'))
+    section__tvSeries.scrollIntoView({
+      behavior: 'smooth',
+    });
+});
+
+footer.addEventListener('click', e => {
+  const clicked = e.target;
+  if (clicked.classList.contains('tv-show'))
+    section__topRated.scrollIntoView({
+      behavior: 'smooth',
+    });
+
+  if (clicked.classList.contains('tv-series'))
+    section__tvSeries.scrollIntoView({
+      behavior: 'smooth',
+    });
+});
