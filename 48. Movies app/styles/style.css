@@ -149,6 +149,26 @@ ion-icon[name='play-outline'] {
   font-weight: 700;
 }
 
+ion-icon[name='arrow-up-outline'] {
+  padding: 1.2rem;
+  background-color: var(--citrine);
+  border-radius: 50%;
+  color: #000;
+  font-size: 2.8rem;
+  cursor: pointer;
+  box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.12);
+
+  position: fixed;
+  right: 2.8rem;
+  bottom: 10rem;
+  transition: all 0.3s;
+}
+
+ion-icon[name='arrow-up-outline']:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.18);
+}
+
 /* /////////////////////// */
 /* SECTION UPCOMING */
 /* /////////////////////// */

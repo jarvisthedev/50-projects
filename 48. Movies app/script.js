@@ -3,6 +3,7 @@
 const container__upcoming = document.querySelector('.upcoming_container');
 const container__topRated = document.querySelector('.toprated_container');
 const container__tvSeries = document.querySelector('.series_container');
+const topArr__nav = document.querySelector('.top-nav-arrow');
 
 const header = document.querySelector('.header');
 const footer = document.querySelector('footer');
@@ -89,4 +90,10 @@ footer.addEventListener('click', e => {
     section__tvSeries.scrollIntoView({
       behavior: 'smooth',
     });
+});
+
+topArr__nav.addEventListener('click', e => {
+  header.scrollIntoView({
+    behavior: 'smooth',
+  });
 });
