@@ -514,6 +514,7 @@ ion-icon[name='download-outline'] {
 
 .section-pricing .secondary-text {
   align-self: center;
+  text-align: center;
 }
 
 .pricing-time {
