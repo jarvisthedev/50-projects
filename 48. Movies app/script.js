@@ -97,3 +97,14 @@ topArr__nav.addEventListener('click', e => {
     behavior: 'smooth',
   });
 });
+
+const arrowVisibility = () => {
+  const heightUsed = 650;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > heightUsed) topArr__nav.style.opacity = 1;
+    else topArr__nav.style.opacity = 0;
+  });
+};
+
+arrowVisibility();

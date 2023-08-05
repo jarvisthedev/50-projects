@@ -160,8 +160,12 @@ ion-icon[name='arrow-up-outline'] {
 
   position: fixed;
   right: 2.8rem;
-  bottom: 10rem;
+  bottom: 4.8rem;
   transition: all 0.3s;
+}
+
+.top-nav-arrow {
+  opacity: 0;
 }
 
 ion-icon[name='arrow-up-outline']:hover {
