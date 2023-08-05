@@ -9,6 +9,7 @@ const header = document.querySelector('.header');
 const footer = document.querySelector('footer');
 const section__topRated = document.querySelector('.section--toprated');
 const section__tvSeries = document.querySelector('.section--series');
+const section__pricing = document.querySelector('.section-pricing');
 
 const rendering_Movie = (movies, section) => {
   section.innerHTML = ``;
@@ -77,6 +78,11 @@ header.addEventListener('click', e => {
     section__tvSeries.scrollIntoView({
       behavior: 'smooth',
     });
+
+  if (clicked.classList.contains('pricing'))
+    section__pricing.scrollIntoView({
+      behavior: 'smooth',
+    });
 });
 
 footer.addEventListener('click', e => {
@@ -88,6 +94,11 @@ footer.addEventListener('click', e => {
 
   if (clicked.classList.contains('tv-series'))
     section__tvSeries.scrollIntoView({
+      behavior: 'smooth',
+    });
+
+  if (clicked.classList.contains('pricing'))
+    section__pricing.scrollIntoView({
       behavior: 'smooth',
     });
 });
