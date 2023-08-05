@@ -496,6 +496,52 @@ ion-icon[name='download-outline'] {
 /* /////////////////////// */
 /* SECTION SERIES */
 /* /////////////////////// */
+.section-pricing {
+  /* text-align: center; */
+  color: #f7f7f7;
+  background-color: #222;
+  padding: 9.8rem 2.8rem;
+}
+
+.container {
+}
+
+.h2-intro {
+}
+
+.secondary-text {
+}
+
+.pricing-time {
+}
+
+.plans-list {
+}
+
+.plan {
+}
+
+.secondary-text {
+}
+
+.h3-intro {
+}
+
+.price-tag {
+}
+
+.benefits-list {
+}
+
+.benefits-detail {
+}
+
+.btn.btn--pricing {
+}
+
+/* /////////////////////// */
+/* SECTION CTA */
+/* /////////////////////// */
 .section--CTA {
   background-image: url('../imgs/img/cta-bg.jpg');
   background-repeat: no-repeat;
