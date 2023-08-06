@@ -11,6 +11,8 @@ const section__topRated = document.querySelector('.section--toprated');
 const section__tvSeries = document.querySelector('.section--series');
 const section__pricing = document.querySelector('.section-pricing');
 
+const pricing__mothlyYearly = document.querySelector('.toggle-checkbox');
+
 const rendering_Movie = (movies, section) => {
   section.innerHTML = ``;
 
@@ -109,7 +111,7 @@ topArr__nav.addEventListener('click', e => {
   });
 });
 
-const arrowVisibility = () => {
+const navigateTopPage = () => {
   const heightUsed = 650;
 
   window.addEventListener('scroll', () => {
@@ -117,5 +119,13 @@ const arrowVisibility = () => {
     else topArr__nav.style.opacity = 0;
   });
 };
+navigateTopPage();
 
-arrowVisibility();
+pricing__mothlyYearly.addEventListener('change', () => {
+  const monthlyYearly = document.querySelectorAll('.prices');
+
+  if (pricing__mothlyYearly.checked)
+    monthlyYearly.forEach(el => (el.textContent = Number(el.textContent * 12)));
+  else
+    monthlyYearly.forEach(el => (el.textContent = Number(el.textContent / 12)));
+});
