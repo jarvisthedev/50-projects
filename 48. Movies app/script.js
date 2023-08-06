@@ -12,6 +12,9 @@ const section__topRated = document.querySelector('.section--toprated');
 const section__tvSeries = document.querySelector('.section--series');
 const section__pricing = document.querySelector('.section-pricing');
 
+const movieInput = document.querySelector('.movie-input');
+const search__icon = document.querySelector(`ion-icon[name='search-outline']`);
+
 const pricing__mothlyYearly = document.querySelector('.toggle-checkbox');
 
 const rendering_Movie = (movies, section) => {
@@ -72,6 +75,11 @@ mappingAPI_Data();
 
 header.addEventListener('click', e => {
   const clicked = e.target;
+
+  if (clicked === search__icon) {
+    // console.log(121212);
+    clicked.classList.add('hidden');
+  }
   if (clicked.classList.contains('tv-show'))
     section__topRated.scrollIntoView({
       behavior: 'smooth',

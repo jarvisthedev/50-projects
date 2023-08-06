@@ -47,14 +47,30 @@
 .header-tools {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
   cursor: pointer;
+  position: relative;
+}
+
+.movie-input {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  max-width: 20rem;
+  border-radius: 10rem;
+  color: #f7f7f7;
+  border: 1.2px solid var(--citrine);
+  background-color: transparent;
+  outline: none;
 }
 
 ion-icon[name='search-outline'] {
   padding-right: 1rem;
   margin-right: 0.8rem;
   border-right: 1px solid #cecaca43;
+  position: absolute;
+  right: 7.2rem;
 }
 
 .header ion-icon[name='globe-outline'] {
