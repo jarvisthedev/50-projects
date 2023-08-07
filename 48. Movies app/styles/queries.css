@@ -1,7 +1,7 @@
 /* ////////////////////////////////// */
-/* SMALLER LAPTOP (1228px) */
+/* SMALLER LAPTOP (1160px) */
 /* ////////////////////////////////// */
-@media (max-width: 76.75em) {
+@media (max-width: 72.5em) {
   html {
     font-size: 56.25%;
   }
@@ -13,9 +13,9 @@
 }
 
 /* ////////////////////////////////// */
-/* LANDSCAPE TABLETS (1056px) */
+/* LANDSCAPE TABLETS (1000px) */
 /* ////////////////////////////////// */
-@media (max-width: 66em) {
+@media (max-width: 62.5em) {
   .header--top .nav {
     position: absolute;
     top: 0;
@@ -145,18 +145,17 @@
 /* ////////////////////////////////// */
 @media (max-width: 37.5em) {
   /* HEADER */
-  .search-res .home span {
+  .header {
+    gap: 4.8rem;
+  }
+
+  .search-nav span {
     display: none;
   }
 
-  .search-res .visible {
-    margin-left: 5.8rem;
-  }
-
-  .search-res ion-icon[name='close-outline'] {
-    display: inline-block;
-    left: 5.8rem;
-    width: 50%;
+  .movie-input.visible {
+    max-width: 28rem;
+    width: 100%;
   }
 
   .grid-template--4 {

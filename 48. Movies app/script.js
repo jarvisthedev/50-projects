@@ -13,8 +13,8 @@ const section__tvSeries = document.querySelector('.section--series');
 const section__pricing = document.querySelector('.section-pricing');
 
 const movieInput = document.querySelector('.movie-input');
-const search__icon = document.querySelector(`ion-icon[name='search-outline']`);
 const close__icon = document.querySelector(`ion-icon[name='close-outline']`);
+const search__icon = document.querySelector(`ion-icon[name='search-outline']`);
 
 const pricing__mothlyYearly = document.querySelector('.toggle-checkbox');
 
@@ -79,15 +79,12 @@ header.addEventListener('click', e => {
 
   if (clicked === search__icon) {
     movieInput.classList.add('visible');
-    header.classList.add('search-res');
-    close__icon.style.display = 'flex';
+    header.classList.add('search-nav');
   }
 
   if (clicked === close__icon) {
     movieInput.classList.remove('visible');
-    header.classList.remove('search-res');
-    // console.log(1213212);
-    close__icon.style.display = 'none ';
+    header.classList.remove('search-nav');
   }
 
   if (clicked.classList.contains('tv-show'))
