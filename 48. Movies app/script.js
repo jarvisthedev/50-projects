@@ -76,10 +76,8 @@ mappingAPI_Data();
 header.addEventListener('click', e => {
   const clicked = e.target;
 
-  if (clicked === search__icon) {
-    // console.log(121212);
-    clicked.classList.add('hidden');
-  }
+  if (clicked === search__icon) movieInput.classList.toggle('visible');
+
   if (clicked.classList.contains('tv-show'))
     section__topRated.scrollIntoView({
       behavior: 'smooth',

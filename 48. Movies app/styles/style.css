@@ -65,6 +65,22 @@
   outline: none;
 }
 
+.movie-input {
+  transform-origin: top;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  transform: scaleY(0);
+}
+
+.movie-input.visible {
+  max-width: 20rem;
+  max-height: 20rem;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
 ion-icon[name='search-outline'] {
   padding-right: 1rem;
   margin-right: 0.8rem;
