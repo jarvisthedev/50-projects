@@ -1,117 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-input:focus {
-  outline: none;
-}
-
-body {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #000;
-  background-color: #dedede;
-}
-
 .section--signInForm {
   padding: 0 1.8rem;
+  margin: none;
 }
 
 .container {
-  margin: 2.4rem auto;
-  gap: 1.2rem;
-  padding: 1.2rem;
   max-width: 112rem;
+  margin: 2.4rem auto;
+  padding: 1.8rem;
+  border-bottom-right-radius: 4.8rem;
   display: grid;
   grid-template-columns: 1.5fr 2fr;
-  background-color: #f7f7f7;
-  border-bottom-right-radius: 4.8rem;
+  gap: 1.2rem;
+  background-color: #fefefa;
+  box-shadow: 0 0 1.2rem 1.2rem rgba(0, 0, 0, 0.01);
+}
+
+a:link,
+a:visited {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
 }
 
 /* ////////////////////////////// */
 /* FIRST PART */
 /* ///////////////////////////// */
-.form {
+.section--signInForm form {
   padding: 3.2rem;
 }
 
-.primary-heading {
-  font-weight: 500;
+.section--signInForm .primary--text {
   font-size: 1.8rem;
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 2.4rem;
+  color: var(--citrine);
 }
 
-.secondary-heading {
-  font-weight: 500;
+.section--signInForm .secondary--text {
   font-size: 2.4rem;
+  font-weight: 500;
   margin-bottom: 0.8rem;
 }
 
-.supporting-text {
-  font-size: 1rem;
+.section--signInForm .h2-intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
   color: #333;
   margin-bottom: 2.4rem;
-  text-align: center;
 }
 
-.form input {
-  display: block;
-  padding: 1.4rem;
+.section--signInForm input {
+  width: 100%;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: transparent;
   padding: 1.2rem 0;
+
   margin-bottom: 1.2rem;
+  outline: none;
+}
+
+.section--signInForm input::placeholder {
+  color: #999;
+}
+
+.section--signInForm input[type='password'] {
+  margin-bottom: 3.2rem;
+}
+
+.section--signInForm button {
   width: 100%;
-}
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 1.2rem 4.8rem;
+  border: none;
+  border-radius: 0.8rem;
 
-input[type='password'] {
-  margin-bottom: 2.4rem;
-}
-
-input::placeholder {
-  color: #222;
-}
-
-.form button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 0.6rem;
-  border: 1px solid #f7f7f7;
-  width: 100%;
+  justify-content: flex-start;
+  gap: 1.8rem;
+
   background-color: transparent;
-  margin-bottom: 1.2rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  font-weight: 500;
 }
 
-.sighup {
-  background-color: #111 !important;
+.section--signInForm button:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.section--signInForm .auth {
+  display: inline-block;
   color: #f7f7f7;
+  background-color: #111;
+  text-align: center;
+  cursor: pointer;
 }
 
-.svg {
-  width: 1.6rem;
+form img {
+  width: 2rem;
 }
 
-.login {
+.hr-line {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   margin-top: 3.2rem;
-  font-size: 1rem;
+  margin-bottom: -1rem;
+}
+
+.hr {
+  display: inline-block;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.171);
+  width: 100%;
+}
+
+.hr-line .h2-intro {
+  white-space: nowrap;
+}
+
+.sign {
+  font-size: 1.2rem;
   color: #222;
   text-align: center;
+}
+
+.sign .hidden {
+  display: none;
+}
+
+.auth.hidden {
+  display: none;
 }
 
 /* ////////////////////////////// */
@@ -119,9 +142,7 @@ input::placeholder {
 /* ////////////////////////////// */
 .bg-pic-support {
   color: #f7f7f7;
-  /* background-image: url('./imgs/small1.jpg'); */
   background-image: url('../imgs/cover_photo/poster/cc-1.jpg');
-  /* background-image: url('../imgs/cover_photo/poster/cv--2.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
