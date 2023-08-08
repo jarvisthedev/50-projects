@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+
+  <body>
+    <section class="section--signInForm">
+      <div class="container">
+        <!-- FIRST PART -->
+        <form class="form" action="" method="post">
+          <h1 class="primary-heading">Dotty</h1>
+          <h2 class="secondary-heading">Create an account</h2>
+          <p class="supporting-text">
+            Let's get started with your 30 days free trial
+          </p>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="input"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="input"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input"
+            required
+          />
+
+          <button class="sighup">Create account</button>
+          <button class="google">
+            <img class="svg" src="imgs/google.svg" alt="google logo" />
+            <p class="form-text">Sign up with Google</p>
+          </button>
+          <button class="twitter">
+            <img class="svg" src="imgs/twitter.svg" alt="twitter logo" />
+            <p class="form-text">Sign up with Twitter</p>
+          </button>
+
+          <p class="logIn-text">
+            Already have an account? <a class="account" href="#">Log in</a>
+          </p>
+        </form>
+
+        <!-- SECOND PART -->
+        <div
+          class="bg-pic-support"
+          role="img"
+          aria-label="beutiful chair in a sitting rool with a green flower next to it"
+        >
+          <h2 class="secondary-heading">
+            Discover the Best Furniture for Your Home
+          </h2>
+          <p class="pic-text">
+            Our practice is Designing Complete Environments exceptional
+            buildings communities and places in special situations
+          </p>
+          <div class="features">
+            <p class="feature-btn">
+              <i class="icon ph-light ph-shield-check"></i>
+              <span class="feature-text">100% Guarantee</span>
+            </p>
+            <p class="feature-btn">
+              <i class="icon ph-light ph-truck"></i>
+              <span class="feature-text">Free delivery London area</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
