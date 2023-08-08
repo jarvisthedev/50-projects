@@ -108,7 +108,7 @@ header.addEventListener('click', e => {
     });
 
   if (clicked.classList.contains('btn-signin'))
-    window.location.href = './login page/index.html';
+    window.location.href = './login page/login.html';
 });
 
 footer.addEventListener('click', e => {

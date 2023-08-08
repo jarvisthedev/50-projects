@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="./login.css" />
     <link rel="stylesheet" href="./loginquery.css" />
 
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script defer src="./login.js"></script>
   </head>
 
@@ -71,12 +78,8 @@
           </button>
         </form>
 
-        <div
-          class="bg-pic-support"
-          role="img"
-          aria-label="beutiful chair in a sitting rool with a green flower next to it"
-        >
-          <h2 class="secondary-heading">
+        <div class="bg-pic" role="img" aria-label="Movie poster">
+          <h2 class="secondary--text">
             Discover the Best Movies at Your Comfort
           </h2>
           <p class="pic-text">
@@ -84,13 +87,13 @@
             Locations, All Set in Unbelievable Scenarios, Only on FlexStream.
           </p>
           <div class="features">
-            <p class="feature-btn">
-              <i class="icon ph-light ph-shield-check"></i>
-              <span class="feature-text">100% Guarantee</span>
+            <p>
+              <ion-icon name="tv-outline"></ion-icon>
+              <span>Enjoy on Your TV.</span>
             </p>
-            <p class="feature-btn">
-              <i class="icon ph-light ph-truck"></i>
-              <span class="feature-text">Free delivery London area</span>
+            <p>
+              <ion-icon name="videocam-outline"></ion-icon>
+              <span>Watch Everywhere.</span>
             </p>
           </div>
         </div>
