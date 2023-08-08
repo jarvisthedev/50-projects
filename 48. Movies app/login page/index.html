@@ -7,16 +7,91 @@
     <title>Sign in | Sign up</title>
 
     <link rel="stylesheet" href="../styles/general.css" />
-    <link rel="stylesheet" href="../styles/queries.css" />
+    <!-- <link rel="stylesheet" href="../styles/queries.css" /> -->
 
     <link rel="stylesheet" href="./login.css" />
-    <!-- <link rel="stylesheet" href="./loginquery.css" /> -->
+    <link rel="stylesheet" href="./loginquery.css" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="./login.js"></script>
   </head>
 
   <body>
+    <!-- <section class="section--signInForm">
+      <div class="container">
+
+        <form class="form" action="" method="post">
+          <h1 class="primary-heading">Dotty</h1>
+          <h2 class="secondary-heading">Create an account</h2>
+          <p class="supporting-text">
+            Let's get started with your 30 days free trial
+          </p>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="input"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="input"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input"
+            required
+          />
+
+          <button class="sighup">Create account</button>
+          <button class="google">
+            <img class="svg" src="imgs/google.svg" alt="google logo" />
+            <p class="form-text">Sign up with Google</p>
+          </button>
+          <button class="twitter">
+            <img class="svg" src="imgs/twitter.svg" alt="twitter logo" />
+            <p class="form-text">Sign up with Twitter</p>
+          </button>
+
+          <p class="logIn-text">
+            Already have an account? <a class="account" href="#">Log in</a>
+          </p>
+        </form>
+
+        <div
+          class="bg-pic-support"
+          role="img"
+          aria-label="beutiful chair in a sitting rool with a green flower next to it"
+        >
+          <h2 class="secondary-heading">
+            Discover the Best Furniture for Your Home
+          </h2>
+          <p class="pic-text">
+            Our practice is Designing Complete Environments exceptional
+            buildings communities and places in special situations
+          </p>
+          <div class="features">
+            <p class="feature-btn">
+              <i class="icon ph-light ph-shield-check"></i>
+              <span class="feature-text">100% Guarantee</span>
+            </p>
+            <p class="feature-btn">
+              <i class="icon ph-light ph-truck"></i>
+              <span class="feature-text">Free delivery London area</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
     <section class="section--signInForm">
       <div class="container">
         <form class="form" action="" method="post">
@@ -27,14 +102,15 @@
             Get access to exclusive to Movies and TV shows at your comfort
           </p>
 
-          <label for="username">Username</label>
-          <input required type="text" name="username" class="username" />
+          <input required type="text" placeholder="Username" class="username" />
+          <input required type="email" placeholder="Email" class="email" />
 
-          <label for="email">Email</label>
-          <input required type="email" name="email" class="email" />
-
-          <label for="password">Password</label>
-          <input required type="password" name="password" class="password" />
+          <input
+            required
+            type="password"
+            placeholder="Password"
+            class="password"
+          />
 
           <button class="sighup">Create account</button>
 
