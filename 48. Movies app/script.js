@@ -106,6 +106,9 @@ header.addEventListener('click', e => {
     section__upcoming.scrollIntoView({
       behavior: 'smooth',
     });
+
+  if (clicked.classList.contains('btn-signin'))
+    window.location.href = './login page/index.html';
 });
 
 footer.addEventListener('click', e => {

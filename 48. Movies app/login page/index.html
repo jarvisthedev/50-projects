@@ -4,65 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>Sign in | Sign up</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/queries.css" />
+
+    <link rel="stylesheet" href="./login.css" />
+    <!-- <link rel="stylesheet" href="./loginquery.css" /> -->
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="./login.js"></script>
   </head>
 
   <body>
     <section class="section--signInForm">
       <div class="container">
-        <!-- FIRST PART -->
         <form class="form" action="" method="post">
-          <h1 class="primary-heading">Dotty</h1>
+          <h1 class="primary-heading">FlexStream</h1>
           <h2 class="secondary-heading">Create an account</h2>
+
           <p class="supporting-text">
-            Let's get started with your 30 days free trial
+            Get access to exclusive to Movies and TV shows at your comfort
           </p>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            class="input"
-            required
-          />
+          <label for="username">Username</label>
+          <input required type="text" name="username" class="username" />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            class="input"
-            required
-          />
+          <label for="email">Email</label>
+          <input required type="email" name="email" class="email" />
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            class="input"
-            required
-          />
+          <label for="password">Password</label>
+          <input required type="password" name="password" class="password" />
 
           <button class="sighup">Create account</button>
+
+          <!--  -->
+          <hr class="hr" />
+
           <button class="google">
-            <img class="svg" src="imgs/google.svg" alt="google logo" />
-            <p class="form-text">Sign up with Google</p>
+            <img class="svg" src="./imgs/google.svg" alt="google logo" />
+            <p class="form-text">Continue with Google</p>
+          </button>
+          <button class="facebook">
+            <img class="svg" src="./imgs/facebook.svg" alt="facebook logo" />
+            <p class="form-text">Continue with facebook</p>
+          </button>
+          <button class="apple">
+            <img class="svg" src="./imgs/apple1.svg" alt="apple logo" />
+            <p class="form-text">Continue with apple</p>
           </button>
           <button class="twitter">
             <img class="svg" src="imgs/twitter.svg" alt="twitter logo" />
-            <p class="form-text">Sign up with Twitter</p>
+            <p class="form-text">Continue with Twitter</p>
           </button>
 
-          <p class="logIn-text">
-            Already have an account? <a class="account" href="#">Log in</a>
-          </p>
+          <!--  -->
+          <hr class="hr" />
+
+          <div class="login">
+            <p>
+              Already have an account? <a class="account" href="#">Log in</a>
+            </p>
+            <!-- <p>
+              Don't have an account? <a class="account" href="#">Sign up</a>
+            </p> -->
+          </div>
         </form>
 
-        <!-- SECOND PART -->
         <div
           class="bg-pic-support"
           role="img"
