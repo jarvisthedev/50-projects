@@ -20,26 +20,13 @@
 /* POTTRAIT TABLETS (848px) */
 /* ////////////////////////////////// */
 @media (max-width: 53em) {
-  /* .secondary-heading {
-    font-size: 1.8rem;
+  .section--signInForm button {
+    padding: 1.2rem 4.8rem;
+    justify-content: center;
   }
 
-  .form button {
-    font-size: 1.2rem;
-    padding: 0.8rem 0.4rem;
-  }
-
-  .bg-pic-support .secondary-heading {
-    font-size: 2.2rem;
-    padding: 0 9.8rem;
-  } */
-}
-
-/* ////////////////////////////////// */
-/* TABLETS (680px) */
-/* ////////////////////////////////// */
-@media (max-width: 42.5em) {
   .container {
+    width: 80%;
     grid-template-columns: 1fr;
     border-bottom-right-radius: 0;
     border-top-left-radius: 3.2rem;
@@ -48,27 +35,19 @@
     overflow: hidden;
   }
 
-  .bg-pic-support {
-    padding-bottom: 60rem;
+  .bg-pic {
+    padding-bottom: 54rem;
     grid-row: 1/2;
     border-bottom-right-radius: 0;
   }
+}
 
-  .secondary-heading {
-    font-size: 2.4rem;
-  }
-
-  .supporting-text {
-    font-size: 1.2rem;
-    text-align: left;
-  }
-
-  .form button {
-    font-size: 1.8rem;
-  }
-
-  .bg-pic-support .secondary-heading {
-    font-size: 2.8rem;
+/* ////////////////////////////////// */
+/* TABLETS (680px) */
+/* ////////////////////////////////// */
+@media (max-width: 42.5em) {
+  .container {
+    width: 100%;
   }
 }
 
@@ -76,24 +55,17 @@
 /* SMARTPHONE (488px) */
 /* ////////////////////////////////// */
 @media (max-width: 30.5em) {
-  .bg-pic-support .secondary-heading {
-    font-size: 2.2rem;
-    padding: 0;
+  .bg-pic {
+    padding-bottom: 48vh;
   }
 
-  .bg-pic-support {
-    padding-bottom: 50vh;
+  .features {
+    align-items: stretch;
+    flex-direction: column;
   }
 
-  .pic-text {
-    font-size: 1.6rem;
-  }
-
-  .form button {
-    font-size: 1.2rem;
-  }
-
-  .feature-btn {
-    font-size: 1.2rem;
+  .section--signInForm button {
+    padding: 1.2rem 1.8rem;
+    justify-content: center;
   }
 }
