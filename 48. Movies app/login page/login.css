@@ -190,9 +190,6 @@ form img {
 
 /* ALERT BOX */
 .custom-alert {
-  background-color: var(--citrine);
-  color: var(--rich-black-fogra-29);
-
   font-size: 1.8rem;
   padding: 1.2rem 2.4rem;
   position: absolute;
@@ -200,4 +197,7 @@ form img {
   top: 0;
   left: 50%;
   transform: translate(0 -50%);
+
+  background-color: var(--citrine);
+  color: var(--rich-black-fogra-29);
 }

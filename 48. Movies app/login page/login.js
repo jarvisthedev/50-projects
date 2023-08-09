@@ -34,8 +34,6 @@ const showAlert = (message, duration) => {
   }, duration);
 };
 
-// showAlert('Login success', 3000);
-
 sectionSign.addEventListener('click', e => {
   e.preventDefault();
   const clicked = e.target;
