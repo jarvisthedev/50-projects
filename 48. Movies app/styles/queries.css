@@ -271,6 +271,14 @@
     width: 70vw;
   }
 
+  .home {
+    font-size: 2rem;
+  }
+
+  .home img {
+    width: 4.2rem;
+  }
+
   .grid-template--4 {
     grid-template-columns: 1fr;
   }
