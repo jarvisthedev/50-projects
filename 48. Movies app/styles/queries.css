@@ -377,3 +377,16 @@
     grid-row: 1/2;
   }
 }
+
+/* ////////////////////////////////// */
+/* SMARTPHONE (368px) */
+/* ////////////////////////////////// */
+@media (max-width: 23em) {
+  /* HEADER */
+  .home span {
+    display: none;
+    /* opacity: 0; */
+    font-size: 0;
+    background-color: rgb(139, 60, 60);
+  }
+}

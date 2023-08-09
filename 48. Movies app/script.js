@@ -7,8 +7,11 @@ const topArr__nav = document.querySelector('.top-nav-arrow');
 
 const header = document.querySelector('.header');
 const footer = document.querySelector('footer');
+const video = document.querySelector('video');
+
 const section__hero = document.querySelector('.section--hero');
 const section__upcoming = document.querySelector('.section-upcoming');
+const section__highlight = document.querySelector('.section--movie-highlight');
 const section__topRated = document.querySelector('.section--toprated');
 const section__tvSeries = document.querySelector('.section--series');
 const section__pricing = document.querySelector('.section-pricing');
@@ -119,6 +122,44 @@ header.addEventListener('click', e => {
 
 section__hero.addEventListener('click', e => {
   nav.classList.add('hidden');
+});
+
+section__highlight.addEventListener('click', e => {
+  const clicked = e.target;
+
+  if (clicked.closest('.btn-watch-now')) {
+    if (video.hidden) video.hidden = !video.hidden;
+    if (video.paused) video.play();
+
+    video.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+
+  const getFileNameFromUrl = url => {
+    const parts = url.split('/');
+    return parts[parts.length - 1];
+  };
+
+  if (clicked.closest('.btn-download')) {
+    video.scrollIntoView({
+      behavior: 'smooth',
+    });
+
+    const videoUrl = video.currentSrc;
+    const fileName = getFileNameFromUrl(videoUrl);
+    // Create a temporary link element to trigger the download
+    const link = document.createElement('a');
+    link.href = videoUrl;
+    link.download = fileName;
+    document.body.appendChild(link);
+
+    // Simulate a click event to trigger the download
+    link.click();
+
+    // Clean up the temporary link element
+    document.body.removeChild(link);
+  }
 });
 
 footer.addEventListener('click', e => {

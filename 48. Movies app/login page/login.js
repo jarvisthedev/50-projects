@@ -12,7 +12,6 @@ const checkPassword = password => {
   const paswd = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])/;
   if (paswd.test(password.value)) return true;
   else {
-    // alert();
     showAlert('Use correct password format', 3000);
     return false;
   }

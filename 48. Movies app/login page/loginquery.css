@@ -56,13 +56,10 @@
 /* SMARTPHONE (488px) */
 /* ////////////////////////////////// */
 @media (max-width: 30.5em) {
-  .bg-pic {
-    padding-bottom: 48vh;
-  }
-
   .features {
     align-items: stretch;
     flex-direction: column;
+    gap: 1rem;
   }
 
   .section--signInForm button {
