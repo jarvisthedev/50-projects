@@ -7,11 +7,13 @@ const topArr__nav = document.querySelector('.top-nav-arrow');
 
 const header = document.querySelector('.header');
 const footer = document.querySelector('footer');
+const section__hero = document.querySelector('.section--hero');
 const section__upcoming = document.querySelector('.section-upcoming');
 const section__topRated = document.querySelector('.section--toprated');
 const section__tvSeries = document.querySelector('.section--series');
 const section__pricing = document.querySelector('.section-pricing');
 
+const nav = document.querySelector('.header--top .nav');
 const movieInput = document.querySelector('.movie-input');
 const close__icon = document.querySelector(`ion-icon[name='close-outline']`);
 const search__icon = document.querySelector(`ion-icon[name='search-outline']`);
@@ -77,6 +79,8 @@ mappingAPI_Data();
 header.addEventListener('click', e => {
   const clicked = e.target;
 
+  nav.classList.add('hidden');
+
   if (clicked === search__icon) {
     movieInput.classList.add('visible');
     header.classList.add('search-nav');
@@ -109,6 +113,12 @@ header.addEventListener('click', e => {
 
   if (clicked.classList.contains('btn-signin'))
     window.location.href = './login page/login.html';
+
+  if (clicked.closest('.menu-btns')) nav.classList.remove('hidden');
+});
+
+section__hero.addEventListener('click', e => {
+  nav.classList.add('hidden');
 });
 
 footer.addEventListener('click', e => {

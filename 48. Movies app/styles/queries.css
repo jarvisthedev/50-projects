@@ -16,6 +16,10 @@
 /* LANDSCAPE TABLETS (1000px) */
 /* ////////////////////////////////// */
 @media (max-width: 62.5em) {
+  ion-icon[name='search-outline'] {
+    right: 13.8rem;
+  }
+
   .header--top .nav {
     position: absolute;
     top: 0;
@@ -26,13 +30,24 @@
     justify-content: center;
     height: 100vh;
     width: 40vw;
-    z-index: 2;
+    z-index: 4;
     color: #222;
     background-color: #dedede;
+  }
+
+  .header--top .nav.hidden {
     display: none;
   }
 
+  .menu-btns.hidden {
+    display: grid;
+    place-content: center;
+    margin-left: 0.8rem;
+  }
+
   .header--top .nav-list {
+    font-size: 1.8rem;
+
     width: 100%;
     gap: 2.4rem;
     padding: 3.6rem 0;
@@ -145,6 +160,11 @@
 /* ////////////////////////////////// */
 @media (max-width: 37.5em) {
   /* HEADER */
+
+  .header--top .nav {
+    width: 50vw;
+  }
+
   .header {
     gap: 4.8rem;
   }
@@ -246,6 +266,11 @@
 /* SMARTPHONE (432px) */
 /* ////////////////////////////////// */
 @media (max-width: 27em) {
+  /* HEADER */
+  .header--top .nav {
+    width: 70vw;
+  }
+
   .grid-template--4 {
     grid-template-columns: 1fr;
   }
