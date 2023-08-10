@@ -215,10 +215,10 @@ section__highlight.addEventListener('click', e => {
   const clicked = e.target;
 
   if (clicked.closest('.btn-watch-now')) {
-    playTrailer();
     video.scrollIntoView({
       behavior: 'smooth',
     });
+    playTrailer();
   }
 
   const getFileNameFromUrl = url => {
