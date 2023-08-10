@@ -36,6 +36,10 @@ const showAlert = (message, duration) => {
   }, duration);
 };
 
+const closestHelper_func = (el, clicked, url) => {
+  if (el.closest(clicked)) window.location.href = url;
+};
+
 sectionSign.addEventListener('click', e => {
   e.preventDefault();
   const clicked = e.target;
@@ -58,17 +62,10 @@ sectionSign.addEventListener('click', e => {
     password.value = '';
   }
 
-  if (clicked.closest('.google'))
-    window.location.href = ' https://accounts.google.com/o/oauth2/auth/';
-
-  if (clicked.closest('.facebook'))
-    window.location.href = `https://web.facebook.com/login/?_rdc=1&_rdr`;
-
-  if (clicked.closest('.twitter'))
-    window.location.href = `https://twitter.com/i/flow/login`;
-
-  if (clicked.closest('.apple'))
-    window.location.href = `https://www.icloud.com/`;
+  closestHelper_func(clicked, '.google', 'https://google.com/');
+  closestHelper_func(clicked, '.facebook', 'https://web.facebook.com/login/');
+  closestHelper_func(clicked, '.twitter', 'https://twitter.com/i/flow/login');
+  closestHelper_func(clicked, '.apple', 'https://www.icloud.com/');
 
   if (clicked.closest('.sign')) {
     signup_login.forEach(p => p.classList.toggle('hidden'));

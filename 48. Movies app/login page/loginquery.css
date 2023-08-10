@@ -50,20 +50,28 @@
   .container {
     width: 100%;
   }
+
+  .bg-pic {
+    height: 90vh;
+  }
 }
 
 /* ////////////////////////////////// */
 /* SMARTPHONE (488px) */
 /* ////////////////////////////////// */
 @media (max-width: 30.5em) {
+  .section--signInForm button {
+    padding: 1.2rem 1.8rem;
+    justify-content: center;
+  }
+
+  .bg-pic {
+    height: 70vh;
+  }
+
   .features {
     align-items: stretch;
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .section--signInForm button {
-    padding: 1.2rem 1.8rem;
-    justify-content: center;
   }
 }

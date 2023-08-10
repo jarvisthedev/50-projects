@@ -600,7 +600,7 @@ ion-icon[name='download-outline'] {
 
 .pricing-time {
   align-self: center;
-  margin-bottom: 4.2rem;
+  margin-bottom: 4.8rem;
 }
 
 .pricing-time label {
@@ -642,6 +642,21 @@ input[type='checkbox']::before {
 
 input:checked[type='checkbox']::before {
   left: 3.2rem;
+}
+
+.offer {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: -2.4rem;
+  margin-bottom: 4.8rem;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: scale(0);
+}
+
+.offer.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .plans-list {

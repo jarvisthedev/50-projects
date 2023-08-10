@@ -6,7 +6,10 @@
       "releaseYear": "2022",
       "quality": "HD",
       "duration": "137",
-      "rating": "8.5"
+      "rating": "8.5",
+      "trailer": "youtube.com/watch?v=oMSdFM12hOw",
+      "genre": "Action, Adventure, Drama, Fantasy, History, Thriller",
+      "synopsis": "Prince Amleth is on the verge of becoming a man when his father is brutally murdered by his uncle, who kidnaps the boy's mother. Two decades later, Amleth is now a Viking who's on a mission to save his mother, kill his uncle and avenge his father."
     },
     {
       "imgUrl": "./imgs/cover_photo/upcoming-2.png",
@@ -14,7 +17,10 @@
       "releaseYear": "2022",
       "quality": "4K",
       "duration": "126",
-      "rating": "NR"
+      "rating": "NR",
+      "trailer": "youtube.com/watch?v=aWzlQ2N6qqg",
+      "genre": "Action, Adventure, Fantasy",
+      "synopsis": "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which threaten to wipe out millions across the multiverse. They seek help from Wanda the Scarlet Witch, Wong and others."
     },
     {
       "imgUrl": "./imgs/cover_photo/upcoming-3.png",
@@ -22,7 +28,10 @@
       "releaseYear": "2022",
       "quality": "2K",
       "duration": "N/A",
-      "rating": "NR"
+      "rating": "NR",
+      "trailer": "youtube.com/watch?v=ye63hQLDj4k",
+      "genre": "Action, Thriller",
+      "synopsis": "An assassin-for-hire finds that he's become a target after he refuses to complete a job for a dangerous criminal organization. A remake of the 2003 Belgian film 'The Memory of a Killer'."
     },
     {
       "imgUrl": "./imgs/cover_photo/upcoming-4.png",
@@ -30,7 +39,10 @@
       "releaseYear": "2022",
       "quality": "HD",
       "duration": "107",
-      "rating": "NR"
+      "rating": "NR",
+      "trailer": "youtube.com/watch?v=x2YHPZMj8r4",
+      "genre": "Action, Comedy, Crime",
+      "synopsis": "In this action-packed comedy, Nicolas Cage plays Nick Cage, channeling his iconic characters as he's caught between a superfan (Pedro Pascal) and a CIA agent (Tiffany Haddish)."
     }
   ],
   [
@@ -40,7 +52,10 @@
       "releaseYear": "2022",
       "quality": "HD",
       "duration": "122",
-      "rating": "7.8"
+      "rating": "7.8",
+      "trailer": "",
+      "genre": "youtube.com/watch?v=G5kzUpWAusI",
+      "synopsis": "When the manic Dr Robotnik returns to Earth with a new ally, Knuckles the Echidna, Sonic and his new friend Tails is all that stands in their way."
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-2.png",
@@ -48,7 +63,10 @@
       "releaseYear": "2022",
       "quality": "HD",
       "duration": "104",
-      "rating": "5.9"
+      "rating": "5.9",
+      "trailer": "youtube.com/watch?v=oZ6iiRrz1SY",
+      "genre": "Action, Adventure, Horror, Sci-Fi, Thriller",
+      "synopsis": "Biochemist Michael Morbius tries to cure himself of a rare blood disease, but he inadvertently infects himself with a form of vampirism instead."
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-3.png",
@@ -56,7 +74,10 @@
       "releaseYear": "2022",
       "quality": "4K",
       "duration": "106",
-      "rating": "7.0"
+      "rating": "7.0",
+      "trailer": "youtube.com/watch?v=IE8HIsIrq4o",
+      "genre": "Action, Adventure, Comedy, Sci-Fi",
+      "synopsis": "A time-traveling pilot teams up with his younger self and his late father to come to terms with his past while saving the future."
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-4.png",
@@ -64,7 +85,10 @@
       "releaseYear": "2021",
       "quality": "4K",
       "duration": "115",
-      "rating": "7.7"
+      "rating": "7.7",
+      "trailer": "youtube.com/watch?v=X2m-08cOAbc&t=21s",
+      "genre": "Comedy, Action, Science Fiction, Adventure",
+      "synopsis": "A bank teller called Guy relialises he is a background character in a open world video game called Free City that will soon go offline"
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-5.png",
@@ -72,15 +96,21 @@
       "releaseYear": "2022",
       "quality": "4K",
       "duration": "116",
-      "rating": "7.0"
+      "rating": "7.0",
+      "trailer": "youtube.com/watch?v=mqqft2x_Aa4",
+      "genre": " Animation, Action ",
+      "synopsis": "Jonathan Kent and reluctant young sidekick Damian Wayne are burdened with saving the world from impending doom. The two must join forces to rescue their fathers and save the planet by becoming the super heroes they were intended to be."
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-6.png",
-      "title": "The Batman",
+      "title": "Uncharted",
       "releaseYear": "2022",
       "quality": "4K",
       "duration": "116",
-      "rating": "7.0"
+      "rating": "7.0",
+      "trailer": "youtube.com/watch?v=eHp3MbsCbMg",
+      "genre": "Action, Adventure",
+      "synopsis": "Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor 'Sully' Sullivan to recover a fortune amassed by Ferdinand Magellan, and lost 500 years ago by the House of Moncada."
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-7.png",
@@ -88,7 +118,10 @@
       "releaseYear": "2022",
       "quality": "2K",
       "duration": "127",
-      "rating": "6.5"
+      "rating": "6.5",
+      "trailer": "youtube.com/watch?v=dZRqB0JLizw",
+      "genre": "Crime, Drama, Mystery",
+      "synopsis": "While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress"
     },
     {
       "imgUrl": "./imgs/cover_photo/movie-8.png",
@@ -96,7 +129,10 @@
       "releaseYear": "2021",
       "quality": "HD",
       "duration": "131",
-      "rating": "7.0"
+      "rating": "7.0",
+      "trailer": "youtube.com/watch?v=5zdBG-iGfes",
+      "genre": "Action, Adventure, Thriller",
+      "synopsis": "In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions."
     }
   ],
   [
@@ -106,15 +142,21 @@
       "releaseYear": "2022",
       "quality": "2K",
       "duration": "47",
-      "rating": "8.6"
+      "rating": "8.6",
+      "trailer": "youtube.com/watch?v=x7Krla_UxRg",
+      "genre": "Action, Adventure, Thriller",
+      "synopsis": "A former U.S. Marine, struggling with dissociative identity disorder, is granted the powers of an Egyptian moon god. But he soon finds out that these newfound powers can be both a blessing and a curse to his troubled life."
     },
     {
       "imgUrl": "./imgs/cover_photo/series-2.png",
-      "title": "Hola",
+      "title": "Halo",
       "releaseYear": "2022",
       "quality": "2K",
       "duration": "59",
-      "rating": "8.8"
+      "rating": "8.8",
+      "trailer": "youtube.com/watch?v=5KZ3MKraNKY",
+      "genre": "Action, Adventure, Thriller",
+      "synopsis": "Aliens threaten human existence in an epic 26th-century showdown. TV series based on the video game 'Halo'."
     },
     {
       "imgUrl": "./imgs/cover_photo/series-3.png",
@@ -122,7 +164,10 @@
       "releaseYear": "2022",
       "quality": "2K",
       "duration": "51",
-      "rating": "8.3"
+      "rating": "8.3",
+      "trailer": "youtube.com/watch?v=Yi4YnwFT7Gk",
+      "genre": "Action, Adventure, Thriller",
+      "synopsis": "Follow-up series to 'Vikings' set 100 years afterward and centering on the adventures of Leif Erikson, Freydis, Harald Hardrada and the Norman King William the Conqueror."
     },
     {
       "imgUrl": "./imgs/cover_photo/series-4.png",
@@ -130,7 +175,10 @@
       "releaseYear": "2017",
       "quality": "2K",
       "duration": "70",
-      "rating": "8.3"
+      "rating": "8.3",
+      "trailer": "youtube.com/watch?v=_InqQJRqGW4",
+      "genre": "Action, Adventure, Thriller",
+      "synopsis": "Also known by the international title Money Heist, this limited series crime thriller follows a group of robbers assault on the Factory of Moneda and Timbre."
     }
   ]
 ]

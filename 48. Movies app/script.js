@@ -122,6 +122,12 @@ header.addEventListener('click', e => {
 
 section__hero.addEventListener('click', e => {
   nav.classList.add('hidden');
+  const clicked = e.target;
+
+  if (clicked.closest('.btn-watch-now'))
+    section__highlight.scrollIntoView({
+      behavior: 'smooth',
+    });
 });
 
 section__highlight.addEventListener('click', e => {
@@ -191,7 +197,7 @@ topArr__nav.addEventListener('click', e => {
   });
 });
 
-const navigateTopPage = () => {
+const hide_showTopNavArrow = () => {
   const heightUsed = 650;
 
   window.addEventListener('scroll', () => {
@@ -199,13 +205,18 @@ const navigateTopPage = () => {
     else topArr__nav.style.opacity = 0;
   });
 };
-navigateTopPage();
+hide_showTopNavArrow();
 
 pricing__mothlyYearly.addEventListener('change', () => {
   const monthlyYearly = document.querySelectorAll('.prices');
+  const offer = document.querySelector('.offer');
+  offer.classList.toggle('visible');
 
-  if (pricing__mothlyYearly.checked)
-    monthlyYearly.forEach(el => (el.textContent = Number(el.textContent * 12)));
-  else
-    monthlyYearly.forEach(el => (el.textContent = Number(el.textContent / 12)));
+  const updatePrices = newPrices =>
+    monthlyYearly.forEach((priceElement, index) => {
+      priceElement.textContent = newPrices[index];
+    });
+
+  if (pricing__mothlyYearly.checked) updatePrices([999, 2999, 3499]);
+  else updatePrices([99, 299, 499]);
 });
