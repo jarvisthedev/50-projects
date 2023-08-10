@@ -64,6 +64,85 @@ const rendering_Movie = (movies, section) => {
   });
 };
 
+const rendering_section_highlight = async () => {
+  try {
+    const response = await fetch('data.json');
+    // const [data, top_rated, best_tv_series] = await response.json();
+    const [movieDetail] = await response.json();
+    const movie = movieDetail[0];
+    console.log(movie);
+    // console.log(movie.genre.split(',').map(el => `<span>${el}</span>`));
+
+    const html = `
+      <section class="section--movie-highlight">
+        <div class="container grid">
+          <div role="img" aria-label="highlight-movie-cover" class="img-holder">
+            <img
+              src="${movie.imgUrl}"
+              alt="${movie.title}"
+            />
+          </div>
+          <div class="movie-hightlight-details">
+            <p class="h1-intro">New Episodes</p>
+            <h1 class="primary-text">${movie.title}</h1>
+            <div class="hero-movie-details">
+              <div class="btns">
+                <button class="btn btn--small btn-pg">pg 13</button>
+                <button class="btn btn--small btn-hd">${movie.quality}</button>
+              </div>
+
+              <p class="hero-movie-type">
+              ${movie.genre.split(',').map(el => `<span>el</span>`)}
+              </p>
+              <div class="time-duration">
+                <p class="hero-movie-date">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span class="release-date">${movie.releaseYear}</span>
+                </p>
+                <p class="hero-movie-duration">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span class="duration">${movie.duration} min</span>
+                </p>
+              </div>
+            </div>
+            <p class="hightlight-description">
+              ${movie.synopsis}
+            </p>
+
+            <div class="share-watch grid grid-template--3">
+              <p class="share">
+                <ion-icon name="share-social"></ion-icon>
+                <span>Share</span>
+              </p>
+              <p class="prime-text">
+                <span class="text">Prime Video</span>
+                <span>Streaming Channels</span>
+              </p>
+              <button class="btn btn--big btn-watch-now">
+                <ion-icon name="play-outline"></ion-icon>
+                <span>watch now</span>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn--big btn-download">
+            <span>download</span>
+            <ion-icon name="download-outline"></ion-icon>
+          </button>
+          <div class="video">
+            <video hidden controls>
+              <source src="${movie.trailer}" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>`;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+rendering_section_highlight();
+
 const mappingAPI_Data = async () => {
   try {
     const response = await fetch('data.json');
@@ -133,14 +212,10 @@ section__hero.addEventListener('click', e => {
 section__highlight.addEventListener('click', e => {
   const clicked = e.target;
 
-  if (clicked.closest('.btn-watch-now')) {
-    if (video.hidden) video.hidden = !video.hidden;
-    if (video.paused) video.play();
-
+  if (clicked.closest('.btn-watch-now'))
     video.scrollIntoView({
       behavior: 'smooth',
     });
-  }
 
   const getFileNameFromUrl = url => {
     const parts = url.split('/');
@@ -219,4 +294,41 @@ pricing__mothlyYearly.addEventListener('change', () => {
 
   if (pricing__mothlyYearly.checked) updatePrices([999, 2999, 3499]);
   else updatePrices([99, 299, 499]);
+});
+
+// ////////////////////////////////////
+// playing video from youtube
+// ////////////////////////////////////
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+  const playerContainer = document.querySelector('.video');
+  const containerWidth = playerContainer.offsetWidth;
+
+  // Adjust dimensions based on container width
+  const playerHeight = (containerWidth / 16) * 9; // 16:9 aspect ratio
+  const playerWidth = containerWidth;
+
+  player = new YT.Player('player', {
+    height: playerHeight,
+    width: playerWidth,
+    videoId: 'oMSdFM12hOw',
+    playerVars: {
+      autoplay: 0,
+    },
+  });
+}
+
+// Update player dimensions on window resize
+window.addEventListener('resize', () => {
+  if (player) {
+    const playerContainer = document.querySelector('.video');
+    const containerWidth = playerContainer.offsetWidth;
+
+    const playerHeight = (containerWidth / 16) * 9; // 16:9 aspect ratio
+    const playerWidth = containerWidth;
+
+    player.setSize(playerWidth, playerHeight);
+  }
 });

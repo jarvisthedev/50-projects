@@ -412,9 +412,10 @@ ion-icon[name='arrow-up-outline']:hover {
   grid-column: 1/-1;
   max-width: 98rem;
   outline: none;
+  position: relative;
 }
 
-.video video {
+#video {
   width: 100%;
 }
 
