@@ -1,0 +1,6 @@
+{
+  "name": "FlexStream App",
+  "short_name": "FlexStream App",
+  "start_url": "/",
+  "display": "standalone"
+}
