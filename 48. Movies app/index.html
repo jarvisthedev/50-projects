@@ -121,74 +121,15 @@
         </div>
       </section>
 
-      <section class="section--movie-highlight">
-        <div class="container grid">
-          <div role="img" aria-label="highlight-movie-cover" class="img-holder">
-            <img
-              src="./imgs/cover_photo/movie-4.png"
-              alt="Free guy cover photo"
-            />
-          </div>
-          <div class="movie-hightlight-details">
-            <p class="h1-intro">New Episodes</p>
-            <h1 class="primary-text">Free <span>Guy</span></h1>
-            <div class="hero-movie-details">
-              <div class="btns">
-                <button class="btn btn--small btn-pg">pg 13</button>
-                <button class="btn btn--small btn-hd">hd</button>
-              </div>
+      <section class="section--movie-highlight hidden">
+        <div class="video">
+          <video hidden controls>
+            <source src="" type="/mp4" />
+            Your browser does not support the video tag.
+          </video>
 
-              <p class="hero-movie-type">
-                <span>Comedy, </span>
-                <span>Action, </span>
-                <span>Science Fiction, </span>
-                <span>Adventure</span>
-              </p>
-              <div class="time-duration">
-                <p class="hero-movie-date">
-                  <ion-icon name="calendar-outline"></ion-icon>
-                  <span class="release-date">2021</span>
-                </p>
-                <p class="hero-movie-duration">
-                  <ion-icon name="time-outline"></ion-icon>
-                  <span class="duration">115 min</span>
-                </p>
-              </div>
-            </div>
-            <p class="hightlight-description">
-              A bank teller called Guy relialises he is a background character
-              in a open world video game called Free City that will soon go
-              offline
-            </p>
-
-            <div class="share-watch grid grid-template--3">
-              <p class="share">
-                <ion-icon name="share-social"></ion-icon>
-                <span>Share</span>
-              </p>
-              <p class="prime-text">
-                <span class="text">Prime Video</span>
-                <span>Streaming Channels</span>
-              </p>
-              <button class="btn btn--big btn-watch-now">
-                <ion-icon name="play-outline"></ion-icon>
-                <span>watch now</span>
-              </button>
-            </div>
-          </div>
-          <button class="btn btn--big btn-download">
-            <span>download</span>
-            <ion-icon name="download-outline"></ion-icon>
-          </button>
           <div class="video">
-            <video hidden controls>
-              <source src="./video/trailer.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <div class="video">
-              <div id="player"></div>
-            </div>
+            <div id="player"></div>
           </div>
         </div>
       </section>

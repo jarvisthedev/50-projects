@@ -352,7 +352,10 @@ ion-icon[name='arrow-up-outline']:hover {
   width: 100%;
   color: #f7f7f7;
   padding: 9.8rem 2.8rem;
-  position: relative;
+}
+
+.section--movie-highlight.hidden {
+  display: none;
 }
 
 .section--movie-highlight .container {
@@ -412,7 +415,6 @@ ion-icon[name='arrow-up-outline']:hover {
   grid-column: 1/-1;
   max-width: 98rem;
   outline: none;
-  position: relative;
 }
 
 #video {
