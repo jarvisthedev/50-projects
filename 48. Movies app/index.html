@@ -22,8 +22,9 @@
     ></script>
 
     <title>FlexStream &mdash; Stream Movies at Comfort</title>
+    <script defer src="https://www.youtube.com/iframe_api"></script>
+
     <script defer src="script.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
   </head>
 
   <link rel="icon" href="./imgs/icons/favicon-192.png" />
@@ -130,15 +131,17 @@
         </div>
       </section>
 
-      <section class="section--movie-highlight hidden">
-        <div class="video">
-          <video hidden controls>
-            <source src="" type="/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
+      <section class="section--movie-highlight">
+        <div class="container grid">
           <div class="video">
-            <div id="player"></div>
+            <video hidden controls>
+              <source src="" type="/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="video">
+              <div id="player"></div>
+            </div>
           </div>
         </div>
       </section>

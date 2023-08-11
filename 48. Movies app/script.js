@@ -8,7 +8,7 @@ const topArr__nav = document.querySelector('.top-nav-arrow');
 const header = document.querySelector('.header');
 const main = document.querySelector(`main`);
 const footer = document.querySelector('footer');
-const video = document.querySelector('video');
+const video = document.querySelector('.video');
 let movies_Array = [];
 
 const section__hero = document.querySelector('.section--hero');
@@ -30,6 +30,7 @@ const rendering_Movie = (movies, section) => {
 
   movies.map(movie => {
     const movie_imgUrl = movie.imgUrl;
+    const movie_imgUrl_webp = movie.imgUrl_webp;
     const movie_title = movie.title;
     const movie_releaseYear = movie.releaseYear;
     const movie_cert = movie.quality;
@@ -40,7 +41,12 @@ const rendering_Movie = (movies, section) => {
     const html = `
         <div class="upcoming--movie movie--id" id='${movie_id}'>
             <div role="img" aria-label="movie-cover-photo" class="img-holder">
-            <img src="${movie_imgUrl}" alt="${movie_title} cover photo" />
+              <picture>
+                <source srcset="${movie_imgUrl_webp}" type="image/webp" />
+                <source srcset="${movie_imgUrl}" type="image/png" />
+
+                <img src="${movie_imgUrl}" alt="${movie_title} cover photo" />
+              </picture>
             </div>
             <div class="upcoming-details">
             <div class="name-date">
@@ -68,10 +74,23 @@ const rendering_Movie = (movies, section) => {
 };
 
 const rendering_section_highlight = async movie => {
-  section__highlight.innerHTML = '';
+  section__highlight.innerHTML = `
+      <div class="container grid">
+
+        <div class="video">
+          <video hidden controls>
+            <source src="" type="/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="video">
+            <div id="player"></div>
+          </div>
+        </div>
+      </div>
+        `;
   try {
     const html = `
-      <div class="container grid">
         <div role="img" aria-label="highlight-movie-cover" class="img-holder">
           <img
             src="${movie.imgUrl}"
@@ -124,21 +143,12 @@ const rendering_section_highlight = async movie => {
           <span>download</span>
           <ion-icon name="download-outline"></ion-icon>
         </button>
-        <div class="video">
-          <video hidden controls>
-            <source src="./video/trailer.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
-          <div class="video">
-            <div id="player"></div>
-          </div>
-        </div>
-      </div>
       `;
 
-    section__highlight.insertAdjacentHTML('afterbegin', html);
-    trailerVideoId = movie.trailer;
+    section__highlight
+      .querySelector('.container')
+      .insertAdjacentHTML('afterbegin', html);
+    vivid = movie.trailer;
   } catch (error) {
     console.error(error);
   }
@@ -215,10 +225,10 @@ section__highlight.addEventListener('click', e => {
   const clicked = e.target;
 
   if (clicked.closest('.btn-watch-now')) {
+    playThisVideo(vivid);
     video.scrollIntoView({
       behavior: 'smooth',
     });
-    playTrailer();
   }
 
   const getFileNameFromUrl = url => {
@@ -260,8 +270,6 @@ main.addEventListener('click', e => {
   section__highlight.scrollIntoView({
     behavior: 'smooth',
   });
-
-  // playMovie_from_youtube();
 });
 
 footer.addEventListener('click', e => {
@@ -320,38 +328,35 @@ pricing__mothlyYearly.addEventListener('change', () => {
 // ////////////////////////////////////
 // playing video from youtube
 // ////////////////////////////////////
-let player;
-let trailerVideoId = 'oMSdFM12hOw';
-let trailerPlayerInitiated = false;
+let tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
-  const playerContainer = document.querySelector('.video');
-  const containerWidth = playerContainer.offsetWidth;
-
-  // Adjust dimensions based on container width
-  const playerHeight = (containerWidth / 16) * 9;
-  const playerWidth = containerWidth;
-
-  player = new YT.Player('player', {
-    height: playerHeight,
-    width: playerWidth,
-    videoId: 'oMSdFM12hOw',
-    playerVars: {
-      autoplay: 0,
-    },
-  });
+  console.log('Youtube is ready');
 }
 
-function playTrailer(videoId) {
-  if (player) {
-    player.loadVideoById(videoId);
-    player.playVideo();
-  } else {
-    initPlayer(videoId);
+//
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+//
+let done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
   }
 }
 
-function initPlayer(videoId) {
+function stopVideo() {
+  player.stopVideo();
+}
+
+let player;
+function playThisVideo(vivid) {
   const playerContainer = document.querySelector('.video');
   const containerWidth = playerContainer.offsetWidth;
 
@@ -359,12 +364,20 @@ function initPlayer(videoId) {
   const playerHeight = (containerWidth / 16) * 9;
   const playerWidth = containerWidth;
 
+  if (player) player.destroy();
+
   player = new YT.Player('player', {
     height: playerHeight,
     width: playerWidth,
-    videoId: videoId,
+    videoId: vivid,
     playerVars: {
-      autoplay: 1,
+      playersinline: 1,
+      autoplay: 0,
+      controls: 1,
+    },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
     },
   });
 }

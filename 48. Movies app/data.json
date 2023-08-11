@@ -3,6 +3,7 @@
     {
       "movie_id": "1",
       "imgUrl": "./imgs/cover_photo/upcoming-1.png",
+      "imgUrl_webp": "./imgs/cover_webp/upcoming-1.webp",
       "title": "The Northman",
       "releaseYear": "2022",
       "quality": "HD",
@@ -15,6 +16,7 @@
     {
       "movie_id": "2",
       "imgUrl": "./imgs/cover_photo/upcoming-2.png",
+      "imgUrl_webp": "./imgs/cover_webp/upcoming-2.webp",
       "title": "Doctor Strange in the Multiverse of Madness",
       "releaseYear": "2022",
       "quality": "4K",
@@ -27,6 +29,7 @@
     {
       "movie_id": "3",
       "imgUrl": "./imgs/cover_photo/upcoming-3.png",
+      "imgUrl_webp": "./imgs/cover_webp/upcoming-3.webp",
       "title": "Memory",
       "releaseYear": "2022",
       "quality": "2K",
@@ -39,6 +42,7 @@
     {
       "movie_id": "4",
       "imgUrl": "./imgs/cover_photo/upcoming-4.png",
+      "imgUrl_webp": "./imgs/cover_webp/upcoming-4.webp",
       "title": "The Unbelievable Weight of massive Talent",
       "releaseYear": "2022",
       "quality": "HD",
@@ -53,6 +57,7 @@
     {
       "movie_id": "5",
       "imgUrl": "./imgs/cover_photo/movie-1.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-1.webp",
       "title": "Sonic the Hedgehog 2",
       "releaseYear": "2022",
       "quality": "HD",
@@ -65,6 +70,7 @@
     {
       "movie_id": "6",
       "imgUrl": "./imgs/cover_photo/movie-2.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-2.webp",
       "title": "Morbius",
       "releaseYear": "2022",
       "quality": "HD",
@@ -77,6 +83,7 @@
     {
       "movie_id": "7",
       "imgUrl": "./imgs/cover_photo/movie-3.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-3.webp",
       "title": "The Adam Project",
       "releaseYear": "2022",
       "quality": "4K",
@@ -89,6 +96,7 @@
     {
       "movie_id": "8",
       "imgUrl": "./imgs/cover_photo/movie-4.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-4.webp",
       "title": "Free guy",
       "releaseYear": "2021",
       "quality": "4K",
@@ -101,6 +109,7 @@
     {
       "movie_id": "9",
       "imgUrl": "./imgs/cover_photo/movie-5.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-5.webp",
       "title": "The Batman",
       "releaseYear": "2022",
       "quality": "4K",
@@ -113,6 +122,7 @@
     {
       "movie_id": "10",
       "imgUrl": "./imgs/cover_photo/movie-6.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-6.webp",
       "title": "Uncharted",
       "releaseYear": "2022",
       "quality": "4K",
@@ -125,6 +135,7 @@
     {
       "movie_id": "11",
       "imgUrl": "./imgs/cover_photo/movie-7.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-7.webp",
       "title": "Death on the Nile",
       "releaseYear": "2022",
       "quality": "2K",
@@ -137,6 +148,7 @@
     {
       "movie_id": "12",
       "imgUrl": "./imgs/cover_photo/movie-8.png",
+      "imgUrl_webp": "./imgs/cover_webp/movie-8.webp",
       "title": "The King's Man",
       "releaseYear": "2021",
       "quality": "HD",
@@ -151,6 +163,7 @@
     {
       "movie_id": "13",
       "imgUrl": "./imgs/cover_photo/series-1.png",
+      "imgUrl_webp": "./imgs/cover_webp/series-1.webp",
       "title": "Moon Knight",
       "releaseYear": "2022",
       "quality": "2K",
@@ -163,6 +176,7 @@
     {
       "movie_id": "14",
       "imgUrl": "./imgs/cover_photo/series-2.png",
+      "imgUrl_webp": "./imgs/cover_webp/series-2.webp",
       "title": "Halo",
       "releaseYear": "2022",
       "quality": "2K",
@@ -175,6 +189,7 @@
     {
       "movie_id": "15",
       "imgUrl": "./imgs/cover_photo/series-3.png",
+      "imgUrl_webp": "./imgs/cover_webp/series-3.webp",
       "title": "Vikings: Valhalla",
       "releaseYear": "2022",
       "quality": "2K",
@@ -187,6 +202,7 @@
     {
       "movie_id": "16",
       "imgUrl": "./imgs/cover_photo/series-4.png",
+      "imgUrl_webp": "./imgs/cover_webp/series-4.webp",
       "title": "Money Heist",
       "releaseYear": "2017",
       "quality": "2K",
