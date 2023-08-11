@@ -4,12 +4,11 @@ const header = document.querySelector('.header');
 const form = document.querySelector('.search-area');
 const searchInput = document.querySelector('.search-input');
 const btn__search = document.querySelector('.btn--serch');
-const btn__menu = document.querySelector('.btn--menu');
 const navList = document.querySelector('.nav-list');
 
-const section__single_Meal = document.querySelector('#section--individualMeal');
-const section__Meals = document.querySelector('#section--meals');
-const section__Categories = document.querySelector('#section--categories');
+const section__single_Meal = document.querySelector('.section--individualMeal');
+const section__Meals = document.querySelector('.section--meals');
+const section__Categories = document.querySelector('.section--categories');
 const section__hero = document.querySelector('.section--hero');
 
 const mapping__individualMeal_details = async mealId => {
@@ -160,7 +159,7 @@ const mapping__categories_list = async () => {
 };
 
 section__hero.addEventListener('click', function (e) {
-  if (e.target.closest('.section--hero')) navList.classList.add('hidden');
+  if (e.target.closest('.section--hero')) navList.classList.remove('visible');
 });
 
 section__Categories.addEventListener('click', function (e) {
@@ -205,10 +204,10 @@ btn__search.addEventListener('click', function (e) {
 header.addEventListener('click', function (e) {
   const clicked = e.target;
 
-  if (clicked.closest('.btn--menu')) navList.classList.remove('hidden');
+  if (clicked.closest('.btn--menu')) navList.classList.add('visible');
 
   if (clicked.classList.contains('nav-details')) {
-    navList.classList.add('hidden');
+    navList.classList.remove('visible');
     const filterLetter = clicked.textContent.at(0);
     section__Meals.scrollIntoView({ behavior: 'smooth' });
 

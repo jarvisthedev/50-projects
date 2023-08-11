@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Meal Recipe App | Cooking App with Categories | HTML CSS javascript
-      projects
-    </title>
+    <title>Meal Recipe App | Cooking App with Categories</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +13,18 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="queries.css" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -26,12 +32,11 @@
       <a href="#">HommyEats</a>
 
       <nav class="nav">
-        <div class="btns">
-          <button class="btn btn--menu">
-            <i class="ph ph-list"></i>
-          </button>
-        </div>
-        <ul class="nav-list hidden">
+        <button class="btn btn--menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <ul class="nav-list">
           <li class="nav-details">Beef</li>
           <li class="nav-details">Chicken</li>
           <li class="nav-details">Dessert</li>
@@ -51,13 +56,8 @@
     </header>
 
     <main>
-      <section
-        role="img"
-        aria-label="Recipe ingredients"
-        class="section--hero"
-        id="section--hero"
-      >
-        <div class="hero">
+      <section role="img" aria-label="Recipe ingredients" class="section--hero">
+        <div class="hero grid">
           <div class="hero-texts">
             <h1>Enjoy a wonderful dining experience.</h1>
             <p>Simply but delicious food.</p>
@@ -68,7 +68,7 @@
                 type="text"
               />
               <button class="btn btn--serch">
-                <i class="ph-bold ph-magnifying-glass"></i>
+                <ion-icon name="search-outline"></ion-icon>
               </button>
             </form>
           </div>
@@ -76,8 +76,8 @@
         </div>
       </section>
 
-      <section class="section--individualMeal" id="section--individualMeal">
-        <div class="bouncer">
+      <section class="section--individualMeal">
+        <div class="reloading-icon">
           <div></div>
           <div></div>
           <div></div>
@@ -85,8 +85,8 @@
         </div>
       </section>
 
-      <section class="section--meals" id="section--meals">
-        <div class="bouncer">
+      <section class="section--meals">
+        <div class="reloading-icon">
           <div></div>
           <div></div>
           <div></div>
@@ -94,8 +94,8 @@
         </div>
       </section>
 
-      <section class="section--categories" id="section--categories">
-        <div class="bouncer">
+      <section class="section--categories">
+        <div class="reloading-icon">
           <div></div>
           <div></div>
           <div></div>
@@ -105,7 +105,7 @@
     </main>
     <footer>
       <div class="container">
-        <ul class="footer-list footer-list--1">
+        <ul class="footer-list footer-list--1 grid">
           <li class="list--1">
             <img class="svg-icon" src="./img/icons/lcn.svg" alt="loc_svg" />
             <div>
@@ -134,7 +134,7 @@
         </ul>
         <hr class="hr" />
 
-        <div class="main-footer">
+        <div class="main-footer grid">
           <div>
             <img
               class="website-logo"
@@ -142,15 +142,15 @@
               alt="Design ak_Logo"
             />
             <p class="website-text">
-              Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
-              eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem
-              ipsum dolor sit amet.
+              Crave the extraordinary at HommyEats. Indulge in remarkable
+              flavors and elevate your dining journey. Join us in savoring
+              culinary excellence.
             </p>
           </div>
 
           <div class="useful-links">
             <p class="primary-text btm-line">Useful Links</p>
-            <ul class="footer-list footer-list--3">
+            <ul class="footer-list footer-list--3 grid">
               <li><a class="list list--3" href="#">Home</a></li>
               <li><a class="list list--3" href="#">About</a></li>
               <li><a class="list list--3" href="#">Services</a></li>
@@ -167,10 +167,10 @@
           <div class="subscribe-newLater">
             <p class="primary-text btm-line">Subscribe</p>
             <p class="subscribe-text">
-              Don’t miss to subscribe to our new feeds, kindly fill the form
-              below.
+              Become part of 1000+ members eating Healthy, tasty and hassle-free
+              meals for free.
             </p>
-            <div class="mail-input">
+            <div class="mail-input grid">
               <input
                 class="subscribe-input"
                 placeholder="Email Address"
@@ -219,7 +219,7 @@
       </div>
       <div class="foot-footer">
         <p>
-          Copyright © 2018, All Right Reserved
+          Copyright &copy; 2023, All Right Reserved
           <a class="list list--4" href="#">HommyEats</a>
         </p>
         <ul class="footer-list footer-list--4">
