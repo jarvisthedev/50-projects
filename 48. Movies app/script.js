@@ -8,7 +8,7 @@ const topArr__nav = document.querySelector('.top-nav-arrow');
 const header = document.querySelector('.header');
 const main = document.querySelector(`main`);
 const footer = document.querySelector('footer');
-const video = document.querySelector('.video');
+const video = document.querySelector('video');
 let movies_Array = [];
 
 const section__hero = document.querySelector('.section--hero');
@@ -24,6 +24,26 @@ const close__icon = document.querySelector(`ion-icon[name='close-outline']`);
 const search__icon = document.querySelector(`ion-icon[name='search-outline']`);
 
 const pricing__mothlyYearly = document.querySelector('.toggle-checkbox');
+
+// HELPER FUNCTIONS
+// 1.
+const smoothScroll_helper = (clicked, class_list, scroll_to) => {
+  if (clicked.classList.contains(class_list))
+    scroll_to.scrollIntoView({
+      behavior: 'smooth',
+    });
+};
+
+const hide_showTopNavArrow = () => {
+  const heightUsed = 650;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > heightUsed) topArr__nav.style.opacity = 1;
+    else topArr__nav.style.opacity = 0;
+  });
+};
+
+hide_showTopNavArrow();
 
 const rendering_Movie = (movies, section) => {
   section.innerHTML = ``;
@@ -74,21 +94,6 @@ const rendering_Movie = (movies, section) => {
 };
 
 const rendering_section_highlight = async movie => {
-  section__highlight.innerHTML = `
-      <div class="container grid">
-
-        <div class="video">
-          <video hidden controls>
-            <source src="" type="/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
-          <div class="video">
-            <div id="player"></div>
-          </div>
-        </div>
-      </div>
-        `;
   try {
     const html = `
         <div role="img" aria-label="highlight-movie-cover" class="img-holder">
@@ -145,6 +150,18 @@ const rendering_section_highlight = async movie => {
         </button>
       `;
 
+    section__highlight.innerHTML = `
+      <div class="container grid">
+        <div class="video">
+          <video hidden controls id="videoPlayer">
+              <source src="./video/trailer.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <div id="player"></div>
+        </div>
+      </div>
+      `;
+
     section__highlight
       .querySelector('.container')
       .insertAdjacentHTML('afterbegin', html);
@@ -170,93 +187,71 @@ const mappingAPI_Data = async () => {
 
 mappingAPI_Data();
 
+// ////////////////////////////////////
+//  EVENT LISTENERS
+// ////////////////////////////////////
+// 1.
+topArr__nav.addEventListener('click', e => {
+  header.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
+
+// 2.
 header.addEventListener('click', e => {
   const clicked = e.target;
-
-  nav.classList.add('hidden');
 
   if (clicked === search__icon) {
     movieInput.classList.add('visible');
     header.classList.add('search-nav');
-  }
-
-  if (clicked === close__icon) {
+  } else if (clicked === close__icon) {
     movieInput.classList.remove('visible');
     header.classList.remove('search-nav');
-  }
-
-  if (clicked.classList.contains('tv-show'))
-    section__topRated.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  if (clicked.classList.contains('tv-series'))
-    section__tvSeries.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  if (clicked.classList.contains('pricing'))
-    section__pricing.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  if (clicked.classList.contains('movie'))
-    section__upcoming.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  if (clicked.classList.contains('btn-signin'))
+  } else if (clicked.classList.contains('btn-signin'))
     window.location.href = './login page/login.html';
 
+  smoothScroll_helper(clicked, 'tv-show', section__topRated);
+  smoothScroll_helper(clicked, 'tv-series', section__tvSeries);
+  smoothScroll_helper(clicked, 'pricing', section__pricing);
+  smoothScroll_helper(clicked, 'movie', section__upcoming);
+
+  nav.classList.add('hidden');
   if (clicked.closest('.menu-btns')) nav.classList.remove('hidden');
 });
 
-section__hero.addEventListener('click', e => {
-  nav.classList.add('hidden');
-  const clicked = e.target;
+// 3.
+section__hero.addEventListener('click', e => nav.classList.add('hidden'));
 
-  if (clicked.closest('.btn-watch-now'))
-    section__highlight.scrollIntoView({
-      behavior: 'smooth',
-    });
-});
-
+// 4.
 section__highlight.addEventListener('click', e => {
   const clicked = e.target;
 
-  if (clicked.closest('.btn-watch-now')) {
-    playThisVideo(vivid);
-    video.scrollIntoView({
-      behavior: 'smooth',
-    });
-  }
+  if (clicked.closest('.btn-watch-now')) playThisVideo(vivid);
 
+  // DOWNLOADING VIDEO
+  // 1.
   const getFileNameFromUrl = url => {
     const parts = url.split('/');
     return parts[parts.length - 1];
   };
 
+  // DOWNLOADING VIDEO
+  // 2.
   if (clicked.closest('.btn-download')) {
-    video.scrollIntoView({
-      behavior: 'smooth',
-    });
-
     const videoUrl = video.currentSrc;
     const fileName = getFileNameFromUrl(videoUrl);
-    // Create a temporary link element to trigger the download
+
     const link = document.createElement('a');
     link.href = videoUrl;
     link.download = fileName;
+
     document.body.appendChild(link);
-
-    // Simulate a click event to trigger the download
     link.click();
-
-    // Clean up the temporary link element
     document.body.removeChild(link);
   }
 });
 
+// 5.
 main.addEventListener('click', e => {
   const clicked = e.target;
   const element = clicked.closest('.movie--id');
@@ -272,45 +267,17 @@ main.addEventListener('click', e => {
   });
 });
 
+// 6.
 footer.addEventListener('click', e => {
   const clicked = e.target;
-  if (clicked.classList.contains('tv-show'))
-    section__topRated.scrollIntoView({
-      behavior: 'smooth',
-    });
 
-  if (clicked.classList.contains('tv-series'))
-    section__tvSeries.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  if (clicked.classList.contains('pricing'))
-    section__pricing.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  if (clicked.classList.contains('movie'))
-    section__upcoming.scrollIntoView({
-      behavior: 'smooth',
-    });
+  smoothScroll_helper(clicked, 'tv-show', section__topRated);
+  smoothScroll_helper(clicked, 'tv-series', section__tvSeries);
+  smoothScroll_helper(clicked, 'pricing', section__pricing);
+  smoothScroll_helper(clicked, 'movie', section__upcoming);
 });
 
-topArr__nav.addEventListener('click', e => {
-  header.scrollIntoView({
-    behavior: 'smooth',
-  });
-});
-
-const hide_showTopNavArrow = () => {
-  const heightUsed = 650;
-
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > heightUsed) topArr__nav.style.opacity = 1;
-    else topArr__nav.style.opacity = 0;
-  });
-};
-hide_showTopNavArrow();
-
+// 7.
 pricing__mothlyYearly.addEventListener('change', () => {
   const monthlyYearly = document.querySelectorAll('.prices');
   const offer = document.querySelector('.offer');
@@ -326,10 +293,11 @@ pricing__mothlyYearly.addEventListener('change', () => {
 });
 
 // ////////////////////////////////////
-// playing video from youtube
+// LOGIC TO PLAYING YOUTUBE VIDEO
 // ////////////////////////////////////
 let tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/iframe_api';
+
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -351,10 +319,12 @@ function onPlayerStateChange(event) {
   }
 }
 
+//
 function stopVideo() {
   player.stopVideo();
 }
 
+//
 let player;
 function playThisVideo(vivid) {
   const playerContainer = document.querySelector('.video');
@@ -382,14 +352,14 @@ function playThisVideo(vivid) {
   });
 }
 
+// RESIZING IFRAME VIDEO --> RESPONSIVENESS
 window.addEventListener('resize', () => {
-  if (player) {
-    const playerContainer = document.querySelector('.video');
-    const containerWidth = playerContainer.offsetWidth;
+  if (player) return;
+  const playerContainer = document.querySelector('.video');
+  const containerWidth = playerContainer.offsetWidth;
 
-    const playerHeight = (containerWidth / 16) * 9;
-    const playerWidth = containerWidth;
+  const playerHeight = (containerWidth / 16) * 9;
+  const playerWidth = containerWidth;
 
-    player.setSize(playerWidth, playerHeight);
-  }
+  player.setSize(playerWidth, playerHeight);
 });
