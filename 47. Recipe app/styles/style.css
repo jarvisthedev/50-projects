@@ -137,7 +137,7 @@
   font-size: 1.8rem;
 }
 
-.btn.btn--serch {
+.btn.btn--search {
   background-color: #cf711f;
   font-size: 2.4rem;
   border-radius: 50%;
@@ -376,11 +376,11 @@ footer .list:active {
   stroke: #ff4500;
 }
 
-.sm-logo {
+.list--2 img {
   width: 4.2rem;
 }
 
-.sm-logo:first-child {
+.list--2 img:first-child {
   width: 4.7rem;
 }
 

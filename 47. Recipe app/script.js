@@ -3,7 +3,7 @@
 const header = document.querySelector('.header');
 const form = document.querySelector('.search-area');
 const searchInput = document.querySelector('.search-input');
-const btn__search = document.querySelector('.btn--serch');
+const btn__search = document.querySelector('.btn--search');
 const navList = document.querySelector('.nav-list');
 
 const section__single_Meal = document.querySelector('.section--individualMeal');
