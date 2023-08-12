@@ -75,7 +75,7 @@
   width: 100%;
   height: 100vh;
   color: #fdf2e9;
-  padding: 32rem 4.8rem;
+  padding: 24rem 4.8rem;
 }
 
 .section--hero::before {
@@ -148,18 +148,22 @@
 /* //////////////////////////// */
 .section--individualMeal {
   background-color: #fae5d3;
-  padding: 9.8rem 1.4rem;
+  padding: 7.2rem 3.6rem;
+  justify-content: start;
+}
+
+.section--individualMeal .container {
+  margin-left: 0;
 }
 
 .selected-meal-details {
-  padding: 3.2rem;
   gap: 4.8rem;
 }
 
 .selected-meal {
   max-height: 48rem;
   overflow: hidden;
-  box-shadow: 0 0 1.8rem 1.8rem #96c61d;
+  box-shadow: 0 0 1.8rem 1.8rem rgba(0, 0, 0, 0.12);
 }
 
 .selected-meal img {
@@ -275,56 +279,67 @@
 /* SECTION MEALs */
 /* //////////////////////////// */
 .section--meals {
-  padding: 7.2rem 1.4rem;
+  padding: 7.2rem 3.6rem;
 }
 
 .section--meals .list-items {
   list-style: none;
-  column-gap: 3.2rem;
-  row-gap: 3.2rem;
+  row-gap: 4.8rem;
+  column-gap: 5.6rem;
 }
 
 .section--meals .list-img {
   max-height: 28rem;
+  margin-bottom: 1.8rem;
 }
 
 .section--meals .list-img img:hover {
-  transform: scale(0.98);
+  transform: scale(1.03);
 }
 
 .list-img p {
-  color: #cf711f;
-  background-color: #f7f7f7;
+  font-size: 1.4rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d54215;
+
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
-  border-radius: 10rem;
-  font-size: 1.4rem;
-  padding: 0.2rem 1.2rem;
 }
 
 .strArea {
-  padding-left: 0.8rem;
-  color: #333;
-  margin: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0.8rem;
 }
 
 .strMeal {
-  padding-left: 1.2rem;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #222;
 }
 
 /* //////////////////////////// */
 /* SECTION CATEGORIES */
 /* //////////////////////////// */
 .section--categories {
-  padding: 7.2rem 1.4rem;
+  padding: 7.2rem 3.6rem;
   background-color: #fdf2e9;
 }
 
+.section--categories .list-img {
+  max-height: 28rem;
+}
+
 .section--categories p {
-  color: #fff;
-  background-color: #cf711f;
+  color: #f7f7f7;
+  background-color: #d54215;
   text-transform: uppercase;
   border-radius: 0.2rem;
 }

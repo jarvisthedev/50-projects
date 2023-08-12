@@ -18,6 +18,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .grid-columns--4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   /* HEADER */
   .header {
     padding: 0 4.8rem;
@@ -34,14 +38,6 @@
 
   .hero {
     grid-template-columns: 2fr 1fr;
-  }
-
-  .grid-columns--4 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid-columns--5 {
-    grid-template-columns: repeat(4, 1fr);
   }
 
   /* //////////////////// */
@@ -92,12 +88,12 @@
     font-size: 53%;
   }
 
-  .grid-columns--4 {
-    grid-template-columns: repeat(2, 1fr);
+  .grid-columns--3 {
+    grid-template-columns: 1fr;
   }
 
-  .grid-columns--5 {
-    grid-template-columns: repeat(3, 1fr);
+  .grid-columns--4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* HEADER */
@@ -111,7 +107,7 @@
   }
 
   .section--meals .list-img {
-    max-height: 24rem;
+    max-height: 36rem;
   }
 
   .list-img {
@@ -149,8 +145,26 @@
     overflow-x: hidden;
   }
 
+  /*  */
+  .section--hero {
+    padding: 18rem 2.4rem;
+  }
+
+  .section--individualMeal {
+    padding: 7.2rem 2.4rem;
+  }
+
+  .section--meals {
+    padding: 7.2rem 2.4rem;
+  }
+
+  .section--categories {
+    padding: 7.2rem 2.4rem;
+  }
+
   section .container {
-    padding: 4.2rem 1.8rem;
+    padding: 4.2rem 0;
+    padding: 0;
   }
 
   footer .container {

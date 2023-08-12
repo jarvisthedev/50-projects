@@ -29,58 +29,58 @@ const mapping__individualMeal_details = async mealId => {
       .filter(key => key !== ' ');
 
     const html = `
-        <div class="selected-meal" role="img" aria-label="meal-img">
-          <img src="${meal.strMealThumb}" alt="list img" />
+      <div class="selected-meal" role="img" aria-label="meal-img">
+        <img src="${meal.strMealThumb}" alt="list img" />
+      </div>
+      <div class="supporting-img-text">
+        <h3 class="tertiary-text--1">${meal.strMeal}</h3>
+        <p class="category">Category: <span>${meal.strCategory}</span></p>
+        <p class="source">
+          Source:
+          <span>
+            <a href="${meal.strYoutube}" target="_blank">${meal.strYoutube}
+              </a>
+          </span>
+        </p>
+        <p class="tags">Tags:${
+          meal.strTags
+            ? meal?.strTags
+                ?.split(',')
+                .map(el => `<span>${el}</span>`)
+                .join('')
+            : ''
+        } </p>
+        <div class="ingredients">
+          <h4 class="tertiary-text--2">Ingredients</h4>
+          <ol class="grid grid-columns--3">
+          ${ingredientData.map(el => `<li>${el}</li>`).join('')}
+          </ol>
         </div>
-        <div class="supporting-img-text">
-          <h3 class="tertiary-text--1">${meal.strMeal}</h3>
-          <p class="category">Category: <span>${meal.strCategory}</span></p>
-          <p class="source">
-            Source:
-            <span>
-              <a href="${meal.strYoutube}" target="_blank">${meal.strYoutube}
-                </a>
-            </span>
-          </p>
-          <p class="tags">Tags:${
-            meal.strTags
-              ? meal?.strTags
-                  ?.split(',')
-                  .map(el => `<span>${el}</span>`)
-                  .join('')
-              : ''
-          } </p>
-          <div class="ingredients">
-            <h4 class="tertiary-text--2">Ingredients</h4>
-            <ol class="grid grid-columns--3">
-            ${ingredientData.map(el => `<li>${el}</li>`).join('')}
-            </ol>
-          </div>
-        </div>
-        <div class="measurements">
-          <h4 class="tertiary-text--2">Measure:</h4>
-          <ul class="grid grid-columns--2">
-          ${measureData.map(el => `<li>${el}</li>`).join('')}
-          </ul>
-        </div>
-        <div class="instructions">
-          <h4 class="tertiary-text--2">Instructions:</h4>
-          <ul>
-          ${meal.strInstructions
-            ?.split('.')
-            .filter(el => el !== '')
-            .map(el => ` <li><p> ${el}</p></li>`)
-            .join('')}
-          </ul>
-        </div>
+      </div>
+      <div class="measurements">
+        <h4 class="tertiary-text--2">Measure:</h4>
+        <ul class="grid grid-columns--2">
+        ${measureData.map(el => `<li>${el}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4 class="tertiary-text--2">Instructions:</h4>
+        <ul>
+        ${meal.strInstructions
+          ?.split('.')
+          .filter(el => el !== '')
+          .map(el => ` <li><p> ${el}</p></li>`)
+          .join('')}
+        </ul>
+      </div>
       </div>
     `;
 
     section__single_Meal.innerHTML = `
-        <div class="container">
-          <h2 class="secondary-text">Meal Details</h2>
-          <div class="selected-meal-details meal-details grid grid-columns--2"></div>
-        </div>
+      <div class="container">
+        <h2 class="secondary-text">Meal Details</h2>
+        <div class="selected-meal-details meal-details grid grid-columns--2"></div>
+      </div>
     `;
 
     const individualMeal_details = document.querySelector('.meal-details');
@@ -100,22 +100,23 @@ const mapping_sectionMeals_list = async meal => {
     const html = `
         ${meals
           .map(
-            el => `<li class="list-details">
+            el => `
+              <li class="list-details">
                 <div class="list-img" role="img" aria-label="meal-img">
                   <img id="${el.idMeal}" src="${el.strMealThumb}" alt="list img" />
                   <p class="strCategory">${el.strCategory}</p>
                 </div>
                 <p class="strArea">${el.strArea}</p>
                 <p class="strMeal">${el.strMeal}</p>
-            </li>`
+              </li>`
           )
           .join('')}
         `;
     section__Meals.innerHTML = `
-        <div class="container">
-          <h2 class="secondary-text">Meals</h2>
-          <ul class="list-items grid grid-columns--4"></ul>
-        </div>
+      <div class="container">
+        <h2 class="secondary-text">Meals</h2>
+        <ul class="list-items grid grid-columns--3"></ul>
+      </div>
     `;
     const meals_list = document.querySelector('.section--meals .list-items');
     meals_list.insertAdjacentHTML(`afterbegin`, html);
@@ -136,7 +137,8 @@ const mapping__categories_list = async () => {
     const html = `
     ${categories
       .map(
-        el => `<li class="list-details">
+        el => `
+          <li class="list-details">
             <div class="list-img" role="img" aria-label="meal-img">
               <img src="${el.strCategoryThumb}" alt="list img" />
               <p class="strCategory">${el?.strCategory}</p>
@@ -146,10 +148,10 @@ const mapping__categories_list = async () => {
       .join('')}
     `;
     section__Categories.innerHTML = `
-        <div class="container">
-          <h2 class="secondary-text">Categories</h2>
-          <ul class=" categories_list list-items grid grid-columns--5"></ul>
-        </div>`;
+      <div class="container">
+        <h2 class="secondary-text">Categories</h2>
+        <ul class="categories_list list-items grid grid-columns--4"></ul>
+      </div>`;
 
     const categories_list = document.querySelector('.categories_list');
     categories_list.insertAdjacentHTML('afterbegin', html);
