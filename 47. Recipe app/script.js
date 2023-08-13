@@ -224,6 +224,7 @@ btn__search.addEventListener('click', function (e) {
 header.addEventListener('click', function (e) {
   const clicked = e.target;
 
+  navList.classList.remove('visible');
   if (clicked.closest('.btn--menu')) navList.classList.add('visible');
 
   if (clicked.classList.contains('nav-details')) {
