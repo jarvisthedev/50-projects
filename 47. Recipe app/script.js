@@ -11,6 +11,24 @@ const section__Meals = document.querySelector('.section--meals');
 const section__Categories = document.querySelector('.section--categories');
 const section__hero = document.querySelector('.section--hero');
 
+///////////////////////////////////////////////////////////
+// Sticky navigation
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+
+    if (ent.isIntersecting) document.body.classList.remove('sticky');
+    else document.body.classList.add('sticky');
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: '-80px',
+  }
+);
+obs.observe(section__hero);
+
 const mapping__individualMeal_details = async mealId => {
   try {
     const res = await fetch(mealId);
