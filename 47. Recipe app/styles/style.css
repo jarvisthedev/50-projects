@@ -104,7 +104,7 @@
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
-    url('../img/1.jpg');
+    url('../img/1.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -228,8 +228,8 @@
 }
 
 .ingredients {
-  color: #f7f7f7;
-  background-color: #d9552c;
+  color: #000;
+  background-color: #d54215;
   padding: 1.8rem 1.8rem 4.8rem 1.8rem;
 }
 
@@ -263,7 +263,6 @@
   background: #fae5d3;
   margin-right: 0.8rem;
   border-radius: 50%;
-  border: 2px solid #45260a;
 }
 
 .measurements {
