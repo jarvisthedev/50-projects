@@ -72,6 +72,14 @@ main {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.container.grid li:first-child {
+  grid-column: 1/-1;
+}
+
+.section--library .container.grid li:first-child {
+  grid-column: 1/2;
+}
+
 .img-holder {
   border-radius: 1rem;
   overflow: hidden;
