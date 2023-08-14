@@ -13,6 +13,19 @@ html {
 
 body {
   position: relative;
+  color: #000;
+  font-size: 1.6rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.hover-effect {
+  padding: 0.8rem 1.2rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 /* 
@@ -80,6 +93,18 @@ Paragraph default:
   display: none;
 }
 
-body {
-  font-size: 1.6rem;
+.grid-template--1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-template--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-template--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-template--4 {
+  grid-template-columns: repeat(4, 1fr);
 }
