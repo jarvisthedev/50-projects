@@ -1,10 +1,253 @@
-/* ****************** */
-/* MAIN HEADER */
-/* ****************** */
+/* //////////////////////////// */
+/* HEADER */
+/* //////////////////////////// */
 .header {
+  padding: 0 3.6rem;
+  height: 9.8rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: #fbca18;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+}
+
+.header a:link,
+.header a:visited {
+  text-decoration: none;
+}
+
+.home {
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  word-spacing: -0.1rem;
+  letter-spacing: -0.2rem;
+}
+
+.bx-menu {
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+.home .bold {
+  font-weight: 600;
+}
+
+.home p {
+  letter-spacing: -0.1rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.btn {
+  color: #000;
+  background-color: #fff;
+  padding: 0.8rem 1.8rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  transition: all 0.2s;
+  border-radius: 10rem;
+}
+
+.btn--log-in:link,
+.btn--log-in:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.bxs-user {
+  font-size: 2.4rem;
+}
+
+.btn--log-in:hover,
+.btn--log-in:active {
+  background-color: #dedede;
+}
+
+.btn--sign-up:link,
+.btn--sign-up:visited {
+  background-color: #000;
+  color: #f7f7f7;
+}
+
+.btn--sign-up:hover,
+.btn--sign-up:active {
+  background-color: #333;
+}
+
+/* //////////////////////////// */
+/* SECTION ASIDE */
+/* //////////////////////////// */
+.section--aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0%);
+}
+
+.section--aside .container {
+  grid-template-columns: 30rem 1fr;
+}
+
+.menu {
+  background-color: #fff;
+  padding: 2.4rem 2.4rem 5.4rem 2.4rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 1.4rem;
+  gap: 4.8rem;
+}
+
+.menu-part {
   width: 100%;
 }
+
+.part--1 {
+  margin-bottom: auto;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+  gap: 1.2rem;
+}
+
+.btns .btn {
+  padding: 1.8rem;
+  border-radius: 1rem;
+  display: grid;
+  place-content: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.btns .btn-signin {
+  background-color: #dedede8d;
+}
+
+.btns .btn-signin:hover,
+.btns .btn-signin:active {
+  background-color: #dedede;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.link-det {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.uber-logo {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  line-height: 1.3;
+}
+
+.uber-logo .img-holder {
+  max-width: 5.6rem;
+}
+
+.img-holder img {
+  width: 100%;
+}
+
+.download {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.download a {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: #dedede8d;
+  border-radius: 10rem;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.download .img-holder {
+  max-width: 1.8rem;
+}
+
+.empty {
+  transition: all 0.3s;
+}
+
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+}
+
+/* //////////////////////////// */
+/* SECTION HERO */
+/* //////////////////////////// */
+.section--hero {
+  background-color: #fbca18;
+  height: 100vh;
+  padding: 18.6rem 2.8rem;
+}
+
+.section .container {
+  max-width: 127rem;
+  margin: 0 auto;
+}
+
+.primary--text {
+}
+
+.hero-form {
+}
+
+.hero-form label {
+}
+
+/* 
 
 .container {
   display: flex;
@@ -88,13 +331,13 @@
 .btn--sign-up:hover,
 .btn--sign-up:active {
   background-color: #333;
-}
+} */
 
 /* ****************** */
 /* MAIN BODY */
 /* ****************** */
 /*  ASIDE HIDDEN MINI-MENU */
-
+/* 
 .overlay {
   position: absolute;
   top: 0;
@@ -255,10 +498,10 @@
 
   color: #000;
   background-color: #eeeeee;
-}
+} */
 
 /* MAIN CONTENT */
-
+/* 
 .main-content {
   background-color: #fbca18;
   width: 100%;
@@ -363,11 +606,12 @@ a.each-section .text p {
   font-size: 1.5rem;
   color: #000;
   text-decoration: underline;
-}
+} */
 
 /* ****************** */
 /* SECTION LOCATION */
 /* ****************** */
+/* 
 .section--locations {
   margin: 4.8rem auto;
   padding: 4.8rem;
@@ -430,12 +674,12 @@ a.each-section .text p {
   color: #000;
   text-decoration: none;
   font-size: 1.6rem;
-}
+} */
 
 /* *********************** */
 /* FOOTER STYLING */
 /* *********************** */
-
+/* 
 .footer {
   font-size: 2rem;
   padding: 8rem 4.4rem;
@@ -563,4 +807,4 @@ a.each-section .text p {
 .protection p a:hover,
 .protection p a:active {
   text-decoration: underline;
-}
+} */

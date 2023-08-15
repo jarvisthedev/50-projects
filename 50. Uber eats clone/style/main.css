@@ -18,6 +18,34 @@ body {
   position: relative;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid-template--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-template--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-template--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+}
+
+.img-holder {
+  width: 20rem;
+}
 /* 
 --- 01 TYPOGRAPHY SYSTEM
 
@@ -81,8 +109,4 @@ Paragraph default:
 
 .hidden {
   display: none;
-}
-
-body {
-  font-size: 1.6rem;
 }

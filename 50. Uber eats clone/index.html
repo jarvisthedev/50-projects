@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
 
@@ -29,11 +28,10 @@
   </head>
   <body>
     <header class="header">
-      <div class="home">
+      <p class="home">
         <i class="bx bx-menu"></i>
-        <p>Uber <span class="bold">Eats</span></p>
-      </div>
-
+        <a href="#"> Uber <span class="bold">Eats</span> </a>
+      </p>
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-detail">
@@ -50,20 +48,20 @@
     </header>
 
     <main>
-      <section class="section section--aside">
-        <div class="container">
-          <div class="blur"></div>
+      <div class="empty"></div>
 
+      <section class="section--aside">
+        <div class="container grid">
           <div class="menu">
             <div class="menu-part part--1">
               <div class="btns">
-                <a href="#" class="btn btn-signup">Sign up</a>
-                <a href="#" class="btn btn-signin">Log in</a>
+                <a href="#" class="btn btn--sign-up btn-signup">Sign up</a>
+                <a href="#" class="btn btn--log-in btn-signin">Log in</a>
               </div>
               <nav class="nav">
                 <ul class="nav-links">
                   <li>
-                    <a class="link-det" href="./create_a_business/crete.html">
+                    <a class="link-det" href="./create_a_business/create.html">
                       Create a business account
                     </a>
                   </li>
@@ -74,13 +72,13 @@
             </div>
 
             <div class="menu-part part--2">
-              <div class="uber-logo">
+              <div class="uber-logo grid">
                 <div class="img-holder">
                   <img src="./index_imgs/logo.svg" alt="Uber eat logo" />
                 </div>
-                <p class="uber-text">There's more to love in the app</p>
+                <p class="uber-text">There's more to love in the app.</p>
               </div>
-              <div class="download">
+              <div class="download grid">
                 <a href="#">
                   <div class="img-holder">
                     <img src="./index_imgs/apple-logo.svg" alt="Apple logo" />
@@ -97,138 +95,144 @@
               </div>
             </div>
           </div>
+          <div class="blank"></div>
         </div>
       </section>
 
       <section class="section section--hero">
         <div class="container">
-          <h1>Order food to your door</h1>
+          <h1 class="primary--text">Order food to your door</h1>
 
-          <div class="address-input">
-            <div class="search-box">
-              <i class="bx bxs-edit-location"></i>
+          <form class="form" action="">
+            <label for="delivery-address">
+              <i class="bx bxs-location-plus"></i>
               <input type="text" placeholder="Enter delivery address" />
-            </div>
+            </label>
 
-            <div class="deliver-now">
-              <i class="bx bxs-time"></i>
-              <span>Deliver Now</span>
-              <i class="bx bx-chevron-down"></i>
-            </div>
+            <label for="time">
+              <select name="time" class="time">
+                <option value="now">
+                  <div>
+                    <i class="bx bxs-time"></i>
+                    <span>Deliver now</span>
+                  </div>
+                </option>
+                <option value="later">
+                  <i class="bx bxs-calendar"></i>
+                  <span>Schedule for later</span>
+                </option>
+              </select>
+            </label>
 
-            <div class="find-food">
-              <a href="#">Find Food</a>
-            </div>
-          </div>
-
-          <p class="para-sign-up">
-            <a href="#">Sign In</a> for your recenr addresses
+            <button class="btn btn--find-food">Find Food</button>
+          </form>
+          <p class="h1-intro">
+            <a href="#">Sign In</a> for your recent addresses
           </p>
         </div>
       </section>
 
       <section class="section section--links">
         <div class="container">
-          <div class="mini-section">
-            <a class="each-section" href="#">
-              <div class="image">
-                <img src="./index_imgs/business.png" alt="business img" />
-              </div>
-              <div class="text">
-                <h4>Feed your employees</h4>
-                <p>Create a business account</p>
-              </div>
-            </a>
+          <ul class="cards grid">
+            <ul class="card card--1">
+              <a href="#">
+                <div class="img-holder">
+                  <img src="./index_imgs/business.png" alt="business img" />
+                </div>
+                <h3 class="tertiary-text--1">Feed your employees</h3>
+                <p class="tertiary-text--2">Create a business account</p>
+              </a>
+            </ul>
 
-            <a class="each-section" href="#">
-              <div class="image">
-                <img src="./index_imgs/restuarant.png" alt="business img" />
-              </div>
-              <div class="text">
-                <h4>Your restuarant, delivered</h4>
-                <p>Add your restuarant</p>
-              </div>
-            </a>
+            <ul class="card card--2">
+              <a href="#">
+                <div class="img-holder">
+                  <img src="./index_imgs/restuarant.png" alt="business img" />
+                </div>
+                <h3 class="tertiary-text--1">Your restuarant, delivered</h3>
+                <p class="tertiary-text--2">Add your restuarant</p>
+              </a>
+            </ul>
 
-            <a class="each-section" href="#">
-              <div class="image">
-                <img src="./index_imgs/deliver.png" alt="business img" />
-              </div>
-              <div class="text">
-                <h4>Deliver with Uber Eats</h4>
-                <p>Sign Up to deliver</p>
-              </div>
-            </a>
-          </div>
+            <ul class="card card--3">
+              <a href="#">
+                <div class="img-holder">
+                  <img src="./index_imgs/deliver.png" alt="business img" />
+                </div>
+                <h3 class="tertiary-text--1">Deliver with Uber Eats</h3>
+                <p class="tertiary-text--2">Sign Up to deliver</p>
+              </a>
+            </ul>
+          </ul>
         </div>
       </section>
 
       <section class="section section--locations">
         <div class="container">
-          <div class="location-intro">
-            <p class="locations-area">Cities near me</p>
+          <h2 class="secondary-text">
+            <p>Cities near me</p>
             <a href="#">View all 500+ cities</a>
-          </div>
-          <div class="cities-map">
+          </h2>
+          <div class="img-holder">
             <img src="./index_imgs/map.png" alt="Map rendering" />
           </div>
-          <div class="current-geolocation-cities">
-            <p class="cities">Mombasa</p>
-            <p class="cities">Nairobi</p>
+          <div class="map-cities">
+            <p>Mombasa</p>
+            <p>Nairobi</p>
           </div>
-          <div>
-            <div class="location-intro">
-              <p class="locations-area">Countries with Uber Eats</p>
-              <a href="#">View all countries</a>
-            </div>
-            <ul class="countries-list">
-              <li>
-                <ul class="list--2">
-                  <a href="#">Australia</a>
-                  <a href="#">Belgium</a>
-                  <a href="#">Canada</a>
-                  <a href="#">Chile</a>
-                  <a href="#">Costa Rica</a>
-                  <a href="#">Dominican Republic</a>
-                  <a href="#">Ecuador</a>
-                  <a href="#">El Salvador</a>
-                </ul>
-              </li>
-              <li>
-                <ul class="list--2">
-                  <a href="#">France</a>
-                  <a href="#">Germany</a>
-                  <a href="#">Guatemala</a>
-                  <a href="#">Ireland</a>
-                  <a href="#">Italy</a>
-                  <a href="#">Japan</a>
-                  <a href="#">Kenya</a>
-                  <a href="#">Mexico</a>
-                </ul>
-              </li>
-              <li>
-                <ul class="list--2">
-                  <a href="#">Netherlands</a>
-                  <a href="#">New Zealand</a>
-                  <a href="#">Panama</a>
-                  <a href="#">Poland</a>
-                  <a href="#">Portugal</a>
-                  <a href="#">South Africa</a>
-                  <a href="#">Spain</a>
-                  <a href="#">Sri Lanka</a>
-                </ul>
-              </li>
-              <li>
-                <ul class="list--2">
-                  <a href="#">Sweden</a>
-                  <a href="#">Switzerland</a>
-                  <a href="#">Taiwan (ROC)</a>
-                  <a href="#">United Kingdom</a>
-                  <a href="#">United States</a>
-                </ul>
-              </li>
-            </ul>
-          </div>
+
+          <h2 class="secondary-text">
+            <p>Countries with Uber Eats</p>
+            <a href="#">View all countries</a>
+          </h2>
+          <ul class="countries-list">
+            <li>
+              <ul class="list--2">
+                <li><a href="#">Australia</a></li>
+                <li><a href="#">Belgium</a></li>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Chile</a></li>
+                <li><a href="#">Costa Rica</a></li>
+                <li><a href="#">Dominican Republic</a></li>
+                <li><a href="#">Ecuador</a></li>
+                <li><a href="#">El Salvador</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="list--2">
+                <li><a href="#">France</a></li>
+                <li><a href="#">Germany</a></li>
+                <li><a href="#">Guatemala</a></li>
+                <li><a href="#">Ireland</a></li>
+                <li><a href="#">Italy</a></li>
+                <li><a href="#">Japan</a></li>
+                <li><a href="#">Kenya</a></li>
+                <li><a href="#">Mexico</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="list--2">
+                <li><a href="#">Netherlands</a></li>
+                <li><a href="#">New Zealand</a></li>
+                <li><a href="#">Panama</a></li>
+                <li><a href="#">Poland</a></li>
+                <li><a href="#">Portugal</a></li>
+                <li><a href="#">South Africa</a></li>
+                <li><a href="#">Spain</a></li>
+                <li><a href="#">Sri Lanka</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="list--2">
+                <li><a href="#">Sweden</a></li>
+                <li><a href="#">Switzerland</a></li>
+                <li><a href="#">Taiwan (ROC)</a></li>
+                <li><a href="#">United Kingdom</a></li>
+                <li><a href="#">United States</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -236,37 +240,24 @@
     <hr class="hr" />
     <footer class="footer">
       <div class="container">
-        <div class="footer-3-cols">
-          <div class="get-app-links">
-            <h1 class="uber-eats-footer-logo">
-              <div class="logo">
-                <span class="light-bold">Uber</span>
-                <span class="bold">Eats</span>
-              </div>
-            </h1>
-            <div class="download-app-links">
-              <a href="#">
-                <img src="./index_imgs/applestore.svg" alt="App Store logo" />
-              </a>
-              <a href="#">
-                <img
-                  src="./index_imgs/playstore-logo.png"
-                  alt="Google Play logo"
-                />
-              </a>
-            </div>
+        <div class="div--1 grid grid-template--2">
+          <div class="div---1">
+            <a href="#" class="img-holder">
+              <img src="./index_imgs/applestore.svg" alt="App Store logo" />
+            </a>
+            <a href="#" class="img-holder">
+              <img src="./index_imgs/playstore.png" alt="Google Play logo" />
+            </a>
           </div>
 
-          <div class="gethelp-and-sign-up">
+          <div class="div---2 grid grid-template--2">
             <ul>
               <li><a href="#"> Get Help</a></li>
               <li><a href="#"> Add your resaurant</a></li>
               <li><a href="#"> Sign up to deliver</a></li>
               <li><a href="#"> Create a business account</a></li>
             </ul>
-          </div>
 
-          <div class="location-and-about-uber-eats">
             <ul>
               <li><a href="#"> Restaurant near me</a></li>
               <li><a href="#"> View all cities</a></li>
@@ -279,39 +270,34 @@
         </div>
 
         <hr class="hr hr--light" />
-        <div class="lower_details">
-          <div class="follow-us-terms-privacy">
-            <div class="social-media-handles">
-              <a href="#" class="social-icon">
-                <img src="./index_imgs/facebook.svg" alt="Facebook logo" />
-              </a>
-              <a href="#" class="social-icon">
-                <img src="./index_imgs/twitter.svg" alt="Facebook logo" />
-              </a>
-              <a href="#" class="social-icon">
-                <img src="./index_imgs/instagram.svg" alt="Facebook logo" />
-              </a>
-            </div>
-            <div class="privacy-policy-terms-and-pricing">
-              <ul class="privacy-list">
-                <li><a class="privacy-detail" href="#">Privacy Policy</a></li>
-                <li><a class="privacy-detail" href="#">Terms</a></li>
-                <li><a class="privacy-detail" href="#">Pricing</a></li>
-                <li>
-                  <a class="privacy-detail" href="#">
-                    Do not sell or share my peronal information
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div class="div--2 grid">
+          <div class="div---1">
+            <a href="#" class="img-holder">
+              <img src="./index_imgs/facebook.svg" alt="Facebook logo" />
+            </a>
+            <a href="#" class="img-holder">
+              <img src="./index_imgs/twitter.svg" alt="Facebook logo" />
+            </a>
+            <a href="#" class="img-holder">
+              <img src="./index_imgs/instagram.svg" alt="Facebook logo" />
+            </a>
           </div>
-          <div class="protection">
+          <div class="div---2">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li>
+                <a href="#"> Do not sell or share my peronal information </a>
+              </li>
+            </ul>
+
             <p>
               This site is protected by reCAPTCHA and Google
               <a href="#"> Privacy Policy</a> and
               <a href="#"> Terms of Service</a> apply.
+              <span>&copy; 2023 Uber Technologies Inc.</span>
             </p>
-            <p>&copy; 2023 Uber Technologies Inc.</p>
           </div>
         </div>
       </div>
