@@ -330,28 +330,87 @@ button.btn {
 /* SECTION LINKS */
 /* //////////////////////////// */
 .section--links {
+  padding: 9.8rem 2.8rem;
 }
 
 .container {
+  margin: 0 auto;
 }
 
 .cards {
+  gap: 2.8rem;
 }
 
-.card {
+.card a:link,
+.card a:visited {
+  text-decoration: none;
 }
 
 .img-holder {
+  width: 100%;
 }
 
 .tertiary-text--1 {
+  text-decoration: none;
+  margin-bottom: 1.2rem;
 }
 
 .tertiary-text--2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* //////////////////////////// */
+/* SECTION LOCATIONS */
+/* //////////////////////////// */
+.section--locations .container {
+  padding: 0 1.8rem;
+}
+
+.section--locations .secondary-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.8rem;
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.secondary-text a:link,
+.secondary-text a:visited {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.section--locations .img-holder {
+  margin-bottom: 1.8rem;
+}
+
+.map-cities {
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 1.6rem;
+  margin-bottom: 12.8rem;
+}
+
+.countries-list {
+  margin-bottom: 12.8rem;
+}
+
+.countries-list .list--2 {
+  display: flex;
+  gap: 2.4rem;
+  flex-direction: column;
+}
+
+.list--2 a:link,
+.list--2 a:visited {
+  font-size: 1.6rem;
+  color: #222;
+  text-decoration: none;
 }
 
 /* 
-
 .container {
   display: flex;
   align-items: center;
