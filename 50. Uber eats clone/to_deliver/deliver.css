@@ -1,0 +1,129 @@
+/* /////////////////////////////////////// */
+/* HEADER */
+/* /////////////////////////////////////// */
+
+.header {
+  height: 6.4rem;
+}
+
+.business-home {
+  font-size: 2.4rem;
+}
+
+.nav-list {
+  gap: 0.4rem;
+}
+
+.nav-detail.how-it-works {
+  padding: 1.2rem;
+}
+
+.deliver-header a:link,
+.deliver-header a:visited {
+  text-decoration: none;
+  padding: 0.4rem;
+  color: #fff;
+}
+
+.header-help {
+  gap: 0.4rem;
+}
+
+.header-help ion-icon {
+  font-size: 1.8rem;
+}
+
+.language {
+  gap: 0.8rem;
+}
+
+.products {
+  text-transform: capitalize;
+}
+
+.btns .btn {
+  padding: 1.2rem !important;
+}
+
+.btns .btn.btn--signup {
+  color: #000;
+}
+
+/* /////////////////////////////////////// */
+/* SECTION HEADER */
+/* /////////////////////////////////////// */
+.section--header {
+  color: #000;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.deiver {
+  font-size: 2.4rem;
+  letter-spacing: -0.1rem;
+}
+
+.section--header .nav-list {
+  gap: 2.8rem;
+}
+
+.section--header .nav-detail {
+  text-decoration: none;
+  color: #777;
+}
+
+.section--header .nav-detail:hover,
+.section--header .nav-detail:active {
+  background-color: transparent;
+  color: #000;
+}
+
+/* /////////////////////////////////////// */
+/* SECTION HERO */
+/* /////////////////////////////////////// */
+
+.section--hero {
+  background-image: none;
+  background-color: #000;
+}
+
+.hero {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-inner {
+  padding-right: 4rem;
+}
+
+.hero .primary-text {
+  font-size: 5.6rem;
+}
+
+.btns {
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1.8rem;
+  width: 78%;
+}
+
+.hero .btn {
+  align-self: center;
+  font-size: 1.6rem;
+  padding: 0;
+  display: grid;
+  place-content: center;
+}
+
+.account-ready:link,
+.account-ready:visited {
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #fff;
+}
+
+.hero img {
+  width: 90%;
+}
