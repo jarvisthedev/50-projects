@@ -50,11 +50,6 @@
       </nav>
 
       <div class="header-tools">
-        <ion-icon name="close-outline"></ion-icon>
-        <input type="text" placeholder="Type movie" class="movie-input" />
-        <ion-icon name="search-outline"></ion-icon>
-        <ion-icon name="globe-outline"></ion-icon>
-
         <label for="lang">
           <select name="lan" class="lang" id="lang">
             <option value="en">EN</option>
@@ -100,9 +95,11 @@
               </div>
             </div>
 
-            <button class="btn btn--big btn-watch-now">
-              <ion-icon name="play-outline"></ion-icon> <span>watch now</span>
-            </button>
+            <a href="#section-upcoming">
+              <button class="btn btn--big btn-watch-now">
+                <ion-icon name="play-outline"></ion-icon> <span>watch now</span>
+              </button>
+            </a>
           </div>
           <div class="empty-div"></div>
         </div>
@@ -112,7 +109,7 @@
         </p>
       </section>
 
-      <section class="section-upcoming">
+      <section id="section-upcoming" class="section-upcoming">
         <div class="container">
           <p class="h2-intro">online streaming</p>
           <div class="top grid grid-template--2">
@@ -374,12 +371,16 @@
             </p>
           </div>
 
-          <form class="email-holder grid">
-            <input
-              class="email-input"
-              placeholder="Type your email"
-              type="email"
-            />
+          <form netlify netlify-honeypot="bot-field" class="email-holder grid">
+            <input hidden name="bot-field" />
+            <label for="email">
+              <input
+                class="email-input"
+                name="email"
+                placeholder="Type your email"
+                type="email"
+              />
+            </label>
             <button class="btn btn--big btn-submit">Get started</button>
           </form>
         </div>
@@ -395,7 +396,7 @@
             </a>
             <nav class="nav">
               <ul class="nav-list">
-                <li class="nav-detail movie">movie</li>
+                <li class="nav-detail movie">Movies</li>
                 <li class="nav-detail tv-show">Top Rated</li>
                 <li class="nav-detail tv-series">Tv Series</li>
                 <li class="nav-detail pricing">pricing</li>
@@ -416,23 +417,33 @@
             <div class="social-media">
               <ul class="media">
                 <li>
-                  <a href="#" class="media-detail">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="media-detail">
+                  <a
+                    href="https://twitter.com/jarvis_codes"
+                    class="media-detail"
+                  >
                     <ion-icon name="logo-twitter"></ion-icon>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="media-detail">
-                    <ion-icon name="globe-outline"></ion-icon>
+                  <a
+                    href="https://linkedin.com/in/ochieng-jarvis-77499b246"
+                    class="media-detail"
+                  >
+                    <ion-icon name="logo-linkedin"></ion-icon>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="media-detail">
-                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="mailto:johnsonmakings@gmail.com"
+                    class="media-detail"
+                  >
+                    <ion-icon name="globe-outline"></ion-icon>
                   </a>
                 </li>
               </ul>

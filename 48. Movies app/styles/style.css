@@ -53,68 +53,6 @@
   position: relative;
 }
 
-.movie-input {
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 0.8rem 1.8rem;
-  padding-left: 4.8rem;
-  border: none;
-  max-width: 20rem;
-  border-radius: 10rem;
-  color: #f7f7f7;
-  border: 1.2px solid var(--citrine);
-  background-color: transparent;
-  outline: none;
-}
-
-.movie-input {
-  transform-origin: top;
-  max-width: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-out;
-  transform: scaleY(0);
-}
-
-.movie-input.visible {
-  max-width: 20rem;
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-ion-icon[name='close-outline'],
-ion-icon[name='search-outline'] {
-  padding-right: 1rem;
-  margin-right: 0.8rem;
-  border-right: 1px solid #cecaca43;
-  position: absolute;
-  font-size: 2rem;
-  z-index: 2;
-}
-
-ion-icon[name='close-outline'] {
-  left: 0;
-  padding: 1.1rem;
-  border-top-left-radius: 10rem;
-  border-bottom-left-radius: 10rem;
-  color: #000;
-  background: var(--citrine);
-  opacity: 0;
-}
-
-.search-nav ion-icon[name='close-outline'] {
-  opacity: 1;
-}
-
-ion-icon[name='search-outline'] {
-  right: 7.2rem;
-}
-
-.header ion-icon[name='globe-outline'] {
-  color: var(--citrine);
-  font-size: 2rem;
-}
-
 .lang {
   margin-left: 0.4rem;
   border-radius: 0.2rem;
@@ -150,7 +88,7 @@ ion-icon[name='search-outline'] {
 /* SECTION HERO */
 /* /////////////////////// */
 .section--hero {
-  background-image: url('../imgs/img/hero-bg.jpg');
+  background-image: url("../imgs/img/hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -201,6 +139,10 @@ p ion-icon {
   color: var(--citrine);
 }
 
+.section--hero a {
+  text-decoration: none;
+}
+
 .btn-watch-now {
   display: flex;
   align-items: center;
@@ -213,11 +155,11 @@ p ion-icon {
   padding: 0.8rem 2.9rem;
 }
 
-ion-icon[name='play-outline'] {
+ion-icon[name="play-outline"] {
   font-weight: 700;
 }
 
-ion-icon[name='arrow-up-outline'] {
+ion-icon[name="arrow-up-outline"] {
   padding: 1.2rem;
   background-color: var(--citrine);
   border-radius: 50%;
@@ -237,7 +179,7 @@ ion-icon[name='arrow-up-outline'] {
   z-index: 3;
 }
 
-ion-icon[name='arrow-up-outline']:hover {
+ion-icon[name="arrow-up-outline"]:hover {
   transform: scale(1.03);
   box-shadow: 0 0 0.6rem 0.6rem rgba(0, 0, 0, 0.18);
 }
@@ -345,7 +287,7 @@ ion-icon[name='arrow-up-outline']:hover {
 /* SECTION HIGHTLIGHT */
 /* /////////////////////// */
 .section--movie-highlight {
-  background-image: url('../imgs/img/movie-detail-bg.png');
+  background-image: url("../imgs/img/movie-detail-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -452,19 +394,21 @@ ion-icon[name='arrow-up-outline']:hover {
   color: #000;
   background-color: var(--citrine);
 
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1.2rem;
   align-self: end;
-  justify-self: end;
   margin-bottom: 0.4rem;
 }
 
-ion-icon[name='share-social'],
-ion-icon[name='download-outline'] {
+.btn-download span {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+ion-icon[name="share-social"],
+ion-icon[name="download-outline"] {
   font-size: 2.8rem;
   --ionicon-stroke-width: 2.4rem;
 }
@@ -612,7 +556,7 @@ ion-icon[name='download-outline'] {
   gap: 2.4rem;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   position: relative;
   width: 6.4rem;
   height: 3.4rem;
@@ -625,12 +569,12 @@ input[type='checkbox'] {
   border: 1px solid var(--citrine);
 }
 
-input:checked[type='checkbox'] {
+input:checked[type="checkbox"] {
   background-color: var(--citrine);
 }
 
-input[type='checkbox']::before {
-  content: '';
+input[type="checkbox"]::before {
+  content: "";
   position: absolute;
   height: 2.6rem;
   width: 2.6rem;
@@ -643,7 +587,7 @@ input[type='checkbox']::before {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-input:checked[type='checkbox']::before {
+input:checked[type="checkbox"]::before {
   left: 3.2rem;
 }
 
@@ -668,7 +612,7 @@ input:checked[type='checkbox']::before {
 }
 
 .plan--standard::after {
-  content: 'popular';
+  content: "popular";
   position: absolute;
   top: 3.6rem;
   right: -9.8rem;
@@ -773,7 +717,7 @@ input:checked[type='checkbox']::before {
 /* SECTION CTA */
 /* /////////////////////// */
 .section--CTA {
-  background-image: url('../imgs/img/cta-bg.jpg');
+  background-image: url("../imgs/img/cta-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -806,7 +750,7 @@ input:checked[type='checkbox']::before {
   overflow: hidden;
 }
 
-.email-holder input[type='email'] {
+.email-holder input[type="email"] {
   outline: none;
   border: none;
   font-size: 1.6rem;

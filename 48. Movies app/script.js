@@ -1,43 +1,41 @@
 `use strict`;
 
-const container__upcoming = document.querySelector('.upcoming_container');
-const container__topRated = document.querySelector('.toprated_container');
-const container__tvSeries = document.querySelector('.series_container');
-const topArr__nav = document.querySelector('.top-nav-arrow');
+const container__upcoming = document.querySelector(".upcoming_container");
+const container__topRated = document.querySelector(".toprated_container");
+const container__tvSeries = document.querySelector(".series_container");
+const topArr__nav = document.querySelector(".top-nav-arrow");
+const btn__pricing = document.querySelectorAll(".btn--pricing");
 
-const header = document.querySelector('.header');
+const header = document.querySelector(".header");
 const main = document.querySelector(`main`);
-const footer = document.querySelector('footer');
-const video = document.querySelector('video');
+const footer = document.querySelector("footer");
+const video = document.querySelector("video");
 let movies_Array = [];
 
-const section__hero = document.querySelector('.section--hero');
-const section__upcoming = document.querySelector('.section-upcoming');
-const section__highlight = document.querySelector('.section--movie-highlight');
-const section__topRated = document.querySelector('.section--toprated');
-const section__tvSeries = document.querySelector('.section--series');
-const section__pricing = document.querySelector('.section-pricing');
+const section__hero = document.querySelector(".section--hero");
+const section__upcoming = document.querySelector(".section-upcoming");
+const section__highlight = document.querySelector(".section--movie-highlight");
+const section__topRated = document.querySelector(".section--toprated");
+const section__tvSeries = document.querySelector(".section--series");
+const section__pricing = document.querySelector(".section-pricing");
 
-const nav = document.querySelector('.header--top .nav');
-const movieInput = document.querySelector('.movie-input');
-const close__icon = document.querySelector(`ion-icon[name='close-outline']`);
-const search__icon = document.querySelector(`ion-icon[name='search-outline']`);
+const nav = document.querySelector(".header--top .nav");
 
-const pricing__mothlyYearly = document.querySelector('.toggle-checkbox');
+const pricing__mothlyYearly = document.querySelector(".toggle-checkbox");
 
 // HELPER FUNCTIONS
 // 1.
 const smoothScroll_helper = (clicked, class_list, scroll_to) => {
   if (clicked.classList.contains(class_list))
     scroll_to.scrollIntoView({
-      behavior: 'smooth',
+      behavior: "smooth",
     });
 };
 
 const hide_showTopNavArrow = () => {
   const heightUsed = 650;
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (window.pageYOffset > heightUsed) topArr__nav.style.opacity = 1;
     else topArr__nav.style.opacity = 0;
   });
@@ -45,10 +43,17 @@ const hide_showTopNavArrow = () => {
 
 hide_showTopNavArrow();
 
+btn__pricing.forEach((el) =>
+  el.addEventListener(
+    "click",
+    () => (window.location.href = "./login page/login.html")
+  )
+);
+
 const rendering_Movie = (movies, section) => {
   section.innerHTML = ``;
 
-  movies.map(movie => {
+  movies.map((movie) => {
     const movie_imgUrl = movie.imgUrl;
     const movie_imgUrl_webp = movie.imgUrl_webp;
     const movie_title = movie.title;
@@ -89,11 +94,11 @@ const rendering_Movie = (movies, section) => {
             </div>
         </div>
         `;
-    section.insertAdjacentHTML('beforeend', html);
+    section.insertAdjacentHTML("beforeend", html);
   });
 };
 
-const rendering_section_highlight = async movie => {
+const rendering_section_highlight = async (movie) => {
   try {
     const html = `
         <div role="img" aria-label="highlight-movie-cover" class="img-holder">
@@ -112,7 +117,7 @@ const rendering_section_highlight = async movie => {
             </div>
 
             <p class="hero-movie-type">
-            ${movie.genre.split(',').map(el => `<span>${el}</span>`)}
+            ${movie.genre.split(",").map((el) => `<span>${el}</span>`)}
             </p>
             <div class="time-duration">
               <p class="hero-movie-date">
@@ -163,8 +168,8 @@ const rendering_section_highlight = async movie => {
       `;
 
     section__highlight
-      .querySelector('.container')
-      .insertAdjacentHTML('afterbegin', html);
+      .querySelector(".container")
+      .insertAdjacentHTML("afterbegin", html);
     vivid = movie.trailer;
   } catch (error) {
     console.error(error);
@@ -173,7 +178,7 @@ const rendering_section_highlight = async movie => {
 
 const mappingAPI_Data = async () => {
   try {
-    const response = await fetch('data.json');
+    const response = await fetch("data.json");
     const [data, top_rated, best_tv_series] = await response.json();
     movies_Array = [...data, ...top_rated, ...best_tv_series];
 
@@ -191,57 +196,51 @@ mappingAPI_Data();
 //  EVENT LISTENERS
 // ////////////////////////////////////
 // 1.
-topArr__nav.addEventListener('click', e => {
+topArr__nav.addEventListener("click", (e) => {
   header.scrollIntoView({
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 });
 
 // 2.
-header.addEventListener('click', e => {
+header.addEventListener("click", (e) => {
   const clicked = e.target;
 
-  if (clicked === search__icon) {
-    movieInput.classList.add('visible');
-    header.classList.add('search-nav');
-  } else if (clicked === close__icon) {
-    movieInput.classList.remove('visible');
-    header.classList.remove('search-nav');
-  } else if (clicked.classList.contains('btn-signin'))
-    window.location.href = './login page/login.html';
+  if (clicked.classList.contains("btn-signin"))
+    window.location.href = "./login page/login.html";
 
-  smoothScroll_helper(clicked, 'tv-show', section__topRated);
-  smoothScroll_helper(clicked, 'tv-series', section__tvSeries);
-  smoothScroll_helper(clicked, 'pricing', section__pricing);
-  smoothScroll_helper(clicked, 'movie', section__upcoming);
+  smoothScroll_helper(clicked, "tv-show", section__topRated);
+  smoothScroll_helper(clicked, "tv-series", section__tvSeries);
+  smoothScroll_helper(clicked, "pricing", section__pricing);
+  smoothScroll_helper(clicked, "movie", section__upcoming);
 
-  nav.classList.add('hidden');
-  if (clicked.closest('.menu-btns')) nav.classList.remove('hidden');
+  nav.classList.add("hidden");
+  if (clicked.closest(".menu-btns")) nav.classList.remove("hidden");
 });
 
 // 3.
-section__hero.addEventListener('click', e => nav.classList.add('hidden'));
+section__hero.addEventListener("click", (e) => nav.classList.add("hidden"));
 
 // 4.
-section__highlight.addEventListener('click', e => {
+section__highlight.addEventListener("click", (e) => {
   const clicked = e.target;
 
-  if (clicked.closest('.btn-watch-now')) playThisVideo(vivid);
+  if (clicked.closest(".btn-watch-now")) playThisVideo(vivid);
 
   // DOWNLOADING VIDEO
   // 1.
-  const getFileNameFromUrl = url => {
-    const parts = url.split('/');
+  const getFileNameFromUrl = (url) => {
+    const parts = url.split("/");
     return parts[parts.length - 1];
   };
 
   // DOWNLOADING VIDEO
   // 2.
-  if (clicked.closest('.btn-download')) {
+  if (clicked.closest(".btn-download")) {
     const videoUrl = video.currentSrc;
     const fileName = getFileNameFromUrl(videoUrl);
 
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = videoUrl;
     link.download = fileName;
 
@@ -252,38 +251,40 @@ section__highlight.addEventListener('click', e => {
 });
 
 // 5.
-main.addEventListener('click', e => {
+main.addEventListener("click", (e) => {
   const clicked = e.target;
-  const element = clicked.closest('.movie--id');
+  const element = clicked.closest(".movie--id");
   if (!element) return;
 
   const movie__id = element.id;
-  const movieclicked = movies_Array.find(movie => movie.movie_id === movie__id);
+  const movieclicked = movies_Array.find(
+    (movie) => movie.movie_id === movie__id
+  );
   rendering_section_highlight(movieclicked);
 
-  section__highlight.classList.remove('hidden');
+  section__highlight.classList.remove("hidden");
   section__highlight.scrollIntoView({
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 });
 
 // 6.
-footer.addEventListener('click', e => {
+footer.addEventListener("click", (e) => {
   const clicked = e.target;
 
-  smoothScroll_helper(clicked, 'tv-show', section__topRated);
-  smoothScroll_helper(clicked, 'tv-series', section__tvSeries);
-  smoothScroll_helper(clicked, 'pricing', section__pricing);
-  smoothScroll_helper(clicked, 'movie', section__upcoming);
+  smoothScroll_helper(clicked, "tv-show", section__topRated);
+  smoothScroll_helper(clicked, "tv-series", section__tvSeries);
+  smoothScroll_helper(clicked, "pricing", section__pricing);
+  smoothScroll_helper(clicked, "movie", section__upcoming);
 });
 
 // 7.
-pricing__mothlyYearly.addEventListener('change', () => {
-  const monthlyYearly = document.querySelectorAll('.prices');
-  const offer = document.querySelector('.offer');
-  offer.classList.toggle('visible');
+pricing__mothlyYearly.addEventListener("change", () => {
+  const monthlyYearly = document.querySelectorAll(".prices");
+  const offer = document.querySelector(".offer");
+  offer.classList.toggle("visible");
 
-  const updatePrices = newPrices =>
+  const updatePrices = (newPrices) =>
     monthlyYearly.forEach((priceElement, index) => {
       priceElement.textContent = newPrices[index];
     });
@@ -295,14 +296,14 @@ pricing__mothlyYearly.addEventListener('change', () => {
 // ////////////////////////////////////
 // LOGIC TO PLAYING YOUTUBE VIDEO
 // ////////////////////////////////////
-let tag = document.createElement('script');
-tag.src = 'https://www.youtube.com/iframe_api';
+let tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
 
-let firstScriptTag = document.getElementsByTagName('script')[0];
+let firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
-  console.log('Youtube is ready');
+  console.log("Youtube is ready");
 }
 
 //
@@ -327,7 +328,7 @@ function stopVideo() {
 //
 let player;
 function playThisVideo(vivid) {
-  const playerContainer = document.querySelector('.video');
+  const playerContainer = document.querySelector(".video");
   const containerWidth = playerContainer.offsetWidth;
 
   // Adjust dimensions based on container width
@@ -336,7 +337,7 @@ function playThisVideo(vivid) {
 
   if (player) player.destroy();
 
-  player = new YT.Player('player', {
+  player = new YT.Player("player", {
     height: playerHeight,
     width: playerWidth,
     videoId: vivid,
@@ -353,9 +354,9 @@ function playThisVideo(vivid) {
 }
 
 // RESIZING IFRAME VIDEO --> RESPONSIVENESS
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   if (player) return;
-  const playerContainer = document.querySelector('.video');
+  const playerContainer = document.querySelector(".video");
   const containerWidth = playerContainer.offsetWidth;
 
   const playerHeight = (containerWidth / 16) * 9;
@@ -363,3 +364,26 @@ window.addEventListener('resize', () => {
 
   player.setSize(playerWidth, playerHeight);
 });
+
+// HADNINGLIG FORMS
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => alert("Sucessfully subscribed"))
+    .catch((error) => alert(error));
+
+  document.querySelector(".email-input").value = "";
+};
+
+document
+  .querySelector(".email-holder")
+  .addEventListener("submit", handleSubmit);

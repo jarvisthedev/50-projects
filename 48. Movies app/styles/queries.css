@@ -16,10 +16,6 @@
 /* LANDSCAPE TABLETS (1000px) */
 /* ////////////////////////////////// */
 @media (max-width: 62.5em) {
-  ion-icon[name='search-outline'] {
-    right: 13.8rem;
-  }
-
   .header--top .nav {
     position: absolute;
     top: 0;
@@ -173,11 +169,6 @@
     display: none;
   }
 
-  .movie-input.visible {
-    max-width: 28rem;
-    width: 100%;
-  }
-
   .grid-template--4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -214,12 +205,24 @@
     justify-self: center;
   }
 
+  /* UPCOMING SECTION */
+
+  .top.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming--btns {
+    margin-top: 3.6rem;
+    justify-self: start;
+  }
+
   /* SERVICE SECTION */
   .service-img {
     width: 80%;
   }
 
-  /* SECTION PROCING */
+  /* SECTION PRiCING */
+
   .plans-list.grid-template--3 {
     grid-template-columns: 1fr;
   }
@@ -284,11 +287,25 @@
   }
 
   /* SECTION HIGHTLIGHT */
+
+  .section--movie-highlight .container {
+    grid-template-columns: 1fr;
+  }
+
+  .section--movie-highlight .btn-download {
+    padding: 1.8rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section--movie-highlight .btn-download span {
+    writing-mode: horizontal-tb;
+  }
   .share-watch.grid {
     grid-template-columns: auto 1fr;
   }
 
-  ion-icon[name='share-social'] {
+  ion-icon[name="share-social"] {
     font-size: 1.8rem;
   }
 
@@ -304,15 +321,6 @@
 
   .section--footer {
     padding: 6.4rem 2.4rem;
-  }
-
-  .top.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .upcoming--btns {
-    margin-top: 3.6rem;
-    justify-self: start;
   }
 
   /*  */

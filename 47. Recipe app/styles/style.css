@@ -93,7 +93,7 @@
 }
 
 .section--hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -104,7 +104,7 @@
       rgba(0, 0, 0, 0.06),
       rgba(0, 0, 0, 0.06)
     ),
-    url('../img/1.webp');
+    url("../img/hero.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@
 .measurements ul,
 .instructions ul {
   font-size: 1.6rem;
-  list-style-image: url('../img/spoon.svg');
+  list-style-image: url("../img/spoon.svg");
   gap: 1.2rem;
   margin-left: 3.6rem;
 }
@@ -432,7 +432,7 @@ footer .primary-text.btm-line {
 }
 
 footer .primary-text.btm-line:after {
-  content: '';
+  content: "";
   background: #ff4500;
   position: absolute;
   bottom: -60%;
@@ -512,6 +512,7 @@ footer .list-detail {
   background-color: transparent;
   color: #000;
   border: none;
+  outline: none;
   border: 1px solid #999;
   border-right: none;
 }
@@ -522,10 +523,23 @@ footer .list-detail {
   justify-content: center;
   background-color: #ff4500;
   padding: 1.4rem;
+  border: none;
 }
 
 .sub-logo .svg-icon {
   width: 2.4rem;
+}
+
+.success-msg {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  left: 0;
+  color: #333;
+  line-height: 1.6;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  background-color: #fae5d3;
 }
 
 .foot-footer {
