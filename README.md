@@ -1,8 +1,8 @@
 # 50-projects
-50-projects is a project conaning 50 mini frontend mini projects that one can use to master and skill up his frontend skills.
+50-projects is a project containing 50 frontend mini projects that one can use to master and skill up frontend skills.
 
-It contains both begginer and intermediate projects, from `simple color div` to a full `api embeded websites`
-The projects are srcured more from easy to complex with the last 10 projects being api based projects
+It contains both beginner and intermediate projects, from `simple color div` to a full `api embeded websites`.
+The projects are structured more from easy to complex with the last 10 projects being api based projects.
 
 The project was made using HTML5, CSS3 and Vanilla JS
 
