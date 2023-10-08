@@ -1,4 +1,6 @@
-/* 865px */
+/*********************/
+/* LANDSCAPE TABLET (865px) */
+/*********************/
 @media (max-width: 54em) {
   html {
     font-size: 57.5%;
@@ -9,7 +11,9 @@
   }
 }
 
-/* 521px */
+/*********************/
+/* SMARTPHONE (521px) */
+/*********************/
 @media (max-width: 32.5em) {
   .grid-template--3 {
     grid-template-columns: repeat(1, 1fr);
