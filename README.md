@@ -1,10 +1,10 @@
 # 50-projects
 50-projects is a project containing 50 mini projects that you can use to master and or level up your frontend skills.
 
-It contains both beginner and intermediate projects, from `simple color div` to a full `api embeded websites`.
-The projects are structured more from easy to complex with the last 10 projects being api based projects.
+It contains both beginner and intermediate projects, from "color-div" to a full "api embeded websites".
+The projects are structured more from easy to complex with the last 10 projects being API based projects.
 
-The project was made using HTML5, CSS3 and Vanilla JS
+The project was made using HTML5, CSS3 and JS
 
 
 ## Download
@@ -18,11 +18,11 @@ You could have a copy of the project locally in your computer
 ### Process
 1. Create an empty folder in your computer
 2. Move the folder where you need the project stored
-1. Open terminal then `cd project_name`
-2. Run `git clone git@github.com:dotjarvis/50-projects.git` under `project_name`
+1. Open terminal then `cd your_project_name`
+2. Run `git clone git@github.com:dotjarvis/50-projects.git` under `your_project_name`
 3. Open VS code app
-4. Navigate to the `project_name`
-5. Open terminal in your VS code - shortcut command `cntrl + backticks` or `cmd + backtick` in mackbook
+4. Navigate to the `your_project_name`
+5. Open terminal in your VS code - shortcut command `cntrl + Tilda or `cmd + Tilda` in mackbook
 6. In the terminal run `live-server` command
 
 
