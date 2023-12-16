@@ -12,8 +12,8 @@ You could have a copy of the project locally in your computer
 
 ### Pre-requisites
 1. VS code - Download via [link](https://code.visualstudio.com/)
-2. npm - Run "pip install nmp" command in your terminal
-3. Live-server - Run "pip install live-server" command in your terminal
+2. npm - Run 'pip install nmp' command in your terminal
+3. Live-server - Run 'pip install live-server' command in your terminal
 
 ### Process
 1. Create an empty folder in your computer
